@@ -1515,7 +1515,7 @@ Inbound.VLESSSettings = class extends Inbound.Settings {
     toJson() {
         return {
             clients: Inbound.VLESSSettings.toJsonArray(this.vlesses),
-            decryption: this.decryption,
+            decryption: 'none',
             fallbacks: Inbound.VLESSSettings.toJsonArray(this.fallbacks),
         };
     }
