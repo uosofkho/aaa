@@ -428,19 +428,19 @@ func (s *InboundService) adjustTraffics(traffics []*xray.ClientTraffic) (full_tr
 		// get settings clients
 		settings := map[string]interface{}{}
 		json.Unmarshal([]byte(inbound.Settings), &settings)
-		clients, ok := settings["clients"].([]model.Client)
+		settingsClients := map[string][]model.Client{}
+		json.Unmarshal([]byte(inbound.Settings), &settingsClients)
+		clients := settingsClients["clients"]
 		needUpdate := false
-		if ok {
-			for client_index, client := range clients {
-				if traffic.Email == client.Email {
-					if client.ExpiryTime < 0 {
-						clients[client_index].ExpiryTime = (time.Now().Unix() * 1000) - client.ExpiryTime
-						needUpdate = true
-					}
-					client_traffic.ExpiryTime = client.ExpiryTime
-					client_traffic.Total = client.TotalGB
-					break
+		for client_index, client := range clients {
+			if traffic.Email == client.Email {
+				if client.ExpiryTime < 0 {
+					clients[client_index].ExpiryTime = (time.Now().Unix() * 1000) - client.ExpiryTime
+					needUpdate = true
 				}
+				client_traffic.ExpiryTime = client.ExpiryTime
+				client_traffic.Total = client.TotalGB
+				break
 			}
 		}
 
