@@ -17,6 +17,7 @@ function LOGE() {
 function LOGI() {
     echo -e "${green}[INF] $* ${plain}"
 }
+
 # check root
 [[ $EUID -ne 0 ]] && LOGE "ERROR: You must be root to run this script! \n" && exit 1
 
@@ -34,7 +35,6 @@ fi
 
 echo "The OS release is: $release"
 
-
 os_version=""
 os_version=$(grep -i version_id /etc/os-release | cut -d \" -f2 | cut -d . -f1)
 
@@ -46,15 +46,13 @@ elif [[ "${release}" ==  "ubuntu" ]]; then
     if [[ ${os_version} -lt 20 ]]; then
         echo -e "${red}please use Ubuntu 20 or higher version! ${plain}\n" && exit 1
     fi
-
 elif [[ "${release}" == "fedora" ]]; then
     if [[ ${os_version} -lt 36 ]]; then
         echo -e "${red}please use Fedora 36 or higher version! ${plain}\n" && exit 1
     fi
-
 elif [[ "${release}" == "debian" ]]; then
-    if [[ ${os_version} -lt 8 ]]; then
-        echo -e "${red} Please use Debian 8 or higher ${plain}\n" && exit 1
+    if [[ ${os_version} -lt 10 ]]; then
+        echo -e "${red} Please use Debian 10 or higher ${plain}\n" && exit 1
     fi
 fi
 
@@ -132,7 +130,7 @@ uninstall() {
     rm /usr/local/x-ui/ -rf
 
     echo ""
-    echo -e "Uninstalled Successfully，If you want to remove this script，then after exiting the script run ${green}rm /usr/bin/x-ui -f${plain} to delete it."
+    echo -e "Uninstalled Successfully, If you want to remove this script, then after exiting the script run ${green}rm /usr/bin/x-ui -f${plain} to delete it."
     echo ""
 
     if [[ $# == 0 ]]; then
@@ -149,12 +147,12 @@ reset_user() {
         return 0
     fi
     /usr/local/x-ui/x-ui setting -username admin -password admin
-    echo -e "Username and password have been reset to ${green}admin${plain}，Please restart the panel now."
+    echo -e "Username and password have been reset to ${green}admin${plain}, Please restart the panel now."
     confirm_restart
 }
 
 reset_config() {
-    confirm "Are you sure you want to reset all panel settings，Account data will not be lost，Username and password will not change" "n"
+    confirm "Are you sure you want to reset all panel settings, Account data will not be lost, Username and password will not change" "n"
     if [[ $? != 0 ]]; then
         if [[ $# == 0 ]]; then
             show_menu
@@ -162,14 +160,14 @@ reset_config() {
         return 0
     fi
     /usr/local/x-ui/x-ui setting -reset
-    echo -e "All panel settings have been reset to default，Please restart the panel now，and use the default ${green}54321${plain} Port to Access the web Panel"
+    echo -e "All panel settings have been reset to default, Please restart the panel now, and use the default ${green}54321${plain} Port to Access the web Panel"
     confirm_restart
 }
 
 check_config() {
     info=$(/usr/local/x-ui/x-ui setting -show true)
     if [[ $? != 0 ]]; then
-        LOGE "get current settings error,please check logs"
+        LOGE "get current settings error, please check logs"
         show_menu
     fi
     LOGI "${info}"
@@ -182,7 +180,7 @@ set_port() {
         before_show_menu
     else
         /usr/local/x-ui/x-ui setting -port ${port}
-        echo -e "The port is set，Please restart the panel now，and use the new port ${green}${port}${plain} to access web panel"
+        echo -e "The port is set, Please restart the panel now, and use the new port ${green}${port}${plain} to access web panel"
         confirm_restart
     fi
 }
@@ -191,7 +189,7 @@ start() {
     check_status
     if [[ $? == 0 ]]; then
         echo ""
-        LOGI "Panel is running，No need to start again，If you need to restart, please select restart"
+        LOGI "Panel is running, No need to start again, If you need to restart, please select restart"
     else
         systemctl start x-ui
         sleep 2
@@ -199,7 +197,7 @@ start() {
         if [[ $? == 0 ]]; then
             LOGI "x-ui Started Successfully"
         else
-            LOGE "panel Failed to start，Probably because it takes longer than two seconds to start，Please check the log information later"
+            LOGE "panel Failed to start, Probably because it takes longer than two seconds to start, Please check the log information later"
         fi
     fi
 
@@ -212,7 +210,7 @@ stop() {
     check_status
     if [[ $? == 1 ]]; then
         echo ""
-        LOGI "Panel stopped，No need to stop again!"
+        LOGI "Panel stopped, No need to stop again!"
     else
         systemctl stop x-ui
         sleep 2
@@ -220,7 +218,7 @@ stop() {
         if [[ $? == 1 ]]; then
             LOGI "x-ui and xray stopped successfully"
         else
-            LOGE "Panel stop failed，Probably because the stop time exceeds two seconds，Please check the log information later"
+            LOGE "Panel stop failed, Probably because the stop time exceeds two seconds, Please check the log information later"
         fi
     fi
 
@@ -236,7 +234,7 @@ restart() {
     if [[ $? == 0 ]]; then
         LOGI "x-ui and xray Restarted successfully"
     else
-        LOGE "Panel restart failed，Probably because it takes longer than two seconds to start，Please check the log information later"
+        LOGE "Panel restart failed, Probably because it takes longer than two seconds to start, Please check the log information later"
     fi
     if [[ $# == 0 ]]; then
         before_show_menu
@@ -300,11 +298,11 @@ update_shell() {
     wget -O /usr/bin/x-ui -N --no-check-certificate https://github.com/alireza0/x-ui/raw/main/x-ui.sh
     if [[ $? != 0 ]]; then
         echo ""
-        LOGE "Failed to download script，Please check whether the machine can connect Github"
+        LOGE "Failed to download script, Please check whether the machine can connect Github"
         before_show_menu
     else
         chmod +x /usr/bin/x-ui
-        LOGI "Upgrade script succeeded，Please rerun the script" && exit 0
+        LOGI "Upgrade script succeeded, Please rerun the script" && exit 0
     fi
 }
 
@@ -334,7 +332,7 @@ check_uninstall() {
     check_status
     if [[ $? != 2 ]]; then
         echo ""
-        LOGE "Panel installed，Please do not reinstall"
+        LOGE "Panel installed, Please do not reinstall"
         if [[ $# == 0 ]]; then
             before_show_menu
         fi
@@ -362,7 +360,7 @@ show_status() {
     check_status
     case $? in
     0)
-        echo -e "Panel state: ${green}Runing${plain}"
+        echo -e "Panel state: ${green}Running${plain}"
         show_enable_status
         ;;
     1)
@@ -397,10 +395,31 @@ check_xray_status() {
 show_xray_status() {
     check_xray_status
     if [[ $? == 0 ]]; then
-        echo -e "xray state: ${green}Runing${plain}"
+        echo -e "xray state: ${green}Running${plain}"
     else
         echo -e "xray state: ${red}Not Running${plain}"
     fi
+}
+
+update_geo() {
+    local defaultBinFolder="/usr/local/x-ui/bin"
+    read -p "Please enter x-ui bin folder path. Leave blank for default. (Default: '${defaultBinFolder}')" binFolder
+    binFolder=${binFolder:-${defaultBinFolder}}
+    if [[ ! -d ${binFolder} ]]; then
+        LOGE "Folder ${binFolder} not exists!"
+        LOGI "making bin folder: ${binFolder}..."
+        mkdir -p ${binFolder}
+    fi
+
+    systemctl stop x-ui
+    cd ${binFolder}
+    rm -f geoip.dat geosite.dat iran.dat
+    wget -N https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
+    wget -N https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
+    wget -N https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/iran.dat
+    systemctl start x-ui
+    echo -e "${green}Geosite.dat + Geoip.dat + Iran.dat have been updated successfully in bin folder '${binfolder}'!${plain}"
+    before_show_menu
 }
 
 ssl_cert_issue() {
@@ -413,10 +432,10 @@ ssl_cert_issue() {
     LOGI "4.The script applies for a certificate. The default installation path is /root/cert "
     confirm "Confirmed?[y/n]" "y"
     if [ $? -eq 0 ]; then
-        cd ~
+    cd ~
         LOGI "Install Acme-Script"
-        curl https://get.acme.sh | sh
-        if [ $? -ne 0 ]; then
+    curl https://get.acme.sh | sh
+    if [ $? -ne 0 ]; then
             LOGE "Failed to install acme script"
             exit 1
         fi
@@ -424,12 +443,12 @@ ssl_cert_issue() {
         CF_GlobalKey=""
         CF_AccountEmail=""
         certPath=/root/cert
-        if [ ! -d "$certPath" ]; then
-            mkdir $certPath
-        else
-            rm -rf $certPath
-            mkdir $certPath
-        fi
+		if [ ! -d "$certPath" ]; then
+			mkdir -p "$certPath"
+		else
+			rm -rf "$certPath"
+			mkdir -p "$certPath"
+		fi
         LOGD "Please set a domain name:"
         read -p "Input your domain here:" CF_Domain
         LOGD "Your domain name is set to:${CF_Domain}"
@@ -450,29 +469,29 @@ ssl_cert_issue() {
         if [ $? -ne 0 ]; then
             LOGE "Certificate issuance failed, script exiting..."
             exit 1
-        else
-            LOGI "Certificate issued Successfully, Installing..."
-        fi
+		else
+			LOGI "Certificate issued Successfully, Installing..."
+		fi
         ~/.acme.sh/acme.sh --installcert -d ${CF_Domain} -d *.${CF_Domain} --ca-file /root/cert/ca.cer \
         --cert-file /root/cert/${CF_Domain}.cer --key-file /root/cert/${CF_Domain}.key \
         --fullchain-file /root/cert/fullchain.cer
-        if [ $? -ne 0 ]; then
+		if [ $? -ne 0 ]; then
             LOGE "Certificate installation failed, script exiting..."
-            exit 1
-        else
-            LOGI "Certificate installed Successfully,Turning on automatic updates..."
-        fi
-        ~/.acme.sh/acme.sh --upgrade --auto-upgrade
-        if [ $? -ne 0 ]; then
+			exit 1
+		else
+			LOGI "Certificate installed Successfully,Turning on automatic updates..."
+		fi
+		~/.acme.sh/acme.sh --upgrade --auto-upgrade
+		if [ $? -ne 0 ]; then
             LOGE "Auto update setup Failed, script exiting..."
             ls -lah cert
             chmod 755 $certPath
-            exit 1
-        else
+			exit 1
+		else
             LOGI "The certificate is installed and auto-renewal is turned on, Specific information is as follows"
             ls -lah cert
             chmod 755 $certPath
-        fi
+		fi
     else
         show_menu
     fi
@@ -499,31 +518,32 @@ show_usage() {
 show_menu() {
     echo -e "
   ${green}x-ui Panel Management Script${plain}
-  ${green}0.${plain} exit script
+  ${green}0.${plain} Exit Script
 ————————————————
   ${green}1.${plain} Install x-ui
   ${green}2.${plain} Update x-ui
   ${green}3.${plain} Uninstall x-ui
 ————————————————
-  ${green}4.${plain} Reset username and password
-  ${green}5.${plain} Reset panel settings
-  ${green}6.${plain} Set panel port
-  ${green}7.${plain} View current panel settings
+  ${green}4.${plain} Reset Username and Password
+  ${green}5.${plain} Reset Panel Settings
+  ${green}6.${plain} Change Panel Port
+  ${green}7.${plain} View Current Panel Settings
 ————————————————
   ${green}8.${plain} Start x-ui
-  ${green}9.${plain} stop x-ui
-  ${green}10.${plain} Reboot x-ui
-  ${green}11.${plain} Check x-ui state
-  ${green}12.${plain} Check x-ui logs
+  ${green}9.${plain} Stop x-ui
+  ${green}10.${plain} Restart x-ui
+  ${green}11.${plain} Check x-ui Status
+  ${green}12.${plain} Check x-ui Logs
 ————————————————
-  ${green}13.${plain} set x-ui Autostart
-  ${green}14.${plain} Cancel x-ui Autostart
+  ${green}13.${plain} Enable x-ui On System Startup
+  ${green}14.${plain} Disable x-ui On System Startup
 ————————————————
-  ${green}15.${plain} 一A key installation bbr (latest kernel)
-  ${green}16.${plain} 一Apply for an SSL certificate with one click(acme script)
+  ${green}15.${plain} Install BBR (Latest Kernel)
+  ${green}16.${plain} Apply for an SSL Certificate with One-Click (ACME Script)
+  ${green}17.${plain} Update Geo Files
  "
     show_status
-    echo && read -p "Please enter your selection [0-16]: " num
+    echo && read -p "Please enter your selection [0-17]: " num
 
     case "${num}" in
     0)
@@ -577,8 +597,11 @@ show_menu() {
     16)
         ssl_cert_issue
         ;;
+    17)
+        update_geo
+        ;;
     *)
-        LOGE "Please enter the correct number [0-16]"
+        LOGE "Please enter the correct number [0-17]"
         ;;
     esac
 }
