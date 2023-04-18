@@ -40,25 +40,26 @@ xray panel supporting multi-protocol, **Multi-lang (English,Farsi,Chinese)**
 - Support https access panel (self-provided domain name + ssl certificate)
 - Support one-click SSL certificate application and automatic renewal
 - For more advanced configuration items, please refer to the panel
+- Support to change configs by different items provided in panel
 
 ## API routes
 
 - `/login` with `PUSH` user data: `{username: '', password: ''}` for login
 - `/xui/API/inbounds` base for following actions:
 
-| Method | Path                             | Action                                      |
-| ------ | -------------------------------- | ------------------------------------------- |
-| GET    | "/"                              | Get all inbounds                            |
-| GET    | "/get/:id"                       | Get inbound with inbound.id                 |
-| POST   | "/add"                           | Add inbound                                 |
-| POST   | "/del/:id"                       | Delete Inbound                              |
-| POST   | "/update/:id"                    | Update Inbound                              |
-| POST   | "/addClient/"                    | Add Client to inbound                       |
-| POST   | "/delClient/:email"              | Delete Client                               |
-| POST   | "/updateClient/:index"           | Update Client                               |
-| POST   | "/:id/resetClientTraffic/:email" | Reset Client's Traffic                      |
-| POST   | "/resetAllTraffics"              | Reset traffics of all inbounds              |
-| POST   | "/resetAllClientTraffics/:id"    | Reset traffics of all clients in an inbound |
+| Method | Path                               | Action                                      |
+| :----: | ---------------------------------- | ------------------------------------------- |
+| `GET`  | `"/"`                              | Get all inbounds                            |
+| `GET`  | `"/get/:id"`                       | Get inbound with inbound.id                 |
+| `POST` | `"/add"`                           | Add inbound                                 |
+| `POST` | `"/del/:id"`                       | Delete Inbound                              |
+| `POST` | `"/update/:id"`                    | Update Inbound                              |
+| `POST` | `"/addClient/"`                    | Add Client to inbound                       |
+| `POST` | `"/delClient/:email"`              | Delete Client                               |
+| `POST` | `"/updateClient/:index"`           | Update Client                               |
+| `POST` | `"/:id/resetClientTraffic/:email"` | Reset Client's Traffic                      |
+| `POST` | `"/resetAllTraffics"`              | Reset traffics of all inbounds              |
+| `POST` | `"/resetAllClientTraffics/:id"`    | Reset traffics of all clients in an inbound |
 
 # Environment Variables
 
@@ -68,6 +69,12 @@ xray panel supporting multi-protocol, **Multi-lang (English,Farsi,Chinese)**
 | XUI_DEBUG      |                   `boolean`                    | `false`       |
 | XUI_BIN_FOLDER |                    `string`                    | `"bin"`       |
 | XUI_DB_FOLDER  |                    `string`                    | `"/etc/x-ui"` |
+
+Example:
+
+```sh
+XUI_BIN_FOLDER="bin" XUI_DB_FOLDER="/etc/x-ui" go build main.go
+```
 
 # Screenshot from Inbouds page
 
@@ -163,6 +170,18 @@ certbot certonly --standalone --register-unsafely-without-email --non-interactiv
 
 </details>
 
+# [WARP Configuration](https://github.com/fscarmen/warp) (Optional)
+
+If you want to use routing to WARP follow steps as below:
+
+1. Install WARP on **socks proxy mode**:
+
+   ```sh
+   curl -fsSL https://gist.githubusercontent.com/hamid-gh98/dc5dd9b0cc5b0412af927b1ccdb294c7/raw/install_warp_proxy.sh | bash
+   ```
+
+2. Turn on the configs you need in panel
+
 ## Tg robot use
 
 <details>
@@ -184,7 +203,7 @@ Set the robot-related parameters in the panel background, including:
 Reference syntax:
 
 - 30 \* \* \* \* \* //Notify at the 30s of each point
-- 0 _/10 _ \* \* \* //Notify at the first second of each 10 minutes
+- 0 \*/10 \* \* \* \* //Notify at the first second of each 10 minutes
 - @hourly // hourly notification
 - @daily // Daily notification (00:00 in the morning)
 - @every 8h // notify every 8 hours
