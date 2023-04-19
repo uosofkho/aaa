@@ -20,7 +20,7 @@ xray panel supporting multi-protocol, **Multi-lang (English,Farsi,Chinese)**
 | REST API                             | :heavy_check_mark: |
 | Telegram BOT (admin + clients)       | :heavy_check_mark: |
 | Backup database using Telegram BOT   | :heavy_check_mark: |
-| Subscription link                    | :heavy_check_mark: |
+| Subscription link + userInfo         | :heavy_check_mark: |
 | Calculate expire date on first usage | :heavy_check_mark: |
 
 **If you think this project is helpful to you, you may wish to give a** :star2:
@@ -85,7 +85,7 @@ XUI_BIN_FOLDER="bin" XUI_DB_FOLDER="/etc/x-ui" go build main.go
 
 - CentOS 8+
 - Ubuntu 20+
-- Debian 8+
+- Debian 10+
 - Fedora 36+
 
 # Install & Upgrade to latest version
