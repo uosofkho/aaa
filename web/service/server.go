@@ -3,6 +3,8 @@ package service
 import (
 	"archive/zip"
 	"bytes"
+	"crypto/rand"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -24,6 +26,7 @@ import (
 	"github.com/shirou/gopsutil/v3/load"
 	"github.com/shirou/gopsutil/v3/mem"
 	"github.com/shirou/gopsutil/v3/net"
+	"golang.org/x/crypto/curve25519"
 )
 
 type ProcessState string
@@ -394,26 +397,25 @@ func (s *ServerService) GetDb() ([]byte, error) {
 }
 
 func (s *ServerService) GetNewX25519Cert() (interface{}, error) {
-	// Run the command
-	cmd := exec.Command(xray.GetBinaryPath(), "x25519")
-	var out bytes.Buffer
-	cmd.Stdout = &out
-	err := cmd.Run()
+	privateKey := make([]byte, curve25519.ScalarSize)
+	if _, err := rand.Read(privateKey); err != nil {
+		return nil, err
+	}
+
+	// Modify random bytes using algorithm described at:
+	// https://cr.yp.to/ecdh.html.
+	privateKey[0] &= 248
+	privateKey[31] &= 127
+	privateKey[31] |= 64
+
+	publicKey, err := curve25519.X25519(privateKey, curve25519.Basepoint)
 	if err != nil {
 		return nil, err
 	}
 
-	lines := strings.Split(out.String(), "\n")
-
-	privateKeyLine := strings.Split(lines[0], ":")
-	publicKeyLine := strings.Split(lines[1], ":")
-
-	privateKey := strings.TrimSpace(privateKeyLine[1])
-	publicKey := strings.TrimSpace(publicKeyLine[1])
-
 	keyPair := map[string]interface{}{
-		"privateKey": privateKey,
-		"publicKey":  publicKey,
+		"privateKey": base64.RawURLEncoding.EncodeToString(privateKey),
+		"publicKey":  base64.RawURLEncoding.EncodeToString(publicKey),
 	}
 
 	return keyPair, nil
