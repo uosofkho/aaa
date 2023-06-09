@@ -126,12 +126,9 @@ class RandomUtil {
     }
 
     static randomUUID() {
-        let d = new Date().getTime();
-        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-            let r = (d + Math.random() * 16) % 16 | 0;
-            d = Math.floor(d / 16);
-            return (c === 'x' ? r : (r & 0x7 | 0x8)).toString(16);
-        });
+        return ('10000000-1000-4000-8000-100000000000').replace(/[018]/g, c => (
+            c ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16)
+        );
     }
 
     static randomText(minLen = 6, varLen = 5) {
@@ -146,19 +143,15 @@ class RandomUtil {
 
     static randomShadowsocksPassword() {
         let array = new Uint8Array(32);
-        window.crypto.getRandomValues(array);
+        crypto.getRandomValues(array);
         return btoa(String.fromCharCode.apply(null, array));
     }
 
     static randomShortId() {
-        let shortIds = ['','','',''];
-        for (var ii = 0; ii < 4; ii++) {
-            for (var jj = 0; jj < this.randomInt(8); jj++){
-                let randomNum = this.randomInt(256);
-                shortIds[ii] += ('0' + randomNum.toString(16)).slice(-2)
-            }
-        }
-        return shortIds;
+        const randomBytes = new Uint8Array(8);
+        crypto.getRandomValues(randomBytes);
+        const shortId = Array.from(randomBytes).map(byte => byte.toString(16).padStart(2, '0')).join('');
+        return shortId;
     }
 }
 
