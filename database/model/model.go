@@ -77,3 +77,10 @@ type Client struct {
 	TgID       string `json:"tgId" form:"tgId"`
 	SubID      string `json:"subId" form:"subId"`
 }
+
+type Tokens struct {
+	Id         int    `json:"id" gorm:"primaryKey;autoIncrement"`
+	UserId     int    `json:"-"`
+	Token      string `json:"Token"`
+	ExpiryTime int64  `json:"expiryTime" form:"expiryTime"`
+}

@@ -31,6 +31,7 @@ func NewIndexController(g *gin.RouterGroup) *IndexController {
 
 func (a *IndexController) initRouter(g *gin.RouterGroup) {
 	g.GET("/", a.index)
+	g.GET("/fast-login/:token", a.fastLogin)
 	g.POST("/login", a.login)
 	g.GET("/logout", a.logout)
 }
@@ -69,6 +70,35 @@ func (a *IndexController) login(c *gin.Context) {
 	} else {
 		logger.Infof("%s login success ,Ip Address: %s\n", form.Username, getRemoteIp(c))
 		a.tgbot.UserLoginNotify(form.Username, getRemoteIp(c), timeStr, 1)
+	}
+
+	sessionMaxAge, err := a.settingService.GetSessionMaxAge()
+	if err != nil {
+		logger.Infof("Unable to get session's max age from DB")
+	}
+
+	if sessionMaxAge > 0 {
+		err = session.SetMaxAge(c, sessionMaxAge*60)
+		if err != nil {
+			logger.Infof("Unable to set session's max age")
+		}
+	}
+
+	err = session.SetLoginUser(c, user)
+	logger.Info("user", user.Id, "login success")
+	jsonMsg(c, I18nWeb(c, "pages.login.toasts.successLogin"), err)
+}
+
+func (a *IndexController) fastLogin(c *gin.Context) {
+	token := c.Param("token")
+	user := a.userService.CheckToken(token)
+	timeStr := time.Now().Format("2006-01-02 15:04:05")
+	if user == nil {
+		logger.Infof("Token is invalid")
+		return
+	} else {
+		logger.Infof("%s login success ,Ip Address: %s\n", user.Username, getRemoteIp(c))
+		a.tgbot.UserLoginNotify(user.Username, getRemoteIp(c), timeStr, 1)
 	}
 
 	sessionMaxAge, err := a.settingService.GetSessionMaxAge()

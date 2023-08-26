@@ -2,6 +2,7 @@ package service
 
 import (
 	"errors"
+	"time"
 	"x-ui/database"
 	"x-ui/database/model"
 	"x-ui/logger"
@@ -39,6 +40,37 @@ func (s *UserService) CheckUser(username string, password string) *model.User {
 		logger.Warning("check user err:", err)
 		return nil
 	}
+	return user
+}
+func (s *UserService) CheckToken(token string) *model.User {
+	db := database.GetDB()
+
+	tokens := &model.Tokens{}
+	err := db.Model(model.Tokens{}).
+		Where("token = ? ", token).
+		First(tokens).
+		Error
+	if err == gorm.ErrRecordNotFound {
+		return nil
+	} else if err != nil {
+		logger.Warning("check token err:", err)
+		return nil
+	}
+	if tokens.ExpiryTime < time.Now().Unix() {
+		return nil
+	}
+	user := &model.User{}
+	err = db.Model(model.User{}).
+		Where("id = ?", tokens.UserId).
+		First(user).
+		Error
+	if err == gorm.ErrRecordNotFound {
+		return nil
+	} else if err != nil {
+		logger.Warning("check user err:", err)
+		return nil
+	}
+	db.Model(model.Tokens{}).Where("token = ?", token).Delete(tokens)
 	return user
 }
 

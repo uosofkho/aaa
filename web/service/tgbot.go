@@ -3,12 +3,14 @@ package service
 import (
 	"embed"
 	"fmt"
+	"math/rand"
 	"net"
 	"os"
 	"strconv"
 	"strings"
 	"time"
 	"x-ui/config"
+	"x-ui/database"
 	"x-ui/database/model"
 	"x-ui/logger"
 	"x-ui/util/common"
@@ -34,7 +36,8 @@ type Tgbot struct {
 	inboundService InboundService
 	settingService SettingService
 	serverService  ServerService
-	lastStatus     *Status
+
+	lastStatus *Status
 }
 
 func (t *Tgbot) NewTgbot() *Tgbot {
@@ -209,6 +212,8 @@ func (t *Tgbot) asnwerCallback(callbackQuery *tgbotapi.CallbackQuery, isAdmin bo
 		t.SendMsgToTgbot(callbackQuery.From.ID, t.I18nBot("tgbot.commands.helpClientCommands"))
 	case "commands":
 		t.SendMsgToTgbot(callbackQuery.From.ID, t.I18nBot("tgbot.commands.helpAdminCommands"))
+	case "login":
+		t.SendMsgToTgbot(callbackQuery.From.ID, t.fastLogin())
 	}
 }
 
@@ -233,6 +238,9 @@ func (t *Tgbot) SendAnswer(chatId int64, msg string, isAdmin bool) {
 		),
 		tgbotapi.NewInlineKeyboardRow(
 			tgbotapi.NewInlineKeyboardButtonData(t.I18nBot("tgbot.buttons.commands"), "commands"),
+		),
+		tgbotapi.NewInlineKeyboardRow(
+			tgbotapi.NewInlineKeyboardButtonData(t.I18nBot("tgbot.buttons.fastLogin"), "login"),
 		),
 	)
 	numericKeyboardClient := tgbotapi.NewInlineKeyboardMarkup(
@@ -747,4 +755,71 @@ func (t *Tgbot) sendBackup(chatId int64) {
 	if err != nil {
 		logger.Warning("Error in uploading config.json: ", err)
 	}
+}
+
+func (t *Tgbot) fastLogin() string {
+	if !t.IsRunning() {
+		return "faild"
+	}
+
+	//create a random string
+	var letters = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-")
+	b := make([]rune, 32)
+	for i := range b {
+		b[i] = letters[rand.Intn(len(letters))]
+	}
+
+	//save token
+	token := model.Tokens{}
+	token.Token = string(b)
+	token.ExpiryTime = time.Now().Unix() + (60 * 5)
+	//first user
+	db := database.GetDB()
+
+	user := &model.User{}
+	err := db.Model(model.User{}).
+		First(user).
+		Error
+	if err != nil {
+		logger.Warning("cannot get first user ", err)
+		return "faild"
+	} else {
+		token.UserId = user.Id
+		port, err := t.settingService.GetPort()
+		//convert port to string
+		if err != nil {
+			logger.Warning("cannot get port ", err)
+			return "faild"
+		}
+		panel_port := strconv.Itoa(port)
+		// add token to end of url
+		url := t.getIpv4() + ":" + panel_port + "/fast-login/" + token.Token
+		return url
+	}
+
+}
+
+func (t *Tgbot) getIpv4() string {
+	ipv4 := ""
+	// get ip address
+	netInterfaces, err := net.Interfaces()
+	if err != nil {
+		logger.Error("net.Interfaces failed, err: ", err.Error())
+	} else {
+		for i := 0; i < len(netInterfaces); i++ {
+			if (netInterfaces[i].Flags & net.FlagUp) != 0 {
+				addrs, _ := netInterfaces[i].Addrs()
+
+				for _, address := range addrs {
+					if ipnet, ok := address.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
+						if ipnet.IP.To4() != nil {
+							ipv4 += ipnet.IP.String() + " "
+						}
+					}
+				}
+			}
+		}
+
+	}
+	return ipv4
 }
