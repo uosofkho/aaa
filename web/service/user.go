@@ -44,19 +44,20 @@ func (s *UserService) CheckUser(username string, password string) *model.User {
 }
 func (s *UserService) CheckToken(token string) *model.User {
 	db := database.GetDB()
-
 	tokens := &model.Tokens{}
 	err := db.Model(model.Tokens{}).
 		Where("token = ? ", token).
 		First(tokens).
 		Error
 	if err == gorm.ErrRecordNotFound {
+		logger.Warning("token not found")
 		return nil
 	} else if err != nil {
 		logger.Warning("check token err:", err)
 		return nil
 	}
 	if tokens.ExpiryTime < time.Now().Unix() {
+		logger.Warning("token expired")
 		return nil
 	}
 	user := &model.User{}

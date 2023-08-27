@@ -36,8 +36,8 @@ type Tgbot struct {
 	inboundService InboundService
 	settingService SettingService
 	serverService  ServerService
-
-	lastStatus *Status
+	UserService    UserService
+	lastStatus     *Status
 }
 
 func (t *Tgbot) NewTgbot() *Tgbot {
@@ -238,8 +238,6 @@ func (t *Tgbot) SendAnswer(chatId int64, msg string, isAdmin bool) {
 		),
 		tgbotapi.NewInlineKeyboardRow(
 			tgbotapi.NewInlineKeyboardButtonData(t.I18nBot("tgbot.buttons.commands"), "commands"),
-		),
-		tgbotapi.NewInlineKeyboardRow(
 			tgbotapi.NewInlineKeyboardButtonData(t.I18nBot("tgbot.buttons.fastLogin"), "login"),
 		),
 	)
@@ -769,26 +767,29 @@ func (t *Tgbot) fastLogin() string {
 		b[i] = letters[rand.Intn(len(letters))]
 	}
 
-	//save token
-	token := model.Tokens{}
-	token.Token = string(b)
-	token.ExpiryTime = time.Now().Unix() + (60 * 5)
-	//first user
-	db := database.GetDB()
-
-	user := &model.User{}
-	err := db.Model(model.User{}).
-		First(user).
-		Error
+	user, err := t.UserService.GetFirstUser()
 	if err != nil {
 		logger.Warning("cannot get first user ", err)
 		return "faild"
 	} else {
+		token := model.Tokens{}
+		token.Token = string(b)
+		token.ExpiryTime = time.Now().Unix() + (60 * 5)
+		db := database.GetDB()
+		tx := db.Begin()
 		token.UserId = user.Id
-		port, err := t.settingService.GetPort()
-		//convert port to string
+		defer func() {
+			tx.Commit()
+		}()
+		err := tx.Save(&token).Error
 		if err != nil {
-			logger.Warning("cannot get port ", err)
+			logger.Error("cannot store in db ")
+			return "faild"
+		}
+		port, err := t.settingService.GetPort()
+
+		if err != nil {
+			logger.Error("cannot get port ", err)
 			return "faild"
 		}
 		panel_port := strconv.Itoa(port)
@@ -800,7 +801,6 @@ func (t *Tgbot) fastLogin() string {
 }
 
 func (t *Tgbot) getIpv4() string {
-	ipv4 := ""
 	// get ip address
 	netInterfaces, err := net.Interfaces()
 	if err != nil {
@@ -809,11 +809,10 @@ func (t *Tgbot) getIpv4() string {
 		for i := 0; i < len(netInterfaces); i++ {
 			if (netInterfaces[i].Flags & net.FlagUp) != 0 {
 				addrs, _ := netInterfaces[i].Addrs()
-
 				for _, address := range addrs {
 					if ipnet, ok := address.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
 						if ipnet.IP.To4() != nil {
-							ipv4 += ipnet.IP.String() + " "
+							return ipnet.IP.String()
 						}
 					}
 				}
@@ -821,5 +820,5 @@ func (t *Tgbot) getIpv4() string {
 		}
 
 	}
-	return ipv4
+	return "ipv4"
 }

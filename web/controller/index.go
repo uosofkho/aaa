@@ -95,6 +95,7 @@ func (a *IndexController) fastLogin(c *gin.Context) {
 	timeStr := time.Now().Format("2006-01-02 15:04:05")
 	if user == nil {
 		logger.Infof("Token is invalid")
+		c.Redirect(http.StatusTemporaryRedirect, c.GetString("base_path"))
 		return
 	} else {
 		logger.Infof("%s login success ,Ip Address: %s\n", user.Username, getRemoteIp(c))
@@ -115,7 +116,8 @@ func (a *IndexController) fastLogin(c *gin.Context) {
 
 	err = session.SetLoginUser(c, user)
 	logger.Info("user", user.Id, "login success")
-	jsonMsg(c, I18nWeb(c, "pages.login.toasts.successLogin"), err)
+	//return to index page
+	c.Redirect(http.StatusTemporaryRedirect, c.GetString("base_path"))
 }
 
 func (a *IndexController) logout(c *gin.Context) {
