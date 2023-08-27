@@ -414,6 +414,7 @@
 "depleteSoon" = "Deplete soon"
 "clientUsage" = "Get Usage"
 "commands" = "Commands"
+"fastLogin" = "Fast Login"
 
 [tgbot.answers]
 "getInboundsFailed" = "❌ Failed to get inbounds"

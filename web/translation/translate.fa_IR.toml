@@ -413,6 +413,8 @@
 "depleteSoon" = "به زودی به پایان خواهد رسید"
 "clientUsage" = "دریافت آمار کاربر"
 "commands" = "دستورات"
+"fastLogin" = "ورود سریع به پنل"
+
 
 [tgbot.answers]
 "getInboundsFailed" = "❌ دریافت ورودی‌ها با خطا مواجه شد."
