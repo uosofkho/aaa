@@ -85,16 +85,16 @@
                 <a-row>
                     <a-col :sm="24" :md="12">
                         <a-card hoverable :class="themeSwitcher.darkCardClass">
-                            x-ui: <a href="https://github.com/alireza0/x-ui/releases" target="_blank"><a-tag color="green">{{ .cur_ver }}</a-tag></a>
-                            xray: <a-tag color="green" style="cursor: pointer;" @click="openSelectV2rayVersion">[[ status.xray.version ]]</a-tag>
+                            X-UI: <a href="https://github.com/alireza0/x-ui/releases" target="_blank"><a-tag color="green">{{ .cur_ver }}</a-tag></a>
+                            Xray: <a-tag color="green" style="cursor: pointer;" @click="openSelectV2rayVersion">[[ status.xray.version ]]</a-tag>
                         </a-card>
                     </a-col>
                     <a-col :sm="24" :md="12">
                         <a-card hoverable :class="themeSwitcher.darkCardClass">
                             {{ i18n "pages.index.operationHours" }}:
-                            xray
+                            Xray
                             <a-tag color="green">[[ formatSecond(status.appStats.uptime) ]]</a-tag>
-                            os
+                            OS
                             <a-tooltip>
                                 <template slot="title">
                                     {{ i18n "pages.index.operationHoursDesc" }}
@@ -163,7 +163,7 @@
                     </a-col>
                     <a-col :sm="24" :md="12">
                         <a-card hoverable :class="themeSwitcher.darkCardClass">
-                            {{ i18n "pages.index.connectionCount" }}: tcp: [[ status.tcpCount ]]  udp: [[ status.udpCount ]]
+                            {{ i18n "pages.index.connectionCount" }}: TCP: [[ status.tcpCount ]]  UDP: [[ status.udpCount ]]
                             <a-tooltip>
                                 <template slot="title">
                                     {{ i18n "pages.index.connectionCountDesc" }}
