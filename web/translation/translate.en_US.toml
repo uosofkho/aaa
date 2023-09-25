@@ -160,8 +160,8 @@
 "email" = "Email"
 "emailDesc" = "Please provide a unique email address."
 "setDefaultCert" = "Set cert from panel"
-"telegramDesc" = "use Telegram ID without @ or chat IDs ( you can get it here @userinfobot or use '/id' command in bot )"
-"subscriptionDesc" = "you can find your sub link on Details, also you can use the same name for several configurations"
+"telegramDesc" = "Use Telegram ID without @ or chat IDs ( you can get it here @userinfobot or use '/id' command in bot )"
+"subscriptionDesc" = "You can find your sub link on Details, also you can use the same name for several configurations"
 
 [pages.client]
 "add" = "Add Client"
