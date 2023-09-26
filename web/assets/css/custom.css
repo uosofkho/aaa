@@ -190,7 +190,7 @@ body {
     min-width: 30px;
 }
 
-.ant-tabs:not(.ant-card-dark) {
+.ant-tabs {
     background-color: white;
 }
 
