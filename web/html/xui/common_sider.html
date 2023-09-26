@@ -34,7 +34,6 @@
 <a-drawer id="sider-drawer" placement="left" :closable="false"
           @close="siderDrawer.close()"
           :visible="siderDrawer.visible"
-          :wrap-class-name="themeSwitcher.darkDrawerClass"
           :wrap-style="{ padding: 0 }">
     <div class="drawer-handle" @click="siderDrawer.change()" slot="handle">
         <a-icon :type="siderDrawer.visible ? 'close' : 'menu-fold'"></a-icon>
