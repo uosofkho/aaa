@@ -16,10 +16,10 @@
     }
 </style>
 
-<body>
+<body :class="themeSwitcher.theme">
 <a-layout id="app" v-cloak>
     {{ template "commonSider" . }}
-    <a-layout id="content-layout" :style="themeSwitcher.bgStyle">
+    <a-layout id="content-layout">
         <a-layout-content>
             <a-spin :spinning="spinning" :delay="500" tip="loading">
                 <transition name="list" appear>
@@ -32,7 +32,7 @@
                     </a-alert>
                 </transition>
                 <transition name="list" appear>
-                    <a-card hoverable style="margin-bottom: 20px;" :class="themeSwitcher.darkCardClass">
+                    <a-card hoverable style="margin-bottom: 20px;">
                         <a-row>
                             <a-col :xs="24" :sm="24" :lg="12">
                                 {{ i18n "pages.inbounds.totalDownUp" }}:
@@ -49,25 +49,25 @@
                             <a-col :xs="24" :sm="24" :lg="12">
                                 {{ i18n "clients" }}:
                                 <a-tag color="green">[[ total.clients ]]</a-tag>
-                                <a-popover title='{{ i18n "disabled" }}' :overlay-class-name="themeSwitcher.darkClass">
+                                <a-popover title='{{ i18n "disabled" }}'>
                                     <template slot="content">
                                         <p v-for="clientEmail in total.deactive">[[ clientEmail ]]</p>
                                     </template>
                                     <a-tag v-if="total.deactive.length">[[ total.deactive.length ]]</a-tag>
                                 </a-popover>
-                                <a-popover title='{{ i18n "depleted" }}' :overlay-class-name="themeSwitcher.darkClass">
+                                <a-popover title='{{ i18n "depleted" }}'>
                                     <template slot="content">
                                         <p v-for="clientEmail in total.depleted">[[ clientEmail ]]</p>
                                     </template>
                                     <a-tag color="red" v-if="total.depleted.length">[[ total.depleted.length ]]</a-tag>
                                 </a-popover>
-                                <a-popover title='{{ i18n "depletingSoon" }}' :overlay-class-name="themeSwitcher.darkClass">
+                                <a-popover title='{{ i18n "depletingSoon" }}'>
                                     <template slot="content">
                                         <p v-for="clientEmail in total.expiring">[[ clientEmail ]]</p>
                                     </template>
                                     <a-tag color="orange" v-if="total.expiring.length">[[ total.expiring.length ]]</a-tag>
                                 </a-popover>
-                                <a-popover title='onlines' :overlay-class-name="themeSwitcher.darkClass">
+                                <a-popover title='onlines'>
                                     <template slot="content">
                                         <p v-for="clientEmail in onlineClients">[[ clientEmail ]]</p>
                                     </template>
@@ -78,7 +78,7 @@
                     </a-card>
                 </transition>
                 <transition name="list" appear>
-                    <a-card hoverable :class="themeSwitcher.darkCardClass">
+                    <a-card hoverable>
                         <div slot="title">
                             <a-row>
                                 <a-col :xs="12" :sm="12" :lg="12">
@@ -89,7 +89,7 @@
                                         <a-button type="primary" icon="menu">
                                             <template v-if="!isMobile">{{ i18n "pages.inbounds.generalActions" }}</template>
                                         </a-button>
-                                        <a-menu slot="overlay" @click="a => generalActions(a)" :theme="themeSwitcher.currentTheme">
+                                        <a-menu slot="overlay" @click="a => generalActions(a)">
                                             <a-menu-item key="export">
                                                 <a-icon type="export"></a-icon>
                                                 {{ i18n "pages.inbounds.export" }}
@@ -112,8 +112,7 @@
                                 <a-col :xs="12" :sm="12" :lg="12" style="text-align: right;">
                                     <a-select v-model="refreshInterval"
                                               v-if="isRefreshEnabled"
-                                              @change="changeRefreshInterval"
-                                              :dropdown-class-name="themeSwitcher.darkCardClass">
+                                              @change="changeRefreshInterval">
                                         <a-select-option v-for="key in [5,10,30,60]" :value="key*1000">[[ key ]]s</a-select-option>
                                     </a-select>
                                     <a-icon type="sync" :spin="refreshing" @click="manualRefresh" style="margin: 0 5px;"></a-icon>
@@ -146,7 +145,7 @@
                             <template slot="action" slot-scope="text, dbInbound">
                                 <a-dropdown :trigger="['click']">
                                     <a-icon @click="e => e.preventDefault()" type="more" style="font-size: 20px; text-decoration: solid;"></a-icon>
-                                    <a-menu slot="overlay" @click="a => clickAction(a, dbInbound)" :theme="themeSwitcher.currentTheme">
+                                    <a-menu slot="overlay" @click="a => clickAction(a, dbInbound)">
                                         <a-menu-item key="edit">
                                             <a-icon type="edit"></a-icon>
                                             {{ i18n "edit" }}
@@ -208,19 +207,19 @@
                             <template slot="clients" slot-scope="text, dbInbound">
                                 <template v-if="clientCount[dbInbound.id]">
                                     <a-tag style="margin:0;" color="green">[[ clientCount[dbInbound.id].clients ]]</a-tag>
-                                    <a-popover title='{{ i18n "disabled" }}' :overlay-class-name="themeSwitcher.darkClass">
+                                    <a-popover title='{{ i18n "disabled" }}'>
                                         <template slot="content">
                                             <p v-for="clientEmail in clientCount[dbInbound.id].deactive">[[ clientEmail ]]</p>
                                         </template>
                                         <a-tag style="margin:0; padding: 0 2px;" v-if="clientCount[dbInbound.id].deactive.length">[[ clientCount[dbInbound.id].deactive.length ]]</a-tag>
                                     </a-popover>
-                                    <a-popover title='{{ i18n "depleted" }}' :overlay-class-name="themeSwitcher.darkClass">
+                                    <a-popover title='{{ i18n "depleted" }}'>
                                         <template slot="content">
                                             <p v-for="clientEmail in clientCount[dbInbound.id].depleted">[[ clientEmail ]]</p>
                                         </template>
                                         <a-tag style="margin:0; padding: 0 2px;" color="red" v-if="clientCount[dbInbound.id].depleted.length">[[ clientCount[dbInbound.id].depleted.length ]]</a-tag>
                                     </a-popover>
-                                    <a-popover title='{{ i18n "depletingSoon" }}' :overlay-class-name="themeSwitcher.darkClass">
+                                    <a-popover title='{{ i18n "depletingSoon" }}'>
                                         <template slot="content">
                                             <p v-for="clientEmail in clientCount[dbInbound.id].expiring">[[ clientEmail ]]</p>
                                         </template>
@@ -229,7 +228,7 @@
                                 </template>
                             </template>
                             <template slot="traffic" slot-scope="text, dbInbound">
-                                <a-popover :overlay-class-name="themeSwitcher.darkClass">
+                                <a-popover>
                                     <template slot="content">
                                         <table cellpadding="2" width="100%">
                                             <tr>
@@ -266,7 +265,7 @@
                                 <a-tag v-else color="green">{{ i18n "indefinite" }}</a-tag>
                             </template>
                             <template slot="info" slot-scope="text, dbInbound">
-                                <a-popover placement="bottomRight" :overlay-class-name="themeSwitcher.darkClass">
+                                <a-popover placement="bottomRight">
                                     <template slot="content">
                                         <table cellpadding="2">
                                             <tr>
@@ -288,19 +287,19 @@
                                                 <td>{{ i18n "clients" }}</td>
                                                 <td>
                                                     <a-tag style="margin:0;" color="green">[[ clientCount[dbInbound.id].clients ]]</a-tag>
-                                                    <a-popover title='{{ i18n "disabled" }}' :overlay-class-name="themeSwitcher.darkClass">
+                                                    <a-popover title='{{ i18n "disabled" }}'>
                                                         <template slot="content">
                                                             <p v-for="clientEmail in clientCount[dbInbound.id].deactive">[[ clientEmail ]]</p>
                                                         </template>
                                                         <a-tag style="margin:0; padding: 0 2px;" v-if="clientCount[dbInbound.id].deactive.length">[[ clientCount[dbInbound.id].deactive.length ]]</a-tag>
                                                     </a-popover>
-                                                    <a-popover title='{{ i18n "depleted" }}' :overlay-class-name="themeSwitcher.darkClass">
+                                                    <a-popover title='{{ i18n "depleted" }}'>
                                                         <template slot="content">
                                                             <p v-for="clientEmail in clientCount[dbInbound.id].depleted">[[ clientEmail ]]</p>
                                                         </template>
                                                         <a-tag style="margin:0; padding: 0 2px;" color="red" v-if="clientCount[dbInbound.id].depleted.length">[[ clientCount[dbInbound.id].depleted.length ]]</a-tag>
                                                     </a-popover>
-                                                    <a-popover title='{{ i18n "depletingSoon" }}' :overlay-class-name="themeSwitcher.darkClass">
+                                                    <a-popover title='{{ i18n "depletingSoon" }}'>
                                                         <template slot="content">
                                                             <p v-for="clientEmail in clientCount[dbInbound.id].expiring">[[ clientEmail ]]</p>
                                                         </template>
@@ -311,7 +310,7 @@
                                             <tr>
                                                 <td>{{ i18n "pages.inbounds.traffic" }}</td>
                                                 <td>
-                                                    <a-popover :overlay-class-name="themeSwitcher.darkClass">
+                                                    <a-popover>
                                                         <template slot="content">
                                                             <table cellpadding="2" width="100%">
                                                                 <tr>
@@ -872,7 +871,6 @@
                 this.$confirm({
                     title: '{{ i18n "pages.inbounds.resetTraffic"}}',
                     content: '{{ i18n "pages.inbounds.resetTrafficContent"}}',
-                    class: themeSwitcher.darkCardClass,
                     okText: '{{ i18n "reset"}}',
                     cancelText: '{{ i18n "cancel"}}',
                     onOk: () => {
@@ -887,7 +885,6 @@
                 this.$confirm({
                     title: '{{ i18n "pages.inbounds.deleteInbound"}}',
                     content: '{{ i18n "pages.inbounds.deleteInboundContent"}}',
-                    class: themeSwitcher.darkCardClass,
                     okText: '{{ i18n "delete"}}',
                     cancelText: '{{ i18n "cancel"}}',
                     onOk: () => this.submit('/xui/inbound/del/' + dbInboundId),
@@ -899,7 +896,6 @@
                 this.$confirm({
                     title: '{{ i18n "pages.inbounds.deleteInbound"}}',
                     content: '{{ i18n "pages.inbounds.deleteInboundContent"}}',
-                    class: themeSwitcher.darkCardClass,
                     okText: '{{ i18n "delete"}}',
                     cancelText: '{{ i18n "cancel"}}',
                     onOk: () => this.submit(`/xui/inbound/${dbInboundId}/delClient/${clientId}`),
@@ -992,7 +988,6 @@
                 this.$confirm({
                     title: '{{ i18n "pages.inbounds.resetTraffic"}}',
                     content: '{{ i18n "pages.inbounds.resetTrafficContent"}}',
-                    class: themeSwitcher.darkCardClass,
                     okText: '{{ i18n "reset"}}',
                     cancelText: '{{ i18n "cancel"}}',
                     onOk: () => this.submit('/xui/inbound/' + dbInboundId + '/resetClientTraffic/' + client.email),
@@ -1002,7 +997,6 @@
                 this.$confirm({
                     title: '{{ i18n "pages.inbounds.resetAllTrafficTitle"}}',
                     content: '{{ i18n "pages.inbounds.resetAllTrafficContent"}}',
-                    class: themeSwitcher.darkCardClass,
                     okText: '{{ i18n "reset"}}',
                     cancelText: '{{ i18n "cancel"}}',
                     onOk: () => this.submit('/xui/inbound/resetAllTraffics'),
@@ -1012,7 +1006,6 @@
                 this.$confirm({
                     title: dbInboundId > 0 ? '{{ i18n "pages.inbounds.resetInboundClientTrafficTitle"}}' : '{{ i18n "pages.inbounds.resetAllClientTrafficTitle"}}',
                     content: dbInboundId > 0 ? '{{ i18n "pages.inbounds.resetInboundClientTrafficContent"}}' : '{{ i18n "pages.inbounds.resetAllClientTrafficContent"}}',
-                    class: themeSwitcher.darkCardClass,
                     okText: '{{ i18n "reset"}}',
                     cancelText: '{{ i18n "cancel"}}',
                     onOk: () => this.submit('/xui/inbound/resetAllClientTraffics/' + dbInboundId),
@@ -1022,7 +1015,6 @@
                 this.$confirm({
                     title: '{{ i18n "pages.inbounds.delDepletedClientsTitle"}}',
                     content: '{{ i18n "pages.inbounds.delDepletedClientsContent"}}',
-                    class: themeSwitcher.darkCardClass,
                     okText: '{{ i18n "reset"}}',
                     cancelText: '{{ i18n "cancel"}}',
                     onOk: () => this.submit('/xui/inbound/delDepletedClients/' + dbInboundId),

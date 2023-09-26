@@ -44,7 +44,7 @@
     [[ client.email ]]
 </template>                                    
 <template slot="traffic" slot-scope="text, client">
-    <a-popover :overlay-class-name="themeSwitcher.darkClass">
+    <a-popover>
         <template slot="content" v-if="client.email">
             <table cellpadding="2" width="100%">
                 <tr>
@@ -86,7 +86,7 @@
     </a-popover>
 </template>                                    
 <template slot="expiryTime" slot-scope="text, client, index">                 
-    <a-popover :overlay-class-name="themeSwitcher.darkClass" v-if="client.expiryTime != 0">
+    <a-popover v-if="client.expiryTime != 0">
         <template slot="content" v-if="client.expiryTime > 0">
             [[ DateUtil.formatMillis(client._expiryTime) ]]
         </template>
@@ -97,7 +97,7 @@
 <template slot="actionMenu" slot-scope="text, client, index">
     <a-dropdown :trigger="['click']">
         <a-icon @click="e => e.preventDefault()" type="ellipsis" style="font-size: 20px;"></a-icon>
-        <a-menu slot="overlay" :theme="themeSwitcher.currentTheme">
+        <a-menu slot="overlay">
             <a-menu-item v-if="record.hasLink()" @click="showQrcode(record.id,client);">
                 <a-icon style="font-size: 14px;" type="qrcode"></a-icon>
                 {{ i18n "qrCode" }}
@@ -127,7 +127,7 @@
     </a-dropdown>
 </template>
 <template slot="info" slot-scope="text, client, index">
-    <a-popover placement="bottomRight" :overlay-class-name="themeSwitcher.darkClass">
+    <a-popover placement="bottomRight">
         <template slot="content">
             <table>
                 <tr>
@@ -138,7 +138,7 @@
                         [[ sizeFormat(getUpStats(record, client.email) + getDownStats(record, client.email)) ]]
                     </td>
                     <td width="120px" v-if="client.totalGB > 0">
-                        <a-popover :overlay-class-name="themeSwitcher.darkClass">
+                        <a-popover>
                             <template slot="content" v-if="client.email">
                                 <table cellpadding="2" width="100%">
                                     <tr>
@@ -179,7 +179,7 @@
                 </tr>
                 <tr>
                     <td colspan="3" style="text-align: center;">
-                        <a-popover :overlay-class-name="themeSwitcher.darkClass" v-if="client.expiryTime != 0">
+                        <a-popover v-if="client.expiryTime != 0">
                             <template slot="content" v-if="client.expiryTime > 0">
                                 [[ DateUtil.formatMillis(client._expiryTime) ]]
                             </template>

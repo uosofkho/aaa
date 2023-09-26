@@ -45,12 +45,12 @@
 
 </style>
 <body>
-<a-layout id="app" v-cloak :class="themeSwitcher.darkCardClass">
+<a-layout id="app" v-cloak>
     <transition name="list" appear>
         <a-layout-content>
             <a-row type="flex" justify="center">
                 <a-col :xs="22" :sm="20" :md="16" :lg="12" :xl="8">
-                    <h1 class="title" :style="themeSwitcher.textStyle">{{ i18n "pages.login.title" }}</h1>
+                    <h1 class="title">{{ i18n "pages.login.title" }}</h1>
                 </a-col>
             </a-row>
             <a-row type="flex" justify="center">
@@ -59,7 +59,7 @@
                         <a-form-item>
                             <a-input v-model.trim="user.username" placeholder='{{ i18n "username" }}'
                                      @keydown.enter.native="login" autofocus>
-                                <a-icon slot="prefix" type="user" :style="'font-size: 16px;' + themeSwitcher.textStyle"/>
+                                <a-icon slot="prefix" type="user" style="font-size: 16px;"/>
                             </a-input>
                         </a-form-item>
                         <a-form-item>
@@ -78,7 +78,7 @@
                         <a-form-item>
                             <a-row justify="center" class="centered">
                                 <a-col :span="12">
-                                    <a-select ref="selectLang" v-model="lang" @change="setLang(lang)" :dropdown-class-name="themeSwitcher.darkCardClass">
+                                    <a-select ref="selectLang" v-model="lang" @change="setLang(lang)">
                                         <a-select-option :value="l.value" label="English" v-for="l in supportLangs">
                                             <span role="img" aria-label="l.name" v-text="l.icon"></span>
                                             &nbsp;&nbsp;<span v-text="l.name"></span>
