@@ -14,6 +14,15 @@
     tr.hideExpandIcon .ant-table-row-expand-icon {
         display: none;
     }
+    .infinite-tag {
+        padding: 0 5px;
+        border-radius: 2rem;
+        min-width: 50px;
+    }
+    .infinite-bar .ant-progress-inner {
+        background-color: #F2EAF1;
+        border: #D5BED2 solid 1px;
+    }
 </style>
 
 <body :class="themeSwitcher.theme">
@@ -32,23 +41,23 @@
                     </a-alert>
                 </transition>
                 <transition name="list" appear>
-                    <a-card hoverable style="margin-bottom: 20px;">
+                    <a-card hoverable>
                         <a-row>
                             <a-col :xs="24" :sm="24" :lg="12">
                                 {{ i18n "pages.inbounds.totalDownUp" }}:
-                                <a-tag color="green">[[ sizeFormat(total.up) ]] / [[ sizeFormat(total.down) ]]</a-tag>
+                                <a-tag color="blue">[[ sizeFormat(total.up) ]] / [[ sizeFormat(total.down) ]]</a-tag>
                             </a-col>
                             <a-col :xs="24" :sm="24" :lg="12">
                                 {{ i18n "pages.inbounds.totalUsage" }}:
-                                <a-tag color="green">[[ sizeFormat(total.up + total.down) ]]</a-tag>
+                                <a-tag color="blue">[[ sizeFormat(total.up + total.down) ]]</a-tag>
                             </a-col>
                             <a-col :xs="24" :sm="24" :lg="12">
                                 {{ i18n "pages.inbounds.inboundCount" }}:
-                                <a-tag color="green">[[ dbInbounds.length ]]</a-tag>
+                                <a-tag color="blue">[[ dbInbounds.length ]]</a-tag>
                             </a-col>
                             <a-col :xs="24" :sm="24" :lg="12">
                                 {{ i18n "clients" }}:
-                                <a-tag color="green">[[ total.clients ]]</a-tag>
+                                <a-tag color="blue">[[ total.clients ]]</a-tag>
                                 <a-popover title='{{ i18n "disabled" }}'>
                                     <template slot="content">
                                         <p v-for="clientEmail in total.deactive">[[ clientEmail ]]</p>
@@ -67,11 +76,11 @@
                                     </template>
                                     <a-tag color="orange" v-if="total.expiring.length">[[ total.expiring.length ]]</a-tag>
                                 </a-popover>
-                                <a-popover title='onlines'>
+                                <a-popover title='{{ i18n "online" }}'>
                                     <template slot="content">
                                         <p v-for="clientEmail in onlineClients">[[ clientEmail ]]</p>
                                     </template>
-                                    <a-tag color="blue" v-if="onlineClients.length">[[ onlineClients.length ]]</a-tag>
+                                    <a-tag color="green" v-if="onlineClients.length">[[ onlineClients.length ]]</a-tag>
                                 </a-popover>
                             </a-col>
                         </a-row>
@@ -130,6 +139,7 @@
                             <a-radio-button value="deactive">{{ i18n "disabled" }}</a-radio-button>
                             <a-radio-button value="depleted">{{ i18n "depleted" }}</a-radio-button>
                             <a-radio-button value="expiring">{{ i18n "depletingSoon" }}</a-radio-button>
+                            <a-radio-button value="online">{{ i18n "online" }}</a-radio-button>
                         </a-radio-group>
                         <a-table :columns="isMobile ? mobileColums : columns" :row-key="dbInbound => dbInbound.id"
                                  :data-source="searchedInbounds"
@@ -154,7 +164,7 @@
                                             <a-icon type="qrcode"></a-icon>
                                             {{ i18n "qrCode" }}
                                         </a-menu-item>
-                                        <template v-if="dbInbound.isMultiUser">
+                                        <template v-if="dbInbound.isMultiUser()">
                                             <a-menu-item key="addClient">
                                                 <a-icon type="user-add"></a-icon>
                                                 {{ i18n "pages.client.add"}}
@@ -197,16 +207,16 @@
                                 </a-dropdown>
                             </template>
                             <template slot="protocol" slot-scope="text, dbInbound">
-                                <a-tag style="margin:0;" color="blue">[[ dbInbound.protocol ]]</a-tag>
+                                <a-tag style="margin:0;" color="purple">[[ dbInbound.protocol ]]</a-tag>
                                 <template v-if="dbInbound.isVMess || dbInbound.isVLess || dbInbound.isTrojan || dbInbound.isSS">
-                                    <a-tag style="margin:0;" color="green">[[ dbInbound.toInbound().stream.network ]]</a-tag>
-                                    <a-tag style="margin:0;" v-if="dbInbound.toInbound().stream.isTls" color="cyan">tls</a-tag>
-                                    <a-tag style="margin:0;" v-if="dbInbound.toInbound().stream.isReality" color="cyan">reality</a-tag>
+                                    <a-tag style="margin:0;" color="blue">[[ dbInbound.toInbound().stream.network ]]</a-tag>
+                                    <a-tag style="margin:0;" v-if="dbInbound.toInbound().stream.isTls" color="green">tls</a-tag>
+                                    <a-tag style="margin:0;" v-if="dbInbound.toInbound().stream.isReality" color="green">reality</a-tag>
                                 </template>
                             </template>
                             <template slot="clients" slot-scope="text, dbInbound">
                                 <template v-if="clientCount[dbInbound.id]">
-                                    <a-tag style="margin:0;" color="green">[[ clientCount[dbInbound.id].clients ]]</a-tag>
+                                    <a-tag style="margin:0;" color="blue">[[ clientCount[dbInbound.id].clients ]]</a-tag>
                                     <a-popover title='{{ i18n "disabled" }}'>
                                         <template slot="content">
                                             <p v-for="clientEmail in clientCount[dbInbound.id].deactive">[[ clientEmail ]]</p>
@@ -241,7 +251,7 @@
                                             </tr>
                                         </table>
                                     </template>
-                                    <a-tag :color="dbInbound.total == 0 ? 'green' : dbInbound.up + dbInbound.down < dbInbound.total ? 'cyan' : 'red'">
+                                    <a-tag :color="usageColor(dbInbound.up + dbInbound.down, app.trafficDiff, dbInbound.total)">
                                         [[ sizeFormat(dbInbound.up + dbInbound.down) ]] /
                                         <template v-if="dbInbound.total > 0">
                                             [[ sizeFormat(dbInbound.total) ]]
@@ -254,15 +264,15 @@
                                 <a-switch v-model="dbInbound.enable" @change="switchEnable(dbInbound.id)"></a-switch>
                             </template>
                             <template slot="expiryTime" slot-scope="text, dbInbound">
-                                <template v-if="dbInbound.expiryTime > 0">
-                                    <a-tag v-if="dbInbound.isExpiry" color="red">
+                                <a-popover v-if="dbInbound.expiryTime > 0">
+                                    <template slot="content">
                                         [[ DateUtil.formatMillis(dbInbound.expiryTime) ]]
+                                    </template>
+                                    <a-tag style="min-width: 50px;" :color="usageColor(new Date().getTime(), app.expireDiff, dbInbound._expiryTime)">
+                                        [[ remainedDays(dbInbound._expiryTime) ]]
                                     </a-tag>
-                                    <a-tag v-else color="blue">
-                                        [[ DateUtil.formatMillis(dbInbound.expiryTime) ]]
-                                    </a-tag>
-                                </template>
-                                <a-tag v-else color="green">{{ i18n "indefinite" }}</a-tag>
+                                </a-popover>
+                                <a-tag v-else color="purple" class="infinite-tag">&infin;</a-tag>
                             </template>
                             <template slot="info" slot-scope="text, dbInbound">
                                 <a-popover placement="bottomRight">
@@ -271,11 +281,11 @@
                                             <tr>
                                                 <td>{{ i18n "pages.inbounds.protocol" }}</td>
                                                 <td>
-                                                    <a-tag style="margin:0;" color="blue">[[ dbInbound.protocol ]]</a-tag>
+                                                    <a-tag style="margin:0;" color="purple">[[ dbInbound.protocol ]]</a-tag>
                                                     <template v-if="dbInbound.isVMess || dbInbound.isVLess || dbInbound.isTrojan || dbInbound.isSS">
-                                                        <a-tag style="margin:0;" color="green">[[ dbInbound.toInbound().stream.network ]]</a-tag>
-                                                        <a-tag style="margin:0;" v-if="dbInbound.toInbound().stream.isTls" color="cyan">tls</a-tag>
-                                                        <a-tag style="margin:0;" v-if="dbInbound.toInbound().stream.isReality" color="cyan">reality</a-tag>
+                                                        <a-tag style="margin:0;" color="blue">[[ dbInbound.toInbound().stream.network ]]</a-tag>
+                                                        <a-tag style="margin:0;" v-if="dbInbound.toInbound().stream.isTls" color="green">tls</a-tag>
+                                                        <a-tag style="margin:0;" v-if="dbInbound.toInbound().stream.isReality" color="green">reality</a-tag>
                                                     </template>                    
                                                 </td>
                                             </tr>
@@ -286,7 +296,7 @@
                                             <tr v-if="clientCount[dbInbound.id]">
                                                 <td>{{ i18n "clients" }}</td>
                                                 <td>
-                                                    <a-tag style="margin:0;" color="green">[[ clientCount[dbInbound.id].clients ]]</a-tag>
+                                                    <a-tag style="margin:0;" color="blue">[[ clientCount[dbInbound.id].clients ]]</a-tag>
                                                     <a-popover title='{{ i18n "disabled" }}'>
                                                         <template slot="content">
                                                             <p v-for="clientEmail in clientCount[dbInbound.id].deactive">[[ clientEmail ]]</p>
@@ -323,7 +333,7 @@
                                                                 </tr>
                                                             </table>
                                                         </template>
-                                                        <a-tag :color="dbInbound.total == 0 ? 'green' : dbInbound.up + dbInbound.down < dbInbound.total ? 'cyan' : 'red'">
+                                                        <a-tag :color="usageColor(dbInbound.up + dbInbound.down, this.trafficDiff)">
                                                             [[ sizeFormat(dbInbound.up + dbInbound.down) ]] /
                                                             <template v-if="dbInbound.total > 0">
                                                                 [[ sizeFormat(dbInbound.total) ]]
@@ -336,20 +346,17 @@
                                             <tr>
                                                 <td>{{ i18n "pages.inbounds.expireDate" }}</td>
                                                 <td>
-                                                    <template v-if="dbInbound.expiryTime > 0">
-                                                        <a-tag v-if="dbInbound.isExpiry" color="red">
-                                                            [[ DateUtil.formatMillis(dbInbound.expiryTime) ]]
-                                                        </a-tag>
-                                                        <a-tag v-else color="blue">
-                                                            [[ DateUtil.formatMillis(dbInbound.expiryTime) ]]
-                                                        </a-tag>
-                                                    </template>
-                                                    <a-tag v-else color="green">{{ i18n "indefinite" }}</a-tag>                    
+                                                    <a-tag style="min-width: 50px; text-align: center;" v-if="dbInbound.expiryTime > 0" :color="dbInbound.isExpiry? 'red': 'blue'">
+                                                        [[ DateUtil.formatMillis(dbInbound.expiryTime) ]]
+                                                    </a-tag>
+                                                    <a-tag v-else style="text-align: center;" color="purple" class="infinite-tag">&infin;</a-tag>                    
                                                 </td>
                                             </tr>
                                         </table>
                                     </template>
-                                    <a-button shape="round" size="small" style="font-size: 10px;">show</a-button>
+                                    <a-button shape="round" size="small" style="font-size: 14px; padding: 0 10px;">
+                                        <a-icon type="info"></a-icon>
+                                    </a-button>
                                 </a-popover>
                             </template>
                             <template slot="expandedRowRender" slot-scope="record">
@@ -377,7 +384,6 @@
         align: 'right',
         dataIndex: "id",
         width: 30,
-        responsive: ["xs"],
     }, {
         title: '{{ i18n "pages.inbounds.operate" }}',
         align: 'center',
@@ -446,7 +452,7 @@
     const innerColumns = [
         { title: '{{ i18n "pages.inbounds.operate" }}', width: 50, scopedSlots: { customRender: 'actions' } },
         { title: '{{ i18n "pages.inbounds.enable" }}', width: 20, scopedSlots: { customRender: 'enable' } },
-        { title: 'Online', width: 20, scopedSlots: { customRender: 'online' } },
+        { title: '{{ i18n "online" }}', width: 20, scopedSlots: { customRender: 'online' } },
         { title: '{{ i18n "pages.inbounds.client" }}', width: 80, scopedSlots: { customRender: 'client' } },
         { title: '{{ i18n "pages.inbounds.traffic" }}', width: 80, align: 'center', scopedSlots: { customRender: 'traffic' } },
         { title: '{{ i18n "pages.inbounds.expireDate" }}', width: 80, align: 'center', scopedSlots: { customRender: 'expiryTime' } },
@@ -503,8 +509,8 @@
                     this.refreshing = false;
                     return;
                 }
+                await this.getOnlineUsers();
                 this.setInbounds(msg.obj);
-                this.getOnlineUsers();
                 setTimeout(() => {
                     this.refreshing = false;
                 }, 500);
@@ -560,7 +566,7 @@
                 }
             },
             getClientCounts(dbInbound, inbound) {
-                let clientCount = 0, active = [], deactive = [], depleted = [], expiring = [];
+                let clientCount = 0, active = [], deactive = [], depleted = [], expiring = [], online = [];
                 clients = this.getClients(dbInbound.protocol, inbound.settings);
                 clientStats = dbInbound.clientStats
                 now = new Date().getTime()
@@ -569,6 +575,7 @@
                     if (dbInbound.enable) {
                         clients.forEach(client => {
                             client.enable ? active.push(client.email) : deactive.push(client.email);
+                            if(this.isClientOnline(client.email)) online.push(client.email);
                         });
                         clientStats.forEach(client => {
                             if (!client.enable) {
@@ -590,6 +597,7 @@
                     deactive: deactive,
                     depleted: depleted,
                     expiring: expiring,
+                    online: online,
                 };
             },
             searchInbounds(key) {
@@ -666,10 +674,10 @@
             clickAction(action, dbInbound) {
                 switch (action.key) {
                     case "qrcode":
-                        this.showQrcode(dbInbound);
+                        this.showQrcode(dbInbound.id);
                         break;
                     case "showInfo":
-                        this.showInfo(dbInbound);
+                        this.showInfo(dbInbound.id);
                         break;
                     case "edit":
                         this.openEditInbound(dbInbound.id);
@@ -946,9 +954,12 @@
             },
             showInfo(dbInboundId, client) {
                 dbInbound = this.dbInbounds.find(row => row.id === dbInboundId);
-                inbound = dbInbound.toInbound();
-                clients = this.getClients(dbInbound.protocol, inbound.settings);
-                index = this.findIndexOfClient(dbInbound.protocol, clients, client);
+                index=0;
+                if (dbInbound.isMultiUser()){
+                    inbound = dbInbound.toInbound();
+                    clients = this.getClients(dbInbound.protocol, inbound.settings);
+                    index = this.findIndexOfClient(dbInbound.protocol, clients, client);
+                }
                 newDbInbound = this.checkFallback(dbInbound);
                 infoModal.show(newDbInbound, index);
             },
@@ -1046,10 +1057,18 @@
                 return remained>0 ? remained : 0;
             },
             statsColor(dbInbound, email) {
-                if (email.length == 0) return 'blue';
+                if (email.length == 0) return '#0e49b5';
                 clientStats = dbInbound.clientStats.find(stats => stats.email === email);
-                if (!clientStats) return 'blue';
-                return usageColor(clientStats.down + clientStats.up, this.trafficDiff, clientStats.total);
+                switch (true) {
+                    case !clientStats:
+                        return "#0e49b5";
+                    case clientStats.up + clientStats.down < clientStats.total - app.trafficDiff:
+                        return "#0e49b5";
+                    case clientStats.up + clientStats.down < clientStats.total:
+                        return "#FFA031";
+                    default:
+                        return "#E04141";
+                }
             },
             statsProgress(dbInbound, email) {
                 if (email.length == 0) return 100;
@@ -1061,24 +1080,24 @@
                 if (expTime == 0) return null;
                 if (expTime < 0) return formatSecond(expTime/-1000);
                 now = new Date().getTime();
-                if (expTime < now) return 0;
+                if (expTime < now) return '{{ i18n "depleted" }}';
                 return formatSecond((expTime-now)/1000);
             },
             statsExpColor(dbInbound, email){
-                if (email.length == 0) return '#722ed1';
+                if (email.length == 0) return '#7a316f';
                 clientStats = dbInbound.clientStats.find(stats => stats.email === email);
-                if (!clientStats) return '#722ed1';
+                if (!clientStats) return '#7a316f';
                 statsColor = usageColor(clientStats.down + clientStats.up, this.trafficDiff, clientStats.total);
                 expColor = usageColor(new Date().getTime(), this.expireDiff, clientStats.expiryTime);
                 switch (true) {
                     case statsColor == "red" || expColor == "red":
-                        return "red";
+                        return "#E04141";
                     case statsColor == "orange" || expColor == "orange":
-                        return "orange";
-                    case statsColor == "cyan" || expColor == "cyan":
-                        return "cyan";
+                        return "#FFA031";
+                    case statsColor == "blue" || expColor == "blue":
+                        return "#0e49b5";
                     default:
-                        return "#722ed1";
+                        return "#7a316f";
                 }
             },
             isClientEnabled(dbInbound, email) {

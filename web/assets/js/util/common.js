@@ -96,15 +96,30 @@ function setCookie(cname, cvalue, exdays) {
 function usageColor(data, threshold, total) {
     switch (true) {
         case data === null:
-            return "blue";
+            return "green";
         case total <= 0:
             return "purple";
         case data < total - threshold:
-            return "cyan";
+            return "blue";
         case data < total:
             return "orange";
         default:
             return "red";
+    }
+}
+
+function usageFilledColor(data, threshold, total) {
+    switch (true) {
+        case data === null:
+            return "#389e0d";
+        case total <= 0:
+            return "#7a316f";
+        case data < total - threshold:
+            return "#0e49b5";
+        case data < total:
+            return "#ffa031";
+        default:
+            return "#e04141";
     }
 }
 

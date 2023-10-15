@@ -89,7 +89,12 @@
                         </a-form-item>
                         <a-form-item>
                             <a-row justify="center" class="centered">
-                                <theme-switch />
+                                <a-col>
+                                    <a-icon type="bulb" :theme="themeSwitcher.isDarkTheme ? 'filled' : 'outlined'"></a-icon>
+                                </a-col>
+                                <a-col>
+                                    <theme-switch />
+                                </a-col>
                             </a-row>
                         </a-form-item>
                     </a-form>
