@@ -899,16 +899,20 @@
                     onOk: () => this.submit('/xui/inbound/del/' + dbInboundId),
                 });
             },
-            delClient(dbInboundId, client) {
+            delClient(dbInboundId, client,confirmation = true) {
                 dbInbound = this.dbInbounds.find(row => row.id === dbInboundId);
                 clientId = this.getClientId(dbInbound.protocol, client);
-                this.$confirm({
-                    title: '{{ i18n "pages.inbounds.deleteInbound"}}',
-                    content: '{{ i18n "pages.inbounds.deleteInboundContent"}}',
-                    okText: '{{ i18n "delete"}}',
-                    cancelText: '{{ i18n "cancel"}}',
-                    onOk: () => this.submit(`/xui/inbound/${dbInboundId}/delClient/${clientId}`),
-                });
+                if (confirmation){
+                    this.$confirm({
+                        title: '{{ i18n "pages.inbounds.deleteClient"}}',
+                        content: '{{ i18n "pages.inbounds.deleteClientContent"}}',
+                        okText: '{{ i18n "delete"}}',
+                        cancelText: '{{ i18n "cancel"}}',
+                        onOk: () => this.submit(`/xui/inbound/${dbInboundId}/delClient/${clientId}`),
+                    });
+                } else {
+                    this.submit(`/xui/inbound/${dbInboundId}/delClient/${clientId}`);
+                }
             },
             getClients(protocol, clientSettings) {
                 switch (protocol) {
@@ -996,14 +1000,18 @@
                     return dbInbound.toInbound().settings.shadowsockses;
                 }
             },
-            resetClientTraffic(client, dbInboundId) {
-                this.$confirm({
-                    title: '{{ i18n "pages.inbounds.resetTraffic"}}',
-                    content: '{{ i18n "pages.inbounds.resetTrafficContent"}}',
-                    okText: '{{ i18n "reset"}}',
-                    cancelText: '{{ i18n "cancel"}}',
-                    onOk: () => this.submit('/xui/inbound/' + dbInboundId + '/resetClientTraffic/' + client.email),
-                })
+            resetClientTraffic(client, dbInboundId, confirmation = true) {
+                if (confirmation){
+                    this.$confirm({
+                        title: '{{ i18n "pages.inbounds.resetTraffic"}}',
+                        content: '{{ i18n "pages.inbounds.resetTrafficContent"}}',
+                        okText: '{{ i18n "reset"}}',
+                        cancelText: '{{ i18n "cancel"}}',
+                        onOk: () => this.submit('/xui/inbound/' + dbInboundId + '/resetClientTraffic/' + client.email),
+                    })
+                } else {
+                    this.submit('/xui/inbound/' + dbInboundId + '/resetClientTraffic/' + client.email);
+                }
             },
             resetAllTraffic() {
                 this.$confirm({

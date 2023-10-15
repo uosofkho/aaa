@@ -123,6 +123,8 @@
 "modifyInbound" = "Modify Inbound"
 "deleteInbound" = "Delete Inbound"
 "deleteInboundContent" = "Are you sure you want to delete inbound?"
+"deleteClient" = "Delete Client"
+"deleteClientContent" = "Are you sure you want to delete client?"
 "resetTrafficContent" = "Are you sure you want to reset traffic?"
 "copyLink" = "Copy Link"
 "address" = "Address"

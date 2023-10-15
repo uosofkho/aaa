@@ -123,6 +123,8 @@
 "modifyInbound" = "修改入站"
 "deleteInbound" = "删除入站"
 "deleteInboundContent" = "确定要删除入站吗?"
+"deleteClient" = "删除客户端"
+"deleteClientContent" = "您确定要删除客户端吗?"
 "resetTrafficContent" = "确定要重置流量吗?"
 "copyLink" = "复制链接"
 "address" = "地址"

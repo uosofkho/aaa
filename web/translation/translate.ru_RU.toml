@@ -123,6 +123,8 @@
 "modifyInbound" = "Изменить данные"
 "deleteInbound" = "Удалить подключение"
 "deleteInboundContent" = "Вы уверены, что хотите удалить подключение?"
+"deleteClient" = "Удалить клиента"
+"deleteClientContent" = "Вы уверены, что хотите удалить клиента?"
 "resetTrafficContent" = "Подтвердите обнуление трафика?"
 "copyLink" = "Копировать ключ"
 "address" = "Адрес"
