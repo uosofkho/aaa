@@ -13,6 +13,19 @@
         [v-cloak] {
             display: none;
         }
+        /* vazirmatn-regular - arabic_latin_latin-ext */
+        @font-face {
+            font-display: swap;
+            font-family: 'Vazirmatn';
+            font-style: normal;
+            font-weight: 400;
+            src: url('{{ .base_path }}assets/vazirmatn-v13.woff2') format('woff2');
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Vazirmatn', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+                         'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+                         'Segoe UI Emoji', 'Segoe UI Symbol';
+        }
     </style>
     <title>{{ .host }}-{{ i18n .title}}</title>
 </head>
