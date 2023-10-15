@@ -38,6 +38,8 @@
 "disabled" = "Отключено"
 "depleted" = "Отключены"
 "depletingSoon" = "Почти отключены"
+"offline" = "Офлайн"
+"online" = "Онлайн"
 "domainName" = "Домен"
 "monitor" = "Прослушиваемый IP"
 "certificate" = "Сертификат"
