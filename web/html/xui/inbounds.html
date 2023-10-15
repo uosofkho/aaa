@@ -121,6 +121,7 @@
                                 <a-col :xs="12" :sm="12" :lg="12" style="text-align: right;">
                                     <a-select v-model="refreshInterval"
                                               v-if="isRefreshEnabled"
+                                              style="width: 70px;"
                                               @change="changeRefreshInterval">
                                         <a-select-option v-for="key in [5,10,30,60]" :value="key*1000">[[ key ]]s</a-select-option>
                                     </a-select>
