@@ -7,6 +7,28 @@ body {
     overflow: hidden;
 }
 
+body {
+    color: rgba(0,0,0,.65);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    background-color: #fff;
+    font-feature-settings: "tnum";
+}
+html {
+    --antd-wave-shadow-color: #0e49b5;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+::selection {
+    color: #0e49b5;
+    background-color: #0e49b530;
+}
+
 #app {
     height: 100%;
     position: fixed;
@@ -22,9 +44,7 @@ body {
 .ant-layout, .ant-layout * {
     box-sizing: border-box;
 }
-*, :after, :before {
-    box-sizing: border-box;
-}
+
 style attribute {
     text-align: center;
 }
@@ -44,24 +64,13 @@ style attribute {
     word-wrap: break-word;
     word-break: break-word;
 }
-th {
-    text-align: inherit;
-}
 
-th {
-    font-weight: bold;
-    text-align: -internal-center;
-}
 .ant-table table {
     width: 100%;
     text-align: left;
     border-radius: 1rem 1rem 0 0;
     border-collapse: separate;
     border-spacing: 0;
-}
-table {
-    text-indent: initial;
-    border-spacing: 2px;
 }
 .ant-table {
     box-sizing: border-box;
@@ -94,35 +103,6 @@ table {
     background: #fff;
     border-radius: 2px;
     transition: all .3s;
-}
-body {
-    margin: 0;
-    color: rgba(0,0,0,.65);
-    font-size: 14px;
-    font-variant: tabular-nums;
-    line-height: 1.5;
-    background-color: #fff;
-    font-feature-settings: "tnum";
-}
-html {
-    --antd-wave-shadow-color: #0e49b5;
-    font-family: sans-serif;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -ms-overflow-style: scrollbar;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-*, :after, :before {
-    box-sizing: border-box;
-}
-*, :after, :before {
-    box-sizing: border-box;
-}
-
-::selection {
-    color: #0e49b5;
-    background-color: #0e49b530;
 }
 
 .ant-space {
@@ -220,7 +200,8 @@ html {
 .ant-dropdown-menu-item:hover,
 .ant-select-dropdown-menu-item,
 .ant-select-dropdown-menu-item:hover,
-.ant-select-dropdown-menu-item-selected {
+.ant-select-dropdown-menu-item-selected,
+.ant-select-selection--multiple .ant-select-selection__choice {
     border-radius: .5rem;
 }
 

@@ -16,9 +16,9 @@
         <template slot="title">{{ i18n "pages.inbounds.resetTraffic" }}</template>
         <a-popconfirm @confirm="resetClientTraffic(client,record.id,false)"
             title='{{ i18n "pages.inbounds.resetTrafficContent"}}'
-            ok-text='{{ i18n "delete"}}'
+            ok-text='{{ i18n "reset"}}'
             cancel-text='{{ i18n "cancel"}}'>
-            <a-icon slot="icon" type="question-circle-o" style="color: red"></a-icon>
+            <a-icon slot="icon" type="question-circle-o" style="color: blue"></a-icon>
             <a-icon style="font-size: 24px;" type="retweet" v-if="client.email.length > 0"></a-icon>
         </a-popconfirm>
     </a-tooltip>
@@ -27,6 +27,7 @@
         <a-popconfirm @confirm="delClient(record.id,client,false)"
             title='{{ i18n "pages.inbounds.deleteClientContent"}}'
             ok-text='{{ i18n "delete"}}'
+            ok-type="danger"
             cancel-text='{{ i18n "cancel"}}'>
             <a-icon slot="icon" type="question-circle-o" style="color: red"></a-icon>
             <a-icon style="font-size: 24px;" type="delete" v-if="isRemovable(record.id)"></a-icon>

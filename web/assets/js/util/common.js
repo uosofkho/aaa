@@ -97,7 +97,9 @@ function usageColor(data, threshold, total) {
     switch (true) {
         case data === null:
             return "green";
-        case total <= 0:
+        case total < 0:
+            return "blue";
+        case total == 0:
             return "purple";
         case data < total - threshold:
             return "blue";
@@ -112,7 +114,9 @@ function usageFilledColor(data, threshold, total) {
     switch (true) {
         case data === null:
             return "#389e0d";
-        case total <= 0:
+        case total < 0:
+            return "#0e49b5";
+        case total == 0:
             return "#7a316f";
         case data < total - threshold:
             return "#0e49b5";
