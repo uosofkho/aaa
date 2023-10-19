@@ -86,9 +86,21 @@
     .under {
         background-color: #dce9f5;
     }
+    .dark .wave {
+        background: rgb(14 73 181 / 20%);
+    }
+    .dark .under {
+        background-color: #101828;
+    }
+    .dark #login {
+        background-color: #151F31;
+    }
+    .dark h1 {
+        color: rgb(255 255 255 / 85%);
+    }
 </style>
 <body>
-<a-layout id="app" v-cloak>
+<a-layout id="app" v-cloak :class="themeSwitcher.currentTheme">
     <transition name="list" appear>
         <a-layout-content class="under">
             <div class='wave'></div>
@@ -126,7 +138,7 @@
                         <a-form-item>
                             <a-row justify="center" class="centered">
                                 <a-col :span="24">
-                                    <a-select ref="selectLang" v-model="lang" @change="setLang(lang)" style="width: 150px;">
+                                    <a-select ref="selectLang" v-model="lang" @change="setLang(lang)" style="width: 150px;" :dropdown-class-name="themeSwitcher.currentTheme">
                                         <a-select-option :value="l.value" label="English" v-for="l in supportLangs">
                                             <span role="img" aria-label="l.name" v-text="l.icon"></span>
                                             &nbsp;&nbsp;<span v-text="l.name"></span>

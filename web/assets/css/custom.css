@@ -56,7 +56,6 @@ style attribute {
     color: rgba(0,0,0,.85);
     font-weight: 500;
     text-align: left;
-    background: #fafafa;
     border-bottom: 1px solid #e8e8e8;
     transition: background .3s ease;
 }
@@ -156,7 +155,7 @@ style attribute {
 }
 
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-    background-color: #04308f;
+    background-color: #04308f !important;
     background-image: linear-gradient( 270deg, rgba(123, 199, 77, 0) 30%, #2f67c2, rgba(123, 199, 77, 0) 100% );
     background-repeat: no-repeat;
     animation: ma-bg-move linear 6.6s infinite;
@@ -182,12 +181,16 @@ style attribute {
     border-radius: 0.5rem;
 }
 
+.ant-menu-inline .ant-menu-item {
+    border-radius: 0.5rem;
+}
 
 .ant-menu-inline .ant-menu-item:after,
 .ant-menu {
     border-right-width: 0;
 }
-.ant-layout-sider-children{
+.ant-layout-sider-children,
+.ant-pagination ul {
     margin-top:-.1px;
     padding:0.5rem
 }
@@ -203,6 +206,7 @@ style attribute {
 .ant-select-dropdown-menu-item-selected,
 .ant-select-selection--multiple .ant-select-selection__choice {
     border-radius: .5rem;
+    margin-bottom: 2px;
 }
 
 @media (min-width: 769px) {
@@ -392,4 +396,300 @@ style attribute {
 .ant-input:hover,
 .ant-input:focus {
     background-color: #edf4fa;
+}
+
+.delete-icon:hover {
+    color: #E04141;
+}
+
+.normal-icon:hover {
+    color: #0E49B5;
+}
+
+/* DARK THEME */
+
+.dark ::selection {
+    color: #fff;
+    background-color: #0e49b5;
+}
+
+.dark .ant-layout-sider,
+.dark .ant-drawer-content,
+.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.dark .ant-card,
+.dark .ant-table,
+.dark .ant-collapse-content,
+.dark .ant-tabs {
+    background-color: #151F31;
+    color: #ffffffa6;
+}
+
+.dark .ant-card-hoverable:hover,
+.dark .ant-space-item>.ant-tabs:hover {
+    box-shadow: 0 1px 10px -1px rgb(154 175 238 / 80%);
+}
+
+.dark>.ant-layout,
+.dark .drawer-handle,
+.dark .ant-table-thead>tr>th,
+.dark .ant-table-expanded-row,
+.dark .ant-table-expanded-row:hover,
+.dark .ant-table-expanded-row .ant-table-tbody,
+.dark .ant-calendar {
+    background-color: #101828;
+    color: rgb(255 255 255 /65%);
+}
+
+.dark .ant-calendar,
+.dark .ant-card-bordered {
+    border-color: #151f31;
+}
+
+.dark .ant-table-tbody>tr>td,
+.dark .ant-table-thead>tr>th,
+.dark .ant-card-head,
+.dark .ant-modal-header,
+.dark .ant-collapse>.ant-collapse-item,
+.dark .ant-tabs-bar,
+.dark .ant-list-split .ant-list-item,
+.dark .ant-popover-title,
+.dark .ant-calendar-header,
+.dark .ant-calendar-input-wrap {
+    border-bottom-color: #42516c;
+}
+
+.dark .ant-modal-footer,
+.dark .ant-collapse-content,
+.dark .ant-calendar-footer,
+.dark .ant-divider-horizontal.ant-divider-with-text-center:before,
+.dark .ant-divider-horizontal.ant-divider-with-text-center:after {
+    border-top-color: #2c3950;
+}
+
+.dark .ant-progress-text,
+.dark .ant-card-head,
+.dark .ant-form,
+.dark .ant-collapse>.ant-collapse-item>.ant-collapse-header,
+.dark .ant-form-item i,
+.dark .ant-modal-close-x,
+.dark .ant-pagination-item a,
+.dark li:not(.ant-pagination-disabled) i,
+.dark .ant-form .anticon,
+.dark .anticon-close,
+.dark .ant-list-item-meta-title,
+.dark .ant-list-item-meta-description,
+.dark .ant-select-selection i,
+.dark .ant-modal-confirm-title,
+.dark .ant-modal-confirm-content,
+.dark .ant-popover-message,
+.dark .ant-modal,
+.dark .ant-divider-inner-text,
+.dark .ant-popover-title,
+.dark .ant-popover-inner-content,
+.dark h2 {
+    color: rgb(255 255 255 / 65%);
+}
+
+.dark .ant-input,
+.dark .ant-input-group-addon,
+.dark .ant-collapse,
+.dark .ant-select-selection,
+.dark .ant-input-number,
+.dark .ant-input-number-handler-wrap,
+.dark .ant-pagination-item-active,
+.dark .ant-table-placeholder,
+.dark .ant-empty-normal,
+.dark.ant-select-dropdown,
+.dark .ant-select-dropdown,
+.dark .ant-select-dropdown-menu-item,
+.dark .ant-divider:not(.ant-divider-with-text-center),
+.dark .ant-calendar-input,
+.dark .ant-calendar-time-picker-inner {
+    background-color: #222D42;
+    border-color: #2c3950;
+    color: rgb(255 255 255 / 65%);
+}
+
+.dark .ant-select-selection:hover,
+.dark .ant-calendar-picker-clear,
+.dark .ant-input-number:hover,
+.dark .ant-input-number:focus,
+.dark .ant-input:hover,
+.dark .ant-input:focus {
+    background-color: rgb(14 73 181 / 30%);
+    border-color: #0E49B5;
+}
+
+.dark .ant-btn:not(.ant-btn-primary):not(.ant-btn-danger) {
+    color: rgb(255 255 255 / 65%);
+    background-color: rgb(14 73 181 / 30%);
+    border: 1px solid #0e49b5;
+}
+
+.dark .ant-radio-button-wrapper,
+.dark .ant-radio-button-wrapper:before {
+    color: rgb(255 255 255 / 65%);
+    background-color: rgb(14 73 181 / 30%);
+    border: 1px solid #0e49b5;
+    border-left: inherit;
+}
+
+.dark .ant-btn:focus:not(.ant-btn-primary):not(.ant-btn-danger) ,
+.dark .ant-btn:hover:not(.ant-btn-primary):not(.ant-btn-danger)  {
+    color: #ffffff;
+    background-color: rgb(14 73 181 / 50%);
+    border-color: #0e49b5;
+}
+
+.dark .ant-btn-primary[disabled],
+.dark .ant-calendar-ok-btn-disabled {
+    color: rgb(255 255 255 / 35%);
+    background-color: #2c3950;
+    border-color: #42516c;
+}
+
+.dark .ant-table-tbody>tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td {
+    background-color: #122444;
+}
+
+.dark .ant-table-row-expand-icon {
+    color: #fff;
+    background-color: #fff0;
+    border-color: #9ea2a8;
+}
+
+.dark .ant-table-row-expand-icon:hover {
+    color: #0e49b5;
+    background-color: #fff0;
+    border-color: #0e49b5;
+}
+
+.dark .ant-switch:not(.ant-switch-checked) {
+    background-color: #2C3950;
+}
+
+.dark .ant-progress-line .ant-progress-inner {
+    background-color: #2c3950;
+}
+
+.dark .ant-progress-circle-trail {
+    stroke: #2c3950 !important;
+}
+
+.ant-dropdown-menu-dark,
+.dark .ant-popover-inner {
+    background-color: #222D42;
+}
+
+.dark>.ant-popover-content>.ant-popover-arrow {
+    border-color: #222D42;
+}
+
+.ant-dropdown-menu-dark .ant-dropdown-menu-item:hover,
+.dark .ant-select-dropdown-menu-item-selected,
+.dark .ant-select-dropdown-menu-item:hover,
+.dark .ant-calendar-time-picker-select-option-selected {
+    background-color: #313f5a;
+}
+
+.ant-menu-dark .ant-menu-item:hover {
+    background-color: #2c3950;
+}
+
+.dark .ant-alert-message {
+    color: rgb(255 255 255 /85%);
+}
+
+.dark .ant-tag {
+    color: rgb(255 255 255 / 65%);
+    background-color: #ffffff0a;
+    border-color: #344461;
+}
+
+.dark .ant-tag-blue {
+    background-color: #111a2c;
+    border-color: #0f367e;
+    color: #3c89e8;
+}
+
+.dark .ant-tag-red,
+.dark .ant-alert-error {
+    background-color: #291515;
+    border-color: #5C2626;
+    color: #e04141;
+}
+
+.dark .ant-tag-orange,
+.dark .ant-alert-warning {
+    background-color: #312313;
+    border-color: #593914;
+    color: #ffa031;
+}
+
+.dark .ant-tag-green {
+    background-color: #142429;
+    border-color: #23432c;
+    color: #61bf39;
+}
+
+.dark .ant-tag-purple {
+    background-color: #2c1e32;
+    border-color: #49394e;
+    color: #f2eaf1;
+}
+
+.dark .ant-modal-content,
+.dark .ant-modal-header {
+    background-color: #181f2c;
+}
+
+.dark .ant-modal-title,
+.dark .ant-form-item-label>label,
+.dark .ant-checkbox-wrapper,
+.dark .ant-form-item,
+.dark .ant-calendar-footer .ant-calendar-today-btn,
+.dark .ant-calendar-footer .ant-calendar-time-picker-btn,
+.dark .ant-calendar-day-select,
+.dark .ant-calendar-month-select,
+.dark .ant-calendar-year-select,
+.dark .ant-calendar-date {
+    color: rgb(255 255 255 / 65%);
+}
+
+.dark .ant-calendar-next-month-btn-day .ant-calendar-date,
+.dark .ant-calendar-last-month-cell .ant-calendar-date {
+    color: #2c3950;
+}
+
+.dark .ant-calendar-selected-day .ant-calendar-date {
+    background-color: #0e49b5 !important;
+    color: #fff;
+}
+
+.dark .ant-calendar-date:hover,
+.dark .ant-calendar-time-picker-select li:hover {
+    background-color: #313f5a;
+    color: #fff;
+}
+
+.dark .ant-calendar-header a:hover,
+.dark .ant-calendar-header a:hover::before,
+.dark .ant-calendar-header a:hover::after {
+    border-color: #fff;
+}
+
+.dark .ant-calendar-time-picker-select li:focus {
+    color: #ffffff;
+    font-weight: 600;
+    outline: none;
+    background-color: #0e49b5;
+}
+
+.dark .ant-calendar-time-picker-select {
+    border-right-color: #2C3950;
+}
+
+.dark .anticon-close-circle {
+    color: #E04141;
 }

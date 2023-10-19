@@ -2,7 +2,7 @@
 <a-modal id="qrcode-modal" v-model="qrModal.visible" :title="qrModal.title"
          :closable="true"
          :footer="null"
-         width="300px">
+         width="300px" :class="themeSwitcher.currentTheme">
     <a-tag color="green" style="margin-bottom: 10px;display: block;text-align: center;" >{{ i18n "pages.inbounds.clickOnQRcode" }}</a-tag>
     <template v-if="app.subSettings.enable && qrModal.subId">
         <a-divider>Subscription</a-divider>

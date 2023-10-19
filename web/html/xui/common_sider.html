@@ -31,7 +31,7 @@
         {{template "menuItems" .}}
     </a-menu>
 </a-layout-sider>
-<a-drawer id="sider-drawer" placement="left" :closable="false"
+<a-drawer id="sider-drawer" placement="left" :closable="false" :class="themeSwitcher.currentTheme"
           @close="siderDrawer.close()"
           :visible="siderDrawer.visible"
           :wrap-style="{ padding: 0 }">
@@ -40,7 +40,7 @@
     </div>
     <a-menu :theme="themeSwitcher.currentTheme" mode="inline" selected-keys="">
         <a-menu-item mode="inline">
-            <a-icon type="bulb" theme="twoTone" :two-tone-color="themeSwitcher.isDarkTheme ? 'orange':''"></a-icon>
+            <a-icon type="bulb" :theme="themeSwitcher.isDarkTheme ? 'filled' : 'outlined'"></a-icon>
             <theme-switch />
         </a-menu-item>
     </a-menu>

@@ -26,7 +26,7 @@
             <td>CipherSuites</td>
             <td>
                 <a-form-item>
-                    <a-select v-model="inbound.stream.tls.cipherSuites" style="width: 250px">
+                    <a-select v-model="inbound.stream.tls.cipherSuites" style="width: 250px" :dropdown-class-name="themeSwitcher.currentTheme">
                         <a-select-option value="">auto</a-select-option>
                         <a-select-option v-for="key,value in TLS_CIPHER_OPTION" :value="key">[[ value ]]</a-select-option>
                     </a-select>
@@ -38,10 +38,10 @@
             <td>
                 <a-form-item>
                     <a-input-group compact>
-                        <a-select style="width: 125px" v-model="inbound.stream.tls.minVersion">
+                        <a-select style="width: 125px" v-model="inbound.stream.tls.minVersion" :dropdown-class-name="themeSwitcher.currentTheme">
                             <a-select-option v-for="key in TLS_VERSION_OPTION" :value="key">[[ key ]]</a-select-option>
                         </a-select>
-                        <a-select style="width: 125px" v-model="inbound.stream.tls.maxVersion">
+                        <a-select style="width: 125px" v-model="inbound.stream.tls.maxVersion" :dropdown-class-name="themeSwitcher.currentTheme">
                             <a-select-option v-for="key in TLS_VERSION_OPTION" :value="key">[[ key ]]</a-select-option>
                         </a-select>
                     </a-input-group>
@@ -53,7 +53,7 @@
             <td>
                 <a-form-item>
                     <a-select v-model="inbound.stream.tls.settings.fingerprint"
-                              style="width: 250px">
+                              style="width: 250px" :dropdown-class-name="themeSwitcher.currentTheme">
                         <a-select-option value=''>None</a-select-option>
                         <a-select-option v-for="key in UTLS_FINGERPRINT" :value="key">[[ key ]]</a-select-option>
                     </a-select>
@@ -215,7 +215,7 @@
             <td>
                 <a-form-item>
                     <a-select v-model="inbound.stream.reality.settings.fingerprint"
-                              style="width: 250px">
+                              style="width: 250px" :dropdown-class-name="themeSwitcher.currentTheme">
                         <a-select-option v-for="key in UTLS_FINGERPRINT" :value="key">[[ key ]]</a-select-option>
                     </a-select>
                 </a-form-item>

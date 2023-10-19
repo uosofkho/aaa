@@ -30,7 +30,7 @@
     }
 </style>
 <body>
-<a-layout id="app" v-cloak>
+<a-layout id="app" v-cloak :class="themeSwitcher.currentTheme">
     {{ template "commonSider" . }}
     <a-layout id="content-layout">
         <a-layout-content>
@@ -45,15 +45,15 @@
                     </a-alert>
                 </transition>
                 <a-space direction="vertical">
-                    <a-card>
+                    <a-card hoverable style="margin-bottom: .5rem;">
                         <a-row>
-                            <a-col :sm="24" :md="6" style="padding: 4px;">
+                            <a-col :xs="24" :sm="8" style="padding: 4px;">
                                 <a-space direction="horizontal">
                                     <a-button type="primary" :disabled="saveBtnDisable" @click="updateAllSetting">{{ i18n "pages.settings.save" }}</a-button>
                                     <a-button type="danger" :disabled="!saveBtnDisable" @click="restartPanel">{{ i18n "pages.settings.restartPanel" }}</a-button>
                                 </a-space>
                             </a-col>
-                            <a-col :sm="24" :md="18">
+                            <a-col :xs="24" :sm="16">
                                 <a-alert type="warning" style="float: right; width: fit-content"
                                 message='{{ i18n "pages.settings.infoDesc" }}'
                                 show-icon
@@ -87,7 +87,7 @@
                                                         ref="selectLang"
                                                         v-model="lang"
                                                         @change="setLang(lang)"
-                                                        style="width: 100%">
+                                                        style="width: 100%" :dropdown-class-name="themeSwitcher.currentTheme">
                                                     <a-select-option :value="l.value" :label="l.value" v-for="l in supportLangs">
                                                         <span role="img" aria-label="l.name" v-text="l.icon"></span>
                                                         &nbsp;&nbsp;<span v-text="l.name"></span>
@@ -144,7 +144,7 @@
                                                             <template>
                                                                 <a-select
                                                                     v-model="freedomStrategy"
-                                                                    style="width: 100%">
+                                                                    style="width: 100%" :dropdown-class-name="themeSwitcher.currentTheme">
                                                                     <a-select-option v-for="s in outboundDomainStrategies" :value="s">[[ s ]]</a-select-option>
                                                                 </a-select>
                                                             </template>
@@ -161,7 +161,7 @@
                                                         <template>
                                                             <a-select
                                                                 v-model="routingStrategy"
-                                                                style="width: 100%">
+                                                                style="width: 100%" :dropdown-class-name="themeSwitcher.currentTheme">
                                                                 <a-select-option v-for="s in routingDomainStrategies" :value="s">[[ s ]]</a-select-option>
                                                             </a-select>
                                                         </template>
@@ -301,6 +301,7 @@
                                                     ref="selectBotLang"
                                                     v-model="allSetting.tgLang"
                                                     style="width: 100%"
+                                                    :dropdown-class-name="themeSwitcher.currentTheme"
                                                 >
                                                     <a-select-option :value="l.value" :label="l.value" v-for="l in supportLangs">
                                                         <span role="img" aria-label="l.name" v-text="l.icon"></span>
@@ -444,6 +445,7 @@
                     this.$confirm({
                         title: '{{ i18n "pages.settings.restartPanel" }}',
                         content: '{{ i18n "pages.settings.restartPanelDesc" }}',
+                        class: themeSwitcher.currentTheme,
                         okText: '{{ i18n "sure" }}',
                         cancelText: '{{ i18n "cancel" }}',
                         onOk: () => resolve(),
