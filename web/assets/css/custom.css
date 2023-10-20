@@ -413,6 +413,10 @@ style attribute {
     background-color: #0e49b5;
 }
 
+.dark .normal-icon:hover {
+    color: #ffffff;
+}
+
 .dark .ant-layout-sider,
 .dark .ant-drawer-content,
 .ant-menu-dark,
