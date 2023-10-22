@@ -8,6 +8,13 @@
         }
     }
 
+    @media (max-width: 768px) {
+        .ant-tabs-nav .ant-tabs-tab {
+            margin: 0;
+            padding: 12px .5rem;
+        }
+    }
+
     .ant-tabs-bar {
         margin: 0;
     }
@@ -121,7 +128,7 @@
 
                         <a-tab-pane key="3" tab='{{ i18n "pages.settings.xrayConfiguration"}}'>
                             <a-list item-layout="horizontal">
-                                <a-tabs class="ant-card-dark-box-nohover" default-active-key="tpl-1" style="padding: 20px 20px;">
+                                <a-tabs default-active-key="tpl-1">
                                     <a-tab-pane key="tpl-1" tab='{{ i18n "pages.settings.templates.basicTemplate"}}' style="padding-top: 20px;">
                                         <a-collapse>
                                             <a-collapse-panel header='{{ i18n "pages.settings.templates.generalConfigs"}}'>

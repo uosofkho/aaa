@@ -31,7 +31,7 @@
             ok-text='{{ i18n "delete"}}'
             ok-type="danger"
             cancel-text='{{ i18n "cancel"}}'>
-            <a-icon slot="icon" type="question-circle-o" style="color: #E04141"></a-icon>
+            <a-icon slot="icon" type="question-circle-o" style="color: #e04141"></a-icon>
             <a-icon style="font-size: 24px" class="delete-icon" type="delete" v-if="isRemovable(record.id)"></a-icon>
         </a-popconfirm>
     </a-tooltip>
@@ -79,7 +79,7 @@
                     [[ sizeFormat(getSumStats(record, client.email)) ]]
                 </td>
                 <td width="120px" v-if="!client.enable">
-                    <a-progress stroke-color="#BCBCBC"
+                    <a-progress :stroke-color="themeSwitcher.isDarkTheme ? 'rgb(72 84 105)' : '#bcbcbc'"
                                 :show-info="false"
                                 :percent="statsProgress(record, client.email)"/>
                 </td>
@@ -90,32 +90,29 @@
                                 :percent="statsProgress(record, client.email)"/>
                 </td>
                 <td width="120px" v-else class="infinite-bar">
-                    <a-progress :stroke-color="themeSwitcher.isDarkTheme ? '#2c1e32':'#F2EAF1'"
+                    <a-progress
                     :show-info="false"
                     :status="isClientOnline(client.email)? 'active' : ''"
                     :percent="100"></a-progress>
                 </td>
                 <td width="60px">
                     <template v-if="client.totalGB > 0">[[ client._totalGB + "GB" ]]</template>
-                    <span v-else style="color:#7a316f; font-weight: 100;font-size: 14pt;">&infin;</span>
+                    <span v-else style="font-weight: 100;font-size: 14pt;">&infin;</span>
                 </td>
             </tr>
         </table>
     </a-popover>
 </template>                                    
 <template slot="expiryTime" slot-scope="text, client, index">                 
-    <a-popover v-if="client.expiryTime > 0" :overlay-class-name="themeSwitcher.currentTheme">
+    <a-popover v-if="client.expiryTime != 0" :overlay-class-name="themeSwitcher.currentTheme">
         <template slot="content" v-if="client.expiryTime > 0">
             [[ DateUtil.formatMillis(client._expiryTime) ]]
         </template>
-    <a-tag style="min-width: 50px; border: none;" :color="client.enable ? usageFilledColor(new Date().getTime(), app.expireDiff, client.expiryTime) : themeSwitcher.isDarkTheme ? '#2C3950' : '#BCBCBC'">
+    <a-tag style="min-width: 50px; border: none;" :color="userExpiryColor(app.expireDiff, client, themeSwitcher.isDarkTheme)">
         [[ remainedDays(client.expiryTime) ]]
     </a-tag>
     </a-popover>
-    <a-tag v-else-if="client.expiryTime < 0" style="min-width: 50px; border: none;" :color="client.enable ? '#0e49b5' : themeSwitcher.isDarkTheme ? '#2C3950' : '#BCBCBC'">
-        [[ remainedDays(client.expiryTime) ]]
-    </a-tag>
-    <a-tag v-else :color="client.enable ? 'purple' : themeSwitcher.isDarkTheme ? '#2C3950' : '#BCBCBC'" class="infinite-tag">&infin;</a-tag>
+    <a-tag v-else :color="userExpiryColor(app.expireDiff, client, themeSwitcher.isDarkTheme)" style="border: 0;" class="infinite-tag">&infin;</a-tag>
 </template>
 <template slot="actionMenu" slot-scope="text, client, index">
     <a-dropdown :trigger="['click']">
@@ -150,7 +147,7 @@
     </a-dropdown>
 </template>
 <template slot="info" slot-scope="text, client, index">
-    <a-popover placement="bottomRight" :overlay-class-name="themeSwitcher.currentTheme">
+    <a-popover placement="bottomRight" :overlay-class-name="themeSwitcher.currentTheme" trigger="click">
         <template slot="content">
             <table>
                 <tr>
@@ -161,7 +158,7 @@
                         [[ sizeFormat(getUpStats(record, client.email) + getDownStats(record, client.email)) ]]
                     </td>
                     <td width="120px" v-if="!client.enable">
-                        <a-progress stroke-color="#BCBCBC"
+                        <a-progress :stroke-color="themeSwitcher.isDarkTheme ? 'rgb(72 84 105)' : '#bcbcbc'"
                                     :show-info="false"
                                     :percent="statsProgress(record, client.email)"/>
                     </td>
@@ -193,7 +190,7 @@
                     </td>
                     <td width="80px">
                         <template v-if="client.totalGB > 0">[[ client._totalGB + "GB" ]]</template>
-                        <span v-else style="color:#7a316f; font-weight: 100;font-size: 14pt;">&infin;</span>
+                        <span v-else style="font-weight: 100;font-size: 14pt;">&infin;</span>
                     </td>
                 </tr>
                 <tr>
@@ -209,16 +206,16 @@
                                 [[ DateUtil.formatMillis(client._expiryTime) ]]
                             </template>
                         <a-tag style="min-width: 50px; border: none;" 
-                            :color="client.enable ? usageFilledColor(new Date().getTime(), app.expireDiff, client.expiryTime) : themeSwitcher.isDarkTheme ? '#2C3950' : '#BCBCBC'">
+                            :color="userExpiryColor(app.expireDiff, client, themeSwitcher.isDarkTheme)">
                             [[ remainedDays(client.expiryTime) ]]
                         </a-tag>
                         </a-popover>
                         <a-tag v-else-if="client.expiryTime < 0"
                             style="min-width: 50px; border: none;"
-                            :color="client.enable ? '#0e49b5' : themeSwitcher.isDarkTheme ? '#2C3950' : '#BCBCBC'">
+                            :color="client.enable ? '#0e49b5' : themeSwitcher.isDarkTheme ? '#2c3950' : '#bcbcbc'">
                             [[ remainedDays(client.expiryTime) ]]
                         </a-tag>
-                        <a-tag v-else :color="client.enable ? 'purple' : themeSwitcher.isDarkTheme ? '#2C3950' : '#BCBCBC'" class="infinite-tag">&infin;</a-tag>
+                        <a-tag v-else :color="client.enable ? 'purple' : themeSwitcher.isDarkTheme ? '#2c3950' : '#bcbcbc'" class="infinite-tag">&infin;</a-tag>
                     </td>
                 </tr>
             </table>

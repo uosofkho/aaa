@@ -116,6 +116,13 @@ style attribute {
     .ant-layout-sider {
         display: none;
     }
+    .ant-card {
+        margin: .5rem;
+    }
+    .ant-tabs {
+        margin: .5rem;
+        padding: .5rem;
+    }
 }
 
 .ant-layout-content {
@@ -445,8 +452,8 @@ style attribute {
     color: rgb(255 255 255 /65%);
 }
 
-.dark .ant-table-expanded-row .ant-table-thead>tr:first-child>th:first-child {
-    border-top-left-radius: 0;
+.dark .ant-table-expanded-row .ant-table-thead>tr:first-child>th {
+    border-radius: 0;
 }
 
 .dark .ant-calendar,
@@ -464,7 +471,7 @@ style attribute {
 .dark .ant-popover-title,
 .dark .ant-calendar-header,
 .dark .ant-calendar-input-wrap {
-    border-bottom-color: #42516c;
+    border-bottom-color: #2C3950;
 }
 
 .dark .ant-modal-footer,
@@ -484,6 +491,7 @@ style attribute {
 .dark .ant-pagination-item a,
 .dark li:not(.ant-pagination-disabled) i,
 .dark .ant-form .anticon,
+.dark .ant-tabs-tab-arrow-show:not(.ant-tabs-tab-btn-disabled),
 .dark .anticon-close,
 .dark .ant-list-item-meta-title,
 .dark .ant-list-item-meta-description,
