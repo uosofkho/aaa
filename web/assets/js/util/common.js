@@ -39,7 +39,7 @@ function formatSecond(second) {
     } else if (second < 3600 * 24) {
         return (second / 3600).toFixed(0) + 'h';
     } else {
-        day = (second / 3600 / 24).toFixed(0);
+        day = Math.floor(second / 3600 / 24);
         remain = ((second/3600) - (day*24)).toFixed(0);
         return day + 'd' + (remain > 0 ? ' ' + remain + 'h' : '');
     }
@@ -110,17 +110,22 @@ function usageColor(data, threshold, total) {
     }
 }
 
-function usageFilledColor(data, threshold, total) {
+function userExpiryColor(threshold, client, isDark = false) {
+    if (!client.enable) {
+        return isDark ? '#2c3950' : '#bcbcbc';
+    }
+    now = new Date().getTime(),
+    expiry = client.expiryTime;
     switch (true) {
-        case data === null:
+        case expiry === null:
             return "#389e0d";
-        case total < 0:
+        case expiry < 0:
             return "#0e49b5";
-        case total == 0:
+        case expiry == 0:
             return "#7a316f";
-        case data < total - threshold:
+        case now < expiry - threshold:
             return "#0e49b5";
-        case data < total:
+        case now < expiry:
             return "#ffa031";
         default:
             return "#e04141";
