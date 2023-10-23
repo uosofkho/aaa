@@ -403,12 +403,14 @@
 "expire" = "📅 Expire Date: {{ .DateTime }}\r\n \r\n"
 "expireIn" = "📅 Expire In: {{ .Time }}\r\n \r\n"
 "active" = "💡 Active: {{ .Enable }}\r\n"
+"online" = "🌐 Connection status: {{ .Status }}\r\n"
 "email" = "📧 Email: {{ .Email }}\r\n"
 "upload" = "🔼 Upload↑: {{ .Upload }}\r\n"
 "download" = "🔽 Download↓: {{ .Download }}\r\n"
 "total" = "🔄 Total: {{ .UpDown }} / {{ .Total }}\r\n"
 "exhaustedMsg" = "🚨 Exhausted {{ .Type }}:\r\n"
 "exhaustedCount" = "🚨 Exhausted {{ .Type }} count:\r\n"
+"onlinesCount" = "🌐 Online clients count: {{ .Count }}\r\n"
 "disabled" = "🛑 Disabled: {{ .Disabled }}\r\n"
 "depleteSoon" = "🔜 Deplete soon: {{ .Deplete }}\r\n \r\n"
 "backupTime" = "🗄 Backup Time: {{ .Time }}\r\n"
@@ -421,6 +423,7 @@
 "getInbounds" = "Get Inbounds"
 "depleteSoon" = "Deplete soon"
 "clientUsage" = "Get Usage"
+"onlines" = "Online Clients"
 "commands" = "Commands"
 
 [tgbot.answers]
