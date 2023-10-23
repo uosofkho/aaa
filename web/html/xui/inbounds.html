@@ -37,11 +37,11 @@
         margin: 5px 0;
     }
     .online-animation .ant-badge-status-dot {
-        animation: 2.4s infinite normal none running onlineAnimation;
+        animation: 1.2s ease infinite normal none running onlineAnimation;
     }
     @keyframes onlineAnimation {
-        0%, 50%, 100%   { transform: scale(.8);  opacity:  1; }
-        10%             { transform: scale(1.5); opacity: .1; }
+        0%, 50%, 100%   { transform: scale(1);  opacity:  1; }
+        10%             { transform: scale(1.5); opacity: .2; }
     }
 </style>
 
@@ -50,7 +50,7 @@
     {{ template "commonSider" . }}
     <a-layout id="content-layout">
         <a-layout-content>
-            <a-spin :spinning="spinning" :delay="500" tip="loading">
+            <a-spin :spinning="spinning" :delay="500" tip='{{ i18n "loading"}}'>
                 <transition name="list" appear>
                     <a-alert type="error" v-if="showAlert" style="margin-bottom: 10px"
                     message='{{ i18n "secAlertTitle" }}'
@@ -168,7 +168,6 @@
                         </div>
                         <a-table :columns="isMobile ? mobileColums : columns" :row-key="dbInbound => dbInbound.id"
                                  :data-source="searchedInbounds"
-                                 :loading="spinning"
                                  :scroll="isMobile ? {} : { x: 1000 }"
                                  :pagination=pagination(searchedInbounds)
                                  :expand-icon-as-cell="false"

@@ -41,7 +41,7 @@
     {{ template "commonSider" . }}
     <a-layout id="content-layout">
         <a-layout-content>
-            <a-spin :spinning="spinning" :delay="500" tip="loading">
+            <a-spin :spinning="spinning" :delay="500" tip='{{ i18n "loading"}}'>
                 <transition name="list" appear>
                     <a-alert type="error" v-if="showAlert" style="margin-bottom: 10px"
                     message='{{ i18n "secAlertTitle" }}'
@@ -464,7 +464,7 @@
                 if (msg.success) {
                     this.loading(true);
                     await PromiseUtil.sleep(5000);
-                    const { webCertFile, webKeyFile, webDomain: host, webPort: port, webBasePath: base } = this.allSetting;
+                    var { webCertFile, webKeyFile, webDomain: host, webPort: port, webBasePath: base } = this.allSetting;
                     if (host == this.oldAllSetting.webDomain) host = null;
                     if (port == this.oldAllSetting.webPort) port = null;
                     const isTLS = webCertFile !== "" || webKeyFile !== "";

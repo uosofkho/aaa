@@ -45,6 +45,10 @@ html {
     box-sizing: border-box;
 }
 
+.ant-spin-blur {
+    border-radius: 1.5rem;
+}
+
 style attribute {
     text-align: center;
 }
@@ -507,6 +511,11 @@ style attribute {
     color: rgb(255 255 255 / 65%);
 }
 
+.dark .ant-pagination-disabled i,
+.dark .ant-tabs-tab-btn-disabled {
+    color: rgb(255 255 255 / 25%);
+}
+
 .dark .ant-input,
 .dark .ant-input-group-addon,
 .dark .ant-collapse,
@@ -708,4 +717,16 @@ style attribute {
 
 .dark .anticon-close-circle {
     color: #E04141;
+}
+
+.dark .ant-spin-nested-loading>div>.ant-spin .ant-spin-text {
+    text-shadow: 0 1px 2px #00000077;
+}
+
+.dark .ant-spin {
+    color: #ffffff;
+}
+
+.dark .ant-spin-dot-item {
+    background-color: #ffffffff;
 }
