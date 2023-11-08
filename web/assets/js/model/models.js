@@ -196,7 +196,6 @@ class AllSetting {
         this.tgBotLoginNotify = false;
         this.tgCpu = "";
         this.tgLang = "";
-        this.xrayTemplateConfig = "";
         this.subEnable = false;
         this.subListen = "";
         this.subPort = "2096";
