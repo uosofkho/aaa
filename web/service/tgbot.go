@@ -75,10 +75,16 @@ func (t *Tgbot) Start(i18nFS embed.FS) error {
 		}
 	}
 
-	bot, err = tgbotapi.NewBotAPI(tgBottoken)
-	if err != nil {
-		fmt.Println("Get tgbot's api error:", err)
-		return err
+	for {
+		bot, err = tgbotapi.NewBotAPI(tgBottoken)
+		if err != nil {
+			fmt.Println("Get tgbot's api error:", err)
+			fmt.Println("Retrying after 10 secound...")
+			time.Sleep(10 * time.Second)
+		} else {
+			fmt.Println("Tgbot connected!")
+			break
+		}
 	}
 	bot.Debug = false
 
