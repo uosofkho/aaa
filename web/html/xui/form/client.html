@@ -138,6 +138,22 @@
                 </a-form-item>
             </td>
         </tr>
+        <tr v-if="client.expiryTime != 0">
+            <td>
+                <span>{{ i18n "pages.client.renew" }}</span>
+                <a-tooltip>
+                    <template slot="title">
+                        <span>{{ i18n "pages.client.renewDesc" }}</span>
+                    </template>
+                    <a-icon type="question-circle" theme="filled"></a-icon>
+                </a-tooltip>
+            </td>
+            <td>
+                <a-form-item>
+                    <a-input-number v-model.number="client.reset" :min="0"></a-input-number>
+                </a-form-item>
+            </td>
+        </tr>
     </table>
 </a-form>
 {{end}}

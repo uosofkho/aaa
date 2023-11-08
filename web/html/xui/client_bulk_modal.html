@@ -135,6 +135,22 @@
                     </a-form-item>
                 </td>
             </tr>
+            <tr v-if="clientsBulkModal.expiryTime != 0">
+                <td>
+                    <span>{{ i18n "pages.client.renew" }}</span>
+                    <a-tooltip>
+                        <template slot="title">
+                            <span>{{ i18n "pages.client.renewDesc" }}</span>
+                        </template>
+                        <a-icon type="question-circle" theme="filled"></a-icon>
+                    </a-tooltip>
+                </td>
+                <td>
+                    <a-form-item>
+                        <a-input-number v-model.number="clientsBulkModal.reset" :min="0"></a-input-number>
+                    </a-form-item>
+                </td>
+            </tr>
         </table>
     </a-form>
 </a-modal>
@@ -160,6 +176,7 @@
         tgId: "",
         flow: "",
         delayedStart: false,
+        reset: 0,
         ok() {
             clients = [];
             method=clientsBulkModal.emailMethod;
@@ -184,6 +201,7 @@
                 if(clientsBulkModal.inbound.canEnableTlsFlow()){
                     newClient.flow = clientsBulkModal.flow;
                 }
+                newClient.reset = clientsBulkModal.reset;
                 clients.push(newClient);
             }
             ObjectUtil.execute(clientsBulkModal.confirm, clients, clientsBulkModal.dbInbound.id);
@@ -207,6 +225,7 @@
             this.dbInbound = new DBInbound(dbInbound);
             this.inbound = dbInbound.toInbound();
             this.delayedStart = false;
+            this.reset = 0;
         },
         newClient(protocol) {
             switch (protocol) {
