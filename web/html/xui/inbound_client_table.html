@@ -103,22 +103,40 @@
         </table>
     </a-popover>
 </template>                                    
-<template slot="expiryTime" slot-scope="text, client, index">  
-    <a-badge>
-        <span v-if="client.expiryTime !=0 && client.reset >0" slot="count" class="reset-number">&#8634;[[ client.reset ]]d</span>              
-        <a-popover v-if="client.expiryTime > 0" :overlay-class-name="themeSwitcher.currentTheme">
+<template slot="expiryTime" slot-scope="text, client, index">
+    <template v-if="client.expiryTime !=0 && client.reset >0">
+        <a-popover :overlay-class-name="themeSwitcher.currentTheme">
             <template slot="content">
-                [[ DateUtil.formatMillis(client._expiryTime) ]]
+                <span v-if="client.expiryTime < 0">{{ i18n "pages.client.delayedStart" }}</span>
+                <span v-else>[[ DateUtil.formatMillis(client._expiryTime) ]]</span>
+            </template>
+            <table>
+                <tr>
+                    <td width="80px" style="margin:0; text-align: right;font-size: 1em;">
+                        [[ remainedDays(client.expiryTime) ]]
+                    </td>
+                    <td width="120px" class="infinite-bar">
+                        <a-progress :show-info="false"
+                        :status="isClientOnline(client.email)? 'active' : isClientEnabled(record, client.email)? 'exception' : ''"
+                        :percent="expireProgress(client.expiryTime, client.reset)"/>
+                    </td>
+                    <td width="60px">[[ client.reset + "d" ]]</td>
+                </tr>
+            </table>
+        </a-popover>
+    </template>
+    <template v-else>
+        <a-popover v-if="client.expiryTime != 0" :overlay-class-name="themeSwitcher.currentTheme">
+            <template slot="content">
+                <span v-if="client.expiryTime < 0">{{ i18n "pages.client.delayedStart" }}</span>
+                <span v-else>[[ DateUtil.formatMillis(client._expiryTime) ]]</span>
             </template>
         <a-tag style="min-width: 50px; border: none;" :color="userExpiryColor(app.expireDiff, client, themeSwitcher.isDarkTheme)">
             [[ remainedDays(client.expiryTime) ]]
         </a-tag>
         </a-popover>
-        <a-tag v-else-if="client.expiryTime < 0" style="min-width: 50px; border: none;" :color="userExpiryColor(app.expireDiff, client, themeSwitcher.isDarkTheme)">
-            [[ remainedDays(client.expiryTime) ]]
-        </a-tag>
         <a-tag v-else :color="userExpiryColor(app.expireDiff, client, themeSwitcher.isDarkTheme)" style="border: 0;" class="infinite-tag">&infin;</a-tag>
-    </a-badge>
+    </template>
 </template>
 <template slot="actionMenu" slot-scope="text, client, index">
     <a-dropdown :trigger="['click']">
@@ -206,25 +224,37 @@
                     </td>
                 </tr>
                 <tr>
+                <template v-if="client.expiryTime !=0 && client.reset >0">
+                    <td width="80px" style="margin:0; text-align: right;font-size: 1em;">
+                        [[ remainedDays(client.expiryTime) ]]
+                    </td>
+                    <td width="120px" class="infinite-bar">
+                        <a-popover :overlay-class-name="themeSwitcher.currentTheme">
+                            <template slot="content">
+                                <span v-if="client.expiryTime < 0">{{ i18n "pages.client.delayedStart" }}</span>
+                                <span v-else>[[ DateUtil.formatMillis(client._expiryTime) ]]</span>
+                            </template>
+                            <a-progress :show-info="false"
+                            :status="isClientOnline(client.email)? 'active' : isClientEnabled(record, client.email)? 'exception' : ''"
+                            :percent="expireProgress(client.expiryTime, client.reset)"/>
+                        </a-popover>
+                    </td>
+                    <td width="60px">[[ client.reset + "d" ]]</td>
+                </template>
+                <template v-else>
                     <td colspan="3" style="text-align: center;">
-                        <a-badge>
-                            <span slot="count" v-if="client.expiryTime !=0 && client.reset >0" class="reset-number">&#8634;[[ client.reset ]]d</span>
-                            <a-popover v-if="client.expiryTime > 0" :overlay-class-name="themeSwitcher.currentTheme">
-                                <template slot="content" v-if="client.expiryTime > 0">
-                                    [[ DateUtil.formatMillis(client._expiryTime) ]]
+                            <a-popover v-if="client.expiryTime != 0" :overlay-class-name="themeSwitcher.currentTheme">
+                                <template slot="content">
+                                    <span v-if="client.expiryTime < 0">{{ i18n "pages.client.delayedStart" }}</span>
+                                    <span v-else>[[ DateUtil.formatMillis(client._expiryTime) ]]</span>
                                 </template>
-                            <a-tag style="min-width: 50px; border: none;" 
-                                :color="userExpiryColor(app.expireDiff, client, themeSwitcher.isDarkTheme)">
-                                [[ remainedDays(client.expiryTime) ]]
-                            </a-tag>
+                                <a-tag style="min-width: 50px; border: none;" 
+                                    :color="userExpiryColor(app.expireDiff, client, themeSwitcher.isDarkTheme)">
+                                    [[ remainedDays(client.expiryTime) ]]
+                                </a-tag>
                             </a-popover>
-                            <a-tag v-else-if="client.expiryTime < 0"
-                                style="min-width: 50px; border: none;"
-                                :color="client.enable ? '#0e49b5' : themeSwitcher.isDarkTheme ? '#2c3950' : '#bcbcbc'">
-                                [[ remainedDays(client.expiryTime) ]]
-                            </a-tag>
                             <a-tag v-else :color="client.enable ? 'purple' : themeSwitcher.isDarkTheme ? '#2c3950' : '#bcbcbc'" class="infinite-tag">&infin;</a-tag>
-                        </a-badge>
+                        </template>
                     </td>
                 </tr>
             </table>

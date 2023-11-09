@@ -1146,6 +1146,13 @@
                 if (clientStats.total == 0) return 100;
                 return 100*(clientStats.down + clientStats.up)/clientStats.total;
             },
+            expireProgress(expTime, reset) {
+                now = new Date().getTime();
+                remainedSeconds = expTime < 0 ? -expTime/1000 : (expTime-now)/1000;
+                resetSeconds = reset * 86400;
+                if (remainedSeconds >= resetSeconds) return 0;
+                return 100*(1-(remainedSeconds/resetSeconds));
+            },
             remainedDays(expTime){
                 if (expTime == 0) return null;
                 if (expTime < 0) return formatSecond(expTime/-1000);
