@@ -227,6 +227,10 @@
                                                 <a-icon type="delete"></a-icon> {{ i18n "delete"}}
                                             </span>
                                         </a-menu-item>
+                                        <a-menu-item v-if="isMobile">
+                                            <a-switch size="small" v-model="dbInbound.enable" @change="switchEnable(dbInbound.id)"></a-switch>
+                                            {{ i18n "pages.inbounds.enable" }}
+                                        </a-menu-item>
                                     </a-menu>
                                 </a-dropdown>
                             </template>
