@@ -104,15 +104,8 @@
     </a-popover>
 </template>                                    
 <template slot="expiryTime" slot-scope="text, client, index">  
-    <a-badge v-if="client.expiryTime !=0 && client.reset >0"
-        :count="'+' + client.reset + 'd'"
-        :number-style="{
-            backgroundColor: 'transparent',
-            color: userExpiryColor(app.expireDiff, client, themeSwitcher.isDarkTheme),
-            fontSize: '8pt',
-            padding: '0',
-            boxShadow: '0 0px',
-          }">               
+    <a-badge>
+        <span v-if="client.expiryTime !=0 && client.reset >0" slot="count" class="reset-number">&#8634;[[ client.reset ]]d</span>              
         <a-popover v-if="client.expiryTime > 0" :overlay-class-name="themeSwitcher.currentTheme">
             <template slot="content">
                 [[ DateUtil.formatMillis(client._expiryTime) ]]
@@ -124,8 +117,8 @@
         <a-tag v-else-if="client.expiryTime < 0" style="min-width: 50px; border: none;" :color="userExpiryColor(app.expireDiff, client, themeSwitcher.isDarkTheme)">
             [[ remainedDays(client.expiryTime) ]]
         </a-tag>
+        <a-tag v-else :color="userExpiryColor(app.expireDiff, client, themeSwitcher.isDarkTheme)" style="border: 0;" class="infinite-tag">&infin;</a-tag>
     </a-badge>
-    <a-tag v-else :color="userExpiryColor(app.expireDiff, client, themeSwitcher.isDarkTheme)" style="border: 0;" class="infinite-tag">&infin;</a-tag>
 </template>
 <template slot="actionMenu" slot-scope="text, client, index">
     <a-dropdown :trigger="['click']">
@@ -214,15 +207,8 @@
                 </tr>
                 <tr>
                     <td colspan="3" style="text-align: center;">
-                        <a-badge v-if="client.expiryTime !=0 && client.reset >0"
-                            :count="'+' + client.reset + 'd'"
-                            :number-style="{
-                                backgroundColor: 'transparent',
-                                color: userExpiryColor(app.expireDiff, client, themeSwitcher.isDarkTheme),
-                                fontSize: '8pt',
-                                padding: '0',
-                                boxShadow: '0 0px',
-                              }">  
+                        <a-badge>
+                            <span slot="count" v-if="client.expiryTime !=0 && client.reset >0" class="reset-number">&#8634;[[ client.reset ]]d</span>
                             <a-popover v-if="client.expiryTime > 0" :overlay-class-name="themeSwitcher.currentTheme">
                                 <template slot="content" v-if="client.expiryTime > 0">
                                     [[ DateUtil.formatMillis(client._expiryTime) ]]
@@ -237,11 +223,12 @@
                                 :color="client.enable ? '#0e49b5' : themeSwitcher.isDarkTheme ? '#2c3950' : '#bcbcbc'">
                                 [[ remainedDays(client.expiryTime) ]]
                             </a-tag>
+                            <a-tag v-else :color="client.enable ? 'purple' : themeSwitcher.isDarkTheme ? '#2c3950' : '#bcbcbc'" class="infinite-tag">&infin;</a-tag>
                         </a-badge>
-                        <a-tag v-else :color="client.enable ? 'purple' : themeSwitcher.isDarkTheme ? '#2c3950' : '#bcbcbc'" class="infinite-tag">&infin;</a-tag>
                     </td>
                 </tr>
             </table>
+        </template>
         <a-badge>
             <a-icon v-if="!client.enable" slot="count" type="pause-circle" :style="'color: ' + themeSwitcher.isDarkTheme ? '#2c3950' : '#bcbcbc'"></a-icon>
             <a-button shape="round" size="small" style="font-size: 14px; padding: 0 10px;"><a-icon type="solution"></a-icon></a-button>
