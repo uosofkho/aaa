@@ -242,8 +242,10 @@
                     </td>
                 </tr>
             </table>
-          </template>
-        <a-button shape="round" size="small" style="font-size: 14px; padding: 0 10px;"><a-icon type="solution"></a-icon></a-button>
+        <a-badge>
+            <a-icon v-if="!client.enable" slot="count" type="pause-circle" :style="'color: ' + themeSwitcher.isDarkTheme ? '#2c3950' : '#bcbcbc'"></a-icon>
+            <a-button shape="round" size="small" style="font-size: 14px; padding: 0 10px;"><a-icon type="solution"></a-icon></a-button>
+        </a-badge>
     </a-popover>
 </template>
 {{end}}
