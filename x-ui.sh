@@ -611,6 +611,31 @@ ssl_cert_issue_CF() {
         show_menu
     fi
 }
+update_geo() {
+    local defaultBinFolder="/usr/local/x-ui/bin"
+    read -p "Please enter x-ui bin folder path. Leave blank for default. (Default: '${defaultBinFolder}')" binFolder
+    binFolder=${binFolder:-${defaultBinFolder}}
+    if [[ ! -d ${binFolder} ]]; then
+        LOGE "Folder ${binFolder} not exists!"
+        LOGI "making bin folder: ${binFolder}..."
+        mkdir -p ${binFolder}
+    fi
+
+    systemctl stop x-ui
+    cd ${binFolder}
+    rm -f geoip.dat geosite.dat geoip_IR.dat geosite_IR.dat geoip-lite.dat geosite-lite.dat security.dat security-ip.dat iran.dat
+    wget -O geoip.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geoip.dat
+    wget -O geosite.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geosite.dat
+    wget -O geoip-lite.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geoip-lite.dat
+    wget -O geosite-lite.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geosite-lite.dat
+    wget -O security-ip.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/security-ip.dat
+    wget -O security.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/security.dat
+    wget -O iran.dat -N https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/iran.dat
+    
+    systemctl start x-ui
+    echo -e "${green}Geosite.dat + Geoip.dat + security.dat + security-ip.dat + geoip-lite.dat + geosite-lite.dat + iran.dat have been updated successfully in bin folder '${binfolder}'!${plain}"
+    before_show_menu
+}
 
 show_usage() {
     echo "x-ui control menu usages: "
@@ -655,6 +680,7 @@ show_menu() {
   ${green}15.${plain} 一A key installation bbr (latest kernel)
   ${green}16.${plain} 一SSL Certificate Management
   ${green}17.${plain} 一Cloudflare SSL Certificate
+  ${green}18.${plain} Update Geo Files
  "
     show_status
     echo && read -p "Please enter your selection [0-17]: " num
@@ -714,8 +740,11 @@ show_menu() {
     17)
         ssl_cert_issue_CF
         ;;
+    18)
+        update_geo
+        ;;
     *)
-        LOGE "Please enter the correct number [0-16]"
+        LOGE "Please enter the correct number [0-17]"
         ;;
     esac
 }
