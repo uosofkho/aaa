@@ -632,7 +632,7 @@ update_geo() {
     wget -O security.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/security.dat
     wget -O iran.dat -N https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/iran.dat
     
-    systemctl start x-ui
+    systemctl restart x-ui
     echo -e "${green}Geosite.dat + Geoip.dat + security.dat + security-ip.dat + geoip-lite.dat + geosite-lite.dat + iran.dat have been updated successfully in bin folder '${binfolder}'!${plain}"
     before_show_menu
 }
@@ -683,7 +683,7 @@ show_menu() {
   ${green}18.${plain} Update Geo Files
  "
     show_status
-    echo && read -p "Please enter your selection [0-17]: " num
+    echo && read -p "Please enter your selection [0-18]: " num
 
     case "${num}" in
     0)
@@ -744,7 +744,7 @@ show_menu() {
         update_geo
         ;;
     *)
-        LOGE "Please enter the correct number [0-17]"
+        LOGE "Please enter the correct number [0-18]"
         ;;
     esac
 }
