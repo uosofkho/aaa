@@ -621,7 +621,6 @@ update_geo() {
         mkdir -p ${binFolder}
     fi
 
-    systemctl stop x-ui
     cd ${binFolder}
     rm -f geoip.dat geosite.dat geoip_IR.dat geosite_IR.dat geoip-lite.dat geosite-lite.dat security.dat security-ip.dat iran.dat
     wget -O geoip.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geoip.dat
