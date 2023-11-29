@@ -622,7 +622,7 @@ update_geo() {
     fi
 
     cd ${binFolder}
-    rm -f geoip.dat geosite.dat geoip_IR.dat geosite_IR.dat geoip-lite.dat geosite-lite.dat security.dat security-ip.dat iran.dat
+    rm -f *.dat
     wget -O geoip.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geoip.dat
     wget -O geosite.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geosite.dat
     wget -O geoip-lite.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geoip-lite.dat
