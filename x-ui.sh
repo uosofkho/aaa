@@ -679,7 +679,7 @@ show_menu() {
   ${green}15.${plain} 一A key installation bbr (latest kernel)
   ${green}16.${plain} 一SSL Certificate Management
   ${green}17.${plain} 一Cloudflare SSL Certificate
-  ${green}18.${plain} Update Geo Files
+  ${green}18.${plain} Update Advanced Geo System
  "
     show_status
     echo && read -p "Please enter your selection [0-18]: " num
