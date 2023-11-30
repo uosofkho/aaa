@@ -624,11 +624,11 @@ update_geo() {
     cd ${binFolder}
     rm -f *.dat
     wget -N https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geoip.dat
-    wget -N https://github.com/chocolate4u/Iran-v2ray-rules@release/geosite.dat
-    wget -N https://github.com/chocolate4u/Iran-v2ray-rules@release/geoip-lite.dat
-    wget -N https://github.com/chocolate4u/Iran-v2ray-rules@release/geosite-lite.dat
-    wget -N https://github.com/chocolate4u/Iran-v2ray-rules@release/security-ip.dat
-    wget -N https://github.com/chocolate4u/Iran-v2ray-rules@release/security.dat
+    wget -N https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geosite.dat
+    wget -N https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geoip-lite.dat
+    wget -N https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geosite-lite.dat
+    wget -N https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/security-ip.dat
+    wget -N https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/security.dat
     wget -N https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/iran.dat
     
     systemctl restart x-ui
