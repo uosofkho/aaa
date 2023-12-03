@@ -56,9 +56,9 @@
 
 [menu]
 "dashboard" = "Trạng thái hệ thống"
-"inbounds" = "Inbounds"
+"inbounds" = "Đầu Vào khách hàng"
 "settings" = "Cài đặt bảng điều khiển"
-"xray" = "Cài đặt tia Xray"
+"xray" = "Cài đặt Xray"
 "logout" = "Đăng xuất"
 "link" = "Khác"
 
