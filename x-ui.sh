@@ -613,19 +613,19 @@ ssl_cert_issue_CF() {
 }
 
 show_usage() {
-    echo "x-ui control menu usages: "
+    echo "X-UI Control Menu Usages: "
     echo "------------------------------------------"
-    echo "x-ui              - Enter     Admin menu"
-    echo "x-ui start        - Start     x-ui"
-    echo "x-ui stop         - Stop      x-ui"
-    echo "x-ui restart      - Restart   x-ui"
-    echo "x-ui status       - Show      x-ui status"
-    echo "x-ui enable       - Enable    x-ui on system startup"
-    echo "x-ui disable      - Disable   x-ui on system startup"
-    echo "x-ui log          - Check     x-ui logs"
-    echo "x-ui update       - Update    x-ui"
-    echo "x-ui install      - Install   x-ui"
-    echo "x-ui uninstall    - Uninstall x-ui"
+    echo "x-ui              - Panel Management Script"
+    echo "x-ui start        - Start X-UI"
+    echo "x-ui stop         - Stop X-UI"
+    echo "x-ui restart      - Restart X-UI"
+    echo "x-ui status       - Current X-UI Status"
+    echo "x-ui enable       - Enable X-UI on System Startup"
+    echo "x-ui disable      - Disable X-UI on System Startup"
+    echo "x-ui log          - Check X-UI Logs"
+    echo "x-ui update       - Update X-UI"
+    echo "x-ui install      - Install X-UI"
+    echo "x-ui uninstall    - Uninstall X-UI"
     echo "------------------------------------------"
 }
 
@@ -646,7 +646,7 @@ show_menu() {
 ————————————————
   ${green}8.${plain} Start X-UI
   ${green}9.${plain} Stop X-UI
-  ${green}10.${plain} Reboot X-UI
+  ${green}10.${plain} Restart X-UI
   ${green}11.${plain} Check X-UI State
   ${green}12.${plain} Check X-UI Logs
 ————————————————
@@ -717,7 +717,7 @@ show_menu() {
         ssl_cert_issue_CF
         ;;
     *)
-        LOGE "Please enter the correct number [0-16]"
+        LOGE "Please enter the correct number [0-17]"
         ;;
     esac
 }
