@@ -613,27 +613,29 @@ ssl_cert_issue_CF() {
 }
 
 show_usage() {
-    echo "X-UI Control Menu Usages: "
+    echo "X-UI Control Menu Usage"
     echo "------------------------------------------"
-    echo "x-ui              - Panel Management Script"
+    echo "SUBCOMMANDS:" 
+    echo "x-ui              - Admin panel management"
     echo "x-ui start        - Start X-UI"
     echo "x-ui stop         - Stop X-UI"
     echo "x-ui restart      - Restart X-UI"
-    echo "x-ui status       - Current X-UI Status"
-    echo "x-ui enable       - Enable X-UI on System Startup"
-    echo "x-ui disable      - Disable X-UI on System Startup"
-    echo "x-ui log          - Check X-UI Logs"
+    echo "x-ui status       - Current X-UI status"
+    echo "x-ui enable       - Enable X-UI on system startup"
+    echo "x-ui disable      - Disable X-UI on system startup"
+    echo "x-ui log          - Check X-UI logs"
     echo "x-ui update       - Update X-UI"
     echo "x-ui install      - Install X-UI"
     echo "x-ui uninstall    - Uninstall X-UI"
+    echo "x-ui help         - Control menu usage"
     echo "------------------------------------------"
 }
 
 show_menu() {
     echo -e "
-  ${green}X-UI Panel Management Script${plain}
+  ${green}X-UI Admin Panel Management${plain}
 ————————————————
-  ${green}0.${plain} Exit Script
+  ${green}0.${plain} Exit 
 ————————————————
   ${green}1.${plain} Install X-UI
   ${green}2.${plain} Update X-UI
