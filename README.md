@@ -246,7 +246,7 @@ Reference syntax:
     },
 ```
 
-**the final output would be like:**
+**the final output is like:**
 
 ```json
   "policy": {
