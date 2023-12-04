@@ -226,16 +226,16 @@ Reference syntax:
 
 # T-Shoots
 
-**If you upgrade from an old version or other forks, for enable traffic for users you should do :**
+**Please be aware if you upgrade from an old X-UI version or other forks, by default data traffic usage for users may not work! it's recommended to follow below steps for enabeling:**
 
-find this in config :
+**Find this section in config file**
 
 ```json
  "policy": {
     "system": {
 ```
 
-**and add this just after ` "policy": {` :**
+**add below section just after ` "policy": {` :**
 
 ```json
     "levels": {
@@ -246,7 +246,7 @@ find this in config :
     },
 ```
 
-**the final output is like :**
+**the final output would be like:**
 
 ```json
   "policy": {
@@ -266,6 +266,7 @@ find this in config :
 ```
 
 **Restart panel**
+**Done**
 
 </details>
 
