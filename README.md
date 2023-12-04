@@ -224,7 +224,7 @@ Reference syntax:
 - Multi language bot
 </details>
 
-# T-Shoots:
+# T-Shoots
 
 **If you upgrade from an old version or other forks, for enable traffic for users you should do :**
 
