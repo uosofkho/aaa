@@ -8,7 +8,7 @@
 
 > **Disclaimer: This project is only for personal learning and communication, please do not use it for illegal purposes, please do not use it in a production environment**
 
-xray panel supporting multi-protocol, **Multi-lang (English,Farsi,Chinese,Russian)**
+Xray panel supporting multi-protocol, **Multi-lang (English,Farsi,Chinese,Russian)**
 
 | Features                             |      Enable?       |
 | ------------------------------------ | :----------------: |
@@ -114,7 +114,7 @@ docker build -t x-ui .
 - Support export/import database from panel
 - Show online users
 
-## suggestion system
+## Recommended OS
 
 - CentOS 8+
 - Ubuntu 20+
