@@ -8,7 +8,7 @@
 
 > **Disclaimer: This project is only for personal learning and communication, please do not use it for illegal purposes, please do not use it in a production environment**
 
-**Xray Panel Supporting Multi-Protocols, Multi-langs (English,Farsi,Chinese,Russian)**
+**Xray Panel Supporting Multi-Protocol, Multi-lang (English,Farsi,Chinese,Russian)**
 
 | Features                             |      Enable?       |
 | ------------------------------------ | :----------------: |
@@ -183,7 +183,7 @@ certbot certonly --standalone --register-unsafely-without-email --non-interactiv
 
 </details>
 
-## Tg Robot Usage
+## Telegram bot
 
 <details>
   <summary>Click for details</summary>
