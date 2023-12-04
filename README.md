@@ -183,7 +183,7 @@ certbot certonly --standalone --register-unsafely-without-email --non-interactiv
 
 </details>
 
-## Tg robot use
+## Tg robot usage
 
 <details>
   <summary>Click for details</summary>
@@ -266,7 +266,6 @@ Reference syntax:
 ```
 
 **Restart panel**
-**Done**
 
 </details>
 
