@@ -32,7 +32,7 @@
 - Tron USDT (TRC20): `TYTq73Gj6dJ67qe58JVPD9zpjW2cc9XgVz`
 - Tezos (XTZ): tz2Wnh2SsY1eezXrcLChu6idWpgdHzUFQcts
 
-# Install & Upgrade to latest Version
+## Install & Upgrade to latest Version
 
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh)
@@ -150,7 +150,7 @@ docker build -t x-ui .
 - `client.password` for TROJAN
 - `client.email` for Shadowsocks
 
-# Environment Variables
+## Environment Variables
 
 | Variable       |                      Type                      | Default       |
 | -------------- | :--------------------------------------------: | :------------ |
@@ -159,7 +159,7 @@ docker build -t x-ui .
 | XUI_BIN_FOLDER |                    `string`                    | `"bin"`       |
 | XUI_DB_FOLDER  |                    `string`                    | `"/etc/x-ui"` |
 
-# Screenshots
+## Screenshots
 
 ![inbounds](./media/inbounds.png)
 ![Dark inbounds](./media/inbounds-dark.png)
@@ -269,12 +269,12 @@ Reference syntax:
 
 </details>
 
-# a Special Thanks to
+## a Special Thanks to
 
 - [HexaSoftwareTech](https://github.com/HexaSoftwareTech/)
 - [MHSanaei](https://github.com/MHSanaei)
 
-# Acknowledgment
+## Acknowledgment
 
 - [Iran Hosted Domains](https://github.com/bootmortis/iran-hosted-domains) (License: **MIT**): _A comprehensive list of Iranian domains and services that are hosted within the country._
 - [PersianBlocker](https://github.com/MasterKia/PersianBlocker) (License: **AGPLv3**): _An optimal and extensive list to block ads and trackers on Persian websites._
