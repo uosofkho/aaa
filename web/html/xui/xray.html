@@ -271,19 +271,19 @@
                                         <template slot="content">
                                             <table cellpadding="2" style="max-width: 300px;">
                                                 <tr v-if="rule.source">
-                                                    <td>Source</td>
+                                                    <td>Nguồn</td>
                                                     <td><a-tag color="blue" v-for="r in rule.source.split(',')">[[ r ]]</a-tag></td>
                                                 </tr>
                                                 <tr v-if="rule.sourcePort">
-                                                    <td>Source Port</td>
+                                                    <td>Cổng nguồn</td>
                                                     <td><a-tag color="green" v-for="r in rule.sourcePort.split(',')">[[ r ]]</a-tag></td>
                                                 </tr>
                                                 <tr v-if="rule.network">
-                                                    <td>Network</td>
+                                                    <td>Mạng</td>
                                                     <td><a-tag color="blue" v-for="r in rule.network.split(',')">[[ r ]]</a-tag></td>
                                                 </tr>
                                                 <tr v-if="rule.protocol">
-                                                    <td>Protocol</td>
+                                                    <td>Giao thức</td>
                                                     <td><a-tag color="green" v-for="r in rule.protocol.split(',')">[[ r ]]</a-tag></td>
                                                 </tr>
                                                 <tr v-if="rule.attrs">
@@ -295,11 +295,11 @@
                                                     <td><a-tag color="green" v-for="r in rule.ip.split(',')">[[ r ]]</a-tag></td>
                                                 </tr>
                                                 <tr v-if="rule.domain">
-                                                    <td>Domain</td>
+                                                    <td>Tên Miền</td>
                                                     <td><a-tag color="blue" v-for="r in rule.domain.split(',')">[[ r ]]</a-tag></td>
                                                 </tr>
                                                 <tr v-if="rule.port">
-                                                    <td>Port</td>
+                                                    <td>Cổng</td></td>
                                                     <td><a-tag color="green" v-for="r in rule.port.split(',')">[[ r ]]</a-tag></td>
                                                 </tr>
                                             </table>

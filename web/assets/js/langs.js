@@ -18,6 +18,11 @@ const supportLangs = [
         name: 'Русский',
         value: 'ru-RU',
         icon: '🇷🇺',
+    },   
+    {
+        name: 'Tiếng Việt',
+        value: 'vi-VN',
+        icon: '🇻🇳',        
     },
 ];
 
