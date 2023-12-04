@@ -8,7 +8,7 @@
 
 > **Disclaimer: This project is only for personal learning and communication, please do not use it for illegal purposes, please do not use it in a production environment**
 
-**Xray Panel Supports Multi-Protocol, Advanced Routing, Multi-lang (English,Farsi,Chinese,Russian)**
+**Xray Panel Supporting Multi-Protocols, Advanced Routing, Multi-langs (English,Farsi,Chinese,Russian)**
 
 | Features                             |      Enable?       |
 | ------------------------------------ | :----------------: |
