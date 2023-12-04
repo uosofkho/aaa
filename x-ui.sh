@@ -663,6 +663,7 @@ update_geo_files() {
     ;;
         *)
         LOGE "Please enter the correct number [0-2]"
+        update_geo_files
     ;;
     esac
 }
