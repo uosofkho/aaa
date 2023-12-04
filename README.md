@@ -265,7 +265,7 @@ find this in config :
   "routing": {
 ```
 
-# Restart panel
+**Restart panel**
 
 </details>
 
