@@ -70,7 +70,7 @@ systemctl restart x-ui
 
 ## Install Using Docker
 
-1. Install docker
+1. Install Docker
 
 ```shell
 curl -fsSL https://get.docker.com | sh
