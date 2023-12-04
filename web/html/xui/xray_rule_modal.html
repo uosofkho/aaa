@@ -5,7 +5,7 @@
     <a-form layout="inline">
     <table width="100%" class="ant-table-tbody">
         <tr>
-            <td>Domain Matcher</td>
+            <td>Bộ so khớp tên miền</td>
             <td>
                 <a-form-item>
                     <a-select v-model="ruleModal.rule.domainMatcher" style="width: 250px;" :dropdown-class-name="themeSwitcher.currentTheme">
@@ -15,7 +15,7 @@
             </td>
         </tr>
         <tr>
-            <td>Source IPs
+            <td>Địa chỉ IP nguồn
                 <a-tooltip>
                     <template slot="title">
                         <span>{{ i18n "pages.xray.rules.useComma" }}</span>
@@ -30,7 +30,7 @@
             </td>
         </tr>
         <tr>
-            <td>Source Port
+            <td>Cổng nguồn
                 <a-tooltip>
                     <template slot="title">
                         <span>{{ i18n "pages.xray.rules.useComma" }}</span>
@@ -45,7 +45,7 @@
             </td>
         </tr>
         <tr>
-            <td>Network</td>
+            <td>Mạng</td>
             <td>
                 <a-form-item>
                     <a-select v-model="ruleModal.rule.network" style="width: 250px;" :dropdown-class-name="themeSwitcher.currentTheme">
@@ -55,7 +55,7 @@
             </td>
         </tr>
         <tr>
-            <td>Protocol</td>
+            <td>Giao thức</td>
             <td>
                 <a-form-item>
                     <a-select v-model="ruleModal.rule.protocol" style="width: 250px;" :dropdown-class-name="themeSwitcher.currentTheme">
@@ -67,7 +67,7 @@
         <tr>
             <td colspan="2">
                 <a-form-item>
-                    <span>Attributes</span>
+                    <span>Thuộc tính</span>
                     <a-button size="small" style="margin-left: 10px" @click="ruleModal.rule.attrs.push(['', ''])">+</a-button>
                     <a-input-group compact v-for="(attr,index) in ruleModal.rule.attrs">
                         <a-input style="width: 50%" v-model="attr[0]" placeholder='{{ i18n "pages.inbounds.stream.general.name" }}'>
@@ -96,7 +96,7 @@
             </td>
         </tr>
         <tr>
-            <td>Domain
+            <td>Tên miền
                 <a-tooltip>
                     <template slot="title">
                         <span>{{ i18n "pages.xray.rules.useComma" }}</span>
@@ -111,7 +111,7 @@
             </td>
         </tr>
         <tr>
-            <td>Port
+            <td>Cổng
                 <a-tooltip>
                     <template slot="title">
                         <span>{{ i18n "pages.xray.rules.useComma" }}</span>
@@ -126,7 +126,7 @@
             </td>
         </tr>
         <tr>
-            <td>Inbound Tags</td>
+            <td>Thẻ đầu vào</td>
             <td>
                 <a-form-item>
                     <a-select v-model="ruleModal.rule.inboundTag" mode="multiple" style="width: 250px;" :dropdown-class-name="themeSwitcher.currentTheme">
@@ -136,7 +136,7 @@
             </td>
         </tr>
         <tr>
-            <td>Outbound Tag</td>
+            <td>Thẻ đầu ra</td>
             <td>
                 <a-form-item>
                     <a-select v-model="ruleModal.rule.outboundTag" style="width: 250px;" :dropdown-class-name="themeSwitcher.currentTheme">
