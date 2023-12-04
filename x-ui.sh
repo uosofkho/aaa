@@ -635,6 +635,7 @@ update_geo_files() {
     wget -N https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
     wget -O geoip_IR.dat -N https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geoip.dat
     wget -O geosite_IR.dat -N https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geosite.dat
+    wget -N https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/iran.dat
     systemctl restart x-ui
     echo -e "${green}Geo Files have been updated successfully in bin folder '${binfolder}'!${plain}"
     before_show_menu
@@ -655,6 +656,7 @@ update_geo_files() {
     wget -N https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
     wget -O geoip_IR.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geoip.dat
     wget -O geosite_IR.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geosite.dat
+    wget -N https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/iran.dat 
     systemctl restart x-ui
     echo -e "${green}Geo Files have been updated successfully in bin folder '${binfolder}'!${plain}"
     before_show_menu
