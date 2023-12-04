@@ -228,14 +228,14 @@ Reference syntax:
 
 **Please be aware if you upgrade from an old X-UI version or other forks, by default data traffic usage for users may not work! it's recommended to follow below steps for enabeling:**
 
-**1. Find this section in config file**
+1. Find this section in config file
 
 ```json
  "policy": {
     "system": {
 ```
 
-**Add below section just after ` "policy": {` :**
+**2. Add below section just after ` "policy": {` :**
 
 ```json
     "levels": {
@@ -246,7 +246,7 @@ Reference syntax:
     },
 ```
 
-**The final output is like:**
+**- The final output is like:**
 
 ```json
   "policy": {
@@ -265,7 +265,7 @@ Reference syntax:
   "routing": {
 ```
 
-**Save and restart panel**
+**3. Save and restart panel**
 
 </details>
 
