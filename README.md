@@ -267,6 +267,8 @@ Reference syntax:
 
 **Restart panel**
 
+**Done**
+
 </details>
 
 # a special thanks to
