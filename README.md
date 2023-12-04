@@ -95,7 +95,7 @@ docker run -itd \
 docker build -t x-ui .
 ```
 
-# Features
+## Features
 
 - System Status Monitoring
 - Search within all inbounds and clients
