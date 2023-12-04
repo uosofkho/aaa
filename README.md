@@ -32,13 +32,13 @@ Xray panel supporting multi-protocol, **Multi-lang (English,Farsi,Chinese,Russia
 - Tron USDT (TRC20): `TYTq73Gj6dJ67qe58JVPD9zpjW2cc9XgVz`
 - Tezos (XTZ): tz2Wnh2SsY1eezXrcLChu6idWpgdHzUFQcts
 
-# Install & Upgrade to latest version
+# Install & Upgrade to latest Version
 
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh)
 ```
 
-## Install custom version
+## Install Custom Version
 
 To install your desired version you can add the version to the end of install command. Example for ver `0.5.2`:
 
@@ -46,7 +46,7 @@ To install your desired version you can add the version to the end of install co
 bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh) 0.5.2
 ```
 
-## Manual install & upgrade
+## Manual Install & Upgrade
 
 1. First download the latest compressed package from https://github.com/alireza0/x-ui/releases, generally choose Architecture `amd64`
 2. Then upload the compressed package to the server's `/root/` directory and login to the server with user `root` 
@@ -68,15 +68,15 @@ systemctl enable x-ui
 systemctl restart x-ui
 ```
 
-## Install using docker
+## Install Using Docker
 
-1. install docker
+1. Install docker
 
 ```shell
 curl -fsSL https://get.docker.com | sh
 ```
 
-2. install x-ui
+2. Install X-UI
 
 ```shell
 mkdir x-ui && cd x-ui
@@ -121,7 +121,7 @@ docker build -t x-ui .
 - Debian 10+
 - Fedora 36+
 
-## API routes
+## API Routes
 
 - `/login` with `PUSH` user data: `{username: '', password: ''}` for login
 - `/xui/API/inbounds` base for following actions:
@@ -166,7 +166,7 @@ docker build -t x-ui .
 ![outbounds](./media/outbounds.png)
 ![rules](./media/rules.png)
 
-## SSL certificate application
+## SSL Certificate Application
 
 <details>
   <summary>Click for details</summary>
@@ -183,7 +183,7 @@ certbot certonly --standalone --register-unsafely-without-email --non-interactiv
 
 </details>
 
-## Tg robot usage
+## Tg Robot Usage
 
 <details>
   <summary>Click for details</summary>
@@ -269,7 +269,7 @@ Reference syntax:
 
 </details>
 
-# a special thanks to
+# a Special Thanks to
 
 - [HexaSoftwareTech](https://github.com/HexaSoftwareTech/)
 - [MHSanaei](https://github.com/MHSanaei)
@@ -279,6 +279,6 @@ Reference syntax:
 - [Iran Hosted Domains](https://github.com/bootmortis/iran-hosted-domains) (License: **MIT**): _A comprehensive list of Iranian domains and services that are hosted within the country._
 - [PersianBlocker](https://github.com/MasterKia/PersianBlocker) (License: **AGPLv3**): _An optimal and extensive list to block ads and trackers on Persian websites._
 
-## Stargazers over time
+## Stargazers over Time
 
 [![Stargazers over time](https://starchart.cc/alireza0/x-ui.svg)](https://starchart.cc/alireza0/x-ui)
