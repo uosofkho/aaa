@@ -616,7 +616,7 @@ show_usage() {
     echo "X-UI Control Menu Usage"
     echo "------------------------------------------"
     echo "SUBCOMMANDS:" 
-    echo "x-ui              - Admin panel management"
+    echo "x-ui              - Admin management script"
     echo "x-ui start        - Start X-UI"
     echo "x-ui stop         - Stop X-UI"
     echo "x-ui restart      - Restart X-UI"
@@ -633,7 +633,7 @@ show_usage() {
 
 show_menu() {
     echo -e "
-  ${green}X-UI Admin Panel Management${plain}
+  ${green}X-UI Admin Management Script ${plain}
 ————————————————
   ${green}0.${plain} Exit 
 ————————————————
