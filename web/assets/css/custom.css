@@ -786,7 +786,7 @@ style attribute {
 
 .ant-calendar-selected-day .ant-calendar-date {
     background: #0E49B5;
-    color: #fff;
+    color: #ffffff;
 }
 
 li.ant-select-dropdown-menu-item:empty:after {
