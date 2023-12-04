@@ -183,7 +183,7 @@ certbot certonly --standalone --register-unsafely-without-email --non-interactiv
 
 </details>
 
-## Telegram bot
+## Telegram Bot
 
 <details>
   <summary>Click for details</summary>
