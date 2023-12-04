@@ -612,6 +612,59 @@ ssl_cert_issue_CF() {
     fi
 }
 
+update_geo_files() {
+    echo -e "${green}\t1.${plain} Update From Github [Default] "
+    echo -e "${green}\t2.${plain} Update From jsDelivr "
+    echo -e "${yellow}\t0.${plain} Back To MainMenu "
+    read -p "Select an option: " select
+    case "$select" in
+        0) show_menu ;;
+        1) 
+    local defaultBinFolder="/usr/local/x-ui/bin"
+    read -p "Please enter x-ui bin folder path. Leave blank for default. (Default: '${defaultBinFolder}')" binFolder
+    binFolder=${binFolder:-${defaultBinFolder}}
+    if [[ ! -d ${binFolder} ]]; then
+        LOGE "Folder ${binFolder} not exists!"
+        LOGI "making bin folder: ${binFolder}..."
+        mkdir -p ${binFolder}
+    fi
+    
+    cd ${binFolder}
+    rm -f *.dat
+    wget -N https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
+    wget -N https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
+    wget -O geoip_IR.dat -N https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geoip.dat
+    wget -O geosite_IR.dat -N https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geosite.dat
+    systemctl restart x-ui
+    echo -e "${green}Geo Files have been updated successfully in bin folder '${binfolder}'!${plain}"
+    before_show_menu
+    ;;
+        2) 
+    local defaultBinFolder="/usr/local/x-ui/bin"
+    read -p "Please enter x-ui bin folder path. Leave blank for default. (Default: '${defaultBinFolder}')" binFolder
+    binFolder=${binFolder:-${defaultBinFolder}}
+    if [[ ! -d ${binFolder} ]]; then
+        LOGE "Folder ${binFolder} not exists!"
+        LOGI "making bin folder: ${binFolder}..."
+        mkdir -p ${binFolder}
+    fi
+    
+    cd ${binFolder}
+    rm -f *.dat
+    wget -N https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat
+    wget -N https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
+    wget -O geoip_IR.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geoip.dat
+    wget -O geosite_IR.dat -N https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geosite.dat
+    systemctl restart x-ui
+    echo -e "${green}Geo Files have been updated successfully in bin folder '${binfolder}'!${plain}"
+    before_show_menu
+    ;;
+        *)
+        LOGE "Please enter the correct number [0-2]"
+    ;;
+    esac
+}
+
 show_usage() {
     echo "x-ui control menu usages: "
     echo "------------------------------------------"
@@ -656,10 +709,11 @@ show_menu() {
   ${green}15.${plain} 一A Key Installation BBR (latest kernel)
   ${green}16.${plain} 一SSL Certificate Management
   ${green}17.${plain} 一Cloudflare SSL Certificate
+  ${green}18.${plain} 一Update Geo Files
 ————————————————
  "
     show_status
-    echo && read -p "Please enter your selection [0-17]: " num
+    echo && read -p "Please enter your selection [0-18]: " num
 
     case "${num}" in
     0)
@@ -716,8 +770,11 @@ show_menu() {
     17)
         ssl_cert_issue_CF
         ;;
+    18)
+        update_geo_files
+        ;;
     *)
-        LOGE "Please enter the correct number [0-16]"
+        LOGE "Please enter the correct number [0-18]"
         ;;
     esac
 }
