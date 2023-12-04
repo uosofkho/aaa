@@ -750,7 +750,8 @@ style attribute {
 }
 
 .dark .ant-spin-dot-item {
-    background-color: #ffffffff;
+    background-color: #ffffff;
+
 }
 
 .ant-radio-button-wrapper {
