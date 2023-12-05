@@ -223,7 +223,7 @@ Reference syntax:
 - @daily // Daily notification (00:00 in the morning)
 - @every 8h // notify every 8 hours
 
-### Telegram Bot Features
+### Features
 
 - Report periodic
 - Login notification
