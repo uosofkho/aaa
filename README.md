@@ -8,7 +8,15 @@
 
 > **Disclaimer: This project is only for personal learning and communication, please do not use it for illegal purposes, please do not use it in a production environment**
 
-**Xray Panel Supporting Multi-Protocol, Multi-lang (English,Farsi,Chinese,Russian)**
+**Xray Panel Supporting Multi-Protocol**
+
+## Language Support## 
+
+- English
+- Chinese
+- Farsi
+- Russion
+- Vietnamese
 
 | Features                             |      Enable?       |
 | ------------------------------------ | :----------------: |
