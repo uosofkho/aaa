@@ -202,6 +202,7 @@ certbot certonly --standalone --register-unsafely-without-email --non-interactiv
 <details>
   <summary>Click for details</summary>
 
+
 X-UI supports daily traffic notification, panel login reminder and other functions through the Tg robot. To use the Tg robot, you need to apply for the specific application tutorial. You can refer to the [blog](https://coderfan.net/how-to-use-telegram-bot-to-alarm-you-when-someone-login-into-your-vps.html)
 Set the robot-related parameters in the panel background, including:
 
@@ -242,6 +243,7 @@ Reference syntax:
 
 <details>
   <summary>Click for details</summary>
+
   
 Please be aware if you upgrade from an old X-UI version or other forks, by default data traffic usage for users may not work! it's recommended to follow below steps for enabeling:
 
