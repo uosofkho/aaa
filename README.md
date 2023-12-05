@@ -22,8 +22,8 @@
 ## Quick Look
 | Features                             |      Enable?       |
 | ------------------------------------ | :----------------: |
-| Multi-Protocols                      | :heavy_check_mark: |
-| Multi-Languages                      | :heavy_check_mark: |
+| Multi-Protocol                       | :heavy_check_mark: |
+| Multi-Language                       | :heavy_check_mark: |
 | Advanced Traffic Routing             | :heavy_check_mark: |
 | Dark/Light Theme                     | :heavy_check_mark: |
 | Search in Deep                       | :heavy_check_mark: |
