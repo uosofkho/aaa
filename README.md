@@ -238,8 +238,11 @@ Reference syntax:
 - Multi language bot
 </details>
 
-### T-Shoots
+## T-Shoots
 
+<details>
+  <summary>Click for details</summary>
+  
 Please be aware if you upgrade from an old X-UI version or other forks, by default data traffic usage for users may not work! it's recommended to follow below steps for enabeling:
 
 1. Find this section in config file
