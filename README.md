@@ -22,16 +22,18 @@
 ## Quick Look
 | Features                             |      Enable?       |
 | ------------------------------------ | :----------------: |
-| Multi-lang                           | :heavy_check_mark: |
+| Multi-Protocols                      | :heavy_check_mark: |
+| Multi-Languages                      | :heavy_check_mark: |
+| Advanced Routing                     | :heavy_check_mark: |
 | Dark/Light Theme                     | :heavy_check_mark: |
-| Search in deep                       | :heavy_check_mark: |
+| Search in Deep                       | :heavy_check_mark: |
 | Inbound Multi User                   | :heavy_check_mark: |
-| Multi User Traffic & Expiration time | :heavy_check_mark: |
+| Multi User Traffic & Expiration Time | :heavy_check_mark: |
 | REST API                             | :heavy_check_mark: |
-| Telegram BOT (admin + clients)       | :heavy_check_mark: |
-| Backup database using Telegram BOT   | :heavy_check_mark: |
-| Subscription link + userInfo         | :heavy_check_mark: |
-| Calculate expire date on first usage | :heavy_check_mark: |
+| Telegram Bot (admin + clients)       | :heavy_check_mark: |
+| Backup Database using Telegram Bot   | :heavy_check_mark: |
+| Subscription Link + UserInfo         | :heavy_check_mark: |
+| Calculate Expire Date on First Usage | :heavy_check_mark: |
 | Show Online Clients                  | :heavy_check_mark: |
 
 
