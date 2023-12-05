@@ -34,7 +34,7 @@
 | Database Backup using Telegram Bot   | :heavy_check_mark: |
 | Subscription Link + UserInfo         | :heavy_check_mark: |
 | Calculate Expire Date on First Usage | :heavy_check_mark: |
-| Show Current Online Users          | :heavy_check_mark: |
+| Show Online Users                    | :heavy_check_mark: |
 
 
 ## Languages
