@@ -27,7 +27,7 @@
 | Advanced Traffic Routing             | :heavy_check_mark: |
 | Dark/Light Theme                     | :heavy_check_mark: |
 | Search in Deep                       | :heavy_check_mark: |
-| Multi User Inbound                   |  
+| Multi User Inbounds                  | 
 :heavy_check_mark: |
 | Multi User Traffic & Expire Date     | :heavy_check_mark: |
 | REST API                             | :heavy_check_mark: |
