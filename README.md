@@ -34,8 +34,8 @@
 | Telegram Bot (admin + clients)       | :heavy_check_mark: |
 | Database Backup using Telegram Bot   | :heavy_check_mark: |
 | Subscription Link + UserInfo         | :heavy_check_mark: |
-| Calculate Expire Date based on 1st Usage | :heavy_check_mark: |
-| Show Current Online Clients                  | :heavy_check_mark: |
+| Calculate Expire Date on First Usage | :heavy_check_mark: |
+| Show Current Online Clients          | :heavy_check_mark: |
 
 
 ## Languages
