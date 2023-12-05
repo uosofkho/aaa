@@ -1,5 +1,5 @@
 # X-UI
-**Advanced GUI panel based on Xray Core supports multiple protocols and languages.**
+**Advanced GUI panel based on Xray Core supports multiple protocols and languages**
 
 ![](https://img.shields.io/github/v/release/alireza0/x-ui.svg)
 ![](https://img.shields.io/docker/pulls/alireza7/x-ui.svg)
