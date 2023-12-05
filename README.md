@@ -1,5 +1,5 @@
 # X-UI
-
+**Xray Panel Supporting Multi-Protocol**
 ![](https://img.shields.io/github/v/release/alireza0/x-ui.svg)
 ![](https://img.shields.io/docker/pulls/alireza7/x-ui.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/alireza0/x-ui)](https://goreportcard.com/report/github.com/alireza0/x-ui)
@@ -8,9 +8,7 @@
 
 > **Disclaimer: This project is only for personal learning and communication, please do not use it for illegal purposes, please do not use it in a production environment**
 
-**Xray Panel Supporting Multi-Protocol**
-
-## Language Support
+## Languages
 
 - English
 - Chinese
