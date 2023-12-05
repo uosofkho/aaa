@@ -146,17 +146,17 @@ docker build -t x-ui .
 | `GET`  | `"/get/:id"`                       | Get inbound with inbound.id               |
 | `GET`  | `"/createbackup"`                  | Telegram bot sends backup to admins       |
 | `POST` | `"/add"`                           | Add inbound                               |
-| `POST` | `"/del/:id"`                       | Delete Inbound                            |
-| `POST` | `"/update/:id"`                    | Update Inbound                            |
-| `POST` | `"/addClient/"`                    | Add Client to inbound                     |
-| `POST` | `"/:id/delClient/:clientId"`       | Delete Client by clientId\*               |
-| `POST` | `"/updateClient/:clientId"`        | Update Client by clientId\*               |
-| `GET`  | `"/getClientTraffics/:email"`      | Get Client's Traffic                      |
-| `POST` | `"/:id/resetClientTraffic/:email"` | Reset Client's Traffic                    |
+| `POST` | `"/del/:id"`                       | Delete inbound                            |
+| `POST` | `"/update/:id"`                    | Update inbound                            |
+| `POST` | `"/addClient/"`                    | Add client to inbound                     |
+| `POST` | `"/:id/delClient/:clientId"`       | Delete client by clientId\*               |
+| `POST` | `"/updateClient/:clientId"`        | Update client by clientId\*               |
+| `GET`  | `"/getClientTraffics/:email"`      | Get client's traffic                      |
+| `POST` | `"/:id/resetClientTraffic/:email"` | Reset client's traffic                    |
 | `POST` | `"/resetAllTraffics"`              | Reset traffics of all inbounds            |
 | `POST` | `"/resetAllClientTraffics/:id"`    | Reset inbound clients traffics (-1: all)  |
 | `POST` | `"/delDepletedClients/:id"`        | Delete inbound depleted clients (-1: all) |
-| `POST` | `"/onlines"`                       | Get Online users ( list of emails )       |
+| `POST` | `"/onlines"`                       | Get online users ( list of emails )       |
 
 \*- The field `clientId` should be filled by:
 
