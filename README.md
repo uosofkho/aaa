@@ -18,14 +18,6 @@
 - Tezos (XTZ): tz2Wnh2SsY1eezXrcLChu6idWpgdHzUFQcts
 
 
-## Languages
-
-- English
-- Chinese
-- Farsi
-- Russian
-- Vietnamese
-
 ## Quick Look
 | Features                             |      Enable?       |
 | ------------------------------------ | :----------------: |
@@ -42,6 +34,15 @@
 | Show Online Clients                  | :heavy_check_mark: |
 
 
+## Languages
+
+- English
+- Chinese
+- Farsi
+- Russian
+- Vietnamese
+
+  
 ## Install & Upgrade to latest Version
 
 ```sh
