@@ -17,6 +17,7 @@
 - Russian
 - Vietnamese
 
+## Quick Look
 | Features                             |      Enable?       |
 | ------------------------------------ | :----------------: |
 | Multi-lang                           | :heavy_check_mark: |
