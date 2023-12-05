@@ -27,8 +27,8 @@
 | Advanced Traffic Routing             | :heavy_check_mark: |
 | Dark/Light Theme                     | :heavy_check_mark: |
 | Search in Deep                       | :heavy_check_mark: |
-| Multi User Inbounds                  | :heavy_check_mark: |
-| Multi User Traffic & Expire Date     | :heavy_check_mark: |
+| Multi-User Inbounds                  | :heavy_check_mark: |
+| Multi-User Traffic & Expire Date     | :heavy_check_mark: |
 | REST API                             | :heavy_check_mark: |
 | Telegram Bot (admin + clients)       | :heavy_check_mark: |
 | Database Backup using Telegram Bot   | :heavy_check_mark: |
