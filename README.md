@@ -122,7 +122,7 @@ docker build -t x-ui .
 - Customizable Xray configuration templates
 - Support subscription (multi) link
 - Detect users which are expiring or exceed traffic limit
-- Support https access panel (self-provided domain name + SSL certificate)
+- Support HTTPS access panel (self-provided domain name + SSL certificate)
 - Support one-click SSL certificate application and automatic renewal
 - Support export/import database from panel
 - Show online users
