@@ -115,7 +115,7 @@ docker build -t x-ui .
 - Search within all inbounds and users
 - Support Dark/Light theme UI
 - Support multi-user, multi-protocol, web page visualization operation
-- advanced GUI for routing traffic (Reverse proxy, Transparent proxy, multi-domain, multi-certificate, multi port per inbound)
+- advanced GUI for routing traffic (Reverse & Transparent proxy, Multi-Domain, Multi-Certificate, Multi-Port per inbound)
 - Supported protocols: VMess, VLESS, Trojan, Shadowsocks, Dokodemo-door, SOCKS, HTTP
 - Support XTLS native encryptions (Vision, REALITY)
 - Traffic statistics, limit traffic, set expire date
