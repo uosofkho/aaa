@@ -116,8 +116,8 @@ docker build -t x-ui .
 - Support Dark/Light theme UI
 - Support multi-user, multi-protocol, web page visualization operation
 - Support multi-domain configuration and multi-certificate inbounds
-- Supported protocols: vmess, vless, trojan, shadowsocks, dokodemo-door, socks, http
-- Support XTLS encryption protocols (Vision, Reality)
+- Supported protocols: VMess, VLESS, Trojan, Shadowsocks, Dokodemo-door, SOCKS, HTTP
+- Support XTLS native encryptions (Vision, REALITY)
 - Traffic statistics, limit traffic, set expire date
 - Customizable Xray configuration templates
 - Support subscription (multi) link
@@ -159,8 +159,8 @@ docker build -t x-ui .
 
 \*- The field `clientId` should be filled by:
 
-- `client.id` for VMESS and VLESS
-- `client.password` for TROJAN
+- `client.id` for VMess and VLESS
+- `client.password` for Trojan
 - `client.email` for Shadowsocks
 
 ## Environment Variables
