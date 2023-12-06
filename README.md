@@ -114,14 +114,13 @@ docker build -t x-ui .
 - System Status Monitoring
 - Search within all inbounds and clients
 - Support Dark/Light theme UI
-- Support multi-user multi-protocol, web page visualization operation
+- Support multi-user, multi-protocol, web page visualization operation
 - Support multi-domain configuration and multi-certificate inbounds
 - Supported protocols: vmess, vless, trojan, shadowsocks, dokodemo-door, socks, http
-- Support for configuring more transport configurations
-- Traffic statistics, limit traffic, limit expiration time
-- Customizable xray configuration templates
-- Support subscription ( multi ) link
-- Detect users which are expiring or exceed traffic limit soon
+- Traffic statistics, limit traffic, set expire date
+- Customizable Xray configuration templates
+- Support subscription (multi) link
+- Detect users which are expiring or exceed traffic limit
 - Support https access panel (self-provided domain name + ssl certificate)
 - Support one-click SSL certificate application and automatic renewal
 - For more advanced configuration items, please refer to the panel
