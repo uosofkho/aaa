@@ -116,13 +116,13 @@ docker build -t x-ui .
 - Support advanced GUI for routing traffic (Reverse and Transparent proxy, Multi-Domain, Multi-Certificate, Multi-Port per inbound)
 - Support Multi-User per inbound
 - Support user traffic limitation, expiration date
-- System Status Monitoring
+- Support System Status Monitoring
 - Support deep database search (inbounds and users)
 - Show Traffic statistics
-- show online users
-- support advanced GUI for Xray Core configuration
+- Show online users
+- Show users with expirtion date or exceeded traffic limitation
+- Support advanced GUI for Xray Core configuration
 - Support subscription (multi) link
-- Detect users which are expiring or exceed traffic limit
 - Support import/export database
 - Support One-Click SSL certificate application and automatic renewal
 - Support HTTPS for panel (self-provided domain name + SSL certificate)
