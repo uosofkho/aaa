@@ -977,3 +977,7 @@ li.ant-select-dropdown-menu-item:empty:after {
 .ant-select-selection:hover {
     background-color: #edf4fa;
 }
+
+.dark .ant-input-number-handler:active {
+    background: #0e49b5;
+}
