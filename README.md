@@ -46,7 +46,7 @@
 - Vietnamese
 
   
-## Install & Upgrade to latest Version
+## Install & Upgrade to Latest Version
 
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh)
@@ -115,7 +115,7 @@ docker build -t x-ui .
 - Search within all inbounds and users
 - Support Dark/Light theme UI
 - Support multi-user, multi-protocol, web page visualization operation
-- Support multi-domain configuration and multi-certificate inbounds
+- advanced GUI for routing traffic (Reverse proxy, Transparent proxy, multi-domain, multi-certificate, multi port per inbound)
 - Supported protocols: VMess, VLESS, Trojan, Shadowsocks, Dokodemo-door, SOCKS, HTTP
 - Support XTLS native encryptions (Vision, REALITY)
 - Traffic statistics, limit traffic, set expire date
