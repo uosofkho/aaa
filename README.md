@@ -118,7 +118,7 @@ docker build -t x-ui .
 - Support user traffic limitation, expiration date
 - Support System Status Monitoring
 - Support deep database search (inbounds and users)
-- Show Traffic statistics
+- Show traffic statistics
 - Show online users
 - Show users with expirtion date or exceeded traffic limitation
 - Support advanced GUI for Xray Core configuration
