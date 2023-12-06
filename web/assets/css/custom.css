@@ -1051,3 +1051,5 @@ li.ant-select-dropdown-menu-item:empty:after {
     color: #fff;
     background: #0e49b5
 }
+
+.dark .ant-calendar-last-month-cell .ant-calendar-date,.dark .ant-calendar-last-month-cell .ant-calendar-date:hover,.dark .ant-calendar-next-month-btn-day .ant-calendar-date,.dark .ant-calendar-next-month-btn-day .ant-calendar-date:hover {color: rgb(255 255 255 / 25%); background: transparent; border-color: transparent;}
