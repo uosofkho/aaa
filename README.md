@@ -180,7 +180,7 @@ docker build -t x-ui .
 ![outbounds](./media/outbounds.png)
 ![rules](./media/rules.png)
 
-## SSL Certificate Apps
+## SSL Certificate
 
 <details>
   <summary>Click for details</summary>
