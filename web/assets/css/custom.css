@@ -623,6 +623,7 @@ style attribute {
     background-color: #222d42;
     border-color: #2c3950;
     color: rgba(255, 255, 255, 0.65);
+    overflow: hidden;
 }
 
 .dark .ant-select-selection:hover,
@@ -1030,4 +1031,16 @@ li.ant-select-dropdown-menu-item:empty:after {
 
 .dark .ant-calendar-input::placeholder {
     color: rgba(255, 255, 255, 0.25);
+}
+
+.ant-input-number-handler-wrap {
+    border-radius: 0;
+}
+
+.ant-input-number-handler {
+    border-radius: 0;
+}
+
+.ant-input-number {
+    overflow: hidden;
 }
