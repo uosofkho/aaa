@@ -623,7 +623,6 @@ style attribute {
     background-color: #222d42;
     border-color: #2c3950;
     color: rgba(255, 255, 255, 0.65);
-    overflow: hidden;
 }
 
 .dark .ant-select-selection:hover,
