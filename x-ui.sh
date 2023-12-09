@@ -1,8 +1,8 @@
 #!/bin/bash
 
-red='\033[1;31m'
-green='\033[1;32m'
-yellow='\033[1;33m'
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
 plain='\033[0m'
 
 #Add some basic function here
@@ -615,48 +615,35 @@ ssl_cert_issue_CF() {
 update_geo() {
     cd /usr/local/x-ui/bin
     echo -e "${green}\t1.${plain} Update Geofiles [Recommended choice] "
-    echo -e "${green}\t2.${plain} Update and add 2 extra Geofiles "
-    echo -e "${green}\t3.${plain} Download from jsDelivr CDN - adds 2 extra Geofiles "
+    echo -e "${green}\t2.${plain} Download from optional jsDelivr CDN "
     echo -e "${green}\t0.${plain} Back To Main Menu "
-    echo -e "${green} \n\tOptions 2 and 3 also add geoip_IR.dat and geosite_IR.dat. 
-\tThey do not have built-in support in the panel.
-\tYou must have the knowledge to add the rules manually.\n${plain}"
     read -p "Select: " select
 
     case "$select" in
         0)
             show_menu
             ;;
+
         1)
             wget -N "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat" && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             wget -N "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat" && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
-            wget -N "https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/iran.dat" && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
-            echo -e "${green}Files are updated.${plain}"
-            restart
-            ;;
-
-        2)
-            wget -N "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat" && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
-            wget -N "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat" && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
-            wget -N "https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/iran.dat" && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             wget "https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geoip.dat" -O /tmp/wget && mv /tmp/wget geoip_IR.dat && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             wget "https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geosite.dat" -O /tmp/wget && mv /tmp/wget geosite_IR.dat && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             echo -e "${green}Files are updated.${plain}"
-            restart
+            confirm_restart
             ;;
 
-        3)
+        2)
             wget -N "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat" && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             wget -N "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat" && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
-            wget -N "https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/iran.dat" && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             wget "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geoip.dat" -O /tmp/wget && mv /tmp/wget geoip_IR.dat && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             wget "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geosite.dat" -O /tmp/wget && mv /tmp/wget geosite_IR.dat && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             echo -e "${green}Files are updated.${plain}"
-            restart
+            confirm_restart
             ;;
 
         *)
-            LOGE "Please enter a correct number [0-3]\n"
+            LOGE "Please enter a correct number [0-2]\n"
             update_geo
             ;;
     esac
