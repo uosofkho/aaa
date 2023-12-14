@@ -48,10 +48,10 @@
 "getVersion" = "Get Version"
 "install" = "Install"
 "clients" = "Clients"
-"usage" = "Utilization"
+"usage" = "Usage"
 "remained" = "Remained"
 "secAlertTitle" = "Security Alert"
-"secAlertSsl" = "Warning! This connection is not secure; Please do not enter sensitive info before TLS is successfully deploy and activated."
+"secAlertSsl" = "This connection is not secure; Please refrain from entering sensitive information until TLS is activated for data protection."
 "security" = "Security"
 
 [menu]
@@ -64,7 +64,7 @@
 
 [pages.login]
 "title" = "Login"
-"loginAgain" = "Your session has expired, Please log in again."
+"loginAgain" = "Your session has expired, please log in again."
 
 [pages.login.toasts]
 "invalidFormData" = "Input data format is invalid."
@@ -81,8 +81,8 @@
 "stopXray" = "Stop"
 "restartXray" = "Restart"
 "xraySwitch" = "Switch Version"
-"xraySwitchClick" = "Switch Xray-Core Running Version"
-"xraySwitchClickDesk" = "Attention! Older versions may not be compatible with current config."
+"xraySwitchClick" = "Choose the version you want to switch."
+"xraySwitchClickDesk" = "Choose wisely, as older versions may not be compatible with current configurations."
 "operationHours" = "System Uptime"
 "operationHoursDesc" = "Time since startup"
 "systemLoad" = "System Load"
@@ -94,7 +94,7 @@
 "totalReceive" = "Total download data across all network cards since system startup"
 "xraySwitchVersionDialog" = "Switch Xray Version"
 "xraySwitchVersionDialogDesc" = "Are you sure you want to switch the Xray version to"
-"dontRefresh" = "Installation is in progress, Please do not refresh this page"
+"dontRefresh" = "Installation is in progress, please do not refresh this page"
 "logs" = "Logs"
 "config" = "Config"
 "backup" = "Backup & Restore"
@@ -218,7 +218,7 @@
 "save" = "Save"
 "infoDesc" = "Every change made here needs to be saved. Please restart the panel for the changes to take effect."
 "restartPanel" = "Restart Panel"
-"restartPanelDesc" = "Are you sure you want to restart the panel? Click OK to restart after 3 seconds. If you cannot access the panel after restarting, Please view the panel log information on the server."
+"restartPanelDesc" = "Are you sure you want to restart the panel? click OK to restart after 3 seconds. If you cannot access the panel after restarting, Please view the panel log information on the server."
 "resetDefaultConfig" = "Reset to Default Config"
 "panelConfig" = "Panel Configurations"
 "userSettings" = "User Settings"
@@ -255,7 +255,7 @@
 "tgNotifyBackupDesc" = "Send database backup file with report notification"
 "tgNotifyLogin" = "Login Notification"
 "tgNotifyLoginDesc" = "Displays the username, IP address, and time when someone tries to log into your panel"
-"sessionMaxAge" = "Session Max Duration"
+"sessionMaxAge" = "Session maximum age"
 "sessionMaxAgeDesc" = "The time that you can stay login (unit: minute)"
 "expireTimeDiff" = "Expiration Threshold for Notification"
 "expireTimeDiffDesc" = "Get notified about account expiration before the threshold (unit: day)"
@@ -312,7 +312,7 @@
 "directCountryConfigsDesc" = "These options will connect users directly to specific country domains."
 "ipv4Configs" = "IPv4 Configs"
 "ipv4ConfigsDesc" = "These options will route to target domains only via IPv4."
-"Template" = "Xray Configuration Template"
+"Template" = "Xray Configurathttps://github.com/shahin-io/x-ui/edit/main/web/translation/translate.en_US.tomlion Template"
 "TemplateDesc" = "Generate the final Xray configuration file based on this template."
 "FreedomStrategy" = "Configure Strategy for Freedom Protocol"
 "FreedomStrategyDesc" = "Set the output strategy of the network in the Freedom Protocol."
