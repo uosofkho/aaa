@@ -140,7 +140,7 @@
                     <a-col :sm="24" :md="12">
                         <a-card hoverable>
                             {{ i18n "usage"}}:
-                            Memory: [[ sizeFormat(status.appStats.mem) ]] -
+                            RAM: [[ sizeFormat(status.appStats.mem) ]] -
                             Threads: [[ status.appStats.threads ]]
                             </a-tooltip>
                         </a-card>
@@ -328,9 +328,9 @@
 {{template "textModal"}}
 <script>
     const State = {
-        Running: "running",
-        Stop: "stop",
-        Error: "error",
+        Running: "Running",
+        Stop: "Stop",
+        Error: "Error",
     }
     Object.freeze(State);
 
