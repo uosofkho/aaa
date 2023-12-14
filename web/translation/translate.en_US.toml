@@ -388,6 +388,12 @@
 "bridge" = "Bridge"
 "portal" = "Portal"
 "intercon" = "Interconnection"
+"MTU" = "MTU"
+"DNS" = "DNS"
+"secretKey" = "Secret Key"
+"publicKey" = "Public Key"
+"allowedIPs" = "Allowed IPs"
+"endpoint" = "End Point"
 
 [tgbot]
 "noResult" = "❗ No result!"

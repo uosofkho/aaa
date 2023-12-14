@@ -388,6 +388,12 @@
 "bridge" = "Мост"
 "portal" = "Портал"
 "intercon" = "Соединение"
+"MTU" = "МТУ"
+"DNS" = "DNS"
+"secretKey" = "Секретный ключ"
+"publicKey" = "Открытый ключ"
+"allowedIPs" = "Разрешенные IP-адреса"
+"endpoint" = "Конечная точка"
 
 [tgbot]
 "noResult" = "❗ Нет результатов!"
