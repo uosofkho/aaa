@@ -51,7 +51,7 @@
 "usage" = "Utilization"
 "remained" = "Remained"
 "secAlertTitle" = "Security Alert"
-"secAlertSsl" = "This connection is not secure; Please do not enter sensitive information until TLS is activated for data protection"
+"secAlertSsl" = "This connection is not secure; Please do not enter sensitive info until TLS is activated for data protection"
 "security" = "Security"
 
 [menu]
@@ -64,7 +64,7 @@
 
 [pages.login]
 "title" = "Login"
-"loginAgain" = "Your session has expired. Please log in again"
+"loginAgain" = "Your session has expired, Please log in again"
 
 [pages.login.toasts]
 "invalidFormData" = "Input data format is invalid."
@@ -99,7 +99,7 @@
 "config" = "Config"
 "backup" = "Backup & Restore"
 "backupTitle" = "Backup & Restore Database"
-"backupDescription" = "Attention! Remember to backup before importing a new database"
+"backupDescription" = "Attention! Backup before importing a new database"
 "exportDatabase" = "Download Database"
 "importDatabase" = "Upload Database"
 
@@ -357,7 +357,7 @@
 "completeTemplate" = "All"
 "Inbounds" = "Inbounds"
 "Outbounds" = "Outbounds"
-"Routings" = "Routing rules"
+"Routings" = "Routing Rules"
 "RoutingsDesc" = "The priority of each rule is important!"
 
 [pages.xray.rules]
@@ -375,12 +375,12 @@
 "useComma" = "Comma separated items"
 
 [pages.xray.outbound]
-"addOutbound" = "Add outbound"
-"addReverse" = "Add reverse"
-"editOutbound" = "Edit outbound"
-"editReverse" = "Edit reverse"
+"addOutbound" = "Add Outbound"
+"addReverse" = "Add Reverse"
+"editOutbound" = "Edit Outbound"
+"editReverse" = "Edit Reverse"
 "tag" = "Tag"
-"tagDesc" = "Unique tag"
+"tagDesc" = "Unique Tag"
 "address" = "Address"
 "reverse" = "Reverse"
 "domain" = "Domain"
