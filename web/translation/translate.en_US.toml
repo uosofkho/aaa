@@ -205,7 +205,7 @@
 "requestVersion" = "Request Version"
 "requestMethod" = "Request Method"
 "requestPath" = "Request Path"
-"responseVersion" = "Response version"
+"responseVersion" = "Response Version"
 "responseStatus" = "Response Status"
 "responseStatusDescription" = "Response Status Description"
 "responseHeader" = "Response Header"
