@@ -26,7 +26,7 @@
 "edit" = "Edit"
 "delete" = "Delete"
 "reset" = "Reset"
-"copySuccess" = "Copied successfully"
+"copySuccess" = "Copied Successfully"
 "sure" = "Sure"
 "encryption" = "Encryption"
 "transmission" = "Transmission"
@@ -45,7 +45,7 @@
 "certificate" = "Certificate"
 "fail" = " Fail"
 "success" = " Success"
-"getVersion" = "Get version"
+"getVersion" = "Get Version"
 "install" = "Install"
 "clients" = "Clients"
 "usage" = "Usage"
@@ -60,11 +60,11 @@
 "settings" = "Panel Settings"
 "xray" = "Xray Settings"
 "logout" = "Logout"
-"link" = "Other"
+"link" = "Management"
 
 [pages.login]
 "title" = "Login"
-"loginAgain" = "The login time limit has expired, please log in again"
+"loginAgain" = "The login time limit has expired, Please log in again"
 
 [pages.login.toasts]
 "invalidFormData" = "Input data format is invalid."
@@ -75,8 +75,8 @@
 
 [pages.index]
 "title" = "System Status"
-"memory" = "Memory"
-"hard" = "Hard Disk"
+"memory" = "RAM"
+"hard" = "Disk"
 "xrayStatus" = "Xray Status"
 "stopXray" = "Stop"
 "restartXray" = "Restart"
@@ -197,18 +197,18 @@
 "obtain" = "Obtain"
 
 [pages.inbounds.stream.general]
-"requestHeader" = "Request header"
+"requestHeader" = "Request Header"
 "name" = "Name"
 "value" = "Value"
 
 [pages.inbounds.stream.tcp]
-"requestVersion" = "Request version"
-"requestMethod" = "Request method"
-"requestPath" = "Request path"
+"requestVersion" = "Request Version"
+"requestMethod" = "Request Method"
+"requestPath" = "Request Path"
 "responseVersion" = "Response version"
-"responseStatus" = "Response status"
-"responseStatusDescription" = "Response status description"
-"responseHeader" = "Response header"
+"responseStatus" = "Response Status"
+"responseStatusDescription" = "Response Status Description"
+"responseHeader" = "Response Header"
 
 [pages.inbounds.stream.quic]
 "encryption" = "Encryption"
