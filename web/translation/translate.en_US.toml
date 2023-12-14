@@ -255,7 +255,7 @@
 "tgNotifyBackupDesc" = "Send database backup file with report notification"
 "tgNotifyLogin" = "Login Notification"
 "tgNotifyLoginDesc" = "Displays the username, IP address, and time when someone tries to log into your panel"
-"sessionMaxAge" = "Session maximum age"
+"sessionMaxAge" = "Session Duration"
 "sessionMaxAgeDesc" = "The time that you can stay login (unit: minute)"
 "expireTimeDiff" = "Expiration Threshold for Notification"
 "expireTimeDiffDesc" = "Get notified about account expiration before the threshold (unit: day)"
