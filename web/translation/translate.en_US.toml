@@ -48,7 +48,7 @@
 "getVersion" = "Get Version"
 "install" = "Install"
 "clients" = "Clients"
-"usage" = "Usage"
+"usage" = "Utilization"
 "remained" = "Remained"
 "secAlertTitle" = "Security Alert"
 "secAlertSsl" = "This connection is not secure; Please do not enter sensitive information until TLS is activated for data protection"
