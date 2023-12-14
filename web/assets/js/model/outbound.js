@@ -920,8 +920,8 @@ Outbound.WireguardSettings = class extends CommonClass{
             json.DNS,
             json.secretKey,
             json.address.toString(),
-            peers[0].allowedIPs.toString(),
             peers[0].publicKey,
+            peers[0].allowedIPs.toString(),
             peers[0].endpoint,
         );
     }
@@ -939,4 +939,4 @@ Outbound.WireguardSettings = class extends CommonClass{
             }]
         };
     }
-}
+};
