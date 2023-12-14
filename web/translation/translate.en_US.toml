@@ -51,7 +51,7 @@
 "usage" = "Utilization"
 "remained" = "Remained"
 "secAlertTitle" = "Security Alert"
-"secAlertSsl" = "This connection is not secure; Please do not enter sensitive info until TLS is activated for data protection"
+"secAlertSsl" = "Warning! This connection is not secure; Please do not enter sensitive info before TLS is successfully deploy and activated."
 "security" = "Security"
 
 [menu]
@@ -64,7 +64,7 @@
 
 [pages.login]
 "title" = "Login"
-"loginAgain" = "Your session has expired, Please log in again"
+"loginAgain" = "Your session has expired, Please log in again."
 
 [pages.login.toasts]
 "invalidFormData" = "Input data format is invalid."
@@ -170,10 +170,10 @@
 "subscriptionDesc" = "You can find your sub link on Details, also you can use the same name for several configurations"
 "info" = "Info"
 "same" = "Same"
-"inboundData" = "Inbound's data"
-"copyToClipboard" = "Copy to clipboard"
+"inboundData" = "Inbound's Data"
+"copyToClipboard" = "Copy to Clipboard"
 "import" = "Import"
-"importInbound" = "Import an inbound"
+"importInbound" = "Import an Inbound"
 
 [pages.client]
 "add" = "Add Client"
