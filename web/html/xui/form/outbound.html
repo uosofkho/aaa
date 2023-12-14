@@ -68,11 +68,11 @@
 
 <!-- wireguard settings -->
 <template v-if="outbound.protocol === Protocols.Wireguard">
-    <a-form-item label='{{ i18n "pages.xray.outbound.MTU" }}'>
-        <a-input-number v-model.number="outbound.settings.MTU"></a-input-number>
+    <a-form-item label='MTU'>
+        <a-input-number v-model.number="outbound.settings.mtu"></a-input-number>
     </a-form-item>
-    <a-form-item label='{{ i18n "pages.xray.outbound.DNS" }}'>
-        <a-input v-model.trim="outbound.settings.DNS"></a-input>
+    <a-form-item label='DNS'>
+        <a-input v-model.trim="outbound.settings.dns"></a-input>
     </a-form-item>
     <a-form-item label='{{ i18n "pages.xray.outbound.address" }}'>
         <a-input v-model.trim="outbound.settings.address"></a-input>

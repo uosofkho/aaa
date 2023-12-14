@@ -387,8 +387,6 @@
 "bridge" = "پل"
 "portal" = "پرتال"
 "intercon" = "اتصال میانی"
-"MTU" = "MTU"
-"DNS" = "DNS"
 "secretKey" = "کلید شخصی"
 "publicKey" = "کلید عمومی"
 "allowedIPs" = "های مجاز IP"
