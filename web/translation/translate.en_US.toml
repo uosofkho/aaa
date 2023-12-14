@@ -312,7 +312,7 @@
 "directCountryConfigsDesc" = "These options will connect users directly to specific country domains."
 "ipv4Configs" = "IPv4 Configs"
 "ipv4ConfigsDesc" = "These options will route to target domains only via IPv4."
-"Template" = "Xray Configurathttps://github.com/shahin-io/x-ui/edit/main/web/translation/translate.en_US.tomlion Template"
+"Template" = "Xray Configurate Template"
 "TemplateDesc" = "Generate the final Xray configuration file based on this template."
 "FreedomStrategy" = "Configure Strategy for Freedom Protocol"
 "FreedomStrategyDesc" = "Set the output strategy of the network in the Freedom Protocol."
