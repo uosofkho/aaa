@@ -51,7 +51,7 @@
 "usage" = "Usage"
 "remained" = "Remained"
 "secAlertTitle" = "Security Alert"
-"secAlertSsl" = "This connection is not secure; Please refrain from entering sensitive information until TLS is activated for data protection."
+"secAlertSsl" = "This connection is not secure; Please refrain from entering sensitive information until TLS is activated for data protection"
 "security" = "Security"
 
 [menu]
@@ -64,13 +64,13 @@
 
 [pages.login]
 "title" = "Login"
-"loginAgain" = "Your session has expired, please log in again."
+"loginAgain" = "Your session has expired, please log in again"
 
 [pages.login.toasts]
-"invalidFormData" = "Input data format is invalid."
-"emptyUsername" = "Please enter username."
-"emptyPassword" = "Please enter password."
-"wrongUsernameOrPassword" = "Invalid username or password."
+"invalidFormData" = "Input data format is invalid"
+"emptyUsername" = "Please enter username"
+"emptyPassword" = "Please enter password"
+"wrongUsernameOrPassword" = "Invalid username or password"
 "successLogin" = "Login"
 
 [pages.index]
@@ -81,7 +81,7 @@
 "stopXray" = "Stop"
 "restartXray" = "Restart"
 "xraySwitch" = "Switch Version"
-"xraySwitchClick" = "Choose the version you want to switch."
+"xraySwitchClick" = "Choose the version you want to switch"
 "xraySwitchClickDesk" = "Choose wisely, as older versions may not be compatible with current configurations."
 "operationHours" = "System Uptime"
 "operationHoursDesc" = "Time since startup"
@@ -134,7 +134,7 @@
 "destinationPort" = "Destination Port"
 "targetAddress" = "Target Address"
 "monitorDesc" = "Leave blank by default"
-"meansNoLimit" = "Means No Limit"
+"meansNoLimit" = "Means no limit"
 "totalFlow" = "Total Flow"
 "leaveBlankToNeverExpire" = "Leave blank to never expire"
 "noRecommendKeepDefault" = "No special requirements to keep the default"
