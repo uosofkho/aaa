@@ -323,7 +323,7 @@
 "PrivateIp" = "Ban Private IPs Connection"
 "PrivateIpDesc" = "Change the configuration template to avoid connecting to private IP ranges."
 "Ads" = "Block Ads"
-"AdsDesc" = "Change the configuration template to block ads"
+"AdsDesc" = "Change the configuration template to block ads."
 "Family" = "Enable Family-Friendly Configuration"
 "FamilyDesc" = "Avoid connecting to unsafe websites for family protection."
 "IRIp" = "Disable Connection to Iran IPs"
