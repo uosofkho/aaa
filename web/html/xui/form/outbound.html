@@ -71,9 +71,6 @@
     <a-form-item label='MTU'>
         <a-input-number v-model.number="outbound.settings.mtu"></a-input-number>
     </a-form-item>
-    <a-form-item label='DNS'>
-        <a-input v-model.trim="outbound.settings.dns"></a-input>
-    </a-form-item>
     <a-form-item label='{{ i18n "pages.xray.outbound.address" }}'>
         <a-input v-model.trim="outbound.settings.address"></a-input>
     </a-form-item>
@@ -85,6 +82,9 @@
     </a-form-item>
     <a-form-item label='{{ i18n "pages.xray.outbound.allowedIPs" }}'>
         <a-input v-model.trim="outbound.settings.allowedIPs"></a-input>
+    </a-form-item>
+    <a-form-item label='keepAlive'>
+        <a-input-number v-model.number="outbound.settings.keepAlive" :min="0"></a-input>
     </a-form-item>
     <a-form-item label='{{ i18n "pages.xray.outbound.endpoint" }}'>
         <a-input v-model.trim="outbound.settings.endpoint"></a-input>

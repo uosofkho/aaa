@@ -902,39 +902,39 @@ Outbound.HttpSettings = class extends CommonClass {
     }
 };
 Outbound.WireguardSettings = class extends CommonClass{
-    constructor(mtu=1280, dns='1.1.1.1', secretKey='', address='', publicKey='', allowedIPs='0.0.0.0/0,::/0', endpoint='') {
+    constructor(mtu=1420, secretKey='', address='', publicKey='', allowedIPs='0.0.0.0/0,::/0', endpoint='', keepAlive=0) {
         super();
         this.mtu = mtu,
-        this.dns = dns,
         this.secretKey = secretKey,
         this.address = address,
         this.publicKey = publicKey,
         this.allowedIPs = allowedIPs,
-        this.endpoint = endpoint
+        this.endpoint = endpoint,
+        this.keepAlive = keepAlive
     }
 
     static fromJson(json={}){
         const peers = json.peers
         return new Outbound.WireguardSettings(
             json.mtu,
-            json.dns,
             json.secretKey,
             json.address.toString(),
             peers[0].publicKey,
             peers[0].allowedIPs.toString(),
             peers[0].endpoint,
+            peers[0].keepAlive
         );
     }
 
     toJson() {
         return {
-            MTU: this.mtu,
-            DNS: this.dns,
+            mtu: this.mtu,
             secretKey: this.secretKey,
             address: this.address ? this.address.split(",") : [],
             peers: [{
                 publicKey:this.publicKey,
                 allowedIPs: this.allowedIPs ? this.allowedIPs.split(",") : [],
+                keepAlive: this.keepAlive,
                 endpoint: this.endpoint
             }]
         };
