@@ -51,7 +51,7 @@
 "usage" = "Usage"
 "remained" = "Remained"
 "secAlertTitle" = "Security Alert"
-"secAlertSsl" = "This connection is not secure; Please refrain from entering sensitive information until TLS is activated for data protection"
+"secAlertSsl" = "This connection is not secure; Please refrain from entering sensitive information until TLS is activated for data protection."
 "security" = "Security"
 
 [menu]
@@ -64,13 +64,13 @@
 
 [pages.login]
 "title" = "Login"
-"loginAgain" = "Your session has expired, please log in again"
+"loginAgain" = "Your session has expired, please log in again."
 
 [pages.login.toasts]
-"invalidFormData" = "Input data format is invalid"
-"emptyUsername" = "Please enter username"
-"emptyPassword" = "Please enter password"
-"wrongUsernameOrPassword" = "Invalid username or password"
+"invalidFormData" = "Input data format is invalid."
+"emptyUsername" = "Please enter username."
+"emptyPassword" = "Please enter password."
+"wrongUsernameOrPassword" = "Invalid username or password."
 "successLogin" = "Login"
 
 [pages.index]
@@ -254,7 +254,7 @@
 "tgNotifyBackup" = "Database Backup"
 "tgNotifyBackupDesc" = "Send database backup file with report notification."
 "tgNotifyLogin" = "Login Notification"
-"tgNotifyLoginDesc" = "Displays the username, IP address and time when someone tries to log into your panel."
+"tgNotifyLoginDesc" = "Displays the username, IP address, and time when someone tries to log into your panel."
 "sessionMaxAge" = "Session Duration"
 "sessionMaxAgeDesc" = "The time that you can stay login. (unit: minute)"
 "expireTimeDiff" = "Client Expiration Threshold Notification"
