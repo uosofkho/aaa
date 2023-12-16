@@ -271,7 +271,7 @@
 "subListen" = "Listening IP"
 "subListenDesc" = "Leave blank by default to monitor all IPs."
 "subPort" = "Subscription Port"
-"subPortDesc" = "Port number for serving the subscription service. must be unused in server."
+"subPortDesc" = "Port number for serving the subscription service. Must be unused in server."
 "subCertPath" = "Subscription Certificate Public Key Path"
 "subCertPathDesc" = "Fill in an absolute path starting with '/'"
 "subKeyPath" = "Subscription Certificate Private Key Path"
