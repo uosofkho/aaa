@@ -121,7 +121,7 @@
             <a-select v-model="outbound.stream.network" @change="streamNetworkChange"
                     :dropdown-class-name="themeSwitcher.currentTheme">
                 <a-select-option value="tcp">TCP</a-select-option>
-                <a-select-option value="kcp">KCP</a-select-option>
+                <a-select-option value="kcp">mKCP</a-select-option>
                 <a-select-option value="ws">WebSocket</a-select-option>
                 <a-select-option value="http">HTTP/2</a-select-option>
                 <a-select-option value="quic">QUIC</a-select-option>
@@ -151,10 +151,10 @@
             <a-select v-model="outbound.stream.kcp.type" :dropdown-class-name="themeSwitcher.currentTheme">
                 <a-select-option value="none">None (no obfuscation)</a-select-option>
                 <a-select-option value="srtp">SRTP (video call)</a-select-option>
-                <a-select-option value="utp">UTP (BT traffic)</a-select-option>
+                <a-select-option value="utp">uTP (BT traffic)</a-select-option>
                 <a-select-option value="wechat-video">WeChat video</a-select-option>
-                <a-select-option value="dtls">DTLS 1.2 Packets</a-select-option>
-                <a-select-option value="wireguard">Wireguard Packets</a-select-option>
+                <a-select-option value="dtls">DTLS 1.2</a-select-option>
+                <a-select-option value="wireguard">Wireguard</a-select-option>
             </a-select>
         </a-form-item>
         <a-form-item label='{{ i18n "password" }}'>
@@ -166,10 +166,10 @@
         <a-form-item label='TTI (ms)'>
             <a-input-number v-model.number="outbound.stream.kcp.tti"></a-input-number>
         </a-form-item>
-        <a-form-item label='Uplink Capacity (Mb/s)'>
+        <a-form-item label='Uplink Capacity (MB/s)'>
             <a-input-number v-model.number="outbound.stream.kcp.upCap"></a-input-number>
         </a-form-item> 
-        <a-form-item label='Downlink Capacity (Mb/s)'>
+        <a-form-item label='Downlink Capacity (MB/s)'>
             <a-input-number v-model.number="outbound.stream.kcp.downCap"></a-input-number>
         </a-form-item>
         <a-form-item label='Congestion'>
@@ -219,10 +219,10 @@
             <a-select v-model="outbound.stream.quic.type" :dropdown-class-name="themeSwitcher.currentTheme">
                 <a-select-option value="none">None (no obfuscation)</a-select-option>
                 <a-select-option value="srtp">SRTP (video call)</a-select-option>
-                <a-select-option value="utp">UTP (BT traffic)</a-select-option>
+                <a-select-option value="utp">uTP (BT traffic)</a-select-option>
                 <a-select-option value="wechat-video">WeChat video</a-select-option>
-                <a-select-option value="dtls">DTLS 1.2 Packets</a-select-option>
-                <a-select-option value="wireguard">Wireguard Packets</a-select-option>
+                <a-select-option value="dtls">DTLS 1.2</a-select-option>
+                <a-select-option value="wireguard">Wireguard</a-select-option>
             </a-select>
         </a-form-item>
     </template>
