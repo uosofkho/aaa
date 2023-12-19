@@ -32,7 +32,7 @@
 "transmission" = "Truyền tải"
 "host" = "Máy chủ"
 "path" = "Đường dẫn"
-"camouflage" = "Ngụy trang"
+"camouflage" = "Sự làm xáo trộn"
 "status" = "Trạng thái"
 "enabled" = "Đã kích hoạt"
 "disabled" = "Đã tắt"
@@ -60,7 +60,7 @@
 "settings" = "Cài đặt bảng điều khiển"
 "xray" = "Cài đặt Xray"
 "logout" = "Đăng xuất"
-"link" = "sự quản lý"
+"link" = "Sự quản lý"
 
 [pages.login]
 "title" = "Đăng nhập"
