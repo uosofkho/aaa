@@ -32,7 +32,7 @@
 "transmission" = "Протокол передачи"
 "host" = "Хост"
 "path" = "Путь"
-"camouflage" = "Маскировка"
+"camouflage" = "Затемнение"
 "status" = "Статус"
 "enabled" = "Включено"
 "disabled" = "Отключено"
@@ -60,7 +60,7 @@
 "settings" = "Настройки"
 "xray" = "Xray Настройки"
 "logout" = "Выйти"
-"link" = "менеджмент"
+"link" = "Менеджмент"
 
 [pages.login]
 "title" = "Войти"
