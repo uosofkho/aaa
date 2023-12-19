@@ -320,7 +320,7 @@
 "RoutingStrategyDesc" = "Set the overall routing strategy for DNS resolving."
 "Torrent" = "Ban BitTorrent Protocol"
 "TorrentDesc" = "Change the configuration template to avoid using BitTorrent protocol."
-"PrivateIp" = "Ban Private IPs Connection"
+"PrivateIp" = "Ban Connection to Private IPs"
 "PrivateIpDesc" = "Change the configuration template to avoid connecting to private IP ranges."
 "Ads" = "Block Ads"
 "AdsDesc" = "Change the configuration template to block ads."
