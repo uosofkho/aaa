@@ -123,7 +123,7 @@
                 <a-select-option value="tcp">TCP</a-select-option>
                 <a-select-option value="kcp">KCP</a-select-option>
                 <a-select-option value="ws">WebSocket</a-select-option>
-                <a-select-option value="http">HTTP2</a-select-option>
+                <a-select-option value="http">HTTP/2</a-select-option>
                 <a-select-option value="quic">QUIC</a-select-option>
                 <a-select-option value="grpc">gRPC</a-select-option>
             </a-select>
@@ -149,12 +149,12 @@
     <template v-if="outbound.stream.network === 'kcp'">
         <a-form-item label='{{ i18n "camouflage" }}'>
             <a-select v-model="outbound.stream.kcp.type" :dropdown-class-name="themeSwitcher.currentTheme">
-                <a-select-option value="none">none (not camouflage)</a-select-option>
-                <a-select-option value="srtp">srtp (video call)</a-select-option>
-                <a-select-option value="utp">utp (BT download)</a-select-option>
-                <a-select-option value="wechat-video">wechat-video (WeChat video)</a-select-option>
-                <a-select-option value="dtls">dtls (DTLS 1.2 packages)</a-select-option>
-                <a-select-option value="wireguard">wireguard (wireguard packages)</a-select-option>
+                <a-select-option value="none">None (not camouflage)</a-select-option>
+                <a-select-option value="srtp">SRTP (video call)</a-select-option>
+                <a-select-option value="utp">UTP (BT download)</a-select-option>
+                <a-select-option value="wechat-video">WeChat video</a-select-option>
+                <a-select-option value="dtls">DTLS 1.2 Packages</a-select-option>
+                <a-select-option value="wireguard">Wireguard Packages</a-select-option>
             </a-select>
         </a-form-item>
         <a-form-item label='{{ i18n "password" }}'>
@@ -207,9 +207,9 @@
     <template v-if="outbound.stream.network === 'quic'">
         <a-form-item label='{{ i18n "pages.inbounds.stream.quic.encryption" }}'>
             <a-select v-model="outbound.stream.quic.security" :dropdown-class-name="themeSwitcher.currentTheme">
-                <a-select-option value="none">none</a-select-option>
-                <a-select-option value="aes-128-gcm">aes-128-gcm</a-select-option>
-                <a-select-option value="chacha20-poly1305">chacha20-poly1305</a-select-option>
+                <a-select-option value="none">None</a-select-option>
+                <a-select-option value="aes-128-gcm">AES-128-GCM</a-select-option>
+                <a-select-option value="chacha20-poly1305">ChaCha20-Poly1305</a-select-option>
             </a-select>
         </a-form-item>
         <a-form-item label='{{ i18n "password" }}'>
@@ -217,12 +217,12 @@
         </a-form-item> 
         <a-form-item label='{{ i18n "camouflage" }}'>
             <a-select v-model="outbound.stream.quic.type" :dropdown-class-name="themeSwitcher.currentTheme">
-                <a-select-option value="none">none (not camouflage)</a-select-option>
-                <a-select-option value="srtp">srtp (video call)</a-select-option>
-                <a-select-option value="utp">utp (BT download)</a-select-option>
-                <a-select-option value="wechat-video">wechat-video (WeChat video)</a-select-option>
-                <a-select-option value="dtls">dtls (DTLS 1.2 packages)</a-select-option>
-                <a-select-option value="wireguard">wireguard (wireguard packages)</a-select-option>
+                <a-select-option value="none">None (not camouflage)</a-select-option>
+                <a-select-option value="srtp">SRTP (video call)</a-select-option>
+                <a-select-option value="utp">UTP (BT download)</a-select-option>
+                <a-select-option value="wechat-video">WeChat video</a-select-option>
+                <a-select-option value="dtls">DTLS 1.2 Packages</a-select-option>
+                <a-select-option value="wireguard">Wireguard Packages</a-select-option>
             </a-select>
         </a-form-item>
     </template>
