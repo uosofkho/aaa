@@ -280,7 +280,7 @@
 "subPathDesc" = "Must start with '/' and end with '/'"
 "subDomain" = "Listening Domain"
 "subDomainDesc" = "Leave blank by default to monitor all domains and IPs."
-"subUpdates" = "Subscription update intervals"
+"subUpdates" = "Subscription Update Intervals"
 "subUpdatesDesc" = "Interval hours between updates in client application."
 "subEncrypt" = "Encode Configs"
 "subEncryptDesc" = "Encode the returned configs in subscription."
