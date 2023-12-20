@@ -33,6 +33,8 @@ jobs:
           wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
           wget -O geoip_IR.dat https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geoip.dat
           wget -O geosite_IR.dat https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geosite.dat
+          wget -O geoip_VN.dat https://github.com/vuong2023/vn-v2ray-rules/releases/latest/download/geoip.dat
+          wget -O geosite_VN.dat https://github.com/vuong2023/vn-v2ray-rules/releases/latest/download/geosite.dat
           mv xray xray-linux-amd64
           cd ..
           cd ..
@@ -75,6 +77,8 @@ jobs:
           wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
           wget -O geoip_IR.dat https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geoip.dat
           wget -O geosite_IR.dat https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geosite.dat
+          wget -O geoip_VN.dat https://github.com/vuong2023/vn-v2ray-rules/releases/latest/download/geoip.dat
+          wget -O geosite_VN.dat https://github.com/vuong2023/vn-v2ray-rules/releases/latest/download/geosite.dat
           mv xray xray-linux-arm64
           cd ..
           cd ..
@@ -117,6 +121,8 @@ jobs:
           wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
           wget -O geoip_IR.dat https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geoip.dat
           wget -O geosite_IR.dat https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geosite.dat
+          wget -O geoip_VN.dat https://github.com/vuong2023/vn-v2ray-rules/releases/latest/download/geoip.dat
+          wget -O geosite_VN.dat https://github.com/vuong2023/vn-v2ray-rules/releases/latest/download/geosite.dat
           mv xray xray-linux-s390x
           cd ..
           cd ..
