@@ -57,7 +57,7 @@
 [menu]
 "dashboard" = "وضعیت سیستم"
 "inbounds" = "سرویس ها"
-"settings" = "تنظیمات X-UI"
+"settings" = "تنظیمات پنل"
 "xray" = "تنظمیات Xray"
 "logout" = "خروج"
 "link" = "مدیریت"
