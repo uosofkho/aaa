@@ -43,9 +43,9 @@
 "domainName" = "آدرس دامنه"
 "monitor" = "آی پی اتصال"
 "certificate" = "گواهی دیجیتال"
-"fail" = "خطا"
+"fail" = "ناموفق"
 "success" = " موفق"
-"getVersion" = "دریافت ورژن"
+"getVersion" = "دریافت نسخه"
 "install" = "نصب"
 "clients" = "کاربران"
 "usage" = "استفاده"
@@ -57,20 +57,20 @@
 [menu]
 "dashboard" = "وضعیت سیستم"
 "inbounds" = "سرویس ها"
-"settings" = "تنظیمات پنل"
-"xray" = "الگوی ایکس‌ری"
+"settings" = "تنظیمات X-UI"
+"xray" = "تنظمیات Xray"
 "logout" = "خروج"
 "link" = "مدیریت"
 
 [pages.login]
-"title" = "ورود به سیستم"
+"title" = "ورود"
 "loginAgain" = "مدت زمان استفاده به اتمام رسیده ، لطفا دوباره وارد شوید"
 
 [pages.login.toasts]
 "invalidFormData" = "اطلاعات وارد شده به صورت درست وارد نشده است"
-"emptyUsername" = "نام کاربری خالی میباشد"
-"emptyPassword" = "رمز عبور خالی میباشد"
-"wrongUsernameOrPassword" = "نام کاربری و رمز عبور اشتباه میباشد"
+"emptyUsername" = "نام کاربری خالی می باشد"
+"emptyPassword" = "رمز عبور خالی می باشد"
+"wrongUsernameOrPassword" = "نام کاربری و رمز عبور اشتباه می باشد"
 "successLogin" = "خوش آمدید"
 
 [pages.index]
@@ -80,9 +80,9 @@
 "xrayStatus" = "وضعیت Xray"
 "stopXray" = "توقف"
 "restartXray" = "شروع مجدد"
-"xraySwitch" = "تغییر ورژن"
-"xraySwitchClick" = "ورژن مورد نظر را انتخاب کنید"
-"xraySwitchClickDesk" = "لطفا با دقت انتخاب کنید ، در صورت انتخاب اشتباه امکان قطعی سیستم وجود دارد "
+"xraySwitch" = "تغییر نسخه"
+"xraySwitchClick" = "نسخه مورد نظر را انتخاب کنید"
+"xraySwitchClickDesk" = "لطفا با دقت انتخاب کنید. در صورت انتخاب نسخه قدیمی تر، امکان ناهماهنگی با تنظمیات فعلی وجود دارد "
 "operationHours" = "مدت فعالیت"
 "operationHoursDesc" = "مدت فعالیت سیستم بعد از روشن شدن"
 "systemLoad" = "بار روی سیستم"
@@ -90,16 +90,16 @@
 "connectionUdpCountDesc" = "مجموع اتصالات UDP در تمام کارت های شبکه"
 "upSpeed" = "سرعت آپلود در حال حاضر سیستم"
 "downSpeed" = "سرعت دانلود در حال حاضر سیستم"
-"totalSent" = "جمع کل ترافیک آپلود مصرفی"
-"totalReceive" = "جمع کل ترافیک دانلود مصرفی"
-"xraySwitchVersionDialog" = "تغییر ورژن Xray"
-"xraySwitchVersionDialogDesc" = "آیا از تغییر ورژن مطمئن هستین"
-"dontRefresh" = "در حال نصب ، لطفا رفرش نکنید "
+"totalSent" = "جمع کل ترافیک آپلود مصرفی از زمان شروع به کار سیستم"
+"totalReceive" = "جمع کل ترافیک دانلود مصرفی از زمان شروع به کار سیستم"
+"xraySwitchVersionDialog" = "تغییر نسخه Xray"
+"xraySwitchVersionDialogDesc" = "آیا از تغییر نسخه مطمئن هستین"
+"dontRefresh" = "در حال نصب ، لطفا صفحه را رفرش نکنید "
 "logs" = "گزارش ها"
 "config" = "تنظیمات"
 "backup" = "پشتیبان گیری"
 "backupTitle" = "پشتیبان گیری دیتابیس"
-"backupDescription" = "به یاد داشته باشید که قبل از وارد کردن یک دیتابیس جدید، نسخه پشتیبان تهیه کنید"
+"backupDescription" = "توصیه می شود قبل از وارد کردن یک دیتابیس جدید، نسخه پشتیبان تهیه کنید"
 "exportDatabase" = "دانلود دیتابیس"
 "importDatabase" = "آپلود دیتابیس"
 
@@ -170,7 +170,7 @@
 "info" = "اطلاعات"
 "same" = "همسان"
 "inboundData" = "داده‌های سرویس"
-"copyToClipboard" = "کپی در حافظه"
+"copyToClipboard" = "کپی در حافظه موقت"
 "import" = "وارد کردن"
 "importInbound" = "وارد کردن یک سرویس"
 
@@ -193,7 +193,7 @@
 "renewDesc" = "روزهای تمدید خودکار پس از انقضا. 0 = غیرفعال"
 
 [pages.inbounds.toasts]
-"obtain" = "Obtain"
+"obtain" = "فراهم سازی"
 
 [pages.inbounds.stream.general]
 "requestHeader" = "درخواست سربرگ"
@@ -201,10 +201,10 @@
 "value" = "مقدار"
 
 [pages.inbounds.stream.tcp]
-"requestVersion" = "ورژن درخواست"
+"requestVersion" = "نسخه درخواست"
 "requestMethod" = "متد درخواست"
 "requestPath" = "مسیر درخواست"
-"responseVersion" = "ورژن پاسخ"
+"responseVersion" = "نسخه پاسخ"
 "responseStatus" = "وضعیت پاسخ"
 "responseStatusDescription" = "توضیحات وضعیت پاسخ"
 "responseHeader" = "سربرگ پاسخ"
