@@ -629,6 +629,8 @@ update_geo() {
             wget -N "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat" && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             wget "https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geoip.dat" -O /tmp/wget && mv /tmp/wget geoip_IR.dat && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             wget "https://github.com/chocolate4u/Iran-v2ray-rules/releases/latest/download/geosite.dat" -O /tmp/wget && mv /tmp/wget geosite_IR.dat && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
+            wget "https://github.com/vuong2023/vn-v2ray-rules/releases/latest/download/geoip.dat" -O /tmp/wget && mv /tmp/wget geoip_VN.dat && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
+            wget "https://github.com/vuong2023/vn-v2ray-rules/releases/latest/download/geosite.dat" -O /tmp/wget && mv /tmp/wget geosite_VN.dat && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             echo -e "${green}Files are updated.${plain}"
             confirm_restart
             ;;
@@ -638,6 +640,8 @@ update_geo() {
             wget -N "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat" && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             wget "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geoip.dat" -O /tmp/wget && mv /tmp/wget geoip_IR.dat && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             wget "https://cdn.jsdelivr.net/gh/chocolate4u/Iran-v2ray-rules@release/geosite.dat" -O /tmp/wget && mv /tmp/wget geosite_IR.dat && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
+            wget "https://cdn.jsdelivr.net/gh/vuong2023/vn-v2ray-rules@release/geoip.dat" -O /tmp/wget && mv /tmp/wget geoip_VN.dat && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
+            wget "https://cdn.jsdelivr.net/gh/vuong2023/vn-v2ray-rules@release/geosite.dat" -O /tmp/wget && mv /tmp/wget geosite_VN.dat && echo -e "${green}Success${plain}\n" || echo -e "${red}Failure${plain}\n"
             echo -e "${green}Files are updated.${plain}"
             confirm_restart
             ;;
