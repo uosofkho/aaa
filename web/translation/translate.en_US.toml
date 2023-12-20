@@ -64,13 +64,13 @@
 
 [pages.login]
 "title" = "Login"
-"loginAgain" = "Your session has expired, please log in again."
+"loginAgain" = "Your session has expired, please log in again"
 
 [pages.login.toasts]
-"invalidFormData" = "Input data format is invalid."
-"emptyUsername" = "Please enter username."
-"emptyPassword" = "Please enter password."
-"wrongUsernameOrPassword" = "Invalid username or password."
+"invalidFormData" = "Input data format is invalid"
+"emptyUsername" = "Please enter username"
+"emptyPassword" = "Please enter password"
+"wrongUsernameOrPassword" = "Invalid username or password"
 "successLogin" = "Login"
 
 [pages.index]
