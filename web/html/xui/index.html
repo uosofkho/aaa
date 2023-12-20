@@ -84,8 +84,8 @@
                 <a-row>
                     <a-col :sm="24" :md="12">
                         <a-card hoverable>
-                            X-UI <a href="https://github.com/alireza0/x-ui/releases" target="_blank"><a-tag color="blue">{{ .cur_ver }}</a-tag></a>
-                            Xray
+                            X-UI: <a href="https://github.com/alireza0/x-ui/releases" target="_blank"><a-tag color="blue">{{ .cur_ver }}</a-tag></a>
+                            Xray:
                             <a-tooltip title='{{ i18n "pages.index.xraySwitch" }}'>
                                 <a-tag color="blue" style="cursor: pointer;" @click="openSelectV2rayVersion">[[ status.xray.version ]]</a-tag>
                             </a-tooltip>
@@ -94,9 +94,9 @@
                     <a-col :sm="24" :md="12">
                         <a-card hoverable>
                             {{ i18n "pages.index.operationHours" }}:
-                            Xray
+                            Xray:
                             <a-tag color="blue">[[ formatSecond(status.appStats.uptime) ]]</a-tag>
-                            OS
+                            OS:
                             <a-tooltip>
                                 <template slot="title">
                                     {{ i18n "pages.index.operationHoursDesc" }}
