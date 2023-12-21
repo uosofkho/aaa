@@ -133,7 +133,7 @@
 "network" = "Network"
 "destinationPort" = "Destination Port"
 "targetAddress" = "Target Address"
-"monitorDesc" = "Leave it blank by default"
+"monitorDesc" = "Leave it blank by default to listen on all IPs"
 "meansNoLimit" = "Means no limit"
 "totalFlow" = "Total Flow"
 "leaveBlankToNeverExpire" = "Leave it blank to never expire"
