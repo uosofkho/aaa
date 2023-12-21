@@ -134,7 +134,7 @@
 "destinationPort" = "Destination Port"
 "targetAddress" = "Target Address"
 "monitorDesc" = "Leave it blank by default to listen on all IPs"
-"meansNoLimit" = "Means no limit"
+"meansNoLimit" = "= Unlimited"
 "totalFlow" = "Total Flow"
 "leaveBlankToNeverExpire" = "Leave it blank by default to never expire"
 "noRecommendKeepDefault" = "default can be kept without any requirements"
