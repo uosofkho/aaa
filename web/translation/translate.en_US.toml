@@ -325,7 +325,7 @@
 "Ads" = "Block Ads"
 "AdsDesc" = "Blocks ads."
 "Family" = "Family Protection"
-"FamilyDesc" = "Blocks accessing to adult content, and malware websites."
+"FamilyDesc" = "Blocks adult content, and malware websites."
 "IRIp" = "Block Connection to Iran IPs"
 "IRIpDesc" = "Blocks connecting to Iran IP ranges."
 "IRDomain" = "Block Connection to Iran Domains"
