@@ -94,7 +94,7 @@
 "totalReceive" = "Total download data across all network cards since OS startup"
 "xraySwitchVersionDialog" = "Switch Xray Version"
 "xraySwitchVersionDialogDesc" = "Are you sure you want to switch the Xray version to"
-"dontRefresh" = "Installation is in the progress, please do not refresh this page."
+"dontRefresh" = "Installation is in progress, please do not refresh this page."
 "logs" = "Logs"
 "config" = "Config"
 "backup" = "Backup & Restore"
