@@ -303,7 +303,7 @@
 "basicTemplate" = "Basic Template"
 "advancedTemplate" = "Advanced Template"
 "generalConfigs" = "General Configs"
-"generalConfigsDesc" = "These options will provide general adjustments."
+"generalConfigsDesc" = "These options will determine the general strategy for traffic routing."
 "blockConfigs" = "Block Configs"
 "blockConfigsDesc" = "These options will block traffic based on the specific requested protocols, and websites."
 "blockCountryConfigs" = "Block Country Configs"
