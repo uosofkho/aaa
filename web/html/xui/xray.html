@@ -398,7 +398,11 @@
                             </a-row>
                         </a-tab-pane>
                         <a-tab-pane key="tpl-4" tab='{{ i18n "pages.xray.advancedTemplate"}}' style="padding-top: 20px;" force-render="true">
-                            <a-list-item-meta title='{{ i18n "pages.xray.Template"}}' description='{{ i18n "pages.xray.TemplateDesc"}}'></a-list-item-meta>
+                            </a-list-item-meta>
+                            <a-alert type="warning" style="margin-bottom: 10px; width: fit-content" 
+                            message='{{ i18n "pages.xray.TemplateDesc"}}'
+                            show-icon
+                            ></a-alert> 
                             <a-radio-group v-model="advSettings" @change="changeCode" button-style="solid" style="margin: 10px 0;" :size="isMobile ? 'small' : ''">
                                 <a-radio-button value="xraySetting">{{ i18n "pages.xray.completeTemplate"}}</a-radio-button>
                                 <a-radio-button value="inboundSettings">{{ i18n "pages.xray.Inbounds" }}</a-radio-button>
