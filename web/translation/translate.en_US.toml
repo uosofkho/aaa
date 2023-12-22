@@ -311,7 +311,7 @@
 "directCountryConfigs" = "Direct Country Configs"
 "directCountryConfigsDesc" = "These options will forward directly traffic based on the specific requsted country."
 "ipv4Configs" = "IPv4 Configs"
-"ipv4ConfigsDesc" = "These options will route requsts to destination only via IPv4."
+"ipv4ConfigsDesc" = "These options will route requests to destination only via IPv4."
 "Template" = "Xray Configuration Template"
 "TemplateDesc" = "Generate the final Xray configuration file based on this template."
 "FreedomStrategy" = "Configure Strategy for Freedom Protocol"
