@@ -221,7 +221,7 @@
 "restartPanelDesc" = "Are you sure you want to restart the panel? click OK to restart after 3 Secs. If you cannot access the panel after restarting, please view the panel log info on the server."
 "resetDefaultConfig" = "Reset to Default"
 "panelConfig" = "Panel Configurations"
-"userSettings" = "User Settings"
+"userSettings" = "Admin Settings"
 "TGBotSettings" = "Telegram Bot Settings"
 "panelListeningIP" = "Listening IP"
 "panelListeningIPDesc" = "The IP address for the panel web view. (blanks by default to listen on all IPs)"
