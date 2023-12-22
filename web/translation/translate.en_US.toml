@@ -84,7 +84,7 @@
 "xraySwitchClick" = "Choose the version you want to switch."
 "xraySwitchClickDesk" = "Choose wisely, as older versions may not be compatible with current configs."
 "operationHours" = "System Uptime"
-"operationHoursDesc" = "Since startup"
+"operationHoursDesc" = "Time since startup"
 "systemLoad" = "System Load"
 "connectionTcpCountDesc" = "Total TCP connections across all network cards"
 "connectionUdpCountDesc" = "Total UDP connections across all network cards"
