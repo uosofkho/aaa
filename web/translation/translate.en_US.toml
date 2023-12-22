@@ -265,7 +265,7 @@
 "tgNotifyCpuDesc" = "Get notified if CPU usage exceeds this threshold. (unit: %)"
 "timeZone" = "Time Zone"
 "timeZoneDesc" = "Scheduled tasks run according to the time in this time zone."
-"subSettings" = "Subscription"
+"subSettings" = "Subscription Settings"
 "subEnable" = "Subscription Service"
 "subEnableDesc" = "Subscription feature with separate configuration."
 "subListen" = "Listening IP"
