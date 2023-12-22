@@ -281,7 +281,7 @@
 "subDomain" = "Listening Domain"
 "subDomainDesc" = "The domain name for the subscription service. (blanks by default to listen on all domains, and IPs)"
 "subUpdates" = "Update Intervals"
-"subUpdatesDesc" = "Interval hours between updates in client application."
+"subUpdatesDesc" = "The update intervals for the client application based on hours."
 "subEncrypt" = "Encode Configs"
 "subEncryptDesc" = "Encode the returned configs in subscription."
 "subShowInfo" = "Show Usage Info"
