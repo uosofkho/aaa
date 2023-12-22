@@ -287,7 +287,7 @@
 "subShowInfo" = "Show Usage Info"
 "subShowInfoDesc" = "Show remained traffic and date after config name."
 "subURI" = "Reverse Proxy URI"
-"subURIDesc" = "Change base URI of subscription URL for using on behind of proxies."
+"subURIDesc" = "Changes the base URI of the subscription URL for use behind proxies."
 
 [pages.settings.toasts]
 "modifySettings" = "Modify Settings"
