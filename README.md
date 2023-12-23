@@ -45,7 +45,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.s
 
 ## Install Custom Version
 
-To install your desired version, add the version to the end of the installation command. For example, for version `0.5.2`:
+To install your desired version, add the version to the end of the installation command. For example, for ver `0.5.2`:
 
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh) 0.5.2
