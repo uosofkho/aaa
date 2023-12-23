@@ -47,10 +47,10 @@
 <!-- blackhole settings -->
 <template v-if="outbound.protocol === Protocols.Blackhole">
         <a-form-item label='Response Type'>
-            <a-select 
-            v-model="outbound.settings.type" 
+            <a-select
+            v-model="outbound.settings.type"
             :dropdown-class-name="themeSwitcher.currentTheme">
-               <a-select-option v-for="s in ['', 'none', 'http']" :value="s" :key="s" 
+               <a-select-option v-for="s in ['', 'none', 'http']" :value="s" :key="s"
             class="capitalized-option">{{ s === 'http' ? s.toUpperCase() : s.charAt(0).toUpperCase() + s.slice(1) }}
               </a-select-option>
              </a-select>
