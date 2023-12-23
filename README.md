@@ -124,7 +124,7 @@ docker build -t x-ui .
 - Supports subscription service with (multi) link
 - Supports importing and exporting databases
 - Supports one-click SSL certificate application and automatic renewal
-- Supports HTTPS for admin web panel and subscription service (self-provided domain name + SSL certificate)
+- Supports HTTPS for admin web panel and subscription service (self-provided domain + SSL certificate)
 - Supports Dark/Light theme UI
 
 ## Recommended OS
