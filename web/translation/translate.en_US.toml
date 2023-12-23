@@ -313,7 +313,7 @@
 "ipv4Configs" = "IPv4 Configs"
 "ipv4ConfigsDesc" = "These options will route requests to destination only via IPv4."
 "Template" = "Xray Configuration Template"
-"TemplateDesc" = "Generate the final Xray configuration file based on this template."
+"TemplateDesc" = "Caution, the final Xray config file will be generated based on this template."
 "FreedomStrategy" = "Freedom Protocol Routing Strategy"
 "FreedomStrategyDesc" = "Set the output strategy for the network in the Freedom Protocol."
 "RoutingStrategy" = "Domain Routing Strategy"
