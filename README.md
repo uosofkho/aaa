@@ -32,7 +32,7 @@
 | Applies Expiry Date Based on First Usage | :heavy_check_mark: |
 | Telegram Bot (admin + clients)         | :heavy_check_mark: |
 | Database Backup using Telegram Bot     | :heavy_check_mark: |
-| Subscription Link + Client Info        | :heavy_check_mark: |
+| Subscription Link + User Info          | :heavy_check_mark: |
 | Search in Deep                         | :heavy_check_mark: |
 | Dark/Light Theme                       | :heavy_check_mark: |
 
