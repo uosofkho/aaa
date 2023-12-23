@@ -125,7 +125,7 @@ docker build -t x-ui .
 - Supports importing and exporting databases
 - Supports one-click SSL certificate application and automatic renewal
 - Supports HTTPS for web panel and subscription service (self-provided domain + SSL certificate)
-- Supports Dark/Light theme UI
+- Supports Dark/Light theme
 
 ## Recommended OS
 
