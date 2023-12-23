@@ -149,7 +149,7 @@
 "export" = "Export Links"
 "clone" = "Clone"
 "cloneInbound" = "Clone"
-"cloneInboundContent" = "All settings of this inbound, except for Port, Listen IP, and Clients, will be applied to the clone."
+"cloneInboundContent" = "All settings for this inbound, excluding Port, Listen IP, and Clients, will be applied to the clone."
 "cloneInboundOk" = "Clone"
 "resetAllTraffic" = "Reset All Inbounds Traffic"
 "resetAllTrafficTitle" = "Reset All Inbounds Traffic"
