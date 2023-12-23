@@ -285,7 +285,7 @@
 "subEncrypt" = "Encode Configs"
 "subEncryptDesc" = "Encode the returned configs in subscription."
 "subShowInfo" = "Show Usage Info"
-"subShowInfoDesc" = "It shows remained traffic and the date after the config name."
+"subShowInfoDesc" = "It will show remained traffic and the date after the config name."
 "subURI" = "Reverse Proxy URI"
 "subURIDesc" = "Changes the base URI of the subscription URL for use behind proxies."
 
