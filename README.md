@@ -113,8 +113,8 @@ docker build -t x-ui .
 - Supports protocols including VLESS, VMess, Trojan, Shadowsocks, Dokodemo-door, SOCKS, HTTP
 - Supports XTLS protocols, including Vision and REALITY
 - Supports an advanced JSON editor interface for Xray-Core configuration 
-- Supports an advanced interface for routing traffic, including Reverse and Transparent proxy, Multi-Domain, Multi-Certificate, and Multi-Port per inbound
-- Supports Multi-User per inbound
+- Supports an advanced interface for routing traffic, including Reverse and T-Proxy, Multi-Domain, Multi-Certificate, and Multi-Port per inbound
+- Supports Multi-Client per inbound
 - Supports traffic data limits and expiry dates per client/inbound
 - Supports system status monitoring
 - Supports deep database search
