@@ -24,15 +24,15 @@
 | -------------------------------------- | :----------------: |
 | Multi-Protocol                         | :heavy_check_mark: |
 | Multi-Language                         | :heavy_check_mark: |
-| Multi-User Inbounds                    | :heavy_check_mark: |
+| Multi-Client Inbounds                  | :heavy_check_mark: |
 | Advanced Traffic Routing               | :heavy_check_mark: |
 | REST API                               | :heavy_check_mark: |
-|Show Online Users                       | :heavy_check_mark: |
-| Manage Users Traffic Data & Expiry Date| :heavy_check_mark: |
-| Apply Expiry Date based on First Usage | :heavy_check_mark: |
+|Display Online Clients                  | :heavy_check_mark: |
+| Manage Clients Traffic Data & Expiry Date| :heavy_check_mark: |
+| Applies Expiry Date Based on First Usage | :heavy_check_mark: |
 | Telegram Bot (admin + clients)         | :heavy_check_mark: |
 | Database Backup using Telegram Bot     | :heavy_check_mark: |
-| Subscription Link + UserInfo           | :heavy_check_mark: |
+| Subscription Link + Client Info        | :heavy_check_mark: |
 | Search in Deep                         | :heavy_check_mark: |
 | Dark/Light Theme                       | :heavy_check_mark: |
 
@@ -112,8 +112,8 @@ docker build -t x-ui .
 
 - Supported protocols: VLESS, VMess, Trojan, Shadowsocks, Dokodemo-door, Socks, HTTP
 - Supports XTLS Protocols (Vision, REALITY)
-- Supports an advanced JSON editor GUI for Xray-Core configuration 
-- Supports an advanced GUI for routing traffic, including Reverse and Transparent proxy, Multi-Domain, Multi-Certificate, and Multi-Port per inbound
+- Supports an advanced JSON editor interface for Xray-Core configuration 
+- Supports an advanced interface for routing traffic, including Reverse and Transparent proxy, Multi-Domain, Multi-Certificate, and Multi-Port per inbound
 - Supports Multi-User per inbound
 - Supports traffic data limits and expiry dates per client/inbound
 - Supports system status monitoring
