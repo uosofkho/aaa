@@ -137,7 +137,7 @@
 "meansNoLimit" = "= Unlimited"
 "totalFlow" = "Total Flow"
 "leaveBlankToNeverExpire" = "It is blank by default to never expire"
-"noRecommendKeepDefault" = "It is recommended to keep the defaults"
+"noRecommendKeepDefault" = "It is recommended to keep the default"
 "certificatePath" = "File Path"
 "certificateContent" = "File Content"
 "publicKeyPath" = "Public Key Path"
