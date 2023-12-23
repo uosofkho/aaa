@@ -1,5 +1,5 @@
 # X-UI
-**Advanced GUI panel based on Xray Core supports multiple protocols and languages**
+**An advanced web panel, built on Xray Core, supports multiple protocols, languages, and features a sophisticated routing interface**
 
 ![](https://img.shields.io/github/v/release/alireza0/x-ui.svg)
 ![](https://img.shields.io/docker/pulls/alireza7/x-ui.svg)
@@ -45,7 +45,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.s
 
 ## Install Custom Version
 
-To install your desired version you can add the version to the end of install command. Example for ver `0.5.2`:
+To install your desired version, add the version to the end of the installation command. For example, for version `0.5.2`:
 
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh) 0.5.2
@@ -56,7 +56,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.s
 1. First download the latest compressed package from https://github.com/alireza0/x-ui/releases, generally choose Architecture `amd64`
 2. Then upload the compressed package to the server's `/root/` directory and login to the server with user `root` 
 
-> If your server cpu architecture is not `amd64` replace another architecture
+> If your server CPU architecture is not `amd64` replace it with the appropriate architecture
 
 ```sh
 ARCH=$(uname -m)
@@ -75,7 +75,7 @@ systemctl restart x-ui
 
 ## Install Using Docker
 
-1. Install Docker
+1. Install docker
 
 ```shell
 curl -fsSL https://get.docker.com | sh
@@ -110,22 +110,22 @@ docker build -t x-ui .
 
 ## Features
 
-- Supported protocols: VMess, VLESS, Trojan, Shadowsocks, Dokodemo-door, SOCKS, HTTP
-- Support XTLS native encryptions (Vision, REALITY)
-- Support advanced JSON editor GUI for Xray-Core configuration 
-- Support advanced GUI for routing traffic (Reverse and Transparent proxy, Multi-Domain, Multi-Certificate, Multi-Port per inbound)
-- Support Multi-User per inbound
-- Support applying traffic data limits and expiry dates per user/inbound
-- Support system status monitoring
-- Support deep database search
-- Show traffic statistics
-- Show online users
-- Show users with expired date or exceeded traffic limits
-- Support subscription (multi) link
-- Support import/export database
-- Support One-Click SSL certificate application and automatic renewal
-- Support HTTPS for panel (self-provided domain name + SSL certificate)
-- Support Dark/Light theme UI
+- Supported protocols: VLESS, VMess, Trojan, Shadowsocks, Dokodemo-door, Socks, HTTP
+- Supports XTLS Protocols (Vision, REALITY)
+- Supports an advanced JSON editor GUI for Xray-Core configuration 
+- Supports an advanced GUI for routing traffic, including Reverse and Transparent proxy, Multi-Domain, Multi-Certificate, and Multi-Port per inbound
+- Supports Multi-User per inbound
+- Supports traffic data limits and expiry dates per client/inbound
+- Supports system status monitoring
+- Supports deep database search
+- Displays live traffic statistics
+- Displays online clients
+- Displays clients with expired dates or exceeded traffic limits
+- Supports subscription service with (multi) link
+- Supports importing and exporting databases
+- Supports one-click SSL certificate application and automatic renewal
+- Supports HTTPS for admin web panel and subscription service (self-provided domain name + SSL certificate)
+- Supports Dark/Light theme UI
 
 ## Recommended OS
 
@@ -218,8 +218,8 @@ certbot certonly --standalone --register-unsafely-without-email --non-interactiv
 
 ### Usage
 
-X-UI supports daily traffic notification, panel login reminder and other functions through the Tg robot. To use the Tg robot, you need to apply for the specific application tutorial. You can refer to the [blog](https://coderfan.net/how-to-use-telegram-bot-to-alarm-you-when-someone-login-into-your-vps.html)
-Set the robot-related parameters in the panel background, including:
+X-UI panel supports daily traffic notifications, panel login reminders, and other functions through the Telegram (Tg) robot. To use the Tg robot, you need to follow the specific application tutorial. Refer to the [blog](https://coderfan.net/how-to-use-telegram-bot-to-alarm-you-when-someone-login-into-your-vps.html)
+to set the robot-related parameters in the panel background, including:
 
 - Tg robot Token
 - Tg robot ChatId
@@ -243,7 +243,7 @@ Reference syntax:
 - Login notification
 - CPU threshold notification
 - Threshold for Expiration time and Traffic to report in advance
-- Support client report menu if client's telegram ID or telegram UserName added to the user's configurations
+- Support client report menu if client's telegram ID or UserName added to the user's configurations
 - Support telegram traffic report searched with UUID (VMESS/VLESS) or Password (TROJAN) - anonymously
 - Menu based bot
 - Search client by email ( only admin )
@@ -261,7 +261,7 @@ Reference syntax:
 
 ### Enable Traffic Usage
 
-Please be aware if you upgrade from an old X-UI version or other forks, by default data traffic usage for users may not work! it's recommended to follow below steps for enabeling:
+Please be aware that if you upgrade from an older X-UI version or other forks, data traffic usage for users may not work by default. It is recommended to follow the steps below for enabling:
 
 1. Find this section in config file
 
@@ -304,7 +304,7 @@ Please be aware if you upgrade from an old X-UI version or other forks, by defau
 
 </details>
 
-## a Special Thanks to
+## A Special Thanks to
 
 - [HexaSoftwareTech](https://github.com/HexaSoftwareTech/)
 - [MHSanaei](https://github.com/MHSanaei)
