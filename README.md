@@ -258,7 +258,7 @@ Reference syntax:
 
 ### Enable Traffic Usage
 
-If you are upgrading from an older version or other forks and find that data traffic usage for users may not work by default, follow the steps below to enable it:
+If you are upgrading from an older version or other forks and find that data traffic usage for clients may not work by default, follow the steps below to enable it:
 
 #### Step 1: Locate the Configuration Section
 
