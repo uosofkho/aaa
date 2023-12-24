@@ -24,9 +24,9 @@
 | -------------------------------------- | :----------------: |
 | Multi-Protocol                         | :heavy_check_mark: |
 | Multi-Language                         | :heavy_check_mark: |
-| Multi-Client Inbounds                  | :heavy_check_mark: |
 | Advanced Routing Interface             | :heavy_check_mark: |
-| Display Online Clients                 | :heavy_check_mark: |
+| Multi-Client Inbounds                  | :heavy_check_mark: |
+| Display Online Clients & Traffic Stats | :heavy_check_mark: |
 | Manage Clients Traffic & Expiry Date   | :heavy_check_mark: |
 | Set Expiry Date Based on First Usage   | :heavy_check_mark: |
 | REST API                               | :heavy_check_mark: |
@@ -118,7 +118,7 @@ docker build -t x-ui .
 - Supports traffic limits and expiry dates per client/inbound
 - Supports system status monitoring
 - Supports deep database search
-- Displays live traffic statistics
+- Displays traffic statistics
 - Displays online clients
 - Displays clients with expired dates or exceeded traffic limits
 - Supports subscription service with (multi) link
