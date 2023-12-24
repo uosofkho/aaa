@@ -27,12 +27,12 @@
 | Multi-Client Inbounds                  | :heavy_check_mark: |
 | Advanced Routing Interface             | :heavy_check_mark: |
 | REST API                               | :heavy_check_mark: |
-|Display Online Clients                  | :heavy_check_mark: |
+| Display Online Clients                  | :heavy_check_mark: |
 | Manage Clients Traffic & Expiry Date   | :heavy_check_mark: |
-| Applies Expiry Date Based on First Usage | :heavy_check_mark: |
+| Set Expiry Date Based on First Usage   | :heavy_check_mark: |
 | Telegram Bot (admin + clients)         | :heavy_check_mark: |
 | Database Backup using Telegram Bot     | :heavy_check_mark: |
-| Subscription Service (link + user info)  | :heavy_check_mark: |
+| Subscription Service (link + user info) | :heavy_check_mark: |
 | Search in Deep                         | :heavy_check_mark: |
 | Dark/Light Theme                       | :heavy_check_mark: |
 
@@ -115,7 +115,7 @@ docker build -t x-ui .
 - Supports an advanced JSON editor interface for Xray Core configuration 
 - Supports an advanced interface for routing traffic, incorporating Reverse, External, and Transparent Proxy, along with Multi-Domain, Certificate, and Port per inbound
 - Supports Multi-Client per inbound
-- Supports traffic data limits and expiry dates per client/inbound
+- Supports traffic limits and expiry dates per client/inbound
 - Supports system status monitoring
 - Supports deep database search
 - Displays live traffic statistics
