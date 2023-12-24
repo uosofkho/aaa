@@ -27,7 +27,8 @@
 | Advanced Routing Interface             | :heavy_check_mark: |
 | Multi-Client Inbounds                  | :heavy_check_mark: |
 | Display Online Clients & Traffic Stats | :heavy_check_mark: |
-| Manage Clients Traffic & Expiry Date   | :heavy_check_mark: |
+| Manage Clients Traffic & Expiry Date
+| :heavy_check_mark: |
 | Set Expiry Date Based on First Usage   | :heavy_check_mark: |
 | REST API                               | :heavy_check_mark: |
 | Telegram Bot (admin + clients)         | :heavy_check_mark: |
@@ -112,8 +113,8 @@ docker build -t x-ui .
 
 - Supports protocols including VLESS, VMess, Trojan, Shadowsocks, Dokodemo-door, SOCKS, HTTP
 - Supports XTLS protocols, including Vision and REALITY
-- Supports an advanced JSON editor interface for Xray Core configuration 
-- Supports an advanced interface for routing traffic, incorporating Reverse, External, and Transparent Proxy, along with Multi-Domain, Certificate, and Port per inbound
+- Supports an advanced interface for routing traffic, incorporating Reverse, External, and Transparent Proxy, along with Multi-Domain, SSL Certificate, and Port per inbound
+- Supports an advanced JSON editor interface for configuration
 - Supports Multi-Client per inbound
 - Supports traffic limits and expiry dates per client/inbound
 - Supports system status monitoring
