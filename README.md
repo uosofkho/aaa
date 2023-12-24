@@ -25,7 +25,7 @@
 | Multi-Protocol                         | :heavy_check_mark: |
 | Multi-Language                         | :heavy_check_mark: |
 | Multi-Client Inbounds                  | :heavy_check_mark: |
-| Advanced Traffic Routing               | :heavy_check_mark: |
+| Advanced Routing Interface             | :heavy_check_mark: |
 | REST API                               | :heavy_check_mark: |
 |Display Online Clients                  | :heavy_check_mark: |
 | Manage Clients Traffic Data & Expiry Date| :heavy_check_mark: |
