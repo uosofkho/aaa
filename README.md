@@ -262,7 +262,7 @@ If you are upgrading from an older version or other forks and find that data tra
 
 #### Step 1: Locate the Configuration Section
 
-Find the following section in configuration file:
+Find the following section in the config file:
 
 ```json
   "policy": {
