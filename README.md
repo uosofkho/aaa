@@ -111,7 +111,7 @@ docker build -t x-ui .
 
 - Supports protocols including VLESS, VMess, Trojan, Shadowsocks, Dokodemo-door, SOCKS, HTTP
 - Supports XTLS protocols, including Vision and REALITY
-- Supports an advanced interface for routing traffic, incorporating Reverse, External, and Transparent Proxy, along with Multi-Domain, SSL Certificate, and Port per inbound
+- Supports an advanced interface for routing traffic, incorporating Reverse, External, and Transparent Proxy, along with Multi-Domain, SSL Certificate, and Port
 - Supports an advanced JSON editor interface for Xray template configuration
 - Supports an advanced interface for inbound management
 - Supports clients' traffic cap and expirtion date based on first usage
