@@ -258,47 +258,55 @@ Reference syntax:
 
 ### Enable Traffic Usage
 
-Please be aware that if you upgrade from an older X-UI version or other forks, data traffic usage for users may not work by default. It is recommended to follow the steps below for enabling:
+If you are upgrading from an older version or other forks and find that data traffic usage for users may not work by default, follow the steps below to enable it:
 
-1. Find this section in config file
+#### Step 1: Locate the Configuration Section
 
-```json
- "policy": {
-    "system": {
-```
-
-2. Add below section just after ` "policy": {` :
-
-```json
-    "levels": {
-      "0": {
-        "statsUserUplink": true,
-        "statsUserDownlink": true
-      }
-    },
-```
-
-- The final output is like:
+Find the following section in configuration file:
 
 ```json
   "policy": {
-    "levels": {
-      "0": {
-        "statsUserUplink": true,
-        "statsUserDownlink": true
-      }
-    },
-
     "system": {
-      "statsInboundDownlink": true,
-      "statsInboundUplink": true
+      // Other policy configurations
     }
   },
-  "routing": {
 ```
+#### Step 2: Add the Required Configuration
 
-3. Save and restart panel
+Add the following section just after `"policy": {`:
 
+```json
+"levels": {
+  "0": {
+    "statsUserUplink": true,
+    "statsUserDownlink": true
+  }
+},
+```
+#### Step 3: Final Configuration
+
+Your final configuration should look like this:
+
+```json
+"policy": {
+  "levels": {
+    "0": {
+      "statsUserUplink": true,
+      "statsUserDownlink": true
+    }
+  },
+  "system": {
+    "statsInboundDownlink": true,
+    "statsInboundUplink": true
+  }
+},
+"routing": {
+  // Other routing configurations
+},
+```
+#### Step 4: Save and Restart
+
+Save your changes and restart the web panel.
 </details>
 
 ## A Special Thanks to
