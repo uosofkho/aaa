@@ -27,7 +27,7 @@
 | Advanced Routing Interface             | :heavy_check_mark: |
 | Multi-Client Inbounds                  | :heavy_check_mark: |
 | Display Online Clients & Traffic Stats | :heavy_check_mark: |
-| Set Clients Traffic and Date limitaion | :heavy_check_mark: |
+| Set Clients Traffic and Date Limitations | :heavy_check_mark: |
 | Set Expiry Date Based on First Usage   | :heavy_check_mark: |
 | REST API                               | :heavy_check_mark: |
 | Telegram Bot (admin + clients)         | :heavy_check_mark: |
