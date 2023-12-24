@@ -1,5 +1,5 @@
 # X-UI
-**An advanced web panel, built on Xray Core, supports multiple protocols, languages**
+**An advanced Web Panel, Built on Xray Core, Supports Multiple Protocols, Languages**
 
 ![](https://img.shields.io/github/v/release/alireza0/x-ui.svg)
 ![](https://img.shields.io/docker/pulls/alireza7/x-ui.svg)
