@@ -22,7 +22,7 @@
 ## Quick Overview
 | Features                               |      Enable?       |
 | -------------------------------------- | :----------------: |
-| Multi-Protocol                         | :heavy_check_mark: |
+| MULTI-PROTOCOL                         | :heavy_check_mark: |
 | Multi-Language                         | :heavy_check_mark: |
 | Advanced Routing Interface             | :heavy_check_mark: |
 | Multi-Client Inbounds                  | :heavy_check_mark: |
@@ -120,8 +120,8 @@ docker build -t x-ui .
 - Displays depleted clients with expired dates or exceeded traffic cap
 - Supports subscription service with (multi) link
 - Supports importing and exporting databases
-- Supports one-click SSL certificate application and automatic renewal
-- Supports HTTPS for web panel and subscription service (self-provided domain + SSL certificate)
+- Supports One-Click SSL certificate application and automatic renewal
+- Supports HTTPS for the web panel (self-provided domain + SSL certificate)
 - Supports Dark/Light theme
 
 ## Recommended OS
