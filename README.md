@@ -19,7 +19,7 @@
 `tz2Wnh2SsY1eezXrcLChu6idWpgdHzUFQcts`
 
 
-## Quick Look
+## Quick Overview
 | Features                               |      Enable?       |
 | -------------------------------------- | :----------------: |
 | Multi-Protocol                         | :heavy_check_mark: |
