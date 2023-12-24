@@ -115,10 +115,8 @@ docker build -t x-ui .
 - Supports an advanced JSON editor interface for Xray template configuration
 - Supports an Advanced Interface for Client/Inbound Management
 - Supports clients' traffic cap and expirtion date Based on First Usage
-- Supports system status monitoring
+- Displays online clients, traffic statistics, and system status monitoring
 - Supports deep database search
-- Displays traffic statistics
-- Displays online clients
 - Displays depleted clients with expired dates or exceeded traffic cap
 - Supports subscription service with (multi) link
 - Supports importing and exporting databases
