@@ -22,7 +22,7 @@
 ## Quick Overview
 | Features                               |      Enable?       |
 | -------------------------------------- | :----------------: |
-| MULTI-PROTOCOL                         | :heavy_check_mark: |
+| Multi-Protocol                   | :heavy_check_mark: |
 | Multi-Language                         | :heavy_check_mark: |
 | Advanced Routing Interface             | :heavy_check_mark: |
 | Multi-Client Inbounds                  | :heavy_check_mark: |
