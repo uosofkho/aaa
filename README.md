@@ -26,13 +26,13 @@
 | Multi-Language                         | :heavy_check_mark: |
 | Multi-Client Inbounds                  | :heavy_check_mark: |
 | Advanced Routing Interface             | :heavy_check_mark: |
-| REST API                               | :heavy_check_mark: |
-| Display Online Clients                  | :heavy_check_mark: |
+| Display Online Clients                 | :heavy_check_mark: |
 | Manage Clients Traffic & Expiry Date   | :heavy_check_mark: |
 | Set Expiry Date Based on First Usage   | :heavy_check_mark: |
+| REST API                               | :heavy_check_mark: |
 | Telegram Bot (admin + clients)         | :heavy_check_mark: |
 | Database Backup using Telegram Bot     | :heavy_check_mark: |
-| Subscription Service (link + user info) | :heavy_check_mark: |
+| Subscription Service (link + user info)| :heavy_check_mark: |
 | Search in Deep                         | :heavy_check_mark: |
 | Dark/Light Theme                       | :heavy_check_mark: |
 
