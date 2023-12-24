@@ -238,7 +238,7 @@ Reference syntax:
 
 - Report periodic
 - Login notification
-- CPU usage threshold notification
+- CPU load threshold notification
 - Expiration time and Traffic notifications to report in advance
 - Support client report menu if client's telegram ID or user name added to the user's configurations
 - Support telegram traffic report searched with UUID (VLESS/VMess) or Password (Trojan) - anonymously
