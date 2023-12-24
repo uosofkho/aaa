@@ -113,7 +113,7 @@ docker build -t x-ui .
 - Supports XTLS protocols, including Vision and REALITY
 - Supports an advanced interface for routing traffic, incorporating Reverse, External, and Transparent Proxy, along with Multi-Domain, SSL Certificate, and Port per inbound
 - Supports an advanced JSON editor interface for Xray template configuration
-- Supports an advanced interface for client/inbound management
+- Supports an advanced interface for inbound management
 - Supports clients' traffic cap and expirtion date Based on First Usage
 - Displays online clients, traffic statistics, and system status monitoring
 - Supports deep database search
