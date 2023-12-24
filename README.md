@@ -112,14 +112,14 @@ docker build -t x-ui .
 - Supports protocols including VLESS, VMess, Trojan, Shadowsocks, Dokodemo-door, SOCKS, HTTP
 - Supports XTLS protocols, including Vision and REALITY
 - Supports an advanced interface for routing traffic, incorporating Reverse, External, and Transparent Proxy, along with Multi-Domain, SSL Certificate, and Port per inbound
-- Supports an advanced JSON editor interface for configuration
-- Supports Multi-Client per inbound
-- Supports traffic limits and expiry dates per client/inbound
+- Supports an advanced JSON editor interface for Xray template configuration
+- Supports an Advanced Interface for Client/Inbound Management
+- Supports clients' traffic cap and expirtion date Based on First Usage
 - Supports system status monitoring
 - Supports deep database search
 - Displays traffic statistics
 - Displays online clients
-- Displays clients with expired dates or exceeded traffic limits
+- Displays depleted clients with expired dates or exceeded traffic cap
 - Supports subscription service with (multi) link
 - Supports importing and exporting databases
 - Supports one-click SSL certificate application and automatic renewal
