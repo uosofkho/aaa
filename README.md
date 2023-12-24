@@ -285,7 +285,7 @@ Add the following section just after `"policy": {`:
 ```
 #### Step 3: Final Configuration
 
-Your final configuration should look like this:
+Your final config should look like this:
 
 ```json
 "policy": {
