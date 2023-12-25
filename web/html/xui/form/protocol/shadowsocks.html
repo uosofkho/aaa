@@ -45,8 +45,8 @@
         <td>{{ i18n "pages.inbounds.network" }}</td>
         <td>
             <a-form-item>
-                <a-select v-model="inbound.settings.network" style="width: 100px;" :dropdown-class-name="themeSwitcher.currentTheme">
-                    <a-select-option value="tcp,udp">TCP,UDP</a-select-option>
+                <a-select v-model="inbound.settings.network" style="width: 250px;" :dropdown-class-name="themeSwitcher.currentTheme">
+                    <a-select-option value="tcp,udp">TCP+UDP</a-select-option>
                     <a-select-option value="tcp">TCP</a-select-option>
                     <a-select-option value="udp">UDP</a-select-option>
                 </a-select>
