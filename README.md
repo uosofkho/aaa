@@ -44,10 +44,10 @@ bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.s
 
 ## Install Custom Version
 
-To install your desired version, add the version to the end of the installation command. E.g., ver `0.5.2`:
+To install your desired version, add the version to the end of the installation command. e.g., ver `1.6.4`:
 
 ```sh
-bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh) 0.5.2
+bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh) 1.6.4
 ```
 
 ## Manual Install & Upgrade
@@ -72,7 +72,7 @@ systemctl enable x-ui
 systemctl restart x-ui
 ```
 
-## Install Using Docker
+## Install using Docker
 
 1. Install docker
 
@@ -121,7 +121,7 @@ docker build -t x-ui .
 - Supports subscription service with (multi) link
 - Supports importing and exporting databases
 - Supports One-Click SSL certificate application and automatic renewal
-- Supports HTTPS for the web panel (self-provided domain + SSL certificate)
+- Supports HTTPS for the web panel and subscription service (self-provided domain + SSL certificate)
 - Supports Dark/Light theme
 
 ## Recommended OS
