@@ -109,10 +109,10 @@
                     <a-col :sm="24" :md="12">
                         <a-card hoverable>
                             {{ i18n "pages.index.xrayStatus" }}:
-                            <a-tag :color="status.xray.color">[[ status.xray.state ]]</a-tag>
+                            <a-tag :color="status.xray.color">[[ status.xray.state.toUpperCase() ]]</a-tag>
                             <a-popover v-if="status.xray.state === State.Error"
                                 :overlay-class-name="themeSwitcher.currentTheme">
-                                <span slot="title" style="font-size: 12pt">Error in running xray-core
+                                <span slot="title" style="font-size: 12pt">ERROR IN RUNNING XRAY-CORE
                                     <a-tag color="purple" style="cursor: pointer; float: right;" @click="openLogs()">{{ i18n "pages.index.logs" }}</a-tag>
                                 </span>
                                 <template slot="content">
