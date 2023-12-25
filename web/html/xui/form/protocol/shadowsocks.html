@@ -26,7 +26,7 @@
         <td>
             <a-form-item>
                 <a-select v-model="inbound.settings.method" style="width: 250px;" @change="SSMethodChange" :dropdown-class-name="themeSwitcher.currentTheme">
-                    <a-select-option v-for="method in SSMethods" :value="method">[[ method ]]</a-select-option>
+            <a-select-option v-for="method in SSMethods" :value="method">[[ method.toUpperCase() ]]</a-select-option>
                 </a-select>
             </a-form-item>
         </td>
