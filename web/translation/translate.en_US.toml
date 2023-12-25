@@ -218,7 +218,7 @@
 "save" = "Save"
 "infoDesc" = "Every change made here needs to be saved. Please restart the panel for the changes to take effect."
 "restartPanel" = "Restart Panel"
-"restartPanelDesc" = "Are you sure you want to restart the panel? Click OK to restart after 3 secs. If you cannot access the panel after restarting, please check the panel log info on the server."
+"restartPanelDesc" = "Are you sure you want to restart the panel? Click OK to restart after 3 secs. If you are unable to access the web panel after restarting, please check the logs"
 "resetDefaultConfig" = "Reset to Default"
 "panelConfig" = "Panel Settings"
 "userSettings" = "Admin Settings"
