@@ -293,8 +293,8 @@
 "modifySettings" = "Modify Settings"
 "getSettings" = "Get Settings"
 "modifyUser" = "Modify User"
-"originalUserPassIncorrect" = "Incorrect original username or password"
-"userPassMustBeNotEmpty" = "New username and password cannot be empty"
+"originalUserPassIncorrect" = "Current username or password is incorrect"
+"userPassMustBeNotEmpty" = "The new username or password is empty"
 
 [pages.xray]
 "title" = "Xray Settings"
