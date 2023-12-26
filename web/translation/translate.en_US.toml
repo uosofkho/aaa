@@ -221,7 +221,7 @@
 "restartPanelDesc" = "Are you sure you want to restart the panel? Click OK to restart after 3 secs. If you are unable to access the web panel after restarting, please check the logs"
 "resetDefaultConfig" = "Reset to Default"
 "panelConfig" = "Configurations"
-"userSettings" = "Authentication"
+"userSettings" = "Admin Auth"
 "TGBotSettings" = "Telegram Bot"
 "panelListeningIP" = "Listening IP"
 "panelListeningIPDesc" = "The IP address for the web panel. (leave blank to listen on all IPs)"
