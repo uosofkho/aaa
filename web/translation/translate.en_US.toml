@@ -214,7 +214,7 @@
 "encryption" = "Encryption"
 
 [pages.settings]
-"title" = "Settings"
+"title" = "Panel Settings"
 "save" = "Save"
 "infoDesc" = "Every change made here needs to be saved. Please restart the panel for the changes to take effect."
 "restartPanel" = "Restart Panel"
@@ -297,8 +297,8 @@
 "userPassMustBeNotEmpty" = "The new username or password is empty"
 
 [pages.xray]
-"title" = "Xray Settings"
-"save" = "Save Settings"
+"title" = "Xray Configurations"
+"save" = "Save"
 "restart" = "Restart Xray"
 "basicTemplate" = "Basic Template"
 "advancedTemplate" = "Advanced Template"
@@ -312,7 +312,7 @@
 "directCountryConfigsDesc" = "These options will directly forward traffic based on the specific requested country."
 "ipv4Configs" = "IPv4 Configs"
 "ipv4ConfigsDesc" = "These options will route requests to destination only via IPv4."
-"Template" = "Xray Configuration Template"
+"Template" = "Advanced Xray Template Configuration"
 "TemplateDesc" = "The final Xray config file will be generated based on this template."
 "FreedomStrategy" = "Freedom Protocol Routing Strategy"
 "FreedomStrategyDesc" = "Set the output strategy for the network in the Freedom Protocol."
