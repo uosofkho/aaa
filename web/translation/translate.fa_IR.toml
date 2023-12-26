@@ -70,7 +70,7 @@
 "invalidFormData" = "اطلاعات وارد شده به صورت درست وارد نشده است"
 "emptyUsername" = "نام‌کاربری خالی‌است"
 "emptyPassword" = "رمز‌عبور خالی‌است"
-"wrongUsernameOrPassword" = "نام‌کاربری و رمزعبور‌اشتباه‌است"
+"wrongUsernameOrPassword" = "نام‌کاربری یا رمزعبور‌اشتباه‌است"
 "successLogin" = "ورود"
 
 [pages.index]
@@ -85,7 +85,7 @@
 "xraySwitchClickDesk" = "لطفا با دقت انتخاب کنید. در صورت انتخاب نسخه قدیمی‌تر، امکان ناهماهنگی با کانفیگ‌های فعلی وجود دارد"
 "operationHours" = "مدت فعالیت"
 "operationHoursDesc" = "مدت فعالیت سیستم‌عامل پس از شروع به‌کار"
-"systemLoad" = "بار‌ سیستم"
+"systemLoad" = "استفاده سیستم"
 "connectionTcpCountDesc" = "در تمام شبکه‌ها TCP مجموع اتصالات"
 "connectionUdpCountDesc" = "در تمام شبکه‌ها UDP مجموع اتصالات"
 "upSpeed" = "سرعت آپلود کلی در تمام شبکه‌ها"
@@ -292,8 +292,8 @@
 "modifySettings" = "ویرایش تنظیمات"
 "getSettings" = "دریافت تنظیمات"
 "modifyUser" = "ویرایش مدیر"
-"originalUserPassIncorrect" = "نام‌کاربری یا رمزعبور فعلی اشتباه است "
-"userPassMustBeNotEmpty" = "نام‌کاربری یا رمزعبور جدید خالی است"
+"originalUserPassIncorrect" = "نام‌کاربری یا رمزعبور فعلی اشتباه‌است "
+"userPassMustBeNotEmpty" = "نام‌کاربری یا رمزعبور جدید خالی‌است"
 
 [pages.xray]
 "title" = "تنظیمات ایکس‌ری"
