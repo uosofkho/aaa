@@ -76,7 +76,7 @@
 [pages.index]
 "title" = "System Status"
 "memory" = "RAM"
-"hard" = "Disk"
+"hard" = "DISK"
 "xrayStatus" = "Xray Status"
 "stopXray" = "Stop"
 "restartXray" = "Restart"
