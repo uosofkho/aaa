@@ -68,8 +68,8 @@
 
 [pages.login.toasts]
 "invalidFormData" = "Input data format is invalid"
-"emptyUsername" = "Username is empty"
-"emptyPassword" = "Password is empty"
+"emptyUsername" = "Please enter a username"
+"emptyPassword" = "Please enter a password"
 "wrongUsernameOrPassword" = "Username or password is incorrect"
 "successLogin" = "Login"
 
