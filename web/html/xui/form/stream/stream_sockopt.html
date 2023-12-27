@@ -5,7 +5,7 @@
         <a-switch v-model="inbound.stream.sockoptSwitch"></a-switch>
     </a-form-item>
     <template v-if="inbound.stream.sockoptSwitch">
-        <a-form-item label="Accept Proxy Protocol">
+        <a-form-item label="Accept PROXY Protocol">
             <a-switch v-model="inbound.stream.sockopt.acceptProxyProtocol"></a-switch>
         </a-form-item>
         <a-form-item label="TCP Fast Open">
@@ -14,11 +14,11 @@
         <a-form-item label="Route Mark">
             <a-input-number v-model="inbound.stream.sockopt.mark" :min="0"></a-input-number>
         </a-form-item>
-        <a-form-item label="T-Proxy">
+        <a-form-item label="TPROXY">
             <a-select v-model="inbound.stream.sockopt.tproxy" :dropdown-class-name="themeSwitcher.currentTheme">
                 <a-select-option value="off">Off</a-select-option>
                 <a-select-option value="redirect">Redirect</a-select-option>
-                <a-select-option value="tproxy">T-Proxy</a-select-option>
+                <a-select-option value="tproxy">TPROXY</a-select-option>
             </a-select>
         </a-form-item>
     </template>
