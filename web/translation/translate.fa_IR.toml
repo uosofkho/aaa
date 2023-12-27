@@ -68,8 +68,8 @@
 
 [pages.login.toasts]
 "invalidFormData" = "اطلاعات وارد شده به صورت درست وارد نشده است"
-"emptyUsername" = "نام‌کاربری خالی‌است"
-"emptyPassword" = "رمز‌عبور خالی‌است"
+"emptyUsername" = "لطفا یک نام‌کاربری وارد کنید‌"
+"emptyPassword" = "لطفا یک رمزعبور وارد کنید"
 "wrongUsernameOrPassword" = "نام‌کاربری یا رمزعبور‌اشتباه‌است"
 "successLogin" = "ورود"
 
