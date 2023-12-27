@@ -188,10 +188,10 @@
 "prefix" = "Tiền Tố (Được ưu đãi)"
 "postfix" = "Hậu tố"
 "delayedStart" = "Bắt đầu sau lần sử dụng đầu tiên"
-"expireDays" = "Số ngày hết hạn"
+"expireDays" = "Khoảng thời gian"
 "days" = "Ngày(s)"
 "renew" = "Tự động gia hạn"
-"renewDesc" = "Tự động gia hạn ngày sau khi hết hạn. 0 = tắt"
+"renewDesc" = "Tự động gia hạn sau khi hết hạn. (0 = tắt)(đơn vị: ngày)"
 
 [pages.inbounds.toasts]
 "obtain" = "Nhận được"
