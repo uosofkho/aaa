@@ -6,7 +6,7 @@
         <a-radio-group v-model="inbound.stream.security" button-style="solid">
             <a-radio-button value="none">{{ i18n "none" }}</a-radio-button>
             <a-radio-button value="tls">TLS</a-radio-button>
-            <a-radio-button v-if="inbound.canEnableReality()" value="reality">Reality</a-radio-button>
+            <a-radio-button v-if="inbound.canEnableReality()" value="reality">REALITY</a-radio-button>
         </a-radio-group>
     </a-form-item>
 
@@ -80,7 +80,7 @@
             <a-input type="textarea" :rows="3" style="width:250px;" v-model="cert.key"></a-input>
         </a-form-item>
     </template>
-        <a-form-item label='ocspStapling'>
+        <a-form-item label='OCSP stapling'>
             <a-input-number v-model.number="cert.ocspStapling" :min="0"></a-input-number>
         </a-form-item>
     </template>
@@ -103,7 +103,7 @@
     <a-form-item label='Dest'>
         <a-input v-model.trim="inbound.stream.reality.dest"></a-input>
     </a-form-item>
-    <a-form-item label='Server Names'>
+    <a-form-item label='SNI'>
         <a-input v-model.trim="inbound.stream.reality.serverNames"></a-input>
     </a-form-item>
     <a-form-item>
@@ -112,7 +112,7 @@
                 <template slot="title">
                     <span>{{ i18n "pages.client.renew" }}</span>
                 </template>
-                Short IDs
+                Short ID
                 <a-icon @click="inbound.stream.reality.shortIds = RandomUtil.randomShortId().join(',')" type="sync">
             </a-icon>
         </template>
