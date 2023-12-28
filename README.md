@@ -118,7 +118,7 @@ docker build -t x-ui .
 - Displays online clients, traffic statistics, and system status monitoring
 - Supports deep database search
 - Displays depleted clients with expired dates or exceeded traffic cap
-- Supports subscription service with (multi) link
+- Supports subscription service with (multi)link
 - Supports importing and exporting databases
 - Supports One-Click SSL certificate application and automatic renewal
 - Supports HTTPS for the web panel and subscription service (self-provided domain + SSL certificate)
