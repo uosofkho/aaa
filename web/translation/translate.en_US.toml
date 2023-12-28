@@ -1,6 +1,6 @@
 "username" = "Username"
 "password" = "Password"
-"login" = "Login"
+"login" = "Log in"
 "confirm" = "Confirm"
 "cancel" = "Cancel"
 "close" = "Close"
@@ -59,7 +59,7 @@
 "inbounds" = "INBOUNDS"
 "settings" = "PANEL SETTINGS"
 "xray" = "XRAY CONFIGURATIONS"
-"logout" = "LOGOUT"
+"logout" = "LOG OUT"
 "link" = "Management"
 
 [pages.login]
