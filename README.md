@@ -215,7 +215,7 @@ certbot certonly --standalone --register-unsafely-without-email --non-interactiv
 
 ### Usage
 
-The web panel supports daily traffic notifications, panel login reminders, and other functions through the Telegram Tgbot. To use the bot, you need to follow the specific tutorial. Refer to the [blog](https://coderfan.net/how-to-use-telegram-bot-to-alarm-you-when-someone-login-into-your-vps.html)
+The web panel supports daily traffic notifications, panel login reminders, and other functions through the Telegram Bot. To use the bot, you need to follow the specific tutorial. Refer to the [blog](https://coderfan.net/how-to-use-telegram-bot-to-alarm-you-when-someone-login-into-your-vps.html)
 to set the robot-related parameters in the panel background, including:
 
 - Tg robot Token
