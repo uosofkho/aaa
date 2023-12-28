@@ -68,8 +68,8 @@
 
 [pages.login.toasts]
 "invalidFormData" = "Input data format is invalid"
-"emptyUsername" = "Please enter a username"
-"emptyPassword" = "Please enter a password"
+"emptyUsername" = "Username is required"
+"emptyPassword" = "Password is required"
 "wrongUsernameOrPassword" = "Username or password is incorrect"
 "successLogin" = "Login"
 
@@ -228,7 +228,7 @@
 "panelListeningDomain" = "Listening Domain"
 "panelListeningDomainDesc" = "The domain name for the web panel. (leave blank to listen on all domains and IPs)"
 "panelPort" = "Port"
-"panelPortDesc" = "The port number for the web panel. (should be an unused port)"
+"panelPortDesc" = "The port number for the web panel. (must be an unused port)"
 "publicKeyPath" = "Public Key Path"
 "publicKeyPathDesc" = "The public key path for the web panel. (begins with ‘/‘)"
 "privateKeyPath" = "Private Key Path"
@@ -271,7 +271,7 @@
 "subListen" = "Listening IP"
 "subListenDesc" = "The IP address for the subscription service. (leave blank to listen on all IPs)"
 "subPort" = "Port"
-"subPortDesc" = "The port number for the subscription service. (should be an unused port)"
+"subPortDesc" = "The port number for the subscription service. (must be an unused port)"
 "subCertPath" = "Public Key Path"
 "subCertPathDesc" = "The public key path for the subscription service. (begins with ‘/‘)"
 "subKeyPath" = "Private Key Path"
@@ -294,7 +294,7 @@
 "getSettings" = "Get Settings"
 "modifyUser" = "Modify Admin"
 "originalUserPassIncorrect" = "Current username or password is incorrect"
-"userPassMustBeNotEmpty" = "The new username or password is empty"
+"userPassMustBeNotEmpty" = "The new username or password is required"
 
 [pages.xray]
 "title" = "Xray Configurations"
@@ -306,9 +306,9 @@
 "generalConfigsDesc" = "These options will determine the general strategy for traffic routing."
 "blockConfigs" = "Block Basics"
 "blockConfigsDesc" = "These options will block traffic based on specific requested protocols and websites."
-"blockCountryConfigs" = "Block Country"
+"blockCountryConfigs" = "Block Countries"
 "blockCountryConfigsDesc" = "These options will block traffic based on the specific requested country."
-"directCountryConfigs" = "Direct Country"
+"directCountryConfigs" = "Direct Countries"
 "directCountryConfigsDesc" = "These options will directly forward traffic based on the specific requested country."
 "ipv4Configs" = "IPv4 Routing"
 "ipv4ConfigsDesc" = "These options will route requests to destination only via IPv4."
