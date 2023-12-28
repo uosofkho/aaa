@@ -134,7 +134,7 @@
 "destinationPort" = "Cổng đích"
 "targetAddress" = "Địa chỉ mục tiêu"
 "monitorDesc" = "Mặc định để trống"
-"meansNoLimit" = "Nghĩa là không giới hạn"
+"meansNoLimit" = "0 = Không giới hạn (đơn vị: GB)"
 "totalFlow" = "Tổng lưu lượng"
 "leaveBlankToNeverExpire" = "0 = Không giới hạn (đơn vị: ngày)"
 "noRecommendKeepDefault" = "Không yêu cầu đặc biệt để giữ nguyên cài đặt mặc định"
