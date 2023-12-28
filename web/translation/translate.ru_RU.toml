@@ -134,7 +134,7 @@
 "destinationPort" = "Порт назначения"
 "targetAddress" = "Целевой адрес"
 "monitorDesc" = "Оставьте пустым по умолчанию"
-"meansNoLimit" = "Значит без ограничений"
+"meansNoLimit" = "0 = Неограниченно (единица: GB)"
 "totalFlow" = "Общий расход"
 "leaveBlankToNeverExpire" = "Оставьте пустым, чтобы сделать бессрочно"
 "noRecommendKeepDefault" = "Нет особых требований для сохранения настроек по умолчанию"
