@@ -136,7 +136,7 @@
 "monitorDesc" = "Mặc định để trống"
 "meansNoLimit" = "Nghĩa là không giới hạn"
 "totalFlow" = "Tổng lưu lượng"
-"leaveBlankToNeverExpire" = "Để trống để không bao giờ hết hạn"
+"leaveBlankToNeverExpire" = "0 = Không giới hạn (đơn vị: ngày)"
 "noRecommendKeepDefault" = "Không yêu cầu đặc biệt để giữ nguyên cài đặt mặc định"
 "certificatePath" = "Đường dẫn tập tin chứng chỉ"
 "certificateContent" = "Nội dung tập tin chứng chỉ"
