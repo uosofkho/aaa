@@ -211,7 +211,9 @@ docker build -t x-ui
 <details>
   <summary>Click for details</summary>
 
-### Certbot
+### Usage
+
+#### Certbot
 
 ```bash
 snap install core; snap refresh core
