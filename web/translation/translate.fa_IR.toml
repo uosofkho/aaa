@@ -245,7 +245,7 @@
 "telegramBotEnable" = "ربات تلگرام"
 "telegramBotEnableDesc" = "از طریق بات تلگرام به امکانات این پنل متصل شوید"
 "telegramToken" = "توکن تلگرام"
-"telegramTokenDesc" = "توکن را باید از مدیر بات های تلگرام دریافت کنید @botfather"
+"telegramTokenDesc" = "دریافت کنید @botfather توکن را می‌توانید از"
 "telegramChatId" = "آی‌دی تلگرام مدیریت"
 "telegramChatIdDesc" = "از @userinfobot یا دستور '/id' در ربات برای دریافت شناسه های چت خود استفاده کنید. با استفاده از کاما می توانید چند آیدی را از هم جدا کنید. "
 "telegramNotifyTime" = "مدت زمان نوتیفیکیشن ربات تلگرام"
