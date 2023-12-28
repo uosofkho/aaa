@@ -215,8 +215,8 @@ certbot certonly --standalone --register-unsafely-without-email --non-interactiv
 
 ### Usage
 
-The web panel supports daily traffic notifications, panel login reminders, and other functions through the Telegram Bot. To use the bot, you need to follow the specific tutorial. Refer to the [blog](https://coderfan.net/how-to-use-telegram-bot-to-alarm-you-when-someone-login-into-your-vps.html)
-to set the robot-related parameters in the panel background, including:
+The web panel supports daily traffic, panel login and other notification and functions through the Telegram Bot. To use the bot, you need to follow the specific tutorial. Refer to the [blog](https://coderfan.net/how-to-use-telegram-bot-to-alarm-you-when-someone-login-into-your-vps.html)
+to set the robot-related parameters in the panel, including:
 
 - Tg robot Token
 - Tg robot ChatId
@@ -228,11 +228,14 @@ to set the robot-related parameters in the panel background, including:
 
 Reference syntax:
 
-- 30 \* \* \* \* \* //Notify at the 30s of each point
-- 0 \*/10 \* \* \* \* //Notify at the first second of each 10 minutes
-- @hourly // hourly notification
-- @daily // Daily notification (00:00 in the morning)
-- @every 8h // notify every 8 hours
+- `*/30 * * * *` Notify every 30 mins, every hour
+- `30 \* \* \* \* \*` Notify at the 30s of each point
+- `0 \*/10 \* \* \* \*` Notify at the first second of each 10 mins
+- `@hourly` Hourly notification
+- `@daily` Daily notification (00:00 in the morning)
+- `@every 8h` Notify every 8 hrs
+
+For more info about [Crontab](https://acquia.my.site.com/s/article/360004224494-Cron-time-string-format)
 
 ### Features
 
