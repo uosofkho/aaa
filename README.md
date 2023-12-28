@@ -218,40 +218,42 @@ certbot certonly --standalone --register-unsafely-without-email --non-interactiv
 The web panel supports daily traffic, panel login and other notification and functions through the Telegram Bot. To use the bot, you need to follow the specific tutorial. Refer to the [blog](https://coderfan.net/how-to-use-telegram-bot-to-alarm-you-when-someone-login-into-your-vps.html)
 to set the robot-related parameters in the panel, including:
 
-- Tg robot Token
-- Tg robot ChatId
-- Tg robot cycle runtime, in crontab syntax
-- Tg robot Expiration threshold
-- Tg robot Traffic threshold
-- Tg robot Enable send backup in cycle runtime
-- Tg robot Enable CPU usage alarm threshold
+- Tg Robot Token
+- Tg Robot Chat ID
+- Tg Robot Cycle Runtime (in cron syntax)
+- Tg Robot Expiration Threshold
+- Tg Robot Traffic Threshold
+- Tg Robot Enable Sending Backup in Cycle Runtime
+- Tg Robot Enable CPU load Alarm Threshold
+
+#### Crontab Time Format 
 
 Reference syntax:
 
-- `*/30 * * * *` Notify every 30 mins, every hour
-- `30 \* \* \* \* \*` Notify at the 30s of each point
-- `0 \*/10 \* \* \* \*` Notify at the first second of each 10 mins
-- `@hourly` Hourly notification
-- `@daily` Daily notification (00:00 in the morning)
-- `@every 8h` Notify every 8 hrs
+- `*/30 * * * *` - Notify every 30 minutes, every hour
+- `30 * * * * *` - Notify at the 30th second of each minute
+- `0 */10 * * * *` - Notify at the start of every 10 minutes
+- `@hourly` - Hourly notification
+- `@daily` - Daily notification (00:00 AM)
+- `@every 8h` - Notify every 8 hours
 
 For more info about [Crontab](https://acquia.my.site.com/s/article/360004224494-Cron-time-string-format)
 
 ### Features
 
-- Report periodic
-- Login notification
-- CPU load threshold notification
-- Expiration time and Traffic notifications to report in advance
-- Support client report menu if client's telegram ID or user name added to the user's configurations
-- Support telegram traffic report searched with UUID (VLESS/VMess) or Password (Trojan) - anonymously
-- Menu based bot
-- Search clients by email (only admin)
-- Check all inbounds
-- Check server status
-- Check depleted clients
-- Receive backup by request and in periodic reports
-- Multi language
+- Periodic reporting
+- Login notifications
+- CPU load threshold notifications
+- Advance notifications for expiration time and traffic
+- Client reporting menu with Telegram ID or username in configurations
+- Anonymous traffic reports, search by UUID (VLESS/VMess) or Password (Trojan)
+- Menu-based bot
+- Client search by email (admin only)
+- Inbound checks
+- Server status check
+- Depleted client checks
+- Backup on request and in periodic reports
+- Multilingual support
 </details>
 
 ## Troubleshoots
