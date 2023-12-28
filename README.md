@@ -52,7 +52,13 @@ bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.s
 
 ## Manual Install & Upgrade
 
+<details>
+  <summary>Click for details</summary>
+  
+### Usage
+
 1. First download the latest compressed package from https://github.com/alireza0/x-ui/releases, generally choose Architecture `amd64`
+   
 2. Then upload the compressed package to the server's `/root/` directory and login to the server with user `root` 
 
 > If your server CPU architecture is not `amd64` replace it with the appropriate architecture
@@ -72,15 +78,22 @@ systemctl enable x-ui
 systemctl restart x-ui
 ```
 
+</details>
+
 ## Install using Docker
 
-1. Install docker
+<details>
+   <summary>Click for details</summary>
+  
+### Usage
+  
+#### 1. Install docker
 
 ```shell
 curl -fsSL https://get.docker.com | sh
 ```
 
-2. Install X-UI
+#### 2. Install X-UI
 
 ```shell
 mkdir x-ui && cd x-ui
@@ -96,8 +109,10 @@ docker run -itd \
 > Build your own image
 
 ```shell
-docker build -t x-ui .
+docker build -t x-ui
 ```
+
+</details>
 
 ## Languages
 
