@@ -111,18 +111,18 @@ docker build -t x-ui .
 
 - Supports protocols including VLESS, VMess, Trojan, Shadowsocks, Dokodemo-door, SOCKS, HTTP
 - Supports XTLS protocols, including Vision and REALITY
-- Supports an advanced interface for routing traffic, incorporating Reverse, External, and Transparent Proxy, along with Multi-Domain, SSL Certificate, and Port
-- Supports an advanced JSON editor interface for Xray template configuration
-- Supports an advanced interface for inbound management
-- Supports clients' traffic cap and expirtion date based on first usage
+- An advanced interface for routing traffic, incorporating PROXY Protocol, Reverse, External, and Transparent Proxy, along with Multi-Domain, SSL Certificate, and Port
+- An advanced JSON interface for Xray template configuration
+- An advanced interface for inbound and outbound configuration
+- Clients’ traffic cap and expirtion date based on first usage
 - Displays online clients, traffic statistics, and system status monitoring
-- Supports deep database search
+- Deep database search
 - Displays depleted clients with expired dates or exceeded traffic cap
-- Supports subscription service with (multi)link
-- Supports importing and exporting databases
-- Supports One-Click SSL certificate application and automatic renewal
-- Supports HTTPS for the web panel and subscription service (self-provided domain + SSL certificate)
-- Supports Dark/Light theme
+- Subscription service with (multi)link
+- Importing and exporting databases
+- One-Click SSL certificate application and automatic renewal
+- HTTPS for the secure access to the web panel and subscription service (self-provided domain + SSL certificate)
+- Dark/Light theme
 
 ## Recommended OS
 
@@ -131,7 +131,7 @@ docker build -t x-ui .
 - Debian 10+
 - Fedora 36+
 
-## Screenshots
+## Preview
 
 ![inbounds](./media/inbounds.png)
 ![Dark inbounds](./media/inbounds-dark.png)
