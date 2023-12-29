@@ -29,7 +29,7 @@
 | Client & Traffic & System Status       | :heavy_check_mark: |
 | Date & Traffic Cap Based on First Use  | :heavy_check_mark: |
 | REST API                               | :heavy_check_mark: |
-| TgBot (DB backup + admin + client)     | :heavy_check_mark: |
+| TG Bot (DB backup + admin + client)     | :heavy_check_mark: |
 | Subscription Service (link + info)     | :heavy_check_mark: |
 | Search in Deep                         | :heavy_check_mark: |
 | Dark/Light Theme                       | :heavy_check_mark: |
@@ -43,7 +43,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.s
 
 ## Install Custom Version
 
-To install your desired version, add the version to the end of the installation command. e.g., ver `1.6.4`:
+**Step 1:** To install your desired version, add the version to the end of the installation command. e.g., ver `1.6.4`:
 
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh) 1.6.4
@@ -56,9 +56,9 @@ bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.s
   
 ### Usage
 
-1. First download the latest compressed package from https://github.com/alireza0/x-ui/releases, generally choose Architecture `amd64`
-   
-2. Then upload the compressed package to the server's `/root/` directory and login to the server with user `root` 
+**Step 1:** First download the latest compressed package from https://github.com/alireza0/x-ui/releases, generally choose Architecture `amd64`
+
+**Step 2:** Then upload the compressed package to the server's `/root/` directory and login to the server with user `root`
 
 > If your server CPU architecture is not `amd64` replace it with the appropriate architecture
 
@@ -83,16 +83,16 @@ systemctl restart x-ui
 
 <details>
    <summary>Click for details</summary>
-  
+
 ### Usage
-  
-#### 1. Install Docker
+
+**Step 1:** Install Docker
 
 ```shell
 curl -fsSL https://get.docker.com | sh
 ```
 
-#### 2. Install X-UI
+**Step 2:** Install X-UI
 
 ```shell
 mkdir x-ui && cd x-ui
@@ -210,9 +210,18 @@ docker build -t x-ui
 <details>
   <summary>Click for details</summary>
 
-### Usage
+### Cloudflare 
 
-#### Certbot
+The admin management script has a built-in SSL certificate application for Cloudflare. To use this script to apply for a certificate, you need the following:
+
+- Cloudflare registered email
+- Cloudflare Global API Key
+- The domain name has been resolved to the current server through cloudflare
+
+**Step 1:** Run the`x-ui`command on the server's terminal and then choose `17`. Then enter the information as requested.**
+
+
+### Certbot
 
 ```bash
 snap install core; snap refresh core
@@ -239,7 +248,7 @@ The web panel supports daily traffic, panel login, database backup, system statu
 - Database Backup
 - CPU Load Threshold Notification
 
-#### Crontab Time Format 
+**Crontab Time Format**
 
 Reference syntax:
 
@@ -278,7 +287,7 @@ For more info about [Crontab](https://acquia.my.site.com/s/article/360004224494-
 
 If you are upgrading from an older version or other forks and find that data traffic usage for clients may not work by default, follow the steps below to enable it:
 
-#### Step 1: Locate the Configuration Section
+**Step 1: Locate the Configuration Section**
 
 Find the following section in the config file:
 
@@ -289,7 +298,7 @@ Find the following section in the config file:
     }
   },
 ```
-#### Step 2: Add the Required Configuration
+**Step 2: Add the Required Configuration**
 
 Add the following section just after `"policy": {`:
 
@@ -301,7 +310,7 @@ Add the following section just after `"policy": {`:
   }
 },
 ```
-#### Step 3: Final Configuration
+**Step 3: Final Configuration**
 
 Your final config should look like this:
 
@@ -322,7 +331,7 @@ Your final config should look like this:
   // Other routing configurations
 },
 ```
-#### Step 4: Save and Restart
+**Step 4: Save and Restart**
 
 Save your changes and restart the web panel.
 </details>
