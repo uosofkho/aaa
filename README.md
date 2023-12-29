@@ -87,7 +87,7 @@ systemctl restart x-ui
   
 ### Usage
   
-#### 1. Install docker
+#### 1. Install Docker
 
 ```shell
 curl -fsSL https://get.docker.com | sh
@@ -127,16 +127,16 @@ docker build -t x-ui
 - Supports protocols including VLESS, VMess, Trojan, Shadowsocks, Dokodemo-door, SOCKS, HTTP
 - Supports XTLS protocols, including Vision and REALITY
 - An advanced interface for routing traffic, incorporating PROXY Protocol, Reverse, External, and Transparent Proxy, along with Multi-Domain, SSL Certificate, and Port
-- An advanced JSON interface for Xray template configuration
+- An interactive JSON interface for Xray template configuration
 - An advanced interface for inbound and outbound configuration
-- Clients’ traffic cap and expirtion date based on first usage
+- Clients’ traffic cap and expiration date based on first usage
 - Displays online clients, traffic statistics, and system status monitoring
 - Deep database search
 - Displays depleted clients with expired dates or exceeded traffic cap
 - Subscription service with (multi)link
 - Importing and exporting databases
 - One-Click SSL certificate application and automatic renewal
-- HTTPS for the secure access to the web panel and subscription service (self-provided domain + SSL certificate)
+- HTTPS for secure access to the web panel and subscription service (self-provided domain + SSL certificate)
 - Dark/Light theme
 
 ## Recommended OS
