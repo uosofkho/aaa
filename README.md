@@ -335,7 +335,7 @@ Your final config should look like this:
 ```
 **Step 4: Save and Restart**
 
-Save your changes and restart the web panel.
+Save your changes and restart the web panel
 </details>
 
 ## A Special Thanks to
