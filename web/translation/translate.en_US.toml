@@ -237,7 +237,7 @@
 "panelUrlPathDesc" = "The URI path for the web panel. (begins with ‘/‘ and concludes with ‘/‘)"
 "pageSize" = "Pagination Size"
 "pageSizeDesc" = "Define page size for the inbounds table. (0 = disable)"
-"remarkModel" = "Remark Model and Seperation Charachter"
+"remarkModel" = "Remark Model & Separation Character"
 "sampleRemark" = "Sample Remark"
 "oldUsername" = "Current Username"
 "currentPassword" = "Current Password"
