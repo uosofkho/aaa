@@ -22,16 +22,16 @@
 ## Quick Overview
 | Features                               |      Enable?       |
 | -------------------------------------- | :----------------: |
-| Multi-Protocol                   | :heavy_check_mark: |
+| Multi-Protocol                         | :heavy_check_mark: |
 | Multi-Language                         | :heavy_check_mark: |
-| Advanced Routing Interface             | :heavy_check_mark: |
+| Advanced Routing                       | :heavy_check_mark: |
 | Multi-Client Inbounds                  | :heavy_check_mark: |
-| Display Online Clients & Traffic Stats | :heavy_check_mark: |
-| Clients' Traffic Cap & Expiry Date Based on First Usage                               | :heavy_check_mark: |
+| Clients, Traffic, and System Status    | :heavy_check_mark: |
+| Traffic & Duration Cap Based on First Usage | :heavy_check_mark: |
 | REST API                               | :heavy_check_mark: |
 | Telegram Bot (admin + client)          | :heavy_check_mark: |
 | Database Backup using Telegram Bot     | :heavy_check_mark: |
-| Subscription Service (link + user info)| :heavy_check_mark: |
+| Subscription Service (link + info)     | :heavy_check_mark: |
 | Search in Deep                         | :heavy_check_mark: |
 | Dark/Light Theme                       | :heavy_check_mark: |
 
