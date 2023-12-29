@@ -1,6 +1,6 @@
 "username" = "Username"
 "password" = "Password"
-"login" = "Log in"
+"login" = "Log In"
 "confirm" = "Confirm"
 "cancel" = "Cancel"
 "close" = "Close"
@@ -413,7 +413,7 @@
 "helpClientCommands" = "To search for statistics, simply use the following command:\r\n \r\n<code>/usage [UUID|Password]</code>\r\n \r\nUse UUID for VMess/VLESS and password for Trojan."
 
 [tgbot.messages]
-"cpuThreshold" = "🔴 CPU load {{ .Percent }}% is more than threshold {{ .Threshold }}%"
+"cpuThreshold" = "🔴 CPU load {{ .Percent }}% = CPU load {{ .Percent }}% is more than the threshold of {{ .Threshold }}%"
 "loginSuccess" = "✅ Logged in to the panel successfully.\r\n"
 "loginFailed" = "❗Log in to the panel failed.\r\n"
 "report" = "🕰 Scheduled reports: {{ .RunTime }}\r\n"
@@ -430,7 +430,7 @@
 "udpCount" = "🔸 UDP: {{ .Count }}\r\n"
 "traffic" = "🚦 Traffic: {{ .Total }} (↑{{ .Upload }},↓{{ .Download }})\r\n"
 "xrayStatus" = "ℹ️ Xray status: {{ .State }}\r\n"
-"username"   = "👤 Username: {{ .Username }}\r\n"
+"username" = "👤 Username: {{ .Username }}\r\n"
 "time" = "⏰ Time: {{ .Time }}\r\n"
 "inbound" = "📍 Inbound: {{ .Remark }}\r\n"
 "port" = "🔌 Port: {{ .Port }}\r\n"
@@ -462,5 +462,5 @@
 
 [tgbot.answers]
 "getInboundsFailed" = "❌ Failed to get inbounds"
-"askToAddUser" = "Your configuration is not found!\r\nYou should configure your telegram username and ask your Admin to add it to your configuration."
-"askToAddUserName" = "Your configuration is not found!\r\nPlease ask your Admin to use your telegram username in your configuration(s).\r\n\r\nYour username: <b>@{{ .TgUserName }}</b>"
+"askToAddUser" = "Your configuration is not found!\r\nYou should configure your Telegram username and ask your Admin to add it to your configuration."
+"askToAddUserName" = "Your configuration is not found!\r\nPlease ask your Admin to use your Telegram username in your configuration(s).\r\n\r\nYour username: <b>@{{ .TgUserName }}</b>"
