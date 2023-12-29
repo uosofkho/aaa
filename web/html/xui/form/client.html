@@ -63,7 +63,7 @@
         </template>
         <a-input v-model.trim="client.tgId"></a-input>
     </a-form-item>
-    <a-form-item v-if="inbound.canEnableTlsFlow()" label='Flow'>
+    <a-form-item v-if="inbound.canEnableTlsFlow()" label='XTLS Flow'>
         <a-select v-model="client.flow" :dropdown-class-name="themeSwitcher.currentTheme">
             <a-select-option value="" selected>{{ i18n "none" }}</a-select-option>
             <a-select-option v-for="key in TLS_FLOW_CONTROL" :value="key">[[ key ]]</a-select-option>
