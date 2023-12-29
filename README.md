@@ -40,7 +40,7 @@
 ## Install & Upgrade to Latest Version
 
 ```sh
-bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/babakazizigithub/x-ui/master/install.sh)
 ```
 
 ## Install Custom Version
@@ -48,7 +48,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.s
 To install your desired version you can add the version to the end of install command. Example for ver `0.5.2`:
 
 ```sh
-bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.sh) 0.5.2
+bash <(curl -Ls https://raw.githubusercontent.com/babakazizigithub/x-ui/master/install.sh) 0.5.2
 ```
 
 ## Manual Install & Upgrade
