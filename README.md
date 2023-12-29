@@ -24,13 +24,12 @@
 | -------------------------------------- | :----------------: |
 | Multi-Protocol                         | :heavy_check_mark: |
 | Multi-Language                         | :heavy_check_mark: |
-| Advanced Routing                       | :heavy_check_mark: |
-| Multi-Client Inbounds                  | :heavy_check_mark: |
+| Multi-Client/Inbound                   | :heavy_check_mark: |
+| Advanced Traffic Routing Interface     | :heavy_check_mark: |
 | Client & Traffic & System Status       | :heavy_check_mark: |
 | Date & Traffic Cap Based on First Use  | :heavy_check_mark: |
 | REST API                               | :heavy_check_mark: |
-| Telegram Bot (admin + client)          | :heavy_check_mark: |
-| Database Backup using Telegram Bot     | :heavy_check_mark: |
+| TgBot (DB backup + admin + client)     | :heavy_check_mark: |
 | Subscription Service (link + info)     | :heavy_check_mark: |
 | Search in Deep                         | :heavy_check_mark: |
 | Dark/Light Theme                       | :heavy_check_mark: |
@@ -232,16 +231,13 @@ certbot certonly --standalone --register-unsafely-without-email --non-interactiv
 
 ### Usage
 
-The web panel supports daily traffic, panel login and other notification and functions through the Telegram Bot. To use the bot, you need to follow the specific tutorial. Refer to the [blog](https://coderfan.net/how-to-use-telegram-bot-to-alarm-you-when-someone-login-into-your-vps.html)
-to set the robot-related parameters in the panel, including:
+The web panel supports daily traffic, panel login, database backup, system status, client info, and other notification and functions through the Telegram Bot. To use the bot, you need to set the bot-related parameters in the panel, including:
 
-- Tg Robot Token
-- Tg Robot Chat ID
-- Tg Robot Cycle Runtime (in cron syntax)
-- Tg Robot Expiration Threshold
-- Tg Robot Traffic Threshold
-- Tg Robot Enable Sending Backup in Cycle Runtime
-- Tg Robot Enable CPU load Alarm Threshold
+- Telegram Token
+- Telegram Admin Chat ID
+- Telegram Time Notification (in cron syntax)
+- Database Backup
+- CPU Load Threshold Notification
 
 #### Crontab Time Format 
 
