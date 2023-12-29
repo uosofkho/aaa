@@ -51,7 +51,7 @@
 "usage" = "Usage"
 "remained" = "Remained"
 "secAlertTitle" = "Security Alert"
-"secAlertSsl" = "THIS CONNECTION IS NOT SECURE. PLEASE AVOID ENTERING SENSITIVE INFO UNTIL TLS IS ACTIVATED FOR DATA PROTECTION."
+"secAlertSsl" = "THIS CONNECTION IS NOT SECURE. PLEASE AVOID ENTERING SENSITIVE INFO UNTIL <strong>TLS</strong> IS ACTIVATED FOR DATA PROTECTION."
 "security" = "Security"
 
 [menu]
