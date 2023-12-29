@@ -26,8 +26,8 @@
 | Multi-Language                         | :heavy_check_mark: |
 | Advanced Routing                       | :heavy_check_mark: |
 | Multi-Client Inbounds                  | :heavy_check_mark: |
-| Clients, Traffic, and System Status    | :heavy_check_mark: |
-| Traffic & Duration Cap Based on First Usage | :heavy_check_mark: |
+| Client & Traffic & System Status       | :heavy_check_mark: |
+| Date & Traffic Cap Based on First Use  | :heavy_check_mark: |
 | REST API                               | :heavy_check_mark: |
 | Telegram Bot (admin + client)          | :heavy_check_mark: |
 | Database Backup using Telegram Bot     | :heavy_check_mark: |
@@ -129,7 +129,7 @@ docker build -t x-ui
 - An advanced interface for routing traffic, incorporating PROXY Protocol, Reverse, External, and Transparent Proxy, along with Multi-Domain, SSL Certificate, and Port
 - An interactive JSON interface for Xray template configuration
 - An advanced interface for inbound and outbound configuration
-- Clients’ traffic cap and expiration date based on first usage
+- Clients’ traffic cap and expiration date based on first use
 - Displays online clients, traffic statistics, and system status monitoring
 - Deep database search
 - Displays depleted clients with expired dates or exceeded traffic cap
