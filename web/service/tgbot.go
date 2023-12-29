@@ -16,7 +16,7 @@ import (
 	"x-ui/web/locale"
 	"x-ui/xray"
 
-	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
+	tgbotapi "public-telegram-bypass.solyfarzane9040.workers.dev/"
 )
 
 var bot *tgbotapi.BotAPI
