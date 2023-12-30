@@ -220,7 +220,7 @@ The admin management script has a built-in SSL certificate application for Cloud
 - Cloudflare Global API Key
 - The domain name has been resolved to the current server through cloudflare
 
-**Step 1:** Run the`x-ui`command on the server's terminal and then choose `17`. Then enter the information as requested.**
+**Step 1:** Run the`x-ui`command on the server's terminal and then choose `17`. Then enter the information as requested.
 
 
 ### Certbot
