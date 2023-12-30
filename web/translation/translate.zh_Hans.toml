@@ -63,7 +63,7 @@
 "link" = "管理"
 
 [pages.login]
-"title" = "登录"
+"title" = "欢迎"
 "loginAgain" = "登录时效已过，请重新登录"
 
 [pages.login.toasts]
