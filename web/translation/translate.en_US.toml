@@ -63,7 +63,7 @@
 "link" = "Management"
 
 [pages.login]
-"title" = "Login"
+"title" = "Log In"
 "loginAgain" = "Your session has expired, please log in again"
 
 [pages.login.toasts]
