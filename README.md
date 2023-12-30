@@ -14,7 +14,7 @@
 
 **Buy Me a Coffee :**
 
-- USDT Tron (TRC20): `TYTq73Gj6dJ67qe58JVPD9zpjW2cc9XgVz`
+- USDT (TRC20): `TYTq73Gj6dJ67qe58JVPD9zpjW2cc9XgVz`
 - Tezos (XTZ):
 `tz2Wnh2SsY1eezXrcLChu6idWpgdHzUFQcts`
 
