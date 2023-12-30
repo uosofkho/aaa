@@ -1,5 +1,5 @@
 # X-UI
-**An Advanced Web Panel, Built on Xray Core**
+**An Advanced Web Panel • Built on Xray Core**
 
 ![](https://img.shields.io/github/v/release/alireza0/x-ui.svg)
 ![](https://img.shields.io/docker/pulls/alireza7/x-ui.svg)
