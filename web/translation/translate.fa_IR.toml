@@ -135,7 +135,7 @@
 "targetAddress" = "آدرس مقصد"
 "monitorDesc" = "به‌طور پیش‌فرض خالی بگذارید"
 "meansNoLimit" = "= واحد: گ.ب - نامحدود" 
-"totalFlow" = "کل ترافیک"
+"totalFlow" = "ترافیک"
 "leaveBlankToNeverExpire" = "برای منقضی نشدن خالی بگذارید"
 "noRecommendKeepDefault" = "توصیه‌می‌شود به‌طور پیش‌فرض حفظ شود"
 "certificatePath" = "مسیر فایل"
