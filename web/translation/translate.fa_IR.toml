@@ -63,7 +63,7 @@
 "link" = "مدیریت"
 
 [pages.login]
-"title" = "ورود"
+"title" = "X-UI خوش‌آمدید به"
 "loginAgain" = "مدت زمان استفاده به اتمام رسیده، لطفا دوباره وارد شوید"
 
 [pages.login.toasts]
