@@ -54,7 +54,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/alireza0/x-ui/master/install.s
 <details>
   <summary>Click for details</summary>
   
-### Usage
+#### Usage
 
 **Step 1:** First download the latest compressed package from https://github.com/alireza0/x-ui/releases, generally choose Architecture `amd64`
 
@@ -84,7 +84,7 @@ systemctl restart x-ui
 <details>
    <summary>Click for details</summary>
 
-### Usage
+#### Usage
 
 **Step 1:** Install Docker
 
@@ -158,7 +158,7 @@ docker build -t x-ui
 <details>
   <summary>Click for details</summary>
 
-### Usage
+#### Usage
 
 - `/login` with `PUSH` user data: `{username: '', password: ''}` for login
 - `/xui/API/inbounds` base for following actions:
@@ -194,7 +194,7 @@ docker build -t x-ui
 <details>
   <summary>Click for details</summary>
 
-### Usage
+#### Usage
 
 | Variable       |                      Type                      | Default       |
 | -------------- | :--------------------------------------------: | :------------ |
@@ -210,7 +210,7 @@ docker build -t x-ui
 <details>
   <summary>Click for details</summary>
 
-### Usage
+#### Usage
 
 ### Cloudflare 
 
@@ -240,7 +240,7 @@ certbot certonly --standalone --register-unsafely-without-email --non-interactiv
 <details>
   <summary>Click for details</summary>
 
-### Usage
+#### Usage
 
 The web panel supports daily traffic, panel login, database backup, system status, client info, and other notification and functions through the Telegram Bot. To use the bot, you need to set the bot-related parameters in the panel, including:
 
