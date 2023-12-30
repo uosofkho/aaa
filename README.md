@@ -245,8 +245,8 @@ certbot certonly --standalone --register-unsafely-without-email --non-interactiv
 The web panel supports daily traffic, panel login, database backup, system status, client info, and other notification and functions through the Telegram Bot. To use the bot, you need to set the bot-related parameters in the panel, including:
 
 - Telegram Token
-- Telegram Admin Chat ID
-- Telegram Time Notification (in cron syntax)
+- Admin Chat ID(s)
+- Notification Time (in cron syntax)
 - Database Backup
 - CPU Load Threshold Notification
 
