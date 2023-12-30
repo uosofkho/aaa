@@ -135,7 +135,7 @@
 "targetAddress" = "Target Address"
 "monitorDesc" = "Leave blank to listen on all IPs"
 "meansNoLimit" = "= Unlimited (unit: GB)"
-"totalFlow" = "Total Flow"
+"totalFlow" = "Traffic Flow"
 "leaveBlankToNeverExpire" = "Leave blank to never expire"
 "noRecommendKeepDefault" = "It's recommended to keep the default"
 "certificatePath" = "File Path"
