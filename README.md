@@ -9,12 +9,12 @@
 
 > **Disclaimer:** This project is only for personal learning and communication, please do not use it for illegal purposes, please do not use it in a production environment
 
-<img width="30" alt="image" src="https://github.com/shahin-io/x-ui/assets/115543613/9c0eb375-da7d-473b-b0af-52407f0f77eb">
+<img width="40" alt="image" src="https://github.com/shahin-io/x-ui/assets/115543613/9c0eb375-da7d-473b-b0af-52407f0f77eb">
 
-**If you think this project is helpful to you, you may wish to give a** :star2:
+**If you think this project is helpful to you, you may wish to give a**:star2:
 
 
-<img width="100" alt="image" src="https://github.com/shahin-io/x-ui/assets/115543613/35d97be6-cc51-44a3-ae48-3b740928bd06">
+<img width="120" alt="image" src="https://github.com/shahin-io/x-ui/assets/115543613/35d97be6-cc51-44a3-ae48-3b740928bd06">
 
 - USDT (TRC20): `TYTq73Gj6dJ67qe58JVPD9zpjW2cc9XgVz`
 - Tezos (XTZ):
