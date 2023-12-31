@@ -410,7 +410,7 @@
 "usage" = "❗️ Please provide a text to search!"
 "getID" = "🆔 Your ID: <code>{{ .ID }}</code>"
 "helpAdminCommands" = "Search for a client email:\r\n<code>/usage [Email]</code>\r\n\r\nSearch for inbounds (with client stats):\r\n<code>/inbound [Remark]</code>"
-"helpClientCommands" = "To search for statistics, simply use the following command:\r\n\r\n<code>/usage [UUID|Password]</code>\r\n\r\nUse UUID for VMess/VLESS and password for Trojan."
+"helpClientCommands" = "To search for statistics, simply use the following command:\r\n\r\n<code>/usage [UUID|Password]</code>\r\n\r\nUse UUID for VMess/VLESS and password for Trojan/Shadowsocks."
 
 [tgbot.messages]
 "cpuThreshold" = "🔴 CPU load {{ .Percent }}% = CPU load {{ .Percent }}% is more than the threshold of {{ .Threshold }}%"
