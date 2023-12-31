@@ -272,7 +272,7 @@ For more info about [Crontab](https://acquia.my.site.com/s/article/360004224494-
 - Menu-based bot
 - Client search by email (admin only)
 - Inbound checks
-- Server status check
+- System status check
 - Depleted client checks
 - Backup on request and in periodic reports
 - Multilingual support
