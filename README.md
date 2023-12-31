@@ -268,7 +268,7 @@ For more info about [Crontab](https://acquia.my.site.com/s/article/360004224494-
 - CPU load threshold notifications
 - Advance notifications for expiration time and traffic
 - Client reporting menu with Telegram ID or username in configurations
-- Anonymous traffic reports, search by UUID (VLESS/VMess) or Password (Trojan)
+- Anonymous traffic reports, search by UUID (VLESS/VMess) or Password (Trojan/Shadowsocks)
 - Menu-based bot
 - Client search by email (admin only)
 - Inbound checks
@@ -333,7 +333,7 @@ Your final config should look like this:
 ```
 **Step 4: Save and Restart**
 
-Save your changes and restart the web panel
+Save your changes and restart the Xray Service
 </details>
 
 ## A Special Thanks to
