@@ -88,9 +88,9 @@
 "systemLoad" = "بارسیستم"
 "connectionTcpCountDesc" = "در تمام شبکه‌ها TCP جمع‌کل اتصالات"
 "connectionUdpCountDesc" = "در تمام شبکه‌ها UDP جمع‌کل اتصالات"
-"upSpeed" = "سرعت ارسال در تمام شبکه‌ها"
-"downSpeed" = "سرعت دریافت در تمام شبکه‌ها"
-"totalSent" = "جمع‌کل ترافیک ارسال‌شده پس‌از شروع به‌کار سیستم‌عامل"
+"upSpeed" = "سرعت آپلود در تمام شبکه‌ها"
+"downSpeed" = "سرعت دانلود در تمام شبکه‌ها"
+"totalSent" = "جمع‌کل ترافیک ارسال‌‌شده پس‌از شروع به‌کار سیستم‌عامل"
 "totalReceive" = "جمع‌کل ترافیک دریافت‌شده پس‌از شروع به‌کار سیستم‌عامل"
 "xraySwitchVersionDialog" = "تغییرنسخه‌ایکس‌ری"
 "xraySwitchVersionDialogDesc" = "آیااز تغییر نسخه‌ مطمئن‌هستید؟"
@@ -105,7 +105,7 @@
 
 [pages.inbounds]
 "title" = "کاربران"
-"totalDownUp" = "‌جمع دریافت/ارسال"
+"totalDownUp" = "دریافت/ارسال"
 "totalUsage" = "‌جمع‌کل‌"
 "inboundCount" = "سرویس‌ها"
 "operate" = "عملیات"
