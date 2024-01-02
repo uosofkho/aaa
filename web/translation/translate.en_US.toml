@@ -105,9 +105,9 @@
 
 [pages.inbounds]
 "title" = "Inbounds"
-"totalDownUp" = "Total Uploads/Downloads"
+"totalDownUp" = "Uploads/Downloads"
 "totalUsage" = "Total Usage"
-"inboundCount" = "Number of Inbounds"
+"inboundCount" = "Inbounds"
 "operate" = "Menu"
 "enable" = "Enable"
 "remark" = "Remark"
