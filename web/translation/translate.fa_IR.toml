@@ -105,9 +105,9 @@
 
 [pages.inbounds]
 "title" = "کاربران"
-"totalDownUp" = "دریافت/ارسال"
+"totalDownUp" = "جمع دریافت/ارسال"
 "totalUsage" = "‌جمع‌کل‌"
-"inboundCount" = "سرویس‌ها"
+"inboundCount" = "تعداد سرویس‌ها"
 "operate" = "عملیات"
 "enable" = "فعال"
 "remark" = "نام"
