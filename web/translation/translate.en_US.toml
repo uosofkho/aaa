@@ -90,8 +90,8 @@
 "connectionUdpCountDesc" = "Total UDP connections across all networks"
 "upSpeed" = "Overall upload speed across all networks"
 "downSpeed" = "Overall download speed across all network"
-"totalSent" = "Total uploaded data across all networks since OS startup"
-"totalReceive" = "Total downloaded data across all networks since OS startup"
+"totalSent" = "Total sent data across all networks since OS startup"
+"totalReceive" = "Total Received data across all networks since OS startup"
 "xraySwitchVersionDialog" = "Change Xray Version"
 "xraySwitchVersionDialogDesc" = "Are you sure you want to change the Xray version to"
 "dontRefresh" = "Installation is in progress, please do not refresh this page."
@@ -105,7 +105,7 @@
 
 [pages.inbounds]
 "title" = "Inbounds"
-"totalDownUp" = "Uploads/Downloads"
+"totalDownUp" = "Sent/Received"
 "totalUsage" = "Total Usage"
 "inboundCount" = "Inbounds"
 "operate" = "Menu"
