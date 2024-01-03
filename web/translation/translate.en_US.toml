@@ -146,7 +146,7 @@
 "keyContent" = "Private Key Content"
 "clickOnQRcode" = "Click on QR Code to Copy"
 "client" = "Client"
-"export" = "Export URL Links"
+"export" = "Export URLs"
 "clone" = "Clone"
 "cloneInbound" = "Clone"
 "cloneInboundContent" = "All settings for this inbound, excluding Port, Listening IP, and Clients, will be applied to the clone."
@@ -286,7 +286,7 @@
 "subEncryptDesc" = "The configuration will be Base64 encoded in the subscription URL."
 "subShowInfo" = "Show Usage Info"
 "subShowInfoDesc" = "The remaining traffic and date will be display in the client app."
-"subURI" = "Reverse Proxy URI"
+"subURI" = "Reverse Proxy URI Path"
 "subURIDesc" = "The URI path of the subscription URL for use behind proxies."
 
 [pages.settings.toasts]
