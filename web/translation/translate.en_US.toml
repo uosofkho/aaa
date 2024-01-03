@@ -244,7 +244,7 @@
 "newUsername" = "New Username"
 "newPassword" = "New Password"
 "telegramBotEnable" = "Enable Telegram Bot"
-"telegramBotEnableDesc" = "Activates the Telegram Bot.
+"telegramBotEnableDesc" = "Activates the Telegram Bot."
 "telegramToken" = "Telegram Token"
 "telegramTokenDesc" = "The token obtained from @BotFather"
 "telegramChatId" = "Admin Chat ID"
