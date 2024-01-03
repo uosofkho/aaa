@@ -146,7 +146,7 @@
 "keyContent" = "Private Key Content"
 "clickOnQRcode" = "Click on QR Code to Copy"
 "client" = "Client"
-"export" = "Export URLs"
+"export" = "Export All URLs"
 "clone" = "Clone"
 "cloneInbound" = "Clone"
 "cloneInboundContent" = "All settings for this inbound, excluding Port, Listening IP, and Clients, will be applied to the clone."
