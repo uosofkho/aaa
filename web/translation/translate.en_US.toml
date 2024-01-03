@@ -82,7 +82,7 @@
 "restartXray" = "Restart"
 "xraySwitch" = "Change Xray Version"
 "xraySwitchClick" = "Choose the version you want to switch."
-"xraySwitchClickDesk" = "Choose carefully, as older versions may not be compatible with the current configs."
+"xraySwitchClickDesk" = "Choose carefully, as older versions may not be compatible with the current configuration."
 "operationHours" = "Uptime"
 "operationHoursDesc" = "Time since startup"
 "systemLoad" = "System Load"
