@@ -82,7 +82,7 @@
 "restartXray" = "Restart"
 "xraySwitch" = "Change Xray Version"
 "xraySwitchClick" = "Choose the version you want to switch."
-"xraySwitchClickDesk" = "Choose carefully, as older versions may not be compatible with the current configuration."
+"xraySwitchClickDesk" = "Choose carefully, as older versions may not be compatible with the current configurations."
 "operationHours" = "Uptime"
 "operationHoursDesc" = "Time since startup"
 "systemLoad" = "System Load"
@@ -166,8 +166,8 @@
 "email" = "Email"
 "emailDesc" = "Please provide a unique email address."
 "setDefaultCert" = "Set Cert from Panel"
-"telegramDesc" = "Use Telegram ID(s) without @. (get it here @userinfobot) or (use '/id' command in bot)"
-"subscriptionDesc" = "Find your subscription URL on the Details, also you can use the same name for several configs."
+"telegramDesc" = "Use Telegram or Chat ID(s) without @. (get it here @userinfobot) or (use '/id' command in bot)"
+"subscriptionDesc" = "You can find your subscription URL on the Details, also you can use the same name for several configuration."
 "info" = "Info" 
 "same" = "Same"
 "inboundData" = "Inbound's Data"
@@ -248,7 +248,7 @@
 "telegramToken" = "Telegram Token"
 "telegramTokenDesc" = "The token obtained from @BotFather"
 "telegramChatId" = "Admin Chat ID"
-"telegramChatIdDesc" = "The Telegram Admin chat ID(s). (comma-separated)(use @userinfobot) or (use '/id' command in the bot to get your chat IDs)"
+"telegramChatIdDesc" = "The Telegram Chat ID(s). (comma-separated)(use @userinfobot) or (use '/id' command in the bot to get your Chat IDs)"
 "telegramNotifyTime" = "Notification Time"
 "telegramNotifyTimeDesc" = "The Telegram bot notification time for periodic reports. (use the crontab time format)"
 "tgNotifyBackup" = "Database Backup"
@@ -286,7 +286,7 @@
 "subEncryptDesc" = "The configuration will be Base64 encoded in the subscription URL."
 "subShowInfo" = "Show Usage Info"
 "subShowInfoDesc" = "The remaining traffic and date will be display in the client app."
-"subURI" = "Reverse Proxy URI Path"
+"subURI" = "Reverse Proxy URI"
 "subURIDesc" = "The URI path of the subscription URL for use behind proxies."
 
 [pages.settings.toasts]
@@ -419,7 +419,7 @@
 "report" = "🕰 Scheduled reports: {{ .RunTime }}\r\n"
 "datetime" = "⏰ Date&Time: {{ .DateTime }}\r\n"
 "hostname" = "💻 Host: {{ .Hostname }}\r\n"
-"version" = "🚀 X-UI version: {{ .Version }}\r\n"
+"version" = "🚀 X-UI: {{ .Version }}\r\n"
 "ipv6" = "🌐 IPv6: {{ .IPv6 }}\r\n"
 "ipv4" = "🌐 IPv4: {{ .IPv4 }}\r\n"
 "ip" = "🌐 IP: {{ .IP }}\r\n"
@@ -462,5 +462,5 @@
 
 [tgbot.answers]
 "getInboundsFailed" = "❌ Failed to get inbounds"
-"askToAddUser" = "Your configuration is not found!\r\nYou should configure your Telegram username and ask your Admin to add it to your configuration."
+"askToAddUser" = "Your configuration is not found!\r\nYou should configure your Telegram username and ask your Admin to add it to your configuration(s)."
 "askToAddUserName" = "Your configuration is not found!\r\nPlease ask your Admin to use your Telegram username in your configuration(s).\r\n\r\nYour username: <b>@{{ .TgUserName }}</b>"
