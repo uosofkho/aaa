@@ -167,7 +167,7 @@
 "emailDesc" = "Please provide a unique email address."
 "setDefaultCert" = "Set Cert from Panel"
 "telegramDesc" = "Use Telegram ID(s) without @. (get it here @userinfobot) or (use '/id' command in bot)"
-"subscriptionDesc" = "Find your subscription URL link on the Details, also you can use the same name for several configs."
+"subscriptionDesc" = "Find your subscription URL on the Details, also you can use the same name for several configs."
 "info" = "Info" 
 "same" = "Same"
 "inboundData" = "Inbound's Data"
@@ -287,7 +287,7 @@
 "subShowInfo" = "Show Usage Info"
 "subShowInfoDesc" = "The remaining traffic and date will be display in the client app."
 "subURI" = "Reverse Proxy URI"
-"subURIDesc" = "The URI path of the subscription link for use behind proxies."
+"subURIDesc" = "The URI path of the subscription URL for use behind proxies."
 
 [pages.settings.toasts]
 "modifySettings" = "Modify Settings"
