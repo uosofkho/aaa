@@ -67,10 +67,10 @@
 "loginAgain" = "Your session has expired, please log in again"
 
 [pages.login.toasts]
-"invalidFormData" = "Input data format is invalid"
+"invalidFormData" = "The input data format is invalid"
 "emptyUsername" = "Username is required"
 "emptyPassword" = "Password is required"
-"wrongUsernameOrPassword" = "Username or password is incorrect"
+"wrongUsernameOrPassword" = "The username or password is incorrect"
 "successLogin" = "Login"
 
 [pages.index]
@@ -293,7 +293,7 @@
 "modifySettings" = "Modify Settings"
 "getSettings" = "Get Settings"
 "modifyUser" = "Modify Admin"
-"originalUserPassIncorrect" = "Current username or password is incorrect"
+"originalUserPassIncorrect" = "The current username or password is incorrect"
 "userPassMustBeNotEmpty" = "The new username or password is required"
 
 [pages.xray]
