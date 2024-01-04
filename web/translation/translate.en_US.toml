@@ -403,7 +403,7 @@
 [tgbot.commands]
 "unknown" = "❗️Unknown command"
 "pleaseChoose" = "👇 Please choose:\r\n"
-"help" = "🤖 Welcome to this bot! It's designed to provide you with specific data from the server and allows you to make modifications as needed.\r\n\r\n"
+"help" = "🤖 Welcome to this bot! It's designed to provide you with specific data from the web panel and allows you to make modifications as needed.\r\n\r\n"
 "start" = "👋 Hello <i>{{ .Firstname }}</i>.\r\n"
 "welcome" = "🤖 Welcome to <b>{{ .Hostname }}</b> management bot.\r\n"
 "status" = "✅ Bot is OK!"
