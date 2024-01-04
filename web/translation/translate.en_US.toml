@@ -216,7 +216,7 @@
 [pages.settings]
 "title" = "Panel Settings"
 "save" = "Save"
-"infoDesc" = "Every change made here needs to be saved. Please restart the web panel for the changes to take effect."
+"infoDesc" = "Every change made here needs to be saved. Please restart the panel for the changes to take effect."
 "restartPanel" = "Restart Panel"
 "restartPanelDesc" = "Are you sure you want to restart the panel? If you are unable to access the panel after restarting, please check the logs in the terminal script"
 "resetDefaultConfig" = "Reset to Default"
