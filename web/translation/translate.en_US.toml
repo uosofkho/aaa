@@ -254,7 +254,7 @@
 "tgNotifyBackup" = "Database Backup"
 "tgNotifyBackupDesc" = "Send a database backup file with a report."
 "tgNotifyLogin" = "Login Notification"
-"tgNotifyLoginDesc" = "Get notified about the username, IP address, and time whenever someone attempts to log into your web panel."
+"tgNotifyLoginDesc" = "Get notified about the username, IP address, and time whenever someone attempts to log into your panel."
 "sessionMaxAge" = "Session Duration"
 "sessionMaxAgeDesc" = "The duration for which you can stay logged in. (unit: minute)"
 "expireTimeDiff" = "Client Expiration Threshold Notification"
