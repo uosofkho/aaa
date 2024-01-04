@@ -166,7 +166,7 @@
 "email" = "Email"
 "emailDesc" = "Please provide a unique email address"
 "setDefaultCert" = "Set Cert from Panel"
-"telegramDesc" = "Please provide Telegram or Chat ID(s) without using the '@' sign. (get it here @userinfobot) or (use '/id' command in the bot)"
+"telegramDesc" = "Please provide Telegram or Chat ID(s) without using the '@'. (get it here @userinfobot) or (use '/id' command in the bot)"
 "subscriptionDesc" = "To find your subscription URL, navigate to the 'Details'. Additionally, you can use the same name for several configurations."
 "info" = "Info" 
 "same" = "Same"
