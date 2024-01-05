@@ -55,7 +55,7 @@
 "security" = "Security"
 
 [menu]
-"dashboard" = "STATUS OVERVIEW"
+"dashboard" = "OVERVIEW"
 "inbounds" = "INBOUNDS"
 "settings" = "PANEL SETTINGS"
 "xray" = "XRAY CONFIGURATIONS"
@@ -89,7 +89,7 @@
 "connectionTcpCountDesc" = "Total TCP connections across all networks"
 "connectionUdpCountDesc" = "Total UDP connections across all networks"
 "upSpeed" = "Overall upload speed across all networks"
-"downSpeed" = "Overall download speed across all network"
+"downSpeed" = "Overall download speed across all networks"
 "totalSent" = "Total traffic sent across all networks since OS startup"
 "totalReceive" = "Total traffic received across all networks since OS startup"
 "xraySwitchVersionDialog" = "Change Xray Version"
