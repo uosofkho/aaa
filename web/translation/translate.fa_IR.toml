@@ -134,7 +134,7 @@
 "destinationPort" = "پورت مقصد"
 "targetAddress" = "آدرس مقصد"
 "monitorDesc" = "به‌طور پیش‌فرض خالی‌بگذارید"
-"meansNoLimit" = "واحد: گیگابایت - یعنی‌بدون‌محدودیت"
+"meansNoLimit" = "یعنی‌بدون‌محدودیت"
 "totalFlow" = "کل ترافیک"
 "leaveBlankToNeverExpire" = "برای منقضی‌نشدن خالی‌بگذارید"
 "noRecommendKeepDefault" = "توصیه‌می‌شود به‌طور پیش‌فرض حفظ‌شود"
