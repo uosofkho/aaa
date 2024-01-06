@@ -55,7 +55,7 @@
 "security" = "امنیت"
 
 [menu]
-"dashboard" = "وضعیت کلی"
+"dashboard" = "نمای کلی"
 "inbounds" = "سرویس‌ها"
 "settings" = "تنظیمات پنل"
 "xray" = "پیکربندی ایکس‌ری"
@@ -74,7 +74,7 @@
 "successLogin" = "ورود"
 
 [pages.index]
-"title" = "وضعیت کلی"
+"title" = "نمای کلی"
 "memory" = "RAM"
 "hard" = "Disk"
 "xrayStatus" = "وضعیت‌ایکس‌ری"
