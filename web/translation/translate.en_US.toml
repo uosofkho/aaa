@@ -74,7 +74,7 @@
 "successLogin" = "Login"
 
 [pages.index]
-"title" = "Status Overview"
+"title" = "Overview"
 "memory" = "RAM"
 "hard" = "Disk"
 "xrayStatus" = "Xray Status"
