@@ -301,7 +301,7 @@
 "restart" = "ریستارت ایکس‌ری"
 "basicTemplate" = "الگو پایه"
 "advancedTemplate" = "الگو پیشرفته"
-"generalConfigs" = "تنظیمات عمومی"
+"generalConfigs" = "استراتژی‌ کلی"
 "generalConfigsDesc" = "این گزینه‌ها تنظیمات کلی ترافیک را تعیین می‌کنند"
 "blockConfigs" = "مسدودسازی پایه" 
 "blockConfigsDesc" = "این گزینه‌ها ترافیک را بر اساس پروتکل‌های درخواستی خاص، و وب سایت‌ها مسدود می‌کند"
