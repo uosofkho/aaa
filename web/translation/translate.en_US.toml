@@ -220,7 +220,7 @@
 "restartPanel" = "Restart Panel"
 "restartPanelDesc" = "Are you sure you want to restart the panel? If you are unable to access the panel after restarting, please check the logs in the terminal script"
 "resetDefaultConfig" = "Reset to Default"
-"panelConfig" = "Configurations"
+"panelConfig" = "Configuration"
 "userSettings" = "Authentication"
 "TGBotSettings" = "Telegram Bot"
 "panelListeningIP" = "Listening IP"
