@@ -60,7 +60,7 @@
 "settings" = "PANEL SETTINGS"
 "xray" = "XRAY CONFIGURATIONS"
 "logout" = "LOG OUT"
-"link" = "Administration"
+"link" = "Management"
 
 [pages.login]
 "title" = "Welcome"
