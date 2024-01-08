@@ -304,7 +304,7 @@
 "advancedTemplate" = "Advanced"
 "generalConfigs" = "General Strategy"
 "generalConfigsDesc" = "These options will determine general strategy adjustments."
-"blockConfigs" = "Shield"
+"blockConfigs" = "Protection Shield"
 "blockConfigsDesc" = "These options will block traffic based on specific requested protocols and websites."
 "blockCountryConfigs" = "Block Country"
 "blockCountryConfigsDesc" = "These options will block traffic based on the specific requested country."
