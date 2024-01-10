@@ -1140,7 +1140,7 @@ class Inbound extends XrayCommonClass {
             }
         }
 
-        if (security === 'reality') {
+        else if (security === 'reality') {
             params.set("security", "reality");
             params.set("pbk", this.stream.reality.settings.publicKey);
             params.set("fp", this.stream.reality.settings.fingerprint);
@@ -1156,6 +1156,10 @@ class Inbound extends XrayCommonClass {
             if (type == 'tcp' && !ObjectUtil.isEmpty(flow)) {
                 params.set("flow", flow);
             }
+        }
+
+        else {
+            params.set("security", "none");
         }
 
         const link = `vless://${uuid}@${address}:${port}`;
@@ -1316,7 +1320,7 @@ class Inbound extends XrayCommonClass {
             }
         }
 
-        if (security === 'reality') {
+        else if (security === 'reality') {
             params.set("security", "reality");
             params.set("pbk", this.stream.reality.settings.publicKey);
             params.set("fp", this.stream.reality.settings.fingerprint);
@@ -1329,6 +1333,9 @@ class Inbound extends XrayCommonClass {
             if (!ObjectUtil.isEmpty(this.stream.reality.settings.spiderX)) {
                 params.set("spx", this.stream.reality.settings.spiderX);
             }
+        }
+        else {
+            params.set("security", "none");
         }
 
         const link = `trojan://${clientPassword}@${address}:${port}`;
