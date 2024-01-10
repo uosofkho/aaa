@@ -358,11 +358,11 @@
 "NetflixIPv4Desc" = "Routes traffic to Netflix via IPv4."
 "GoogleWARP" = "Google"
 "GoogleWARPDesc" = "Routes traffic to Google via WARP."
-"OpenAIWARP" = "ChatGPT
+"OpenAIWARP" = "ChatGPT"
 "OpenAIWARPDesc" = "Routes traffic to OpenAI (ChatGPT) via WARP."
-"NetflixWARP" = "Netflix
+"NetflixWARP" = "Netflix"
 "NetflixWARPDesc" = "Routes traffic to Netflix via WARP."
-"SpotifyWARP" = "Spotify
+"SpotifyWARP" = "Spotify"
 "SpotifyWARPDesc" = "Routes traffic to Spotify via WARP."
 "completeTemplate" = "All"
 "Inbounds" = "Inbounds"
