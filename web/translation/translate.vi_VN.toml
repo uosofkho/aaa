@@ -100,8 +100,8 @@
 "backup" = "Phục hồi dữ liệu đã lưu"
 "backupTitle" = "Sao lưu và Khôi phục cơ sở dữ liệu"
 "backupDescription" = "Bạn hãy nhớ sao lưu trước khi nhập cơ sở dữ liệu mới."
-"exportDatabase" = "Tải xuống cơ sở dữ liệu"
-"importDatabase" = "Tải lên cơ sở dữ liệu"
+"exportDatabase" = "Sao lưu"
+"importDatabase" = "Khôi phục"
 
 [pages.inbounds]
 "title" = "Điểm vào (Inbounds)"
