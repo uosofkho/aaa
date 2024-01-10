@@ -51,14 +51,14 @@
 "usage" = "Usage"
 "remained" = "Remained"
 "secAlertTitle" = "Security Alert"
-"secAlertSsl" = "THIS CONNECTION IS NOT SECURE. PLEASE AVOID ENTERING SENSITIVE INFORMATION UNTIL <strong>TLS</strong> IS ACTIVATED FOR DATA PROTECTION."
+"secAlertSsl" = "THIS CONNECTION IS NOT SECURE. PLEASE AVOID ENTERING SENSITIVE INFORMATION UNTIL TLS IS ACTIVATED FOR DATA PROTECTION."
 "security" = "Security"
 
 [menu]
-"dashboard" = "Status Overview"
+"dashboard" = "Overview"
 "inbounds" = "Inbounds"
 "settings" = "Panel Settings"
-"xray" = "Xray Config"
+"xray" = "Xray Configs"
 "logout" = "Log Out"
 "link" = "Management"
 
@@ -74,10 +74,10 @@
 "successLogin" = "Login"
 
 [pages.index]
-"title" = "Status Overview"
+"title" = "Overview"
 "memory" = "RAM"
 "hard" = "Disk"
-"xrayStatus" = "Xray Status"
+"xrayStatus" = "Status"
 "stopXray" = "Stop"
 "restartXray" = "Restart"
 "xraySwitch" = "Change Xray Version"
@@ -109,14 +109,14 @@
 "totalUsage" = "Total Usage"
 "inboundCount" = "Total Inbounds"
 "operate" = "Menu"
-"enable" = "Enable"
+"enable" = "Enabled"
 "remark" = "Remark"
 "protocol" = "Protocol"
 "port" = "Port"
 "traffic" = "Traffic"
 "details" = "Details"
 "transportConfig" = "Transport Config"
-"expireDate" = "Expiration Date"
+"expireDate" = "Expiry Date"
 "resetTraffic" = "Reset Traffic"
 "addInbound" = "Add Inbound"
 "generalActions" = "General Actions"
@@ -297,7 +297,7 @@
 "userPassMustBeNotEmpty" = "The new username or password is required"
 
 [pages.xray]
-"title" = "Xray Config"
+"title" = "Xray Configs"
 "save" = "Save"
 "restart" = "Restart Xray"
 "basicTemplate" = "Basic"
@@ -393,7 +393,7 @@
 "secretKey" = "Secret Key"
 "publicKey" = "Public Key"
 "allowedIPs" = "Allowed IPs"
-"endpoint" = "End Point"
+"endpoint" = "Endpoint"
 "psk" = "PreShared Key"
 "domainStrategy" = "Domain Strategy"
 
