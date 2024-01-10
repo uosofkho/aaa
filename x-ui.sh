@@ -283,12 +283,6 @@ show_log() {
     fi
 }
 
-migrate_v2_ui() {
-    /usr/local/x-ui/x-ui v2-ui
-
-    before_show_menu
-}
-
 install_bbr() {
     # temporary workaround for installing bbr
     bash <(curl -L -s https://raw.githubusercontent.com/teddysun/across/master/bbr.sh)
@@ -787,9 +781,6 @@ if [[ $# > 0 ]]; then
         ;;
     "log")
         check_install 0 && show_log 0
-        ;;
-    "v2-ui")
-        check_install 0 && migrate_v2_ui 0
         ;;
     "update")
         check_install 0 && update 0
