@@ -58,7 +58,7 @@
 "dashboard" = "Status Overview"
 "inbounds" = "Inbounds"
 "settings" = "Panel Settings"
-"xray" = "Xray Configurations"
+"xray" = "Xray Configuration"
 "logout" = "Log Out"
 "link" = "Management"
 
@@ -82,7 +82,7 @@
 "restartXray" = "Restart"
 "xraySwitch" = "Change Xray Version"
 "xraySwitchClick" = "Choose the version you want to switch."
-"xraySwitchClickDesk" = "Choose carefully, as older versions may not be compatible with the current configurations."
+"xraySwitchClickDesk" = "Choose carefully, as older versions may not be compatible with the current configuration."
 "operationHours" = "Uptime"
 "operationHoursDesc" = "Time since startup"
 "systemLoad" = "System Load"
@@ -167,7 +167,7 @@
 "emailDesc" = "Please provide a unique email address"
 "setDefaultCert" = "Set Cert from Panel"
 "telegramDesc" = "Please provide Telegram or Chat ID(s) without using the '@'. (get it here @userinfobot) or (use '/id' command in the bot)"
-"subscriptionDesc" = "To find your subscription URL, navigate to the 'Details'. Additionally, you can use the same name for several configurations."
+"subscriptionDesc" = "To find your subscription URL, navigate to the 'Details'. Additionally, you can use the same name for several Inbounds."
 "info" = "Info" 
 "same" = "Same"
 "inboundData" = "Inbound's Data"
@@ -297,7 +297,7 @@
 "userPassMustBeNotEmpty" = "The new username or password is required"
 
 [pages.xray]
-"title" = "Xray Configurations"
+"title" = "Xray Configuration"
 "save" = "Save"
 "restart" = "Restart Xray"
 "basicTemplate" = "Basic"
