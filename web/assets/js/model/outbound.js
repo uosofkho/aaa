@@ -635,7 +635,7 @@ Outbound.Settings = class extends CommonClass {
             case Protocols.Shadowsocks: return new Outbound.ShadowsocksSettings();
             case Protocols.Socks: return new Outbound.SocksSettings();
             case Protocols.HTTP: return new Outbound.HttpSettings();
-            case Protocols.Wireguard: return new Outbound.WireguardSettings();
+            case Protocols.WireGuard: return new Outbound.WireguardSettings();
             default: return null;
         }
     }
@@ -651,7 +651,7 @@ Outbound.Settings = class extends CommonClass {
             case Protocols.Shadowsocks: return Outbound.ShadowsocksSettings.fromJson(json);
             case Protocols.Socks: return Outbound.SocksSettings.fromJson(json);
             case Protocols.HTTP: return Outbound.HttpSettings.fromJson(json);
-            case Protocols.Wireguard: return Outbound.WireguardSettings.fromJson(json);
+            case Protocols.WireGuard: return Outbound.WireguardSettings.fromJson(json);
             default: return null;
         }
     }
