@@ -362,7 +362,7 @@ show_status() {
     check_status
     case $? in
     0)
-        echo -e "Panel state: ${green}Runing${plain}"
+        echo -e "Panel state: ${green}Running${plain}"
         show_enable_status
         ;;
     1)
@@ -397,7 +397,7 @@ check_xray_status() {
 show_xray_status() {
     check_xray_status
     if [[ $? == 0 ]]; then
-        echo -e "xray state: ${green}Runing${plain}"
+        echo -e "xray state: ${green}Running${plain}"
     else
         echo -e "xray state: ${red}Not Running${plain}"
     fi

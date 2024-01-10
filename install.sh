@@ -123,7 +123,7 @@ install_x-ui() {
         echo -e "Begining to install x-ui v$1"
         wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(arch).tar.gz ${url}
         if [[ $? -ne 0 ]]; then
-            echo -e "${red}dowanload x-ui v$1 failed,please check the verison exists${plain}"
+            echo -e "${red}dowanload x-ui v$1 failed,please check the version exists${plain}"
             exit 1
         fi
     fi
