@@ -114,16 +114,16 @@ install_x-ui() {
         echo -e "Got x-ui latest version: ${last_version}, beginning the installation..."
         wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(arch).tar.gz https://github.com/alireza0/x-ui/releases/download/${last_version}/x-ui-linux-$(arch).tar.gz
         if [[ $? -ne 0 ]]; then
-            echo -e "${red}Dowanloading x-ui failed, please be sure that your server can access Github ${plain}"
+            echo -e "${red}Downloading x-ui failed, please be sure that your server can access Github ${plain}"
             exit 1
         fi
     else
         last_version=$1
         url="https://github.com/alireza0/x-ui/releases/download/${last_version}/x-ui-linux-$(arch).tar.gz"
-        echo -e "Begining to install x-ui v$1"
+        echo -e "Beginning to install x-ui v$1"
         wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(arch).tar.gz ${url}
         if [[ $? -ne 0 ]]; then
-            echo -e "${red}dowanload x-ui v$1 failed,please check the version exists${plain}"
+            echo -e "${red}download x-ui v$1 failed,please check the version exists${plain}"
             exit 1
         fi
     fi
@@ -171,6 +171,6 @@ install_x-ui() {
     echo "------------------------------------------"
 }
 
-echo -e "${green}Excuting...${plain}"
+echo -e "${green}Running...${plain}"
 install_base
 install_x-ui $1
