@@ -58,7 +58,7 @@
 "dashboard" = "Status Overview"
 "inbounds" = "Inbounds"
 "settings" = "Panel Settings"
-"xray" = "Xray Config"
+"xray" = "Xray Configurations"
 "logout" = "Log Out"
 "link" = "Management"
 
@@ -297,7 +297,7 @@
 "userPassMustBeNotEmpty" = "The new username or password is required"
 
 [pages.xray]
-"title" = "Xray Config"
+"title" = "Xray Configurations"
 "save" = "Save"
 "restart" = "Restart Xray"
 "basicTemplate" = "Basic"
@@ -393,7 +393,7 @@
 "secretKey" = "Secret Key"
 "publicKey" = "Public Key"
 "allowedIPs" = "Allowed IPs"
-"endpoint" = "End Point"
+"endpoint" = "Endpoint"
 "psk" = "PreShared Key"
 "domainStrategy" = "Domain Strategy"
 
