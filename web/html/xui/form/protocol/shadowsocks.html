@@ -33,10 +33,10 @@
                     <span>{{ i18n "reset" }}</span>
                 </template>
                 {{ i18n "password" }}
-                <a-icon @click="inbound.settings.password = RandomUtil.randomShadowsocksPassword()" type="sync"></a-icon>
+                <a-icon @click="client.password = RandomUtil.randomShadowsocksPassword()" type="sync"></a-icon>
             </a-tooltip>
         </template>
-        <a-input v-model.trim="inbound.settings.password"></a-input>
+        <a-input v-model.trim="client.password"></a-input>
     </a-form-item>
     <a-form-item label='{{ i18n "pages.inbounds.network" }}'>
         <a-select v-model="inbound.settings.network" :dropdown-class-name="themeSwitcher.currentTheme">
