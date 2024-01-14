@@ -88,7 +88,7 @@
 "systemLoad" = "System Load"
 "connectionTcpCountDesc" = "Total TCP connections"
 "connectionUdpCountDesc" = "Total UDP connections"
-"upSpeed" = "Overall upload speed across"
+"upSpeed" = "Overall upload speed"
 "downSpeed" = "Overall download speed"
 "totalSent" = "Total data sent since OS startup"
 "totalReceive" = "Total data received since OS startup"
