@@ -53,7 +53,6 @@
 "secAlertTitle" = "SECURITY ALERT"
 "secAlertSsl" = "THIS CONNECTION IS NOT SECURE. PLEASE AVOID ENTERING SENSITIVE INFORMATION UNTIL TLS IS ACTIVATED FOR DATA PROTECTION."
 "security" = "Security"
-"utilization" = "Utilization"
 
 [menu]
 "dashboard" = "OVERVIEW"
@@ -87,7 +86,6 @@
 "operationHours" = "Uptime"
 "operationHoursDesc" = "Time since startup"
 "systemLoad" = "System Load"
-"utilization" = "Utilization"
 "connectionTcpCountDesc" = "Total TCP connections across system"
 "connectionUdpCountDesc" = "Total UDP connections across system"
 "upSpeed" = "Overall Uplink speed across all networks"
@@ -118,7 +116,7 @@
 "traffic" = "Flow"
 "details" = "Details"
 "transportConfig" = "Transport Config"
-"expireDate" = "Expiration"
+"expireDate" = "Duration"
 "resetTraffic" = "Reset Traffic"
 "addInbound" = "Add Inbound"
 "generalActions" = "General Actions"
@@ -307,7 +305,7 @@
 "advancedTemplate" = "Advanced"
 "generalConfigs" = "General Strategy"
 "generalConfigsDesc" = "These options will determine general strategy adjustments."
-"blockConfigs" = "Security Shield"
+"blockConfigs" = "Protection Shield"
 "blockConfigsDesc" = "These options will block traffic based on specific requested protocols and websites."
 "blockCountryConfigs" = "Block Country"
 "blockCountryConfigsDesc" = "These options will block traffic based on the specific requested country."
