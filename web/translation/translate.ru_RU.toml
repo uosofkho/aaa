@@ -100,8 +100,8 @@
 "backup" = "Бекап и восстановление"
 "backupTitle" = "База данных бекапа и восстановления"
 "backupDescription" = "Не забудьте сделать резервную копию перед импортом новой базы данных"
-"exportDatabase" = "Экспорт базы данных"
-"importDatabase" = "Импорт базы данных"
+"exportDatabase" = "Резерв"
+"importDatabase" = "Восстановить"
 
 [pages.inbounds]
 "title" = "Подключения"
@@ -134,7 +134,7 @@
 "destinationPort" = "Порт назначения"
 "targetAddress" = "Целевой адрес"
 "monitorDesc" = "Оставьте пустым по умолчанию"
-"meansNoLimit" = "Значит без ограничений"
+"meansNoLimit" = " = Без ограничений. (значение: ГБ)"
 "totalFlow" = "Общий расход"
 "leaveBlankToNeverExpire" = "Оставьте пустым, чтобы сделать бессрочно"
 "noRecommendKeepDefault" = "Нет особых требований для сохранения настроек по умолчанию"
