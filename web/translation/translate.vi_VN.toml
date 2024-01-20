@@ -78,7 +78,7 @@
 "memory" = "Bộ nhớ"
 "hard" = "Ổ cứng"
 "systeminfo" = "Hệ thống"
-"host" = "Tên máy chủ"
+"hostname" = "Tên máy chủ"
 "xrayStatus" = "Trạng thái của Xray"
 "stopXray" = "Dừng Xray"
 "restartXray" = "Khởi động lại Xray"
