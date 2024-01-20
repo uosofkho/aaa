@@ -90,7 +90,7 @@
 "systemLoad" = "بارسیستم"
 "systemLoadDesc" = "میانگین در 1، 5 و 15 دقیقه گذشته"
 "connectionTcpCountDesc" = "در کل سیستم TCP مجموع اتصالات"
-"connectionUdpCountDesc" "در کل سیستم UDP مجموع اتصالات"
+"connectionUdpCountDesc" = "در کل سیستم UDP مجموع اتصالات"
 "upSpeed" = "سرعت کلی آپلود"
 "downSpeed" = "‌سرعت کلی دانلود"
 "totalSent" = "مجموع ترافیک ارسال‌‌شده پس‌از شروع‌به‌کار سیستم‌عامل"
