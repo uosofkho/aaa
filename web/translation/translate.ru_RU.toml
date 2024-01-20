@@ -78,7 +78,7 @@
 "memory" = "ОЗУ"
 "hard" = "Место на диске"
 "systeminfo" = "Система"
-"host" = "Имя хоста"
+"hostname" = "Имя хоста"
 "xrayStatus" = "Статус Xray"
 "stopXray" = "Остановка"
 "restartXray" = "Перезапуск Xray"
