@@ -79,7 +79,7 @@
 "hard" = "Disk"
 "systeminfo" = "سیستم"
 "xrayStatus" = "‌نمای‌ایکس‌ری"
-"host" = "نام‌میزبان"
+"hostname" = "نام‌میزبان"
 "stopXray" = "توقف"
 "restartXray" = "ریستارت"
 "xraySwitch" = "تغییر‌ نسخه ایکس‌ری"
@@ -103,7 +103,7 @@
 "config" = "پیکربندی"
 "backup" = "پشتیبان‌گیری"
 "backupTitle" = "پشتیبان‌گیری دیتابیس"
-"backupDescription" = "توصیه‌می‌شود قبل‌از واردکردن یک دیتابیس جدید، نسخه پشتیبان تهیه ‌کنید"
+"backupDescription" = "توصیه‌می‌شود قبل‌از بازگرداندن یک دیتابیس، یک نسخه پشتیبان تهیه ‌کنید"
 "exportDatabase" = "پشتیبان‌گیری"
 "importDatabase" = "بازگرداندن"
 

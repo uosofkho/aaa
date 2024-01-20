@@ -78,7 +78,7 @@
 "memory" = "RAM"
 "hard" = "Disk"
 "systeminfo" = "System"
-"host" = "Hostname"
+"hostname" = "Hostname"
 "xrayStatus" = "Status"
 "stopXray" = "Stop"
 "restartXray" = "Restart"
