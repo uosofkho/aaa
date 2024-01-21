@@ -95,11 +95,11 @@
                 <a-form-item label="{{ i18n "status" }}">
                     <template v-if="warpOutboundIndex>=0">
                         <a-tag color="green">{{ i18n "enabled" }}</a-tag>
-                        <a-button @click="resetOutbound" :loading="warpModal.confirmLoading" type="danger" style="float: right;>{{ i18n "reset" }}</a-button>
+                        <a-button @click="resetOutbound" :loading="warpModal.confirmLoading" type="danger" style="float: right;">{{ i18n "reset" }}</a-button>
                     </template>
                     <template v-else>
                         <a-tag color="orange">{{ i18n "disabled" }}</a-tag>
-                        <a-button @click="addOutbound" :loading="warpModal.confirmLoading" type="primary" style="float: right;>{{ i18n "pages.xray.outbound.addOutbound" }}</a-button>
+                        <a-button @click="addOutbound" :loading="warpModal.confirmLoading" type="primary" style="float: right;">{{ i18n "pages.xray.outbound.addOutbound" }}</a-button>
                     </template>
                  </a-form-item>
         </template>
