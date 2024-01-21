@@ -82,8 +82,6 @@
             </divider>
             </table>
             <a-divider></a-divider>
-            <a-form :label-col="{ md: {span:8} }" :wrapper-col="{ md: {span:14} }">
-                <a-form-item label="{{ i18n "status" }}">
                     <template v-if="warpOutboundIndex>=0">
                         <a-tag color="green">{{ i18n "enabled" }}</a-tag>
                         <a-button @click="resetOutbound" :loading="warpModal.confirmLoading">{{ i18n "reset" }}</a-button>
@@ -92,8 +90,6 @@
                         <a-tag color="orange">{{ i18n "disabled" }}</a-tag>
                         <a-button @click="addOutbound" :loading="warpModal.confirmLoading" style="float: right;">{{ i18n "pages.xray.outbound.addOutbound" }}</a-button>
                     </template>
-                </a-form-item>
-            </a-form>
         </template>
     </template>
 </a-modal>
