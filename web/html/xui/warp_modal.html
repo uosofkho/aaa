@@ -35,7 +35,7 @@
                 </a-form>
             </a-collapse-panel>
         </a-collapse>
-        <a-divider style="margin: 0;">{{ i18n "pages.settings.toasts.getSettings" }}</a-divider>
+        <a-divider style="margin: 0;">{{ i18n "info" }}</a-divider>
         <a-button icon="sync" @click="getConfig" style="margin-bottom: 10px;" :loading="warpModal.confirmLoading">{{ i18n "info" }}</a-button>
         <template v-if="!ObjectUtil.isEmpty(warpModal.warpConfig)">
             <table style="width: 100%">
