@@ -9,26 +9,26 @@
         <table style="margin: 5px 0; width: 100%;">
             <tr class="client-table-odd-row">
                 <td>Access Token</td>
-                <td>[[ warpModal.warpData.access_token ]]</td>
+                [[ warpModal.warpData.access_token ]]
             </tr>
             <tr>
-                <td>Devide ID</td>
-                <td>[[ warpModal.warpData.device_id ]]</td>
+                <td>Device ID</td>
+                [[ warpModal.warpData.device_id ]]
             </tr>
             <tr class="client-table-odd-row">
                 <td>License Key</td>
-                <td>[[ warpModal.warpData.license_key ]]</td>
+                [[ warpModal.warpData.license_key ]]
             </tr>
             <tr>
                 <td>Private Key</td>
-                <td>[[ warpModal.warpData.private_key ]]</td>
+                [[ warpModal.warpData.private_key ]]
             </tr>
         </table>
         <a-divider style="margin: 0;">{{ i18n "pages.settings.toasts.modifySettings" }}</a-divider>
         <a-collapse style="margin: 10px 0;">
             <a-collapse-panel header='WARP/WARP+ License Key'>
                 <a-form :colon="false" :label-col="{ md: {span:6} }" :wrapper-col="{ md: {span:14} }">
-                    <a-form-item label="License Key">
+                    <a-form-item label="Key">
                         <a-input v-model="warpPlus"></a-input>
                         <a-button @click="updateLicense(warpPlus)" :disabled="warpPlus.length<26" :loading="warpModal.confirmLoading">{{ i18n "pages.inbounds.update" }}</a-button>
                     </a-form-item>
@@ -48,7 +48,7 @@
                     <td>[[ warpModal.warpConfig.model ]]</td>
                 </tr>
                 <tr class="client-table-odd-row">
-                    <td>Device Active</td>
+                    <td>Device Enabled</td>
                     <td>[[ warpModal.warpConfig.enabled ]]</td>
                 </tr>
             <template v-if="!ObjectUtil.isEmpty(warpModal.warpConfig.account)">
@@ -61,11 +61,11 @@
                     <td>[[ warpModal.warpConfig.account.role ]]</td>
                 </tr>
                 <tr>
-                    <td>Premium Data</td>
+                    <td>WARP+ Data</td>
                     <td>[[ sizeFormat(warpModal.warpConfig.account.premium_data) ]]</td>
                 </tr>
                 <tr class="client-table-odd-row">
-                    <td>Quota</td>
+                    <td>Remaining</td>
                     <td>[[ sizeFormat(warpModal.warpConfig.account.quota) ]]</td>
                 </tr>
                 <tr v-if="!ObjectUtil.isEmpty(warpModal.warpConfig.account.usage)">
