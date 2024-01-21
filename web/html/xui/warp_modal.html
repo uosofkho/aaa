@@ -1,11 +1,20 @@
-{{define "warpModal"}}
-<a-modal id="warp-modal" v-model="warpModal.visible" title="Cloudflare WARP"
-         :confirm-loading="warpModal.confirmLoading" :closable="true" :mask-closable="true"
-         :footer="null" :class="themeSwitcher.currentTheme">
-    <template v-if="ObjectUtil.isEmpty(warpModal.warpData)">
-        <a-button icon="api" @click="register" :loading="warpModal.confirmLoading">{{ i18n "pages.inbounds.create" }}</a-button>
-    </template>
-    <template v-else>
+{{ define "warpModal" }}
+<a-modal
+  id="warp-modal"
+  v-model="warpModal.visible"
+  title="Cloudflare WARP"
+  :confirm-loading="warpModal.confirmLoading"
+  :closable="true"
+  :mask-closable="true"
+  :footer="null"
+  :class="themeSwitcher.currentTheme"
+>
+  <template v-if="ObjectUtil.isEmpty(warpModal.warpData)">
+    <a-button icon="api" @click="register" :loading="warpModal.confirmLoading">
+      {{ i18n "pages.inbounds.create" }}
+    </a-button>
+  </template>
+  <template v-else>
         <table style="margin: 5px 0; width: 100%;">
             <tr class="client-table-odd-row">
                 <td>Access Token</td>
@@ -82,14 +91,21 @@
             </divider>
             </table>
             <a-divider></a-divider>
-                    <template v-if="warpOutboundIndex>=0">
-                        <a-tag color="green">{{ i18n "enabled" }}</a-tag>
-                        <a-button @click="resetOutbound" :loading="warpModal.confirmLoading">{{ i18n "reset" }}</a-button>
-                    </template>
-                    <template v-else>
-                        <a-tag color="orange">{{ i18n "disabled" }}</a-tag>
-                        <a-button @click="addOutbound" :loading="warpModal.confirmLoading" style="float: right;">{{ i18n "pages.xray.outbound.addOutbound" }}</a-button>
-                    </template>
+          <a-form-item label="{{ i18n "status" }}">
+  <template v-if="warpOutboundIndex >= 0">
+    <a-tag color="green">{{ i18n "enabled" }}</a-tag>
+    <a-button @click="resetOutbound" :loading="warpModal.confirmLoading" type="danger">
+      <a-icon type="reload" /> {{ i18n "reset" }}
+    </a-button>
+  </template>
+  <template v-else>
+    <a-tag color="orange">{{ i18n "disabled" }}</a-tag>
+    <a-button @click="addOutbound" :loading="warpModal.confirmLoading" type="primary">
+      <a-icon type="plus" /> {{ i18n "pages.xray.outbound.addOutbound" }}
+    </a-button>
+  </template>
+</a-form-item>
+
         </template>
     </template>
 </a-modal>
