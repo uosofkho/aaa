@@ -91,21 +91,17 @@
             </divider>
             </table>
             <a-divider></a-divider>
-          <a-form-item label="{{ i18n "status" }}">
-  <template v-if="warpOutboundIndex >= 0">
-    <a-tag color="green">{{ i18n "enabled" }}</a-tag>
-    <a-button @click="resetOutbound" :loading="warpModal.confirmLoading" type="danger">
-      <a-icon type="reload" /> {{ i18n "reset" }}
-    </a-button>
-  </template>
-  <template v-else>
-    <a-tag color="orange">{{ i18n "disabled" }}</a-tag>
-    <a-button @click="addOutbound" :loading="warpModal.confirmLoading" type="primary">
-      <a-icon type="plus" /> {{ i18n "pages.xray.outbound.addOutbound" }}
-    </a-button>
-  </template>
-</a-form-item>
-
+          <a-form :label-col="{ md: {span:8} }" :wrapper-col="{ md: {span:14} }">
+                <a-form-item label="{{ i18n "status" }}">
+                    <template v-if="warpOutboundIndex>=0">
+                        <a-tag color="green">{{ i18n "enabled" }}</a-tag>
+                        <a-button @click="resetOutbound" :loading="warpModal.confirmLoading" type="danger">{{ i18n "reset" }}</a-button>
+                    </template>
+                    <template v-else>
+                        <a-tag color="orange">{{ i18n "disabled" }}</a-tag>
+                        <a-button @click="addOutbound" :loading="warpModal.confirmLoading" type="primary">{{ i18n "pages.xray.outbound.addOutbound" }}</a-button>
+                    </template>
+                 </a-form-item>
         </template>
     </template>
 </a-modal>
