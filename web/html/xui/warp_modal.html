@@ -14,6 +14,7 @@
       {{ i18n "pages.inbounds.create" }}
     </a-button>
   </template>
+  <a-divider style="margin: 0;">Account</a-divider>
   <template v-else>
         <table style="margin: 5px 0; width: 100%;">
             <tr class="client-table-odd-row">
@@ -33,9 +34,9 @@
                 <td>[[ warpModal.warpData.private_key ]]</td>
             </tr>
         </table>
-        <a-divider style="margin: 0;">{{ i18n "pages.settings.toasts.modifySettings" }}</a-divider>
+        <a-divider style="margin: 0;">License Key</a-divider>
         <a-collapse style="margin: 10px 0;">
-            <a-collapse-panel header='WARP/WARP+ License Key'>
+            <a-collapse-panel header='WARP/WARP+'>
                 <a-form :colon="false" :label-col="{ md: {span:6} }" :wrapper-col="{ md: {span:14} }">
                     <a-form-item label="Key">
                         <a-input v-model="warpPlus"></a-input>
