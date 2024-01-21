@@ -87,8 +87,7 @@
                         <a-button @click="resetOutbound" :loading="warpModal.confirmLoading">{{ i18n "reset" }}</a-button>
                     </template>
                     <template v-else>
-                        <a-button @click="addOutbound" :loading="warpModal.confirmLoading">{{ i18n "pages.xray.outbound.addOutbound" }}</a-button>
-                    </template>
+                      <a-button @click="addOutbound" :loading="warpModal.confirmLoading" style="float: right;">{{ i18n "pages.xray.outbound.addOutbound" }}</a-button>
                 </a-form-item>
                 </divider>
             </a-form>
