@@ -9,19 +9,19 @@
         <table style="margin: 5px 0; width: 100%;">
             <tr class="client-table-odd-row">
                 <td>Access Token</td>
-                [[ warpModal.warpData.access_token ]]
+                <td>[[ warpModal.warpData.access_token ]]</td>
             </tr>
             <tr>
                 <td>Device ID</td>
-                [[ warpModal.warpData.device_id ]]
+                <td>[[ warpModal.warpData.device_id ]]</td>
             </tr>
             <tr class="client-table-odd-row">
                 <td>License Key</td>
-                [[ warpModal.warpData.license_key ]]
+                <td>[[ warpModal.warpData.license_key ]]</td>
             </tr>
             <tr>
                 <td>Private Key</td>
-                [[ warpModal.warpData.private_key ]]
+                <td>[[ warpModal.warpData.private_key ]]</td>
             </tr>
         </table>
         <a-divider style="margin: 0;">{{ i18n "pages.settings.toasts.modifySettings" }}</a-divider>
@@ -79,13 +79,13 @@
                 <a-form-item label="{{ i18n "status" }}">
                     <template v-if="warpOutboundIndex>=0">
                         <div style="text-align: right;">
-                        <a-tag color="green">{{ i18n "enabled" }}</a-tag>
+                        {{ i18n "status" }} <a-tag color="green">{{ i18n "enabled" }}</a-tag>
                         <a-button @click="resetOutbound" :loading="warpModal.confirmLoading">{{ i18n "reset" }}</a-button>
                     </div>
                     </template>
                     <template v-else>
                         <div style="text-align: right;">
-                        <a-tag color="orange">{{ i18n "disabled" }}</a-tag>
+                        {{ i18n "status" }} <a-tag color="orange">{{ i18n "disabled" }}</a-tag>
                         <a-button @click="addOutbound" :loading="warpModal.confirmLoading">{{ i18n "pages.xray.outbound.addOutbound" }}</a-button>
                     </div>
                     </template>
