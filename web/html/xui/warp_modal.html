@@ -92,6 +92,7 @@
             </table>
             <a-divider style="margin: 0;">Manage</a-divider>
           <a-form :label-col="{ md: {span:8} }" :wrapper-col="{ md: {span:14} }">
+            <a-form-item label="{{ i18n "status" }}">
                     <template v-if="warpOutboundIndex>=0">
                         <a-button @click="resetOutbound" :loading="warpModal.confirmLoading" type="danger" style="float: right;">{{ i18n "reset" }}</a-button>
                     </template>
