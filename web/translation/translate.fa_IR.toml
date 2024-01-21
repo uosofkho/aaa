@@ -78,7 +78,7 @@
 "memory" = "RAM"
 "hard" = "Disk"
 "systeminfo" = "سیستم"
-"xrayStatus" = "‌نمای‌ایکس‌ری"
+"xrayStatus" = "‌وضعیت"
 "hostname" = "نام‌میزبان"
 "stopXray" = "توقف"
 "restartXray" = "ریستارت"
