@@ -44,13 +44,13 @@
                 </a-form>
             </a-collapse-panel>
         </a-collapse>
-        <a-divider style="margin: 0;">Account</a-divider>
+        <a-divider style="margin: 0;">Account Information</a-divider>
         <a-button icon="sync" @click="getConfig" style="margin-bottom: 10px;" :loading="warpModal.confirmLoading">More Information</a-button>
         <template v-if="warpOutboundIndex>=0">
-          <a-tag color="green">{{ i18n "enabled" }}</a-tag>
+          <a-tag color="green"> class="ant-tag ant-tag-has-color" style="line-height: 24px;">{{ i18n "enabled" }}</a-tag>
         </template>
             <template v-else>
-          <a-tag color="orange">{{ i18n "disabled" }}</a-tag>
+          <a-tag color="orange"> class="ant-tag ant-tag-has-color" style="line-height: 32px;">{{ i18n "disabled" }}</a-tag>
        </template>
          <template v-if="!ObjectUtil.isEmpty(warpModal.warpConfig)">
             <table style="width: 100%">
