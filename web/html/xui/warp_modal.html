@@ -91,21 +91,21 @@
             </divider>
             </table>
             <template>
-            <a-divider style="margin: 0;">Manage</a-divider>
-          <a-form :label-col="{ md: {span:8} }" :wrapper-col="{ md: {span:14} }">
-            <a-form-item label="WARP Outbound">
+            <a-divider style="margin: 10px 0;">Manage</a-divider>
+            <a-form :label-col="{ md: {span:8} }" :wrapper-col="{ md: {span:14} }">
+                <a-form-item label="WARP Outbound">
                     <template v-if="warpOutboundIndex>=0">
-                        <a-button @click="resetOutbound" :loading="warpModal.confirmLoading" type="danger" style="float: right;">{{ i18n "reset" }}</a-button>
+                        <a-button @click="resetOutbound" :loading="warpModal.confirmLoading" style="float: right;">{{ i18n "reset" }}</a-button>
                     </template>
                     <template v-else>
-                        <a-button @click="addOutbound" :loading="warpModal.confirmLoading" type="primary" style="float: right;">{{ i18n "pages.xray.outbound.addOutbound" }}</a-button>
+                        <a-button @click="addOutbound" :loading="warpModal.confirmLoading" style="float: right;">{{ i18n "pages.xray.outbound.addOutbound" }}</a-button>
                     </template>
-                 </a-form-item>
+                </a-form-item>
+            </a-form>
         </template>
     </template>
 </a-modal>
 <script>
-
     const warpModal = {
         visible: false,
         confirmLoading: false,
