@@ -37,7 +37,13 @@
         </a-collapse>
         <a-divider style="margin: 0;">{{ i18n "info" }}</a-divider>
         <a-button icon="sync" @click="getConfig" style="margin-bottom: 10px;" :loading="warpModal.confirmLoading">{{ i18n "info" }}</a-button>
-        <template v-if="!ObjectUtil.isEmpty(warpModal.warpConfig)">
+        <template v-if="warpOutboundIndex>=0">
+          {{ i18n "status" }} <a-tag color="green">{{ i18n "enabled" }}</a-tag>
+        </template>
+            <template v-else>
+        <a-tag color="orange">{{ i18n "disabled" }}</a-tag>
+       </template>
+         <template v-if="!ObjectUtil.isEmpty(warpModal.warpConfig)">
             <table style="width: 100%">
                 <tr class="client-table-odd-row">
                     <td>Device Name</td>
@@ -87,7 +93,6 @@
                         <div style="text-align: right;">
                         {{ i18n "status" }} <a-tag color="orange">{{ i18n "disabled" }}</a-tag>
                         <a-button @click="addOutbound" :loading="warpModal.confirmLoading">{{ i18n "pages.xray.outbound.addOutbound" }}</a-button>
-                    </div>
                     </template>
                 </a-form-item>
             </a-form>
