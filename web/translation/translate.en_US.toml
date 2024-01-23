@@ -475,7 +475,7 @@
 "no" = "❌ No"
 
 [tgbot.buttons]
-"dbBackup" = "Back Up Now"
+"dbBackup" = "Get DB Backup"
 "serverUsage" = "Server Usage"
 "getInbounds" = "Get Inbounds"
 "depleteSoon" = "Deplete Soon"
