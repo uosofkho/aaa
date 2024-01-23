@@ -138,7 +138,7 @@
 "destinationPort" = "پورت مقصد"
 "targetAddress" = "آدرس مقصد"
 "monitorDesc" = "به‌طور پیش‌فرض خالی‌بگذارید"
-"meansNoLimit" = "(GB:میزان کل ترافیک رو تنظیم کنید. (0 = نامحدود)(واحد" 
+"meansNoLimit" = "(GB :میزان کل ترافیک رو تنظیم کنید. (0 = نامحدود)(واحد" 
 "totalFlow" = "ترافیک کل"
 "leaveBlankToNeverExpire" = "برای منقضی‌نشدن خالی‌بگذارید"
 "noRecommendKeepDefault" = "توصیه‌می‌شود به‌طور پیش‌فرض حفظ‌شود"
@@ -194,7 +194,7 @@
 "expireDays" = "مدت زمان"
 "days" = "(روز)"
 "renew" = "تمدید خودکار"
-"renewDesc" = "(تمدید خودکار پس‌از ‌انقضا. (0 = غیرفعال)(واحد: روز"
+"renewDesc" = "(تمدید خودکار پس‌از ‌انقضا. (0 = غیرفعال - واحد: روز"
 
 [pages.inbounds.toasts]
 "obtain" = "فراهم‌سازی"
