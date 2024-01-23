@@ -138,7 +138,7 @@
 "destinationPort" = "Destination Port"
 "targetAddress" = "Target Address"
 "monitorDesc" = "Leave blank to listen on all IPs"
-"meansNoLimit" = "Set the total quota. (0 = unlimited)(unit: GB)"
+"meansNoLimit" = "Set the total flow quota. (0 = unlimited)(unit: GB)"
 "totalFlow" = "Total Flow"
 "leaveBlankToNeverExpire" = "Leave blank to never expire"
 "noRecommendKeepDefault" = "It is recommended to keep the default"
