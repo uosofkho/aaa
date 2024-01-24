@@ -405,6 +405,7 @@
 "intercon" = "Interconnection"
 "settings" = "Settings"
 "accountInfo" = "Account Information"
+"outboundStatus" = "Outbound Status"
 
 [pages.xray.wireguard]
 "secretKey" = "Secret Key"
