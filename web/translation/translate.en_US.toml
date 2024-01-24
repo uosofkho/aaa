@@ -262,7 +262,7 @@
 "tgNotifyLoginDesc" = "Get notified about the username, IP, and time whenever someone attempts to log into your web panel."
 "sessionMaxAge" = "Session Duration"
 "sessionMaxAgeDesc" = "The duration for which you can stay logged in. (Unit: minute)"
-"expireTimeDiff" = "Expiry Time Notification"
+"expireTimeDiff" = "Expiration Time Notification"
 "expireTimeDiffDesc" = "Get notified when the remaining time reaches the set threshold. (Unit: day)"
 "trafficDiff" = "Traffic Limit Notification"
 "trafficDiffDesc" = "Get notified when remaining traffic reaches the set threshold. (Unit: GB)"
