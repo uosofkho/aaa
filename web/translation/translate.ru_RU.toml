@@ -403,6 +403,8 @@
 "bridge" = "Мост"
 "portal" = "Портал"
 "intercon" = "Соединение"
+"settings" = "Настройки"
+"accountInfo" = "Информация Об Учетной Записи"
 
 [pages.xray.wireguard]
 "secretKey" = "Секретный ключ"
