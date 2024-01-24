@@ -291,8 +291,8 @@
 "subEncryptDesc" = "The returned content of subscription service will be Base64 encoded."
 "subShowInfo" = "Show Usage Info"
 "subShowInfoDesc" = "The remaining traffic and date will be displayed in the client apps."
-"subURI" = "Reverse Proxy URI Path"
-"subURIDesc" = "The URI path for the subscription service for use behind proxies."
+"subURI" = "Reverse Proxy URI"
+"subURIDesc" = "The URI for the subscription service for use behind proxies."
 
 [pages.settings.toasts]
 "modifySettings" = "Modify Settings"
