@@ -403,6 +403,8 @@
 "bridge" = "Liên kết"
 "portal" = "Cổng thông tin"
 "intercon" = "Kết nối"
+"settings" = "cài đặt"
+"accountInfo" = "Thông tin tài khoản"
 
 [pages.xray.wireguard]
 "secretKey" = "Chìa khoá bí mật"
