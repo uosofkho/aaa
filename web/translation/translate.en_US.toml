@@ -317,7 +317,7 @@
 "directCountryConfigsDesc" = "These options will directly forward traffic based on the specific requested country."
 "ipv4Configs" = "IPv4 Routing"
 "ipv4ConfigsDesc" = "These options will route traffic based on specific requested destination via system's IPv4."
-"warpConfigs" = "WARP Configuration"
+"warpConfigs" = "WARP Config"
 "warpConfigsDesc" = "These options will route traffic based on specific requested destination via WARP."
 "Template" = "Advanced Xray Configuration Template"
 "TemplateDesc" = "The final Xray config file will be generated based on this template."
