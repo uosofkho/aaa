@@ -404,6 +404,7 @@
 "intercon" = "اتصال میانی"
 "settings" = "تنظیمات"
 "accountInfo" = "اطلاعات حساب کاربری"
+"outboundStatus" = "وضعیت خروجی"
 
 [pages.xray.wireguard]
 "secretKey" = "کلید شخصی"
