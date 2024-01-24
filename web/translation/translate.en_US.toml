@@ -153,7 +153,7 @@
 "export" = "Export All URLs"
 "clone" = "Clone"
 "cloneInbound" = "Clone"
-"cloneInboundContent" = "All settings for this inbound, except Port, Listening IP, and Clients, will be applied to the clone."
+"cloneInboundContent" = "All settings for this inbound, except Port, Listen IP, and Clients, will be applied to the clone."
 "cloneInboundOk" = "Clone"
 "resetAllTraffic" = "Reset All Inbounds Traffic"
 "resetAllTrafficTitle" = "Reset All Inbounds Traffic"
@@ -170,7 +170,7 @@
 "email" = "Email"
 "emailDesc" = "Please provide a unique email address"
 "setDefaultCert" = "Set Cert from Panel"
-"telegramDesc" = "Please provide Chat ID(s) without using the '@' symbol. (Get it here @userinfobot) or (Use '/id' command in the bot)"
+"telegramDesc" = "Please provide Chat ID(s) without using the '@'. (Get it here @userinfobot) or (Use '/id' command in the bot)"
 "subscriptionDesc" = "To find your subscription URL, navigate to the 'More Information'. Additionally, you can use the same name for several clients."
 "info" = "Info" 
 "same" = "Same"
@@ -241,7 +241,7 @@
 "panelUrlPath" = "URI Path"
 "panelUrlPathDesc" = "The URI path for the web panel. (Begins with ‘/‘ and concludes with ‘/‘)"
 "pageSize" = "Pagination Size"
-"pageSizeDesc" = "Define page size for the inbounds table. (0 = disable)"
+"pageSizeDesc" = "The page size for the inbounds table. (0 = disable)"
 "remarkModel" = "Remark Model & Separation Character"
 "sampleRemark" = "Sample Remark"
 "oldUsername" = "Current Username"
@@ -262,7 +262,7 @@
 "tgNotifyLoginDesc" = "Get notified about the username, IP, and time whenever someone attempts to log into your web panel."
 "sessionMaxAge" = "Session Duration"
 "sessionMaxAgeDesc" = "The duration for which you can stay logged in. (Unit: minute)"
-"expireTimeDiff" = "Expiration Time Notification"
+"expireTimeDiff" = "Expiry Time Notification"
 "expireTimeDiffDesc" = "Get notified when the remaining time reaches the set threshold. (Unit: day)"
 "trafficDiff" = "Traffic Exhaustion Notification"
 "trafficDiffDesc" = "Get notified when remaining traffic reaches the set threshold (Unit: GB)"
@@ -476,7 +476,7 @@
 
 [tgbot.buttons]
 "dbBackup" = "Get Backup"
-"serverUsage" = "Server Usage"
+"serverUsage" = "System Usage"
 "getInbounds" = "Get Inbounds"
 "depleteSoon" = "Deplete Soon"
 "clientUsage" = "Get Usage"
@@ -485,5 +485,5 @@
 
 [tgbot.answers]
 "getInboundsFailed" = "❌ Failed to get inbounds"
-"askToAddUser" = "Your configuration is not found!\r\nFirst, set your Telegram username, and then ask your admin to add it to the configuration(s)."
-"askToAddUserName" = "Your configuration is not found!\r\nPlease ask your admin to add your Telegram username to the configuration(s).\r\n\r\nYour Username: <b>@{{ .TgUserName }}</b>"
+"askToAddUser" = "Your configuration is not found!\r\nPlease set a Telegram username, and then ask the service admin to add it to the configuration(s)."
+"askToAddUserName" = "Your configuration is not found!\r\nPlease ask the service admin to add your Telegram username to the configuration(s).\r\n\r\nYour Username: <b>@{{ .TgUserName }}</b>"
