@@ -24,7 +24,7 @@
                 <td>[[ warpModal.warpData.private_key ]]</td>
             </tr>
         </table>
-        <a-divider style="margin: 0;">{{ i18n "pages.settings.toasts.modifySettings" }}</a-divider>
+        <a-divider style="margin: 0;">{{ i18n "pages.xray.outbound.settings" }}</a-divider>
         <a-collapse style="margin: 10px 0;">
             <a-collapse-panel header='WARP/WARP+ License Key'>
                 <a-form :colon="false" :label-col="{ md: {span:6} }" :wrapper-col="{ md: {span:14} }">
@@ -35,7 +35,7 @@
                 </a-form>
             </a-collapse-panel>
         </a-collapse>
-        <a-divider style="margin: 0;">{{ i18n "pages.settings.toasts.getSettings" }}</a-divider>
+        <a-divider style="margin: 0;">{{ i18n "pages.xray.outbound.accountInfo" }}</a-divider>
         <a-button icon="sync" @click="getConfig" style="margin-bottom: 10px;" :loading="warpModal.confirmLoading">{{ i18n "info" }}</a-button>
         <template v-if="!ObjectUtil.isEmpty(warpModal.warpConfig)">
             <table style="width: 100%">
