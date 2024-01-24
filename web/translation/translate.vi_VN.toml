@@ -405,6 +405,7 @@
 "intercon" = "Kết nối"
 "settings" = "cài đặt"
 "accountInfo" = "Thông tin tài khoản"
+"outboundStatus" = "Trạng thái đầu ra"
 
 [pages.xray.wireguard]
 "secretKey" = "Chìa khoá bí mật"
