@@ -77,7 +77,7 @@
 "title" = "نمای کلی"
 "memory" = "RAM"
 "hard" = "Disk"
-"systeminfo" = "سیستم"
+"systemInfo" = "سیستم"
 "hostname" = "نام‌میزبان"
 "xrayStatus" = "‌وضعیت"
 "stopXray" = "توقف"
