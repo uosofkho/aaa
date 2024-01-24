@@ -405,6 +405,7 @@
 "intercon" = "Соединение"
 "settings" = "Настройки"
 "accountInfo" = "Информация Об Учетной Записи"
+"outboundStatus" = "Исходящий статус"
 
 [pages.xray.wireguard]
 "secretKey" = "Секретный ключ"
