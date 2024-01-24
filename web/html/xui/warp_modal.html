@@ -74,7 +74,7 @@
                 </tr>
             </template>
             </table>
-            <a-divider style="margin: 10px 0;">WARP {{ i18n "pages.xray.rules.outboundStatus" }}</a-divider>
+            <a-divider style="margin: 10px 0;">{{ i18n "pages.xray.rules.outboundStatus" }}</a-divider>
             <a-form :label-col="{ md: {span:8} }" :wrapper-col="{ md: {span:14} }">
                     <template v-if="warpOutboundIndex>=0">
                         <a-tag color="green" style="line-height: 31px;">{{ i18n "enabled" }}</a-tag>
