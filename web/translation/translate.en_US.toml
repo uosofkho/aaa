@@ -195,7 +195,7 @@
 "expireDays" = "Duration"
 "days" = "Day(s)"
 "renew" = "Auto Renew"
-"renewDesc" = "Auto-renewal after expiry. (0 = disable)(Unit: day)"
+"renewDesc" = "Auto-renewal after expiration. (0 = disable)(Unit: day)"
 
 [pages.inbounds.toasts]
 "obtain" = "Obtain"
