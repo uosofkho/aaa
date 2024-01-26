@@ -79,7 +79,7 @@
 "hard" = "Disk"
 "systemInfo" = "سیستم"
 "hostname" = "نام‌میزبان"
-"xrayStatus" = "‌وضعیت"
+"xrayStatus" = "‌Xray"
 "stopXray" = "توقف"
 "restartXray" = "ریستارت"
 "xraySwitch" = "تغییر‌ نسخه ایکس‌ری"
