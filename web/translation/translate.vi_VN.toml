@@ -77,7 +77,7 @@
 "title" = "Trạng thái hệ thống"
 "memory" = "Bộ nhớ"
 "hard" = "Ổ cứng"
-"systemInfo" = "Hệ thống"
+"machineInfo" = "Máy"
 "hostname" = "Tên máy chủ"
 "xrayStatus" = "Trạng thái của Xray"
 "stopXray" = "Dừng Xray"
