@@ -81,7 +81,7 @@
 "hostname" = "Имя хоста"
 "xrayStatus" = "Xray"
 "stopXray" = "Остановка"
-"restartXray" = "Перезапуск Xray"
+"restartXray" = "Перезапуск"
 "xraySwitch" = "Сменить версию"
 "xraySwitchClick" = "Выберите желаемую версию"
 "xraySwitchClickDesk" = "Выбирайте внимательно, так как старые версии могут быть несовместимы с текущими конфигурациями"
