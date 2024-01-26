@@ -79,7 +79,7 @@
 "hard" = "Disk"
 "systemInfo" = "System"
 "hostname" = "Hostname"
-"xrayStatus" = "Status"
+"xrayStatus" = "Xray"
 "stopXray" = "Stop"
 "restartXray" = "Restart"
 "xraySwitch" = "Change Xray Version"
