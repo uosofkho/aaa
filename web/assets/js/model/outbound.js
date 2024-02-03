@@ -912,7 +912,7 @@ Outbound.HttpSettings = class extends CommonClass {
 };
 Outbound.WireguardSettings = class extends CommonClass {
     constructor(
-            mtu=1420, secretKey=Wireguard.generateKeypair().privateKey,
+            mtu=1420, secretKey='',
             address='', workers=2, domainStrategy='', reserved='',
             peers=[new Outbound.WireguardSettings.Peer()], kernelMode=false) {
         super();
