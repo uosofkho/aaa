@@ -122,7 +122,7 @@
                     <a-col :sm="24" :md="12">
                         <a-card hoverable>
                             <strong>{{ i18n "pages.index.xrayStatus" }}:</strong>
-                            <a-tag :color="status.xray.color" style="margin-right: 3px;"><strong>[[ status.xray.state.toUpperCase() ]]</strong></a-tag>
+                            <a-tag :color="status.xray.color" style="margin-right: 3px;"><strong>[[ status.xray.state ]]</strong></a-tag>
                             <a-popover v-if="status.xray.state === State.Error"
                                 :overlay-class-name="themeSwitcher.currentTheme">
                                 <span slot="title" style="font-size: 12pt">An error occurred while running Xray
@@ -330,9 +330,9 @@
 {{template "textModal"}}
 <script>
     const State = {
-        Running: "running",
-        Stop: "stop",
-        Error: "error",
+        Running: "Running",
+        Stop: "Stop",
+        Error: "Error",
     }
     Object.freeze(State);
 
