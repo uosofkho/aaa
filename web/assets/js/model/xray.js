@@ -1370,7 +1370,7 @@ class Inbound extends XrayCommonClass {
         const orderChars = remarkModel.slice(1);
         let orders = {
             'i': remark,
-            'e': client ? client.email : '',
+            'e': email,
             'o': '',
           };
         if(ObjectUtil.isArrEmpty(this.stream.externalProxy)){
@@ -2098,7 +2098,7 @@ Inbound.WireguardSettings = class extends XrayCommonClass {
 };
 
 Inbound.WireguardSettings.Peer = class extends XrayCommonClass {
-    constructor(publicKey='', psk='', allowedIPs=['0.0.0.0/0','::/0'], keepAlive=0) {
+    constructor(publicKey=Wireguard.generateKeypair().publicKey, psk='', allowedIPs=['0.0.0.0/0','::/0'], keepAlive=0) {
         super();
         this.publicKey = publicKey;
         this.psk = psk;
