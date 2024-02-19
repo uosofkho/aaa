@@ -26,8 +26,9 @@ echo "The OS release is: $release"
 arch() {
     case "$(uname -m)" in
     x86_64 | x64 | amd64) echo 'amd64' ;;
+    i*86 | x86) echo '386' ;;
     armv8* | armv8 | arm64 | aarch64) echo 'arm64' ;;
-    armv7* | armv7 | arm | arm32 ) echo 'arm' ;;
+    armv7* | armv7 | arm) echo 'armv7' ;;
     *) echo -e "${green}Unsupported CPU architecture! ${plain}" && rm -f install.sh && exit 1 ;;
     esac
 }
@@ -60,11 +61,17 @@ fi
 
 
 install_dependencies() {
-    if [[ "${release}" == "centos" ]] || [[ "${release}" == "fedora" ]] ; then
-        yum install wget curl tar -y
-    else
-        apt install wget curl tar -y
-    fi
+    case "${release}" in
+    centos)
+        yum -y update && yum install -y -q wget curl tar tzdata
+        ;;
+    fedora)
+        dnf -y update && dnf install -y -q wget curl tar tzdata
+        ;;
+    *)
+        apt-get update && apt install -y -q wget curl tar tzdata
+        ;;
+    esac
 }
 
 #This function will be called when user installed x-ui out of sercurity
@@ -151,6 +158,13 @@ install_x-ui() {
     tar zxvf x-ui-linux-$(arch).tar.gz
     rm x-ui-linux-$(arch).tar.gz -f
     cd x-ui
+    chmod +x x-ui
+
+    # Check the system's architecture and rename the file accordingly
+    if [[ $(arch) == "armv7" ]]; then
+        mv bin/xray-linux-$(arch) bin/xray-linux-arm
+        chmod +x bin/xray-linux-arm
+    fi
     chmod +x x-ui bin/xray-linux-$(arch)
     cp -f x-ui.service /etc/systemd/system/
     wget --no-check-certificate -O /usr/bin/x-ui https://raw.githubusercontent.com/alireza0/x-ui/main/x-ui.sh
