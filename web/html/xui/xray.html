@@ -84,11 +84,11 @@
                                     <a-button type="danger" :disabled="!saveBtnDisable" @click="restartXray">{{ i18n "pages.xray.restart" }}</a-button>
                                     <a-popover v-if="restartResult"
                                         :overlay-class-name="themeSwitcher.currentTheme">
-                                        <span slot="title" style="font-size: 12pt">Error in running xray-core</span>
+                                        <span slot="title" style="font-size: 12pt">An error occurred while running Xray</span>
                                         <template slot="content">
                                             <p style="max-width: 400px" v-for="line in restartResult.split('\n')">[[ line ]]</p>
                                         </template>
-                                        <a-icon type="question-circle"></a-icon>
+                                        <a-icon type="exclamation-circle"></a-icon>
                                     </a-popover>
                                 </a-space>
                             </a-col>
