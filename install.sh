@@ -41,7 +41,7 @@ if [[ "${release}" == "centos" ]]; then
     if [[ ${os_version} -lt 8 ]]; then
         echo -e "${red} Please use CentOS 8 or higher ${plain}\n" && exit 1
     fi
-elif [[ "${release}" ==  "ubuntu" ]]; then
+elif [[ "${release}" == "ubuntu" ]]; then
     if [[ ${os_version} -lt 20 ]]; then
         echo -e "${red}please use Ubuntu 20 or higher version! ${plain}\n" && exit 1
     fi
@@ -58,7 +58,6 @@ elif [[ "${release}" == "debian" ]]; then
 else
     echo -e "${red}Failed to check the OS version, please contact the author!${plain}" && exit 1
 fi
-
 
 install_dependencies() {
     case "${release}" in
@@ -122,6 +121,7 @@ install_x-ui() {
             exit 0
         else
             echo -e "Continuing installing x-ui ..."
+        fi
     fi
 
     cd /usr/local/
@@ -185,7 +185,7 @@ install_x-ui() {
     echo -e ""
     echo "X-UI Control Menu Usage"
     echo "------------------------------------------"
-    echo "SUBCOMMANDS:" 
+    echo "SUBCOMMANDS:"
     echo "x-ui              - Admin Management Script"
     echo "x-ui start        - Start"
     echo "x-ui stop         - Stop"
