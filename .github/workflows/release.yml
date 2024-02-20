@@ -23,9 +23,10 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5.0.0
         with:
-          go-version: '1.21'
-
-      - name: Install dependencies
+          go-version: '1.22'
+          
+      - name: Install dependencies for arm64 and arm
+        if: matrix.platform == 'arm64' || matrix.platform == 'arm'
         run: |
           sudo apt-get update
           if [ "${{ matrix.platform }}" == "arm64" ]; then
