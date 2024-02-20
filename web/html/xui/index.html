@@ -109,7 +109,7 @@
                             <a href="https://github.com/alireza0/x-ui/releases" target="_blank"><a-tag color="purple"><b>X-UI:</b> {{ .cur_ver }}</a-tag></a>
                             </template>
                         </a-card>
-                    </a-col>            
+                    </a-col>
                     <a-col :sm="24" :md="12">
                         <a-card hoverable>
                             <div><p style="font-weight: bold; margin-bottom: 5px; text-align: left;">{{ i18n "pages.index.xrayStatus" }}</p></div>
@@ -136,7 +136,7 @@
                                 <a-tag color="purple" style="cursor: pointer;" @click="openSelectV2rayVersion">[[ status.xray.version ]]</a-tag>
                             </a-tooltip>                   
                         </a-card>
-                    </a-col>       
+                    </a-col>
                     <a-col :sm="24" :md="12">
                         <a-card hoverable>
                             <div><p style="font-weight: bold; margin-bottom: 5px; text-align: left;">{{ i18n "menu.link" }}</p></div>
@@ -204,7 +204,7 @@
                                         <template slot="title">
                                             {{ i18n "pages.index.downSpeed" }}
                                         </template>
-                                        <strong>Dn:</strong> [[ sizeFormat(status.netIO.down) ]]/s
+                                        <strong>Down:</strong> [[ sizeFormat(status.netIO.down) ]]/s
                                     </a-tooltip>
                                 </a-col>
                             </a-row>
