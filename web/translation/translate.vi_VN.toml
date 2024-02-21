@@ -80,7 +80,7 @@
 "hard" = "Ổ cứng"
 "serverInfo" = "Máy chủ"
 "hostname" = "Tên máy chủ"
-"xrayStatus" = "Tình trạng Xray"
+"xrayStatus" = "Xray"
 "stopXray" = "Dừng"
 "restartXray" = "Khởi động lại"
 "xraySwitch" = "Chuyển đổi phiên bản"
