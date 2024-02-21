@@ -381,6 +381,12 @@
 "Routings" = "قوانین مسیریابی"
 "RoutingsDesc" = "اولویت هر قانون مهم است"
 "Balancers" = "بالانسرها"
+"logLevel" = "سطح گزارش"
+"logLevelDesc" = "سطح گزارش برای گزارش‌های خطا، شدت مسائلی را که باید ثبت شوند، تعیین می‌کند"
+"accessLog" = "گزارش دسترسی"
+"accessLogDesc" = "مسیر فایل گزارش دسترسی"
+"errorLog" = "گزارش خطا"
+"errorLogDesc" = "مسیر فایل گزارش خطا"
 
 [pages.xray.rules]
 "first" = "اولین"
