@@ -382,6 +382,12 @@
 "Routings" = "Routing Rules"
 "RoutingsDesc" = "The priority of each rule is important!"
 "Balancers" = "Balancers"
+"logLevel" = "Log Level"
+"logLevelDesc" = "The log level for error logs determines the severity of issues that should be recorded."
+"accessLog" = "Access Log"
+"accessLogDesc" = "The file path for the access log."
+"errorLog" = "Error Log"
+"errorLogDesc" = "The file path for the error log."
 
 [pages.xray.rules]
 "first" = "First"
