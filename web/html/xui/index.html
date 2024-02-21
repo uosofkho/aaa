@@ -85,11 +85,11 @@
                     <a-col :sm="24" :md="12">
                         <a-card hoverable>
                             <strong>{{ i18n "pages.inbounds.stream.tcp.version" }}:</strong>
-                            <a href="https://github.com/alireza0/x-ui/releases" target="_blank">
-                                <a-tag color="purple" style="cursor: pointer;">X-UI {{ .cur_ver }}</a-tag>
+                            <a rel="noopener" href="https://github.com/alireza0/x-ui/releases" target="_blank">
+                                <a-tag color="purple" style="cursor: pointer; margin-right: 3px;"><b>X-UI</b> {{ .cur_ver }}</a-tag>
                             </a>
                             <a-tooltip title='{{ i18n "pages.index.xraySwitch" }}'>
-                                <a-tag color="purple" style="cursor: pointer;" @click="openSelectV2rayVersion">Xray [[ status.xray.version ]]</a-tag>
+                                <a-tag color="purple" style="cursor: pointer;" @click="openSelectV2rayVersion"><b>Xray</b> [[ status.xray.version ]]</a-tag>
                             </a-tooltip>
                         </a-card>
                     </a-col>
@@ -100,13 +100,13 @@
                                  <template slot="title">
                                      {{ i18n "pages.index.xrayoperationHoursDesc" }}
                                  </template>
-                                <a-tag color="blue" style="margin-right: 3px;">Xray [[ formatSecond(status.appStats.uptime) ]]</a-tag>
+                                <a-tag :color="status.xray.color" style="margin-right: 3px;"><b>Xray</b> [[ formatSecond(status.appStats.uptime) ]]</a-tag>
                             </a-tooltip>      
                             <a-tooltip>
                                 <template slot="title">
                                     {{ i18n "pages.index.operationHoursDesc" }}
                                 </template>
-                                 <a-tag color="blue">OS [[ formatSecond(status.uptime) ]]</a-tag>
+                                 <a-tag color="blue"><b>OS</b> [[ formatSecond(status.uptime) ]]</a-tag>
                             </a-tooltip>
                         </a-card>
                     </a-col>
@@ -150,8 +150,8 @@
                     <a-col :sm="24" :md="12">
                         <a-card hoverable>
                             <strong>{{ i18n "usage" }}:</strong>
-                            <a-tag color="blue" style="margin-right: 3px;">RAM [[ sizeFormat(status.appStats.mem) ]]</a-tag>
-                            <a-tag color="blue">Threads [[ status.appStats.threads ]]</a-tag>
+                            <a-tag color="blue" style="margin-right: 3px;"><b>RAM</b> [[ sizeFormat(status.appStats.mem) ]]</a-tag>
+                            <a-tag color="blue"><b>Threads</b> [[ status.appStats.threads ]]</a-tag>
                         </a-card>
                     </a-col>
                     <a-col :sm="24" :md="12">
@@ -185,21 +185,23 @@
                         <a-card hoverable>
                             <a-row>
                                 <a-col :span="12">
-                                    <a-icon type="swap"></a-icon>    
+                                    <a-icon type="swap"></a-icon>
+                                    <strong>TCP:</Strong>    
                                     <a-tooltip>
                                         <template slot="title">
                                             {{ i18n "pages.index.connectionTcpCountDesc" }}
                                         </template>
-                                        <strong>TCP:</Strong> <a-tag>[[ status.tcpCount ]]</a-tag>
+                                        <a-tag>[[ status.tcpCount ]]</a-tag>
                                     </a-tooltip>
                                 </a-col>
                                 <a-col :span="12">
                                     <a-icon type="swap"></a-icon>
+                                    <strong>UDP:</strong>
                                     <a-tooltip>
                                         <template slot="title">
                                             {{ i18n "pages.index.connectionUdpCountDesc" }}
                                         </template>
-                                        <strong>UDP:</strong> <a-tag>[[ status.udpCount ]]</a-tag>
+                                        <a-tag>[[ status.udpCount ]]</a-tag>
                                     </a-tooltip>
                                 </a-col>
                             </a-row>
@@ -210,20 +212,22 @@
                             <a-row>
                                 <a-col :span="12">
                                     <a-icon type="arrow-up"></a-icon>
+                                    <strong>Up:</strong>
                                     <a-tooltip>
                                         <template slot="title">
                                             {{ i18n "pages.index.upSpeed" }}
                                         </template>
-                                        <strong>Up:</strong> [[ sizeFormat(status.netIO.up) ]]/s
+                                        <a-tag>[[ sizeFormat(status.netIO.up) ]]/s</a-tag>
                                     </a-tooltip>
                                 </a-col>
                                 <a-col :span="12">
                                     <a-icon type="arrow-down"></a-icon>
+                                    <strong>Down:</strong>
                                     <a-tooltip>
                                         <template slot="title">
                                             {{ i18n "pages.index.downSpeed" }}
                                         </template>
-                                        <strong>Down:</strong> [[ sizeFormat(status.netIO.down) ]]/s
+                                        <a-tag>[[ sizeFormat(status.netIO.down) ]]/s</a-tag>
                                     </a-tooltip>
                                 </a-col>
                             </a-row>
@@ -234,20 +238,22 @@
                             <a-row>
                                 <a-col :span="12">
                                     <a-icon type="cloud-upload"></a-icon>
+                                    <strong>Out:</strong>
                                     <a-tooltip>
                                         <template slot="title">
                                             {{ i18n "pages.index.totalSent" }}
                                         </template>
-                                        <strong>Out:</strong> [[ sizeFormat(status.netTraffic.sent) ]]
+                                        <a-tag>[[ sizeFormat(status.netTraffic.sent) ]]</a-tag>
                                     </a-tooltip>
                                 </a-col>
                                 <a-col :span="12">
                                     <a-icon type="cloud-download"></a-icon>
+                                    <strong>In:</strong>
                                     <a-tooltip>
                                         <template slot="title">
                                             {{ i18n "pages.index.totalReceive" }}
                                         </template>
-                                       <strong>In:</strong> [[ sizeFormat(status.netTraffic.recv) ]]
+                                      <a-tag>[[ sizeFormat(status.netTraffic.recv) ]]</a-tag>
                                     </a-tooltip>
                                 </a-col>
                             </a-row>
