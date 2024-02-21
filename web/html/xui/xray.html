@@ -162,7 +162,8 @@
                                     <a-list-item>
                                         <a-row style="padding: 20px">
                                             <a-col :lg="24" :xl="12">
-                                                <a-list-item-meta title='Level'/>
+                                                <a-list-item-meta title='{{ i18n "pages.xray.logLevel" }}'
+                                                    description='{{ i18n "pages.xray.logLevelDesc" }}' />
                                             </a-col>
                                             <a-col :lg="24" :xl="12">
                                                 <template>
@@ -177,7 +178,8 @@
                                     </a-list-item>
                                     <a-row style="padding: 20px">
                                         <a-col :lg="24" :xl="12">
-                                            <a-list-item-meta title='Access Logs' />
+                                            <a-list-item-meta title='{{ i18n "pages.xray.accessLog" }}'
+                                                description='{{ i18n "pages.xray.accessLogDesc" }}' />
                                         </a-col>
                                         <a-col :lg="24" :xl="12">
                                             <a-input v-model="logAccess"></a-input>
@@ -185,7 +187,8 @@
                                     </a-row>
                                     <a-row style="padding: 20px">
                                         <a-col :lg="24" :xl="12">
-                                            <a-list-item-meta title='Error Logs' />
+                                            <a-list-item-meta title='{{ i18n "pages.xray.errorLog" }}'
+                                                description='{{ i18n "pages.xray.errorLogDesc" }}' />
                                         </a-col>
                                         <a-col :lg="24" :xl="12">
                                             <a-input v-model="logError"></a-input>
