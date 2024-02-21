@@ -80,7 +80,7 @@
 "hard" = "Disk"
 "serverInfo" = "Server"
 "hostname" = "Hostname"
-"xrayStatus" = "Xray Status"
+"xrayStatus" = "Xray"
 "stopXray" = "Stop"
 "restartXray" = "Restart"
 "xraySwitch" = "Change Xray Version"
