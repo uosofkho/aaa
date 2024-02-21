@@ -382,6 +382,12 @@
 "Routings" = "路由规则"
 "RoutingsDesc" = "每条规则的优先级都很重要"
 "Balancers" = "平衡器"
+"logLevel" = "日志级别"
+"logLevelDesc" = "错误日志的日志级别决定了应记录的问题的严重性。"
+"accessLog" = "访问日志"
+"accessLogDesc" = "访问日志的文件路径。"
+"errorLog" = "错误日志"
+"errorLogDesc" = "错误日志的文件路径。"
 
 [pages.xray.rules]
 "first" = "第一个"
