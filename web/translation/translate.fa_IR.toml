@@ -80,7 +80,7 @@
 "hard" = "Disk"
 "serverInfo" = "سرور"
 "hostname" = "نام میزبان"
-"xrayStatus" = "‌وضعیت‌ایکس‌ری"
+"xrayStatus" = "‌ایکس‌ری"
 "stopXray" = "توقف"
 "restartXray" = "ریستارت"
 "xraySwitch" = "تغییر‌ نسخه ایکس‌ری"
