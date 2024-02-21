@@ -382,6 +382,12 @@
 "Routings" = "Quy tắc định tuyến"
 "RoutingsDesc" = "Mức độ ưu tiên của mỗi quy tắc là quan trọng!"
 "Balancers" = "Cân bằng"
+"logLevel" = "Mức đăng nhập"
+"logLevelDesc" = "Cấp độ nhật ký cho nhật ký lỗi xác định mức độ nghiêm trọng của sự cố cần được ghi lại."
+"accessLog" = "Nhật ký truy cập"
+"accessLogDesc" = "Đường dẫn tệp cho nhật ký truy cập."
+"errorLog" = "Nhật ký lỗi"
+"errorLogDesc" = "Đường dẫn tệp cho nhật ký lỗi."
 
 [pages.xray.rules]
 "first" = "Đầu tiên"
