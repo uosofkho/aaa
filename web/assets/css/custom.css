@@ -1086,6 +1086,6 @@ li.ant-select-dropdown-menu-item:empty:after {
     background-color: lightgray;
 }
 
-body.dark .ant-table-column-sorters:hover {
+.dark .ant-table-column-sorters:hover {
     background-color: #2c3950;
 }
