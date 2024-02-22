@@ -543,11 +543,10 @@
             },
             {
                 title: '{{ i18n "pages.inbounds.client" }}',
+                dataIndex: 'email',
                 width: 70,
                 scopedSlots: { customRender: 'client' },
-                //need a sorter to sort by client 
-                sorter: (a, b) => a.client.localeCompare(b.client),
-                sortDirections: ['ascend', 'descend'],
+                sorter: (a, b) => a.email.localeCompare(b.email),
             },
             {
                 title: '{{ i18n "pages.inbounds.traffic" }}',
