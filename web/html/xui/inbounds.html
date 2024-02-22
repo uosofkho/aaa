@@ -545,22 +545,15 @@
                 title: '{{ i18n "pages.inbounds.client" }}',
                 width: 70,
                 scopedSlots: { customRender: 'client' },
-                sorter: (a, b) => {
-                    const clientA = a.client || '';
-                    const clientB = b.client || '';
-                    return clientA.localeCompare(clientB, undefined, { sensitivity: 'base' });
-                },
+                //need a sorter to sort by client 
+                sorter: (a, b) => a.client.localeCompare(b.client),
+                sortDirections: ['ascend', 'descend'],
             },
             {
                 title: '{{ i18n "pages.inbounds.traffic" }}',
                 width: 80,
                 align: 'center',
                 scopedSlots: { customRender: 'traffic' },
-                sorter: (a, b) => {
-                    const trafficA = a.traffic || 0;
-                    const trafficB = b.traffic || 0;
-                    return trafficB - trafficA;
-                },
             },
             {
                 title: '{{ i18n "pages.inbounds.expireDate" }}',
@@ -582,11 +575,6 @@
                 width: 90,
                 align: 'left',
                 scopedSlots: { customRender: 'client' },
-                sorter: (a, b) => {
-                    const clientA = a.client || '';
-                    const clientB = b.client || '';
-                    return clientA.localeCompare(clientB, undefined, { sensitivity: 'base' });
-                },
             },
             {
                 title: '{{ i18n "pages.inbounds.info" }}',
