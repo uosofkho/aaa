@@ -546,7 +546,11 @@
                 dataIndex: 'email',
                 width: 70,
                 scopedSlots: { customRender: 'client' },
-                sorter: (a, b) => a.email.localeCompare(b.email),
+                sorter: (a, b) => {
+                    const clientA = a.email || '';
+                    const clientB = b.email || '';
+                    return clientA.localeCompare(clientB, undefined, { sensitivity: 'base' });
+                },
             },
             {
                 title: '{{ i18n "pages.inbounds.traffic" }}',
