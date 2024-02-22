@@ -558,11 +558,6 @@
                 width: 80,
                 align: 'center',
                 scopedSlots: { customRender: 'traffic' },
-                sorter: (a, b) => {
-                    const trafficA = a.traffic || 0;
-                    const trafficB = b.traffic || 0;
-                    return trafficB - trafficA;
-                },
             },
             {
                 title: '{{ i18n "pages.inbounds.expireDate" }}',
@@ -581,9 +576,15 @@
             },
             {
                 title: '{{ i18n "pages.inbounds.client" }}',
+                dataIndex: 'email',
                 width: 90,
                 align: 'left',
                 scopedSlots: { customRender: 'client' },
+                sorter: (a, b) => {
+                    const clientA = a.email || '';
+                    const clientB = b.email || '';
+                    return clientA.localeCompare(clientB, undefined, { sensitivity: 'base' });
+                },
             },
             {
                 title: '{{ i18n "pages.inbounds.info" }}',

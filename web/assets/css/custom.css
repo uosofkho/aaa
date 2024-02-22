@@ -1081,3 +1081,11 @@ li.ant-select-dropdown-menu-item:empty:after {
 .ant-input-group-addon:not(:first-child):not(:last-child), .ant-input-group-wrap:not(:first-child):not(:last-child), .ant-input-group>.ant-input:not(:first-child):not(:last-child) {
     border-radius: 0rem 1rem 1rem 0rem;
 }
+
+.ant-table-column-sorters:hover {
+    background-color: lightgray;
+}
+
+body.dark .ant-table-column-sorters:hover {
+    background-color: darkgray;
+}
