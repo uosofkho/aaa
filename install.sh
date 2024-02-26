@@ -41,6 +41,17 @@ if [[ "${release}" == "centos" ]]; then
     if [[ ${os_version} -lt 8 ]]; then
         echo -e "${red} Please use CentOS 8 or higher ${plain}\n" && exit 1
     fi
+    
+elif [[ "${release}" == "almalinux" ]]; then
+    if [[ ${os_version} -lt 8 ]]; then
+        echo -e "${red} Please use AlmaLinux 8 or higher ${plain}\n" && exit 1
+    fi
+    
+elif [[ "${release}" == "rocky" ]]; then
+    if [[ ${os_version} -lt 8 ]]; then
+        echo -e "${red} Please use RockyLinux 8 or higher ${plain}\n" && exit 1
+    fi
+    
 elif [[ "${release}" == "ubuntu" ]]; then
     if [[ ${os_version} -lt 20 ]]; then
         echo -e "${red}please use Ubuntu 20 or higher version! ${plain}\n" && exit 1
@@ -61,7 +72,7 @@ fi
 
 install_dependencies() {
     case "${release}" in
-    centos)
+    centos | almalinux | rocky)
         yum -y update && yum install -y -q wget curl tar tzdata
         ;;
     fedora)
