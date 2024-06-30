@@ -3,7 +3,7 @@
          :confirm-loading="ruleModal.confirmLoading" :closable="true" :mask-closable="false"
          :ok-text="ruleModal.okText" cancel-text='{{ i18n "close" }}' :class="themeSwitcher.currentTheme">
     <a-form :colon="false" :label-col="{ md: {span:8} }" :wrapper-col="{ md: {span:14} }">
-        <a-form-item label='Domain Matcher'>
+        <a-form-item label='域策略'>
                     <a-select v-model="ruleModal.rule.domainMatcher" :dropdown-class-name="themeSwitcher.currentTheme">
                         <a-select-option v-for="dm in ['','hybrid','linear']" :value="dm">[[ dm ]]</a-select-option>
                     </a-select>
@@ -14,7 +14,7 @@
                     <template slot="title">
                         <span>{{ i18n "pages.xray.rules.useComma" }}</span>
                     </template>
-                    Source IPs <a-icon type="question-circle"></a-icon>
+                    源IP <a-icon type="question-circle"></a-icon>
                 </a-tooltip>
             </template>
             <a-input v-model.trim="ruleModal.rule.source"></a-input>
@@ -25,22 +25,22 @@
                     <template slot="title">
                         <span>{{ i18n "pages.xray.rules.useComma" }}</span>
                     </template>
-                    Source Port <a-icon type="question-circle"></a-icon>
+                    源端口 <a-icon type="question-circle"></a-icon>
                 </a-tooltip>
             </template>
             <a-input v-model.trim="ruleModal.rule.sourcePort"></a-input>
         </a-form-item>
-        <a-form-item label='Network'>
+        <a-form-item label='网络类型'>
             <a-select v-model="ruleModal.rule.network" :dropdown-class-name="themeSwitcher.currentTheme">
                 <a-select-option v-for="x in ['','tcp','udp','tcp,udp']" :value="x">[[ x ]]</a-select-option>
             </a-select>
         </a-form-item>
-        <a-form-item label='Protocol'>
+        <a-form-item label='传输协议'>
             <a-select v-model="ruleModal.rule.protocol" mode="multiple" :dropdown-class-name="themeSwitcher.currentTheme">
                 <a-select-option v-for="x in ['http','tls','bittorrent']" :value="x">[[ x ]]</a-select-option>
             </a-select>
         </a-form-item>
-        <a-form-item label='Attributes'>
+        <a-form-item label='属性'>
             <a-button size="small" style="margin-left: 10px" @click="ruleModal.rule.attrs.push(['', ''])">+</a-button>
         </a-form-item>
         <a-form-item :wrapper-col="{span: 24}">
@@ -70,7 +70,7 @@
                     <template slot="title">
                         <span>{{ i18n "pages.xray.rules.useComma" }}</span>
                     </template>
-                    Domain <a-icon type="question-circle"></a-icon>
+                    域名 <a-icon type="question-circle"></a-icon>
                 </a-tooltip>
             </template>
             <a-input v-model.trim="ruleModal.rule.domain"></a-input>
@@ -81,7 +81,7 @@
                     <template slot="title">
                         <span>{{ i18n "pages.xray.rules.useComma" }}</span>
                     </template>
-                    User <a-icon type="question-circle"></a-icon>
+                    用户 <a-icon type="question-circle"></a-icon>
                 </a-tooltip>
             </template>
             <a-input v-model.trim="ruleModal.rule.user"></a-input>
@@ -92,17 +92,17 @@
                     <template slot="title">
                         <span>{{ i18n "pages.xray.rules.useComma" }}</span>
                     </template>
-                    Port <a-icon type="question-circle"></a-icon>
+                    端口 <a-icon type="question-circle"></a-icon>
                 </a-tooltip>
             </template>
             <a-input v-model.trim="ruleModal.rule.port"></a-input>
         </a-form-item>
-        <a-form-item label='Inbound Tags'>
+        <a-form-item label='入站标签'>
             <a-select v-model="ruleModal.rule.inboundTag" mode="multiple" :dropdown-class-name="themeSwitcher.currentTheme">
                 <a-select-option v-for="tag in ruleModal.inboundTags" :value="tag">[[ tag ]]</a-select-option>
             </a-select>
         </a-form-item>
-        <a-form-item label='Outbound Tag'>
+        <a-form-item label='出站标签'>
             <a-select v-model="ruleModal.rule.outboundTag" :dropdown-class-name="themeSwitcher.currentTheme">
                 <a-select-option v-for="tag in ruleModal.outboundTags" :value="tag">[[ tag ]]</a-select-option>
             </a-select>
@@ -113,7 +113,7 @@
                     <template slot="title">
                         <span>{{ i18n "pages.xray.balancer.balancerDesc" }}</span>
                     </template>
-                    Balancer Tag <a-icon type="question-circle"></a-icon>
+                    负载均衡标签 <a-icon type="question-circle"></a-icon>
                 </a-tooltip>
             </template>
             <a-select v-model="ruleModal.rule.balancerTag" :dropdown-class-name="themeSwitcher.currentTheme">

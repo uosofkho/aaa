@@ -6,11 +6,11 @@ COPY . .
 ENV CGO_ENABLED=1
 ENV CGO_CFLAGS="-D_LARGEFILE64_SOURCE"
 RUN go build -o build/x-ui main.go
+RUN chmod +x DockerInitFiles.sh
 RUN ./DockerInitFiles.sh "$TARGETARCH"
 
 FROM alpine
-LABEL org.opencontainers.image.authors="alireza7@gmail.com"
-ENV TZ=Asia/Tehran
+ENV TZ=Asia/Shanghai
 WORKDIR /app
 
 RUN apk add ca-certificates tzdata

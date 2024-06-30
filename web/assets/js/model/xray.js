@@ -647,8 +647,8 @@ TlsStreamSettings.Settings = class extends XrayCommonClass {
 
 class RealityStreamSettings extends XrayCommonClass {
     constructor(show = false, xver = 0,
-        dest = 'microsoft.com:443',
-        serverNames = 'microsoft.com,www.microsoft.com',
+        dest = 'sega.com:443',
+        serverNames = 'sega.com,www.sega.com',
         privateKey = '', minClient = '', maxClient = '',
         maxTimediff = 0, shortIds = RandomUtil.randomShortId(),
         settings= new RealityStreamSettings.Settings()) {
@@ -701,7 +701,7 @@ class RealityStreamSettings extends XrayCommonClass {
 }
 
 RealityStreamSettings.Settings = class extends XrayCommonClass {
-    constructor(publicKey = '', fingerprint = UTLS_FINGERPRINT.UTLS_FIREFOX, serverName = '', spiderX= '/') {
+    constructor(publicKey = '', fingerprint = UTLS_FINGERPRINT.UTLS_CHROME, serverName = '', spiderX= '/') {
         super();
         this.publicKey = publicKey;
         this.fingerprint = fingerprint;

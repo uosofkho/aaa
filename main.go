@@ -135,10 +135,10 @@ func showSetting(show bool) {
 		if (username == "") || (userpasswd == "") {
 			fmt.Println("current username or password is empty")
 		}
-		fmt.Println("current panel settings as follows:")
-		fmt.Println("username:", username)
-		fmt.Println("userpasswd:", userpasswd)
-		fmt.Println("port:", port)
+		fmt.Println("当前面板登录信息:")
+		fmt.Println("用户名:", username)
+		fmt.Println("密码:", userpasswd)
+		fmt.Println("面板端口:", port)
 	}
 }
 
