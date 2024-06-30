@@ -20,7 +20,7 @@ jobs:
       with:
         images: |
           dapiaoliang666/x-ui
-          ghcr.io/alireza0/x-ui
+          ghcr.io/admin8800/x-ui
         tags: |
           type=ref,event=branch
           type=ref,event=tag
