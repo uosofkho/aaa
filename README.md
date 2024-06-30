@@ -158,13 +158,10 @@ systemctl restart x-ui
 ## Languages
 
 - English（英语）
-- Farsi（伊朗语）
 - Chinese（中文）
 - Russian（俄语）
 - Vietnamese（越南语）
-- Spanish（西班牙语）
-- Indonesian （印度尼西亚语）
-- Ukrainian（乌克兰语）
+- Farsi（波斯语）
 
 
 ## Features
