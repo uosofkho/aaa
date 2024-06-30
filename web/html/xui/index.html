@@ -86,7 +86,18 @@
                         <a-card hoverable>
                             <strong>{{ i18n "pages.inbounds.stream.tcp.version" }}:</strong>
                             <a href="" target="_blank">
-                                <a-tag color="purple" style="cursor: pointer;">自用面板 🌍</a-tag>
+                                <a-tag color="purple" style="cursor: pointer;">🌍自用面板</a-tag>
+                            </a>
+                            <a-tooltip title='{{ i18n "pages.index.xraySwitch" }}'>
+                                <a-tag color="purple" style="cursor: pointer;" @click="openSelectV2rayVersion">Xray [[ status.xray.version ]]</a-tag>
+                            </a-tooltip>
+                        </a-card>
+                    </a-col>
+                    <a-col :sm="24" :md="12">
+                        <a-card hoverable>
+                            <strong>{{ i18n "pages.inbounds.stream.tcp.version" }}:</strong>
+                            <a href="https://ping.pe" target="_blank">
+                                <a-tag color="purple" style="cursor: pointer;">🌐IP检测</a-tag>
                             </a>
                             <a-tooltip title='{{ i18n "pages.index.xraySwitch" }}'>
                                 <a-tag color="purple" style="cursor: pointer;" @click="openSelectV2rayVersion">Xray [[ status.xray.version ]]</a-tag>
@@ -100,7 +111,7 @@
                                  <template slot="title">
                                      {{ i18n "pages.index.xrayoperationHoursDesc" }}
                                  </template>
-                                <a-tag color="blue" style="margin-right: 3px;">Xray [[ formatSecond(status.appStats.uptime) ]]</a-tag>
+                                <a-tag color="blue" style="margin-right: 3px;">⚙️xray版本 [[ formatSecond(status.appStats.uptime) ]]</a-tag>
                             </a-tooltip>      
                             <a-tooltip>
                                 <template slot="title">
