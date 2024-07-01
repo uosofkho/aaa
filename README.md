@@ -129,9 +129,9 @@ systemctl restart x-ui
 
 ## 建议使用的操作系统
 
-- Ubuntu 20.04+
-- Debian 11+
 - CentOS 8+
+- Ubuntu 20+
+- Debian 10+
 - Fedora 36+
 - Arch Linux
 - AlmaLinux 9+
