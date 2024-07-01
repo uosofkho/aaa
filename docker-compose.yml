@@ -1,11 +1,8 @@
----
-version: "3"
-
 services:
   xui:
-    image: dapiaoliang666/x-ui
+    image: dapiaoliang666/x-ui:latest
     container_name: x-ui
-    hostname: yourhostname
+    hostname: hostname
     volumes:
       - $PWD/db/:/etc/x-ui/
       - $PWD/cert/:/root/cert/
