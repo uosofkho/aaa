@@ -1292,6 +1292,22 @@ func (s *InboundService) GetClientTrafficByEmail(email string) (traffic *xray.Cl
 	return nil, nil
 }
 
+func (s *InboundService) GetClientTrafficByID(id string) (traffic *xray.ClientTraffic, err error) {
+	db := database.GetDB()
+	var traffics []*xray.ClientTraffic
+
+	err = db.Model(xray.ClientTraffic{}).Where("id = ?", id).Find(&traffics).Error
+	if err != nil {
+		logger.Warning(err)
+		return nil, err
+	}
+	if len(traffics) > 0 {
+		return traffics[0], nil
+	}
+
+	return nil, nil
+}
+
 func (s *InboundService) SearchClientTraffic(query string) (traffic *xray.ClientTraffic, err error) {
 	db := database.GetDB()
 	inbound := &model.Inbound{}
