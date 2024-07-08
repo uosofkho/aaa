@@ -1292,10 +1292,11 @@ func (s *InboundService) GetClientTrafficByEmail(email string) (traffic *xray.Cl
 	return nil, nil
 }
 
-func (s *InboundService) GetClientTrafficByID(id string) (traffic *xray.ClientTraffic,err error) {
-	db := database.GetDB()
-	var traffics []*xray.ClientTraffic
-	err = db.Model(xray.ClientTraffic{}).Where(`email IN(
+func (s *InboundService) GetClientTrafficByID(id string) ([]xray.ClientTraffic, error)  {
+	db := database.GetDB() 
+	var traffics []xray.ClientTraffic
+
+	err := db.Model(xray.ClientTraffic{}).Where(`email IN(
 		SELECT JSON_EXTRACT(client.value, '$.email') as email
 		FROM inbounds,
 	  	JSON_EACH(JSON_EXTRACT(inbounds.settings, '$.clients')) AS client
@@ -1304,13 +1305,12 @@ func (s *InboundService) GetClientTrafficByID(id string) (traffic *xray.ClientTr
 		)`, id).Find(&traffics).Error
 
 	if err != nil {
-		logger.Warning(err)
-		return nil, err
+		if err == gorm.ErrRecordNotFound {
+			logger.Warning(err)
+			return nil, err
+		}
 	}
-	if len(traffics) > 0 {
-		return traffics[0], nil
-	}
-	return nil, nil
+	return traffics, err
 }
 
 func (s *InboundService) SearchClientTraffic(query string) (traffic *xray.ClientTraffic, err error) {
