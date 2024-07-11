@@ -5,7 +5,7 @@
 
 **如果此项目对你有用，请给一个**:star2:
 
-## 一键安装脚本
+## 🟢一键安装脚本
 
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/admin8800/x-ui/main/install.sh)
@@ -16,7 +16,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/admin8800/x-ui/main/install.sh
 ---
 ---
 
-### Dcoker
+### 🟢Dcoker
 
 ```
 docker run -itd \
