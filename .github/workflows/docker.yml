@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker Hub镜像
 on:
   push:
     tags:
