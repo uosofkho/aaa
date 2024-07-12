@@ -479,7 +479,7 @@ ssl_cert_issue() {
     # get the domain here,and we need verify it
     local domain=""
     read -p "输入你的域名:" domain
-    LOGD "你的域名是:${domain},核实..."
+    LOGD "你的域名是：${domain}，核实..."
     # here we need to judge whether there exists cert already
     local currentCert=$(~/.acme.sh/acme.sh --list | tail -1 | awk '{print $1}')
 
@@ -487,6 +487,7 @@ ssl_cert_issue() {
         local certInfo=$(~/.acme.sh/acme.sh --list)
         LOGE "系统已有证书，无法再次颁发，当前证书详情："
         LOGI "$certInfo"
+        LOGD "请检查/root/.acme.sh目录"
         exit 1
     else
         LOGI "您的域名现已准备好颁发证书..."
@@ -505,7 +506,7 @@ ssl_cert_issue() {
     local WebPort=80
     read -p "请选择要使用的端口号，默认端口号为80:" WebPort
     if [[ ${WebPort} -gt 65535 || ${WebPort} -lt 1 ]]; then
-        LOGE "你输入的 ${WebPort} 无效，将使用默认端口"
+        LOGD "你输入的端口 ${WebPort} 无效，将使用默认端口"
     fi
     LOGI "将使用端口：${WebPort} 颁发证书，请确保此端口已开放..."
     # NOTE:This should be handled by user
