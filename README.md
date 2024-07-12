@@ -69,7 +69,7 @@ certbot renew --dry-run
 
 </details>
 
-## 手动安装 & 升级
+### 手动安装 & 升级
 
 <details>
   <summary>点击查看 手动安装 & 升级</summary>
@@ -127,7 +127,7 @@ systemctl restart x-ui
 
 
 
-## 建议使用的操作系统
+### 建议使用的操作系统
 
 - CentOS 8+
 - Ubuntu 20+
@@ -136,7 +136,7 @@ systemctl restart x-ui
 - Arch Linux
 - AlmaLinux 9+
 
-## 支持的架构和设备
+### 支持的架构和设备
 <details>
   <summary>点击查看 支持的架构和设备</summary>
 
@@ -155,7 +155,7 @@ systemctl restart x-ui
 - **armv5 / arm / arm32**: 它是一种主要与早期嵌入式系统相关的旧架构，目前不太常见，但仍可能出现在早期 Raspberry Pi 版本和一些旧智能手机等传统设备中。
 </details>
 
-## Languages
+### 支持多语言
 
 - English（英语）
 - Chinese（中文）
@@ -164,7 +164,7 @@ systemctl restart x-ui
 - Farsi（波斯语）
 
 
-## Features
+### 功能介绍
 
 - 系统状态监控
 - 在所有入站和客户端中搜索
@@ -182,7 +182,7 @@ systemctl restart x-ui
 - 支持从面板导出/导入数据库
 
 
-## 默认设置
+### 默认设置
 
 <details>
   <summary>点击查看 默认设置</summary>
@@ -203,4 +203,10 @@ systemctl restart x-ui
  
 </details>
 
-## [WARP 配置](https://gitlab.com/fscarmen/warp)
+### [WARP 配置](https://gitlab.com/fscarmen/warp)
+
+
+## 免责声明
+
+* 本程序仅供学习了解, 非盈利目的，请于下载后 24 小时内删除, 不得用作任何商业用途, 文字、数据及图片均有所属版权, 如转载须注明来源。
+* 使用本程序必循遵守部署免责声明。使用本程序必循遵守部署服务器所在地、所在国家和用户所在国家的法律法规, 程序作者不对使用者任何不当行为负责
