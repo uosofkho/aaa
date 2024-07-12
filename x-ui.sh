@@ -517,7 +517,7 @@ ssl_cert_issue() {
         rm -rf ~/.acme.sh/${domain}
         exit 1
     else
-        LOGE "颁发证书成功，正在安装证书..."
+        LOGI "颁发证书成功，正在安装证书..."
     fi
     # install cert
     ~/.acme.sh/acme.sh --installcert -d ${domain} \
