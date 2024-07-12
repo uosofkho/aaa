@@ -192,14 +192,14 @@ systemctl restart x-ui
 - **端口：** 54321
 - **用户名 & 密码：** 当您跳过设置时，此项会随机生成。
 - **数据库路径：**
-  - /etc/x-ui/x-ui.db
+  - `/etc/x-ui/x-ui.db`
 - **Xray 配置路径：**
-  - /usr/local/x-ui/bin/config.json
+  - `/usr/local/x-ui/bin/config.json`
 - **面板链接（无SSL）：**
-  - http://ip:54321/panel
-  - http://domain:54321/panel
+  - `http://IP:54321`
+  - `http://example.com:54321`
 - **面板链接（有SSL）：**
-  - https://domain:54321/panel
+  - `https://example.com:54321`
  
 </details>
 
