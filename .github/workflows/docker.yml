@@ -1,9 +1,11 @@
 name: Docker Hub镜像
 on:
-  push:
-    tags:
-      - "*"
   workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Tags to build and push'
+        required: true
+        default: 'latest'
 
 jobs:
   build:
