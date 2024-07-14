@@ -1305,10 +1305,8 @@ func (s *InboundService) GetClientTrafficByID(id string) ([]xray.ClientTraffic, 
 		)`, id).Find(&traffics).Error
 
 	if err != nil {
-		if err == gorm.ErrRecordNotFound {
-			logger.Debug("Unable to find client ID:", err)
-			return nil, err
-		}
+		logger.Debug(err)
+		return nil, err
 	}
 	return traffics, err
 }
