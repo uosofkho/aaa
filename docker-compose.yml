@@ -1,6 +1,6 @@
 services:
   xui:
-    image: dapiaoliang666/x-ui:latest
+    image: ghcr.io/admin8800/x-ui:latest
     container_name: x-ui
     hostname: hostname
     volumes:
