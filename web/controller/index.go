@@ -71,13 +71,8 @@ func (a *IndexController) login(c *gin.Context) {
 		pureJsonMsg(c, http.StatusOK, false, I18nWeb(c, "pages.login.toasts.wrongUsernameOrPassword"))
 		return
 	} else {
-<<<<<<< HEAD
 		logger.Infof("%s login success ,Ip Address: %s\n", safeUser, getRemoteIp(c))
 		a.tgbot.UserLoginNotify(safeUser, getRemoteIp(c), timeStr, 1)
-=======
-		logger.Infof("%s Successful Login ,Ip Address: %s\n", form.Username, getRemoteIp(c))
-		a.tgbot.UserLoginNotify(form.Username, getRemoteIp(c), timeStr, 1)
->>>>>>> a443d31 (Merge pull request #1356 from MHSanaei/main)
 	}
 
 	sessionMaxAge, err := a.settingService.GetSessionMaxAge()
